@@ -67,65 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Pycharm模块不存在" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/post/Pycharm%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%AD%98%E5%9C%A8.html" class="article-date">
-  <time class="dt-published" datetime="2022-08-05T02:33:06.000Z" itemprop="datePublished">2022-08-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/post/Pycharm%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%AD%98%E5%9C%A8.html">Pycharm模块不存在</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Pycharm模块不存在"><a href="#Pycharm模块不存在" class="headerlink" title="Pycharm模块不存在"></a>Pycharm模块不存在</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>当运行Python文件时，出现以下报错：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python中已经用pip安装了某模块，但pycharm中为什么仍然显示没有该模块</code></pre>
-
-<h2 id="出现原因："><a href="#出现原因：" class="headerlink" title="出现原因："></a>出现原因：</h2><p>pycharm里面自带一个Python解释器，而这个里面是没有几个模块的。因为咱们在DOS<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>里面下载的模块是下载到Python的解释器里而不是pycharm里面的那个。</p>
-<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>打开pycharm依次点击file-&gt;Settings-&gt;Project Interpreter；</p>
-<p>可以看到当前项目正在使用的Python解释器，即Project Interpreter那一栏。</p>
-<p>可以将其替换为本机上安装的Python解释器，即cmd中可以查看到的python解释器：</p>
-<p>1.查找本机Python的安装地址：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">C:\Users\26485&gt;where python
-C:\Users\26485\AppData\Local\Programs\Python\Python39\python.exe
-C:\Users\26485\AppData\Local\Microsoft\WindowsApps\python.exe</code></pre>
-
-<p>2.在Project Interpreter添加对应地址中新的解释器，添加完成后，可以看到我们在本机环境下已经安装的模块和工具包。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/post/Pycharm%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%AD%98%E5%9C%A8.html" data-id="cldlogwar00a1a8ykensta3bs" data-title="Pycharm模块不存在" class="article-share-link">Share</a>
-      
-        <a href="http://example.com/post/Pycharm%E6%A8%A1%E5%9D%97%E4%B8%8D%E5%AD%98%E5%9C%A8.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pycharm/" rel="tag">Pycharm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%A5%E9%94%99/" rel="tag">报错</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-寻找比目标字母大的最小字母" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/post/%E5%AF%BB%E6%89%BE%E6%AF%94%E7%9B%AE%E6%A0%87%E5%AD%97%E6%AF%8D%E5%A4%A7%E7%9A%84%E6%9C%80%E5%B0%8F%E5%AD%97%E6%AF%8D.html" class="article-date">
@@ -982,6 +923,67 @@ public class Solution &#123;
 
 
   
+    <article id="post-ListtoArray" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/post/ListtoArray.html" class="article-date">
+  <time class="dt-published" datetime="2022-07-28T03:18:32.000Z" itemprop="datePublished">2022-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/post/ListtoArray.html">列表导出为数组</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Java中List集合的toArray方法"><a href="#Java中List集合的toArray方法" class="headerlink" title="Java中List集合的toArray方法"></a>Java中List集合的toArray方法</h1><h2 id="1-toArray"><a href="#1-toArray" class="headerlink" title="1. toArray()"></a>1. toArray()</h2><ul>
+<li>当没有参数指定时，返回的数组中元素的类型是Object类型的。因为List在使用时一般会指定泛型，所以该方法是不常用的。</li>
+</ul>
+<h2 id="2-toArray-T-a"><a href="#2-toArray-T-a" class="headerlink" title="2.toArray(T[] a)"></a>2.toArray(T[] a)</h2><ul>
+<li>leetcode-406使用到了该方法将列表对象转化为二维数组</li>
+<li>可以导出数组为指定的类型</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">List&lt;String&gt; list&#x3D;new List&lt;&gt;();
+list.add(&quot;hello&quot;);
+list.add(&quot;world&quot;);
+String[] strs&#x3D;list.toArray(new String[list.size()]);</code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">List&lt;int[]&gt; list&#x3D;new List&lt;&gt;();
+list.add(new int[]&#123;0,1&#125;);
+list.add(new int[]&#123;1,0&#125;);
+int[][] ret&#x3D;list.toArray(new int[list.size()][]);</code></pre>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/post/ListtoArray.html" data-id="cldlogwao009oa8yk1e4dhxhr" data-title="列表导出为数组" class="article-share-link">Share</a>
+      
+        <a href="http://example.com/post/ListtoArray.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
 
 
   <nav id="page-nav">
@@ -1026,7 +1028,7 @@ public class Solution &#123;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
     </div>
   </div>
 
@@ -1043,10 +1045,6 @@ public class Solution &#123;
           </li>
         
           <li>
-            <a href="/post/LSTNet%E4%BB%A3%E7%A0%81.html">LSTNet代码</a>
-          </li>
-        
-          <li>
             <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a>
           </li>
         
@@ -1056,6 +1054,10 @@ public class Solution &#123;
         
           <li>
             <a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a>
+          </li>
+        
+          <li>
+            <a href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a>
           </li>
         
       </ul>

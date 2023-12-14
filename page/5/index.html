@@ -67,142 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-450-删除二叉搜索树中的节点" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/post/450-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html" class="article-date">
-  <time class="dt-published" datetime="2022-10-15T03:25:12.000Z" itemprop="datePublished">2022-10-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/post/450-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html">450.删除二叉搜索树中的节点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="450-删除二叉搜索树中的节点"><a href="#450-删除二叉搜索树中的节点" class="headerlink" title="450.删除二叉搜索树中的节点"></a>450.删除二叉搜索树中的节点</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="450">
-<li>删除二叉搜索树中的节点</li>
-</ol>
-<p>给定一个二叉搜索树的根节点 <strong>root</strong> 和一个值 <strong>key</strong>，删除二叉搜索树中的 <strong>key</strong> 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。</p>
-<p>一般来说，删除节点可分为两个步骤：</p>
-<ol>
-<li>首先找到需要删除的节点；</li>
-<li>如果找到了，删除它。</li>
-</ol>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 3
-输出：[5,4,6,2,null,null,7]
-解释：给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。
-一个正确的答案是 [5,4,6,2,null,null,7], 如下图所示。
-另一个正确答案是 [5,2,6,null,4,null,7]。</code></pre>
-
-<p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 0
-输出: [5,3,6,2,4,null,7]
-解释: 二叉树不包含值为 0 的节点</code></pre>
-
-<p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [], key &#x3D; 0
-输出: []</code></pre>
-
-
-
-<p>提示：</p>
-<ul>
-<li>节点数的范围 <code>[0, 104]</code>.</li>
-<li><code>-105 &lt;= Node.val &lt;= 105</code></li>
-<li>节点值唯一</li>
-<li><code>root</code> 是合法的二叉搜索树</li>
-<li><code>-105 &lt;= key &lt;= 105</code></li>
-</ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-bst/description/">https://leetcode.cn/problems/delete-node-in-a-bst/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode deleteNode(TreeNode root, int key) &#123;
-        &#x2F;&#x2F;节点为空
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若节点大于待删除节点，则更新左子树
-        if(root.val&gt;key)
-            root.left&#x3D;deleteNode(root.left,key);
-        &#x2F;&#x2F;若节点小于待删除节点，则更新右子树
-        else if(root.val&lt;key)
-            root.right&#x3D;deleteNode(root.right,key);
-        &#x2F;&#x2F;当前节点就是待删除节点
-        else&#123;
-            &#x2F;&#x2F;待删除节点为叶子节点，则直接返回null
-            if(root.left&#x3D;&#x3D;null&amp;&amp;root.right&#x3D;&#x3D;null)
-                return null;
-            &#x2F;&#x2F;左孩子为空，右孩子不空，则右孩子覆盖待删除节点
-            else if(root.left&#x3D;&#x3D;null&amp;&amp;root.right!&#x3D;null)&#123;
-                root&#x3D;root.right;
-            &#x2F;&#x2F;右孩子为空，左孩子不空，则左孩子覆盖待删除节点
-            &#125;else if(root.right&#x3D;&#x3D;null&amp;&amp;root.left!&#x3D;null)&#123;
-                root&#x3D;root.left;
-            &#x2F;&#x2F;左孩子不空，右孩子不空，则将左孩子放到右子树的最左下位置，然后将待删除节点替换为右孩子
-            &#125;else&#123;
-                TreeNode temp&#x3D;root.right;
-                while(temp.left!&#x3D;null)&#123;
-                    temp&#x3D;temp.left;
-                &#125;
-                temp.left&#x3D;root.left;
-                root&#x3D;root.right;
-            &#125;
-
-        &#125;
-        return root;
-    &#125;
-
-
-&#125;</code></pre>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/post/450-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html" data-id="cldlogw9q004qa8yketwnfjdh" data-title="450.删除二叉搜索树中的节点" class="article-share-link">Share</a>
-      
-        <a href="http://example.com/post/450-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-701-二叉搜索树中的插入操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/post/701-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.html" class="article-date">
@@ -1207,6 +1071,117 @@ class Solution &#123;
 
 
   
+    <article id="post-106-从中序与后序遍历序列构造二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/post/106-%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html" class="article-date">
+  <time class="dt-published" datetime="2022-10-03T12:53:13.000Z" itemprop="datePublished">2022-10-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/post/106-%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html">106. 从中序与后序遍历序列构造二叉树</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="106-从中序与后序遍历序列构造二叉树"><a href="#106-从中序与后序遍历序列构造二叉树" class="headerlink" title="106.从中序与后序遍历序列构造二叉树"></a>106.从中序与后序遍历序列构造二叉树</h2><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="106">
+<li>从中序与后序遍历序列构造二叉树</li>
+</ol>
+<p>给定两个整数数组 <code>inorder</code> 和 <code>postorder</code> ，其中 <code>inorder</code> 是二叉树的中序遍历， <code>postorder</code> 是同一棵树的后序遍历，请你构造并返回这颗 <em>二叉树</em> 。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：inorder &#x3D; [9,3,15,20,7], postorder &#x3D; [9,15,7,20,3]
+输出：[3,9,20,null,null,15,7]</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：inorder &#x3D; [-1], postorder &#x3D; [-1]
+输出：[-1]</code></pre>
+
+<p>提示：</p>
+<p>1 &lt;&#x3D; inorder.length &lt;&#x3D; 3000<br>postorder.length &#x3D;&#x3D; inorder.length<br>-3000 &lt;&#x3D; inorder[i], postorder[i] &lt;&#x3D; 3000<br>inorder 和 postorder 都由 不同 的值组成<br>postorder 中每一个值都在 inorder 中<br>inorder 保证是树的中序遍历<br>postorder 保证是树的后序遍历</p>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal">https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val &#x3D; val;
+ *         this.left &#x3D; left;
+ *         this.right &#x3D; right;
+ *     &#125;
+ * &#125;
+ *&#x2F;
+ 
+ class Solution &#123;
+     &#x2F;&#x2F;为了更加方便的找到中序序列中节点下标
+    Map&lt;Integer, Integer&gt; map;  &#x2F;&#x2F; 方便根据数值查找位置
+    public TreeNode buildTree(int[] inorder, int[] postorder) &#123;
+        map &#x3D; new HashMap&lt;&gt;();
+        &#x2F;&#x2F;将中序序列存入map，key为节点val，value为节点val所在的下标
+        for (int i &#x3D; 0; i &lt; inorder.length; i++) &#123; &#x2F;&#x2F; 用map保存中序序列的数值对应位置
+            map.put(inorder[i], i);
+        &#125;
+        &#x2F;&#x2F;注意，右边界是数组长度，是最后一个元素下标的后一个位置    
+        return findNode(inorder,  0, inorder.length, postorder,0, postorder.length);  &#x2F;&#x2F; 前闭后开
+    &#125;
+    
+    
+    public TreeNode findNode(int[] inorder, int inBegin, int inEnd, int[] postorder, int postBegin, int postEnd) &#123;
+        &#x2F;&#x2F; 参数里的范围都是前闭后开
+        if (inBegin &gt;&#x3D; inEnd || postBegin &gt;&#x3D; postEnd) &#123;  &#x2F;&#x2F; 不满足左闭右开，说明没有元素，返回空树
+            return null;
+        &#125;
+        
+        int rootIndex &#x3D; map.get(postorder[postEnd - 1]);  &#x2F;&#x2F; 找到后序遍历的最后一个元素在中序遍历中的位置
+        TreeNode root &#x3D; new TreeNode(inorder[rootIndex]);  &#x2F;&#x2F; 构造结点
+        int lenOfLeft &#x3D; rootIndex - inBegin;  &#x2F;&#x2F; 保存中序左子树个数，用来确定后序数列的个数
+        &#x2F;&#x2F;递归构造左子树
+        root.left &#x3D; findNode(inorder, inBegin, rootIndex,
+                            postorder, postBegin, postBegin + lenOfLeft);
+        &#x2F;&#x2F;递归构造右子树
+        root.right &#x3D; findNode(inorder, rootIndex + 1, inEnd,
+                            postorder, postBegin + lenOfLeft, postEnd - 1);
+
+        return root;
+    &#125;
+&#125;</code></pre>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/post/106-%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html" data-id="cldlogw8y000oa8yk4z5y0vuu" data-title="106. 从中序与后序遍历序列构造二叉树" class="article-share-link">Share</a>
+      
+        <a href="http://example.com/post/106-%E4%BB%8E%E4%B8%AD%E5%BA%8F%E4%B8%8E%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
 
 
   <nav id="page-nav">
@@ -1251,7 +1226,7 @@ class Solution &#123;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
     </div>
   </div>
 
@@ -1268,10 +1243,6 @@ class Solution &#123;
           </li>
         
           <li>
-            <a href="/post/LSTNet%E4%BB%A3%E7%A0%81.html">LSTNet代码</a>
-          </li>
-        
-          <li>
             <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a>
           </li>
         
@@ -1281,6 +1252,10 @@ class Solution &#123;
         
           <li>
             <a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a>
+          </li>
+        
+          <li>
+            <a href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a>
           </li>
         
       </ul>

@@ -67,95 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-349-两个数组的交集" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/post/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html" class="article-date">
-  <time class="dt-published" datetime="2022-08-29T12:47:57.000Z" itemprop="datePublished">2022-08-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/post/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html">349.两个数组的交集</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349.两个数组的交集"></a>349.两个数组的交集</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="349">
-<li>两个数组的交集</li>
-</ol>
-<p>给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
-<p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [1,2,2,1], nums2 &#x3D; [2,2]
-输出：[2]</code></pre>
-
-<p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [4,9,5], nums2 &#x3D; [9,4,9,8,4]
-输出：[9,4]
-解释：[4,9] 也是可通过的</code></pre>
-
-<p>提示：</p>
-<ul>
-<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
-<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
-</ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-arrays/">https://leetcode.cn/problems/intersection-of-two-arrays/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int[] intersection(int[] nums1, int[] nums2) &#123;
-        if (nums1 &#x3D;&#x3D; null || nums1.length &#x3D;&#x3D; 0 || nums2 &#x3D;&#x3D; null || nums2.length &#x3D;&#x3D; 0) &#123;
-            return new int[0];
-        &#125;
-        &#x2F;&#x2F;存储数组元素
-        Set&lt;Integer&gt; set1 &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;存储结果
-        Set&lt;Integer&gt; resSet &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;遍历数组1
-        for (int i : nums1) &#123;
-            set1.add(i);
-        &#125;
-        &#x2F;&#x2F;遍历数组2的过程中判断哈希表中是否存在该元素，若存在，则存入resSet中，因为输出结果是唯一的，因此并集的结果使用set集合来存储
-        for (int i : nums2) &#123;
-            if (set1.contains(i)) &#123;
-                resSet.add(i);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;将结果集合转为数组
-        return resSet.stream().mapToInt(x -&gt; x).toArray();
-    &#125;
-&#125;</code></pre>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/post/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html" data-id="cldlogw9k003qa8ykei3b1co1" data-title="349.两个数组的交集" class="article-share-link">Share</a>
-      
-        <a href="http://example.com/post/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="tag">哈希表</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-242-有效的字母异位词" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/post/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html" class="article-date">
@@ -1096,6 +1007,63 @@ class Solution &#123;
 
 
   
+    <article id="post-连接mysql失败" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/post/%E8%BF%9E%E6%8E%A5mysql%E5%A4%B1%E8%B4%A5.html" class="article-date">
+  <time class="dt-published" datetime="2022-08-18T04:11:34.000Z" itemprop="datePublished">2022-08-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/post/%E8%BF%9E%E6%8E%A5mysql%E5%A4%B1%E8%B4%A5.html">ERROR 2003 (HY000) Can&#39;t connect to MySQL server on &#39;localhost:3306&#39; (10061)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ERROR-2003-HY000-Can’t-connect-to-MySQL-server-on-‘localhost-3306’-10061"><a href="#ERROR-2003-HY000-Can’t-connect-to-MySQL-server-on-‘localhost-3306’-10061" class="headerlink" title="ERROR 2003 (HY000): Can’t connect to MySQL server on ‘localhost:3306’ (10061)"></a>ERROR 2003 (HY000): Can’t connect to MySQL server on ‘localhost:3306’ (10061)</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mysql -uroot -p</code></pre>
+
+<ul>
+<li>输入上传命令之后，出现标题上的错误。</li>
+<li>数据库无法成功连接</li>
+</ul>
+<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><ul>
+<li>打开win搜索栏，输入“计算机管理”</li>
+<li>选择服务</li>
+<li>找到mysql，并启动即可</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/post/%E8%BF%9E%E6%8E%A5mysql%E5%A4%B1%E8%B4%A5.html" data-id="cldlogwb900csa8ykct3037dl" data-title="ERROR 2003 (HY000) Can&#39;t connect to MySQL server on &#39;localhost:3306&#39; (10061)" class="article-share-link">Share</a>
+      
+        <a href="http://example.com/post/%E8%BF%9E%E6%8E%A5mysql%E5%A4%B1%E8%B4%A5.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%A5%E9%94%99/" rel="tag">报错</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
 
 
   <nav id="page-nav">
@@ -1140,7 +1108,7 @@ class Solution &#123;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
     </div>
   </div>
 
@@ -1157,10 +1125,6 @@ class Solution &#123;
           </li>
         
           <li>
-            <a href="/post/LSTNet%E4%BB%A3%E7%A0%81.html">LSTNet代码</a>
-          </li>
-        
-          <li>
             <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a>
           </li>
         
@@ -1170,6 +1134,10 @@ class Solution &#123;
         
           <li>
             <a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a>
+          </li>
+        
+          <li>
+            <a href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a>
           </li>
         
       </ul>

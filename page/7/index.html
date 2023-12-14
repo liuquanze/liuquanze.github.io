@@ -67,123 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-226-翻转二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/post/226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html" class="article-date">
-  <time class="dt-published" datetime="2022-09-22T14:25:52.000Z" itemprop="datePublished">2022-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/post/226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html">226.翻转二叉树</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a>226. 翻转二叉树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">		4
-      |    |
-      2    7
-    |   |  |   |
-    1   3   6   9
-        4
-      |    |
-      7    2
-    |   |  |   |
-    9   6   3   1
-输入：root &#x3D; [4,2,7,1,3,6,9]
-输出：[4,7,2,9,6,3,1]</code></pre>
-
-<p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">		2
-      |    |
-      1    3
-        2
-      |    |
-      1    3
-输入：root &#x3D; [2,1,3]
-输出：[2,3,1]</code></pre>
-
-<p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; []
-输出：[]</code></pre>
-
-<p>提示：</p>
-<ul>
-<li>树中节点数目范围在 <code>[0, 100]</code> 内</li>
-<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
-</ul>
-<p>题目来源:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/invert-binary-tree/">https://leetcode.cn/problems/invert-binary-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;后序遍历，若将遍历节点的左右孩子互换
-    public void postOrder(TreeNode root)&#123;
-        if(root&#x3D;&#x3D;null)
-            return;
-        if(root.left!&#x3D;null) postOrder(root.left);
-        if(root.right!&#x3D;null) postOrder(root.right);
-        TreeNode temp&#x3D;root.left;
-        root.left&#x3D;root.right;
-        root.right&#x3D;temp;
-        
-    &#125;
-    public TreeNode invertTree(TreeNode root) &#123;
-        if(root&#x3D;&#x3D;null)
-            return null;
-        postOrder(root);
-        return root;
-    &#125;
-&#125;</code></pre>
-
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/post/226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html" data-id="cldlogw9d002na8yk1vw879f6" data-title="226.翻转二叉树" class="article-share-link">Share</a>
-      
-        <a href="http://example.com/post/226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-102二叉树的层次遍历" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/post/102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86.html" class="article-date">
@@ -1438,6 +1321,122 @@ myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
 
 
   
+    <article id="post-28-实现-strStr" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/post/28-%E5%AE%9E%E7%8E%B0-strStr.html" class="article-date">
+  <time class="dt-published" datetime="2022-09-11T14:34:12.000Z" itemprop="datePublished">2022-09-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/post/28-%E5%AE%9E%E7%8E%B0-strStr.html">28.实现 strStr()</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="28-实现-strStr"><a href="#28-实现-strStr" class="headerlink" title="28.实现 strStr()"></a>28.实现 strStr()</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="28">
+<li>实现 strStr()</li>
+</ol>
+<p>实现 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strStr()</a> 函数。</p>
+<p>给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回 <code>-1</code> 。</p>
+<p><strong>说明：</strong></p>
+<p>当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
+<p>对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 0 。这与 C 语言的 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strstr()</a> 以及 Java 的 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)">indexOf()</a> 定义相符。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot;
+输出：2</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;aaaaa&quot;, needle &#x3D; &quot;bba&quot;
+输出：-1</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= haystack.length, needle.length &lt;= 104</code></li>
+<li><code>haystack</code> 和 <code>needle</code> 仅由小写英文字符组成</li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 方法一
+class Solution &#123;
+    &#x2F;&#x2F;求出next数组
+    public void getNext(int[] next,String s)&#123;
+        int j&#x3D;-1;
+        next[0]&#x3D;j;
+        &#x2F;&#x2F;j指向前缀的末尾，i指向后缀的末尾
+        for(int i&#x3D;1;i&lt;next.length;i++)&#123;
+            &#x2F;&#x2F;若前缀的末尾和后缀的末尾不匹配，则将前缀的末尾进行回退
+            while(j&gt;&#x3D;0&amp;&amp;s.charAt(i)!&#x3D;s.charAt(j+1))&#123;
+                j&#x3D;next[j];
+            &#125;
+            &#x2F;&#x2F;若匹配成功，则i和j都向后移动
+            if(s.charAt(i)&#x3D;&#x3D;s.charAt(j+1))&#123;
+                j++;
+            &#125;
+            &#x2F;&#x2F;求得最大前后缀长度
+            next[i]&#x3D;j;
+        &#125;
+        
+    &#125;
+    
+    public int strStr(String haystack, String needle) &#123;
+        int[] next&#x3D;new int[needle.length()];
+        &#x2F;&#x2F;j为模式串指针
+        int j&#x3D;-1;
+        &#x2F;&#x2F;求next数组
+        getNext(next,needle);
+        &#x2F;&#x2F;i为匹配串指针
+        for(int i&#x3D;0;i&lt;haystack.length();i++)&#123;
+            &#x2F;&#x2F;若匹配失败，则模式串指针回退
+            while(j&gt;&#x3D;0&amp;&amp;haystack.charAt(i)!&#x3D;needle.charAt(j+1))&#123;
+                j&#x3D;next[j];
+            &#125;
+            &#x2F;&#x2F;匹配成功继续向后匹配
+            if(needle.charAt(j+1)&#x3D;&#x3D;haystack.charAt(i))&#123;
+                j++;
+            &#125;
+            &#x2F;&#x2F;判断模式串是否匹配成功，若j到达模式串末尾，则返回匹配成功位置
+            if(j&#x3D;&#x3D;needle.length()-1)&#123;
+                return i-needle.length()+1;
+            &#125;
+        &#125;
+        &#x2F;&#x2F;匹配失败
+        return -1;
+    &#125;
+&#125;</code></pre>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/post/28-%E5%AE%9E%E7%8E%B0-strStr.html" data-id="cldlogw9j003fa8yk9b6rebda" data-title="28.实现 strStr()" class="article-share-link">Share</a>
+      
+        <a href="http://example.com/post/28-%E5%AE%9E%E7%8E%B0-strStr.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">字符串</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
 
 
   <nav id="page-nav">
@@ -1482,7 +1481,7 @@ myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li></ul>
     </div>
   </div>
 
@@ -1499,10 +1498,6 @@ myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
           </li>
         
           <li>
-            <a href="/post/LSTNet%E4%BB%A3%E7%A0%81.html">LSTNet代码</a>
-          </li>
-        
-          <li>
             <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a>
           </li>
         
@@ -1512,6 +1507,10 @@ myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
         
           <li>
             <a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a>
+          </li>
+        
+          <li>
+            <a href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a>
           </li>
         
       </ul>
