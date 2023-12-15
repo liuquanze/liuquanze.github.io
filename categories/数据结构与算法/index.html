@@ -1,1 +1,1324 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>数据结构与算法 | Hexo</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> Home</i></a><a class="current" href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><h1 class="label-title">Reading articles in 数据结构与算法</h1><div class="post"><div class="post-archive"><h2>2023</h2><ul class="listing"><li><span class="date">2023-01-31</span><a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html" title="01背包理论基础02">01背包理论基础02</a></li><li><span class="date">2023-01-30</span><a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001.html" title="01背包理论基础01">01背包理论基础01</a></li><li><span class="date">2023-01-26</span><a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html" title="84.柱状图中最大的矩形">84.柱状图中最大的矩形</a></li><li><span class="date">2023-01-23</span><a href="/post/496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0%E2%85%A0.html" title="496.下一个更大元素Ⅰ">496.下一个更大元素Ⅰ</a></li><li><span class="date">2023-01-06</span><a href="/post/509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html" title="509.斐波那契数列">509.斐波那契数列</a></li></ul><h2>2022</h2><ul class="listing"><li><span class="date">2022-12-27</span><a href="/post/968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.html" title="968.监控二叉树">968.监控二叉树</a></li><li><span class="date">2022-12-25</span><a href="/post/714-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9.html" title="714.买卖股票的最佳时机含手续费">714.买卖股票的最佳时机含手续费</a></li><li><span class="date">2022-12-23</span><a href="/post/56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.html" title="56.合并区间">56.合并区间</a></li><li><span class="date">2022-12-21</span><a href="/post/435-%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.html" title="435.无重叠区间">435.无重叠区间</a></li><li><span class="date">2022-12-20</span><a href="/post/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83.html" title="452.用最少数量的箭引爆气球">452.用最少数量的箭引爆气球</a></li></ul></div></div><nav class="page-navigator"><span class="page-number current">1</span><a class="page-number" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/2/">2</a><a class="page-number" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/12/">12</a><a class="extend next" rel="next" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/2/">Next</a></nav></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://example.com"/></form></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="About"><img class="nofancybox" src="/img/avatar.png"/></a><p>To be a better man.</p><a class="info-icon" href="https://twitter.com/username" title="Twitter" target="_blank" style="margin-inline:5px"> <i class="fa fa-twitter-square" style="margin-inline:5px"></i></a><a class="info-icon" href="mailto:admin@domain.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/username" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SDN/">SDN</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB%E5%89%8D%E7%AB%AF/">WEB前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E6%97%A5%E5%BF%97/">个人日志</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AE%9E%E9%AA%8C/">实验</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%9C%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结果与算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 15px;">动态规划</a> <a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 15px;">字符串</a> <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" style="font-size: 15px;">贪心算法</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 15px;">二叉树</a> <a href="/tags/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" style="font-size: 15px;">栈和队列</a> <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" style="font-size: 15px;">回溯算法</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15px;">链表</a> <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" style="font-size: 15px;">哈希表</a> <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" style="font-size: 15px;">单调栈</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/%E6%8A%A5%E9%94%99/" style="font-size: 15px;">报错</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" style="font-size: 15px;">使用说明</a> <a href="/tags/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/" style="font-size: 15px;">Java并发编程实战</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15px;">数据结构</a> <a href="/tags/Pycharm/" style="font-size: 15px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF/" style="font-size: 15px;">语法错误</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 15px;">记录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" style="font-size: 15px;">使用方法</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 15px;">科研</a> <a href="/tags/%E6%A8%A1%E5%9D%97/" style="font-size: 15px;">模块</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/post/comeback.html">comeback</a></li><li class="post-list-item"><a class="post-list-link" href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a></li><li class="post-list-item"><a class="post-list-link" href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001.html">01背包理论基础01</a></li><li class="post-list-item"><a class="post-list-link" href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a></li><li class="post-list-item"><a class="post-list-link" href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a></li><li class="post-list-item"><a class="post-list-link" href="/post/496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0%E2%85%A0.html">496.下一个更大元素Ⅰ</a></li><li class="post-list-item"><a class="post-list-link" href="/post/739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6.html">739.每日温度</a></li><li class="post-list-item"><a class="post-list-link" href="/post/62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.html">62.不同路径</a></li><li class="post-list-item"><a class="post-list-link" href="/post/509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html">509.斐波那契数列</a></li><li class="post-list-item"><a class="post-list-link" href="/post/968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.html">968.监控二叉树</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Category: 数据结构与算法 - Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories/Music">Music</a>
+            
+            <a class="navbar-item "
+               href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5><i class="far fa-folder"></i>数据结构与算法</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html" itemprop="url">01背包理论基础02</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2023-01-31T06:31:17.000Z" itemprop="datePublished">Jan 31 2023</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            7 minutes read (About 1083 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="01背包理论基础02"><a href="#01背包理论基础02" class="headerlink" title="01背包理论基础02"></a>01背包理论基础02</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
+<h3 id="背包问题（一维数组d实现，滚动数组）"><a href="#背包问题（一维数组d实现，滚动数组）" class="headerlink" title="背包问题（一维数组d实现，滚动数组）"></a>背包问题（一维数组d实现，<strong>滚动数组</strong>）</h3><p>对于背包问题其实状态都是可以压缩的。</p>
+<p>在使用二维数组的时候，递推公式：dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
+<p><strong>其实可以发现如果把dp[i - 1]那一层拷贝到dp[i]上，表达式完全可以是：dp[i][j] &#x3D; max(dp[i][j], dp[i][j - weight[i]] + value[i]);</strong></p>
+<p><strong>与其把dp[i - 1]这一层拷贝到dp[i]上，不如只用一个一维数组了</strong>，只用dp[j]（一维数组，也可以理解是一个滚动数组）。</p>
+<p>这就是滚动数组的由来，需要满足的条件是上一层可以重复利用，直接拷贝到当前层。</p>
+<p>读到这里估计大家都忘了 dp[i][j]里的i和j表达的是什么了，i是物品，j是背包容量。</p>
+<p><strong>dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少</strong>。</p>
+<ol>
+<li>确定dp数组的定义</li>
+</ol>
+<p>在一维dp数组中，dp[j]表示：容量为j的背包，所背的物品价值可以最大为dp[j]。</p>
+<ol start="2">
+<li>一维dp数组的递推公式</li>
+</ol>
+<p>dp[j]为 容量为j的背包所背的最大价值，那么如何推导dp[j]呢？</p>
+<p>dp[j]可以通过dp[j - weight[i]]推导出来，dp[j - weight[i]]表示容量为j - weight[i]的背包所背的最大价值。</p>
+<p>dp[j - weight[i]] + value[i] 表示 容量为 j - 物品i重量 的背包 加上 物品i的价值。（也就是容量为j的背包，放入物品i了之后的价值即：dp[j]）</p>
+<p>此时dp[j]有两个选择，一个是取自己dp[j] 相当于 二维dp数组中的dp[i-1][j]，即不放物品i，一个是取dp[j - weight[i]] + value[i]，即放物品i，指定是取最大的，毕竟是求最大价值，</p>
+<p>所以递归公式为：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">dp[j] &#x3D; max(dp[j], dp[j - weight[i]] + value[i]);</code></pre>
+
+<p>可以看出相对于二维dp数组的写法，就是把dp[i] [j]中i的维度去掉了。</p>
+<ol start="3">
+<li>一维dp数组如何初始化</li>
+</ol>
+<p><strong>关于初始化，一定要和dp数组的定义吻合，否则到递推公式的时候就会越来越乱</strong>。</p>
+<p>dp[j]表示：容量为j的背包，所背的物品价值可以最大为dp[j]，那么dp[0]就应该是0，因为背包容量为0所背的物品的最大价值就是0。</p>
+<p>那么dp数组除了下标0的位置，初始为0，其他下标应该初始化多少呢？</p>
+<p>看一下递归公式：dp[j] &#x3D; max(dp[j], dp[j - weight[i]] + value[i]);</p>
+<p>dp数组在推导的时候一定是取价值最大的数，如果题目给的价值都是正整数那么非0下标都初始化为0就可以了。</p>
+<ol start="4">
+<li>一维dp数组遍历顺序</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">for(int i&#x3D;0;i&lt;weight.size();i++)&#123;
+    for(int j&#x3D;bagWeight;j&gt;&#x3D;weight[i];j--)&#123;
+        dp[j]&#x3D;Math.max(dp[j],dp[j-weight[i]]+value[i]);
+    &#125;
+&#125;</code></pre>
+
+
+
+<h3 id="注意两点："><a href="#注意两点：" class="headerlink" title="注意两点："></a>注意两点：</h3><ol>
+<li>背包容量从大到小遍历：因为如果是从小到大遍历，则一件物品会被放入多次，从大到小遍历可以避免这个问题。</li>
+<li>先遍历物品再遍历背包：如果先遍历背包再遍历物品，则会导致背包最多只能放入一个物品，先遍历物品再遍历背包可以避免这个问题</li>
+</ol>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public int test(int[] weight,int[] value,int bagSize)&#123;
+    int length&#x3D;weight.length;
+    &#x2F;&#x2F;定义dp数组，采用滚动数组实现，其中dp[i]表示背包容量为i时放入物品的最大价值
+    int[] dp&#x3D;new int[bagSize+1];
+    for(int i&#x3D;0;i&lt;length;i++)&#123;
+        for(int j&#x3D;bagSize;j&gt;&#x3D;weight[i];j--)&#123;
+            dp[j]&#x3D;Math.max(dp[j],dp[j-weight[i]]+value[i]);
+        &#125;
+    &#125;
+    return dp[bagSize];
+    
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001.html" itemprop="url">01背包理论基础01</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2023-01-30T04:38:37.000Z" itemprop="datePublished">Jan 30 2023</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            6 minutes read (About 843 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="01背包理论基础01"><a href="#01背包理论基础01" class="headerlink" title="01背包理论基础01"></a>01背包理论基础01</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
+<ol>
+<li>确定dp数组以及下标的含义</li>
+</ol>
+<p>对于背包问题，有一种写法， 是使用二维数组，即<strong>dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少</strong>。</p>
+<ol start="2">
+<li>确定递推公式</li>
+</ol>
+<p>再回顾一下dp[i][j]的含义：从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。</p>
+<p>那么可以有两个方向推出来dp[i][j]，</p>
+<ul>
+<li><strong>不放物品i</strong>：由dp[i - 1][j]推出，即背包容量为j，里面不放物品i的最大价值，此时dp[i][j]就是dp[i - 1][j]。(其实就是当物品i的重量大于背包j的重量时，物品i无法放进背包中，所以被背包内的价值依然和前面相同。)</li>
+<li><strong>放物品i</strong>：由dp[i - 1][j - weight[i]]推出，dp[i - 1][j - weight[i]] 为背包容量为j - weight[i]的时候不放物品i的最大价值，那么dp[i - 1][j - weight[i]] + value[i] （物品i的价值），就是背包放物品i得到的最大价值</li>
+</ul>
+<p>所以递归公式： dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
+<ol start="3">
+<li>dp数组如何初始化</li>
+</ol>
+<p>状态转移方程 dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]); 可以看出i 是由 i-1 推导出来，那么i为0的时候就一定要初始化。</p>
+<p>dp[0][j]，即：i为0，存放编号0的物品的时候，各个容量的背包所能存放的最大价值。</p>
+<p>那么很明显当 j &lt; weight[0]的时候，dp[0][j] 应该是 0，因为背包容量比编号0的物品重量还小。</p>
+<p>当j &gt;&#x3D; weight[0]时，dp[0][j] 应该是value[0]，因为背包容量放足够放编号0物品。</p>
+<ol start="4">
+<li>确定遍历顺序</li>
+</ol>
+<p>那么问题来了，<strong>先遍历 物品还是先遍历背包重量呢？</strong></p>
+<p><strong>其实都可以！！ 但是先遍历物品更好理解</strong>。</p>
+<p>那么我先给出先遍历物品，然后遍历背包重量的代码。</p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public int 01bag(int[] weight,int[] value,int bagsize)&#123;
+    &#x2F;&#x2F;创建dp数组
+    int goods&#x3D;weight.length;&#x2F;&#x2F;获取物品的数量
+    int[][] dp&#x3D;new int[goods][bagSize+1];
+    &#x2F;&#x2F;初始化dp数组
+    &#x2F;&#x2F;创建数组后，初始值均为0，dp[0][j]&#x3D;value[0],其中j&gt;&#x3D;weight[0]
+    for(int j&#x3D;weight[0];j&lt;&#x3D;bagSize;j++)&#123;
+        dp[0][j]&#x3D;value[0];
+    &#125;
+    &#x2F;&#x2F;填充dp数组,先遍历物品再遍历背包容量
+    for(int i&#x3D;0;i&lt;weight.length;i++)&#123;
+        for(int j&#x3D;1;j&lt;&#x3D;bagSize;j++)&#123;
+            &#x2F;&#x2F;如果当前遍历的背包容量小于当前物品重量，表示根本放不下物品i，则前i-1个物品能放下的最大价值就是当前情况下的最大价值
+            if(j&lt;weight[i])&#123;
+                dp[i][j]&#x3D;dp[i-1][j];
+            &#125;else&#123;
+                &#x2F;&#x2F;如果可以放下，则在两种情况下取最大值
+                dp[j][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i]]+value[i]);
+            &#125;
+        &#125;
+    &#125;
+    return dp[goods-1][bagSize];
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html" itemprop="url">84.柱状图中最大的矩形</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2023-01-26T03:16:19.000Z" itemprop="datePublished">Jan 26 2023</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 398 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="84-柱状图中最大的矩形"><a href="#84-柱状图中最大的矩形" class="headerlink" title="84.柱状图中最大的矩形"></a>84.柱状图中最大的矩形</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="84">
+<li>柱状图中最大的矩形</li>
+</ol>
+<p>给定 <em>n</em> 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
+<p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：heights &#x3D; [2,1,5,6,2,3]
+输出：10
+解释：最大的矩形为图中红色区域，面积为 10</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入： heights &#x3D; [2,4]
+输出： 4</code></pre>
+
+
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= heights.length &lt;=105</code></li>
+<li><code>0 &lt;= heights[i] &lt;= 104</code></li>
+</ul>
+<p>题目描述：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/largest-rectangle-in-histogram/description/">https://leetcode.cn/problems/largest-rectangle-in-histogram/description/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int largestRectangleArea(int[] heights) &#123;
+        &#x2F;&#x2F;由于最大面积&#x3D;MAX(height[i]*(minRight[i]-minLeft[i]-1))求得，其中，minLeft[i]表示柱子i左边第一个高度小于i的柱子的下标，minRight表示柱子i右边第一个高度小于i的柱子的下标
+        int[] minLeft&#x3D;new int[heights.length];
+        int[] minRight&#x3D;new int[heights.length];
+
+        &#x2F;&#x2F;构造两个数组
+        int length&#x3D;heights.length;
+        minLeft[0]&#x3D;-1;
+        &#x2F;&#x2F;左数组，从0开始，在确定每一个柱子左边的第一根短柱子时都需要进行一次while循环。找到第一个小于柱子i的柱子下标，并赋值
+        for(int i&#x3D;0;i&lt;length;i++)&#123;
+            int t&#x3D;i-1;
+            while(t&gt;&#x3D;0&amp;&amp;heights[t]&gt;&#x3D;heights[i])&#123;
+                t&#x3D;minLeft[t];
+            &#125;
+            minLeft[i]&#x3D;t;
+        &#125;
+
+        &#x2F;&#x2F;右数组，从length-1开始，同左数组不断确定数组元素
+        minRight[length-1]&#x3D;length;
+        for(int i&#x3D;length-2;i&gt;&#x3D;0;i--)&#123;
+            int t&#x3D;i+1;
+            while(t&lt;length&amp;&amp;heights[t]&gt;&#x3D;heights[i])&#123;
+                t&#x3D;minRight[t];
+            &#125;
+            minRight[i]&#x3D;t;
+        &#125;
+
+        &#x2F;&#x2F;根据开头的公式，求得heights中的最大的矩形面积
+        int result&#x3D;0;
+        for(int i&#x3D;0;i&lt;length;i++)&#123;
+            int sum&#x3D;heights[i]*(minRight[i]-minLeft[i]-1);
+            result&#x3D;Math.max(sum,result);
+        &#125;
+        return result;
+
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0%E2%85%A0.html" itemprop="url">496.下一个更大元素Ⅰ</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2023-01-23T04:22:44.000Z" itemprop="datePublished">Jan 23 2023</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 582 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="496-下一个更大元素Ⅰ"><a href="#496-下一个更大元素Ⅰ" class="headerlink" title="496.下一个更大元素Ⅰ"></a>496.下一个更大元素Ⅰ</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ol start="496">
+<li>下一个更大元素 I</li>
+</ol>
+<p><code>nums1</code> 中数字 <code>x</code> 的 <strong>下一个更大元素</strong> 是指 <code>x</code> 在 <code>nums2</code> 中对应位置 <strong>右侧</strong> 的 <strong>第一个</strong> 比 <code>x</code> 大的元素。</p>
+<p>给你两个 <strong>没有重复元素</strong> 的数组 <code>nums1</code> 和 <code>nums2</code> ，下标从 <strong>0</strong> 开始计数，其中<code>nums1</code> 是 <code>nums2</code> 的子集。</p>
+<p>对于每个 <code>0 &lt;= i &lt; nums1.length</code> ，找出满足 <code>nums1[i] == nums2[j]</code> 的下标 <code>j</code> ，并且在 <code>nums2</code> 确定 <code>nums2[j]</code> 的 <strong>下一个更大元素</strong> 。如果不存在下一个更大元素，那么本次查询的答案是 <code>-1</code> 。</p>
+<p>返回一个长度为 <code>nums1.length</code> 的数组 <code>ans</code> 作为答案，满足 <code>ans[i]</code> 是如上所述的 <strong>下一个更大元素</strong> 。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [4,1,2], nums2 &#x3D; [1,3,4,2].
+输出：[-1,3,-1]
+解释：nums1 中每个值的下一个更大元素如下所述：
+- 4 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。不存在下一个更大元素，所以答案是 -1 。
+- 1 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。下一个更大元素是 3 。
+- 2 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。不存在下一个更大元素，所以答案是 -1 。</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [2,4], nums2 &#x3D; [1,2,3,4].
+输出：[3,-1]
+解释：nums1 中每个值的下一个更大元素如下所述：
+- 2 ，用加粗斜体标识，nums2 &#x3D; [1,2,3,4]。下一个更大元素是 3 。
+- 4 ，用加粗斜体标识，nums2 &#x3D; [1,2,3,4]。不存在下一个更大元素，所以答案是 -1 。</code></pre>
+
+
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= nums1.length &lt;= nums2.length &lt;= 1000</code></li>
+<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 104</code></li>
+<li><code>nums1</code>和<code>nums2</code>中所有整数 <strong>互不相同</strong></li>
+<li><code>nums1</code> 中的所有整数同样出现在 <code>nums2</code> 中</li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/description/">https://leetcode.cn/problems/next-greater-element-i/description/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) &#123;
+
+        &#x2F;&#x2F;先构造单调栈，再构造nums2对应的每个元素下一个最大元素数组，temp_nums2
+        &#x2F;&#x2F;存放的是nums2中元素的下标
+        Deque&lt;Integer&gt; stack&#x3D;new LinkedList&lt;&gt;();
+        
+        int[] temp_nums2&#x3D;new int[nums2.length];
+        for(int i&#x3D;0;i&lt;nums2.length;i++)&#123;
+            
+            while(!stack.isEmpty()&amp;&amp;nums2[i]&gt;nums2[stack.peek()])&#123;
+                temp_nums2[stack.peek()]&#x3D;nums2[i];
+                stack.pop();
+            &#125;
+            stack.push(i);
+
+        &#125;
+        &#x2F;&#x2F;根据nums1和temp_nums2构造结果数组，存放nums1中每一个元素的下一个更大元素
+        int[] res&#x3D;new int[nums1.length];
+        for(int m&#x3D;0;m&lt;nums1.length;m++)&#123;
+            for(int n&#x3D;0;n&lt;nums2.length;n++)&#123;
+                if(nums1[m]&#x3D;&#x3D;nums2[n])&#123;
+                    res[m]&#x3D;temp_nums2[n];
+                &#125;
+            &#125;
+        &#125;
+        for(int j&#x3D;0;j&lt;res.length;j++)&#123;
+            if(res[j]&#x3D;&#x3D;0)&#123;
+                res[j]&#x3D;-1;
+            &#125;
+        &#125;
+        return res;
+
+
+
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html" itemprop="url">509.斐波那契数列</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2023-01-06T09:13:18.000Z" itemprop="datePublished">Jan 6 2023</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 237 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="509-斐波那契数列"><a href="#509-斐波那契数列" class="headerlink" title="509.斐波那契数列"></a>509.斐波那契数列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="509">
+<li>斐波那契数</li>
+</ol>
+<p><strong>斐波那契数</strong> （通常用 <code>F(n)</code> 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
+<pre class="line-numbers language-none"><code class="language-none">F(0) &#x3D; 0，F(1) &#x3D; 1
+F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1</code></pre>
+
+<p>给定 <code>n</code> ，请计算 <code>F(n)</code> 。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 2
+输出：1
+解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 3
+输出：2
+解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2</code></pre>
+
+<p>example 3:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 4
+输出：3
+解释：F(4) &#x3D; F(3) + F(2) &#x3D; 2 + 1 &#x3D; 3</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>0 &lt;= n &lt;= 30</code></li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/description/">https://leetcode.cn/problems/fibonacci-number/description/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;动态规划
+class Solution &#123;
+    public int fib(int n) &#123;
+        if(n&lt;&#x3D;1)
+            return n;
+        &#x2F;&#x2F;创建dp数组，用于存储每一次的推导结果
+        int[] dp&#x3D;new int[n+1];
+        dp[0]&#x3D;0;
+        dp[1]&#x3D;1;
+        for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
+            dp[i]&#x3D;dp[i-1]+dp[i-2];
+        &#125;
+        return dp[n];
+        
+
+    &#125;
+&#125;</code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;递归
+class Solution &#123;
+    public int fib(int n) &#123;
+        if(n&lt;&#x3D;1)&#123;
+            return n;
+        &#125;
+        return fib(n-1)+fib(n-2);
+        
+
+    &#125;
+&#125;</code></pre>
+
+
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.html" itemprop="url">968.监控二叉树</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-12-27T13:07:30.000Z" itemprop="datePublished">Dec 27 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 328 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="968-监控二叉树"><a href="#968-监控二叉树" class="headerlink" title="968.监控二叉树"></a>968.监控二叉树</h1><h2 id="1-问题描述："><a href="#1-问题描述：" class="headerlink" title="1.问题描述："></a>1.问题描述：</h2><ol start="968">
+<li>监控二叉树</li>
+</ol>
+<p>给定一个二叉树，我们在树的节点上安装摄像头。</p>
+<p>节点上的每个摄影头都可以监视<strong>其父对象、自身及其直接子对象。</strong></p>
+<p>计算监控树的所有节点所需的最小摄像头数量。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：[0,0,null,0,0]
+输出：1
+解释：如图所示，一台摄像头足以监控所有节点。</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：[0,0,null,0,null,0,null,null,0]
+输出：2
+解释：需要至少两个摄像头来监视树的所有节点。 上图显示了摄像头放置的有效位置之一。</code></pre>
+
+<p>提示：</p>
+<ol>
+<li>给定树的节点数的范围是 <code>[1, 1000]</code>。</li>
+<li>每个节点的值都是 0。</li>
+</ol>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-cameras/">https://leetcode.cn/problems/binary-tree-cameras/</a></p>
+<h2 id="2-题解："><a href="#2-题解：" class="headerlink" title="2.题解："></a>2.题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val &#x3D; val;
+ *         this.left &#x3D; left;
+ *         this.right &#x3D; right;
+ *     &#125;
+ * &#125;
+ *&#x2F;
+class Solution &#123;
+    int res&#x3D;0;
+    public int minCameraCover(TreeNode root) &#123;
+        &#x2F;&#x2F;根节点不一定被覆盖，需要检查一下
+        if(minCamera(root)&#x3D;&#x3D;0)&#123;
+            res++;
+        &#125;
+        return res;
+    &#125;
+
+    &#x2F;**
+        若未覆盖，return 0
+        若有相机，return 1
+        若已覆盖，return 2
+     *&#x2F;
+    public int minCamera(TreeNode root)&#123;
+        if(root&#x3D;&#x3D;null)&#123;
+            return 2;
+        &#125;
+        int left&#x3D;minCamera(root.left);
+        int right&#x3D;minCamera(root.right);
+
+        if(left&#x3D;&#x3D;2&amp;&amp;right&#x3D;&#x3D;2)&#123;
+            return 0;
+        &#125;else if(left&#x3D;&#x3D;0||right&#x3D;&#x3D;0)&#123;
+            res++;
+            return 1;
+        &#125;else&#123;
+            return 2;
+        &#125;
+        
+
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/714-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9.html" itemprop="url">714.买卖股票的最佳时机含手续费</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-12-25T13:42:08.000Z" itemprop="datePublished">Dec 25 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 401 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="714-买卖股票的最佳时机含手续费"><a href="#714-买卖股票的最佳时机含手续费" class="headerlink" title="714.买卖股票的最佳时机含手续费"></a>714.买卖股票的最佳时机含手续费</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ol start="714">
+<li>买卖股票的最佳时机含手续费</li>
+</ol>
+<p>给定一个整数数组 <code>prices</code>，其中 <code>prices[i]</code>表示第 <code>i</code> 天的股票价格 ；整数 <code>fee</code> 代表了交易股票的手续费用。</p>
+<p>你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。</p>
+<p>返回获得利润的最大值。</p>
+<p><strong>注意：</strong>这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [1, 3, 2, 8, 4, 9], fee &#x3D; 2
+输出：8
+解释：能够达到的最大利润:  
+在此处买入 prices[0] &#x3D; 1
+在此处卖出 prices[3] &#x3D; 8
+在此处买入 prices[4] &#x3D; 4
+在此处卖出 prices[5] &#x3D; 9
+总利润: ((8 - 1) - 2) + ((9 - 4) - 2) &#x3D; 8</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [1,3,7,5,10,3], fee &#x3D; 3
+输出：6</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= prices.length &lt;= 5 * 104</code></li>
+<li><code>1 &lt;= prices[i] &lt; 5 * 104</code></li>
+<li><code>0 &lt;= fee &lt; 5 * 104</code></li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int maxProfit(int[] prices, int fee) &#123;
+        int result&#x3D;0;
+        int minPrice&#x3D;prices[0]; &#x2F;&#x2F;记录最低价格
+        for(int i&#x3D;1;i&lt;prices.length;i++)&#123;
+            &#x2F;&#x2F;记录股票最小价格
+            if(prices[i]&lt;minPrice) minPrice&#x3D;prices[i];
+
+            &#x2F;&#x2F;如果当前遍历到的股票价格无法获得收益,就不更新
+            if(prices[i]&gt;&#x3D;minPrice&amp;&amp;prices[i]&lt;&#x3D;minPrice+fee)&#123;
+                continue;
+            &#125;
+            &#x2F;&#x2F;计算利润，注意，这里获得利润不一定是直接将股票卖出了
+            if(prices[i]&gt;minPrice+fee)&#123;
+                result+&#x3D;prices[i]-minPrice-fee;
+                &#x2F;&#x2F;收获利润的这一天并不是收获利润区间里的最后一天（不是真正的卖出，相当于持有股票），所以后面要继续收获利润。
+                minPrice&#x3D;prices[i]-fee;
+            &#125;
+
+        &#125;
+        return result;
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.html" itemprop="url">56.合并区间</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-12-23T14:03:17.000Z" itemprop="datePublished">Dec 23 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 322 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="56-合并区间"><a href="#56-合并区间" class="headerlink" title="56.合并区间"></a>56.合并区间</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 <code>intervals[i] = [starti, endi]</code> 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：intervals &#x3D; [[1,3],[2,6],[8,10],[15,18]]
+输出：[[1,6],[8,10],[15,18]]
+解释：区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：intervals &#x3D; [[1,4],[4,5]]
+输出：[[1,5]]
+解释：区间 [1,4] 和 [4,5] 可被视为重叠区间。</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= intervals.length &lt;= 104</code></li>
+<li><code>intervals[i].length == 2</code></li>
+<li><code>0 &lt;= starti &lt;= endi &lt;= 104</code></li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">https://leetcode.cn/problems/merge-intervals/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int[][] merge(int[][] intervals) &#123;
+        List&lt;int[]&gt; result&#x3D;new LinkedList&lt;&gt;();
+        &#x2F;&#x2F;按照子数组的左边界进行排序
+        Arrays.sort(intervals, (x,y)-&gt;Integer.compare(x[0],y[0]));
+        &#x2F;&#x2F;初始化新子区间的左边界为第一个子区间的左边界
+        int start&#x3D;intervals[0][0];
+        &#x2F;&#x2F;初始化新子区间的最远边界为第一个子区间的右边界
+        int rightMaxBound&#x3D;intervals[0][1];
+        for(int i&#x3D;1;i&lt;intervals.length;i++)&#123;
+            &#x2F;&#x2F;如果当前子区间的左边界大于最大右边界，表示当前区间和前一个区间分割开了
+            if(intervals[i][0]&gt;rightMaxBound)&#123;
+                &#x2F;&#x2F;将上一个划分出来的区间加入到结果集合中
+                result.add(new int[]&#123;start,rightMaxBound&#125;);
+                start&#x3D;intervals[i][0];
+                rightMaxBound&#x3D;intervals[i][1];
+            &#125;else&#123;
+                &#x2F;&#x2F;如果这个遍历到的区间和之前遍历的区间是有重叠的，则更新最大右边界
+                rightMaxBound&#x3D;Math.max(rightMaxBound,intervals[i][1]);
+            &#125;
+        &#125;
+        result.add(new int[]&#123;start,rightMaxBound&#125;);
+        return result.toArray(new int[result.size()][]);
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/435-%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.html" itemprop="url">435.无重叠区间</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-12-21T14:23:54.000Z" itemprop="datePublished">Dec 21 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 232 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="435-无重叠区间"><a href="#435-无重叠区间" class="headerlink" title="435.无重叠区间"></a>435.无重叠区间</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="435">
+<li>无重叠区间</li>
+</ol>
+<p>给定一个区间的集合 <code>intervals</code> ，其中 <code>intervals[i] = [starti, endi]</code> 。返回 <em>需要移除区间的最小数量，使剩余区间互不重叠</em> 。</p>
+<p>example 1：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [[1,2],[2,3],[3,4],[1,3]]
+输出: 1
+解释: 移除 [1,3] 后，剩下的区间没有重叠。</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [ [1,2], [1,2], [1,2] ]
+输出: 2
+解释: 你需要移除两个 [1,2] 来使剩下的区间没有重叠。</code></pre>
+
+<p>example 3:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [ [1,2], [2,3] ]
+输出: 0
+解释: 你不需要移除任何区间，因为它们已经是无重叠的了。</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= intervals.length &lt;= 105</code></li>
+<li><code>intervals[i].length == 2</code></li>
+<li><code>-5 * 104 &lt;= starti &lt; endi &lt;= 5 * 104</code></li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-overlapping-intervals/">https://leetcode.cn/problems/non-overlapping-intervals/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int eraseOverlapIntervals(int[][] intervals) &#123;
+        &#x2F;&#x2F;对数组元素按照下标一号元素进行升序排序
+        Arrays.sort(intervals,(a,b)-&gt;&#123;
+            return Integer.compare(a[0],b[0]);
+        &#125;);
+        int num&#x3D;1;
+        for(int i&#x3D;1;i&lt;intervals.length;i++)&#123;
+            if(intervals[i-1][1]&lt;&#x3D;intervals[i][0])&#123;
+                num++;
+            &#125;else&#123;
+                intervals[i][1]&#x3D;Math.min(intervals[i-1][1],intervals[i][1]);
+            &#125;
+        &#125;
+        return intervals.length-num;
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83.html" itemprop="url">452.用最少数量的箭引爆气球</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-12-20T12:00:52.000Z" itemprop="datePublished">Dec 20 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 582 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="452-用最少数量的箭引爆气球"><a href="#452-用最少数量的箭引爆气球" class="headerlink" title="452.用最少数量的箭引爆气球"></a>452.用最少数量的箭引爆气球</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="452">
+<li>用最少数量的箭引爆气球</li>
+</ol>
+<p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 <code>points</code> ，其中<code>points[i] = [xstart, xend]</code> 表示水平直径在 <code>xstart</code> 和 <code>xend</code>之间的气球。你不知道气球的确切 y 坐标。</p>
+<p>一支弓箭可以沿着 x 轴从不同点 <strong>完全垂直</strong> 地射出。在坐标 <code>x</code> 处射出一支箭，若有一个气球的直径的开始和结束坐标为 <code>x``start</code>，<code>x``end</code>， 且满足  <code>xstart ≤ x ≤ x``end</code>，则该气球会被 <strong>引爆</strong> 。可以射出的弓箭的数量 <strong>没有限制</strong> 。 弓箭一旦被射出之后，可以无限地前进。</p>
+<p>给你一个数组 <code>points</code> ，<em>返回引爆所有气球所必须射出的 <strong>最小</strong> 弓箭数</em> 。</p>
+<p>example 1：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[10,16],[2,8],[1,6],[7,12]]
+输出：2
+解释：气球可以用2支箭来爆破:
+-在x &#x3D; 6处射出箭，击破气球[2,8]和[1,6]。
+-在x &#x3D; 11处发射箭，击破气球[10,16]和[7,12]。</code></pre>
+
+<p>example 2：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[3,4],[5,6],[7,8]]
+输出：4
+解释：每个气球需要射出一支箭，总共需要4支箭。</code></pre>
+
+<p>example 3:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[2,3],[3,4],[4,5]]
+输出：2
+解释：气球可以用2支箭来爆破:
+- 在x &#x3D; 2处发射箭，击破气球[1,2]和[2,3]。
+- 在x &#x3D; 4处射出箭，击破气球[3,4]和[4,5]。</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= points.length &lt;= 105</code></li>
+<li><code>points[i].length == 2</code></li>
+<li><code>-231 &lt;= xstart &lt; xend &lt;= 231 - 1</code></li>
+</ul>
+<p>题目来源：</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public int findMinArrowShots(int[][] points) &#123;
+        Arrays.sort(points,(a,b)-&gt;Integer.compare(a[0],b[0]));
+
+        &#x2F;&#x2F;初始状态最少需要一根箭
+        int arrowNum&#x3D;1;
+        for(int i&#x3D;1;i&lt;points.length;i++)&#123;
+            &#x2F;&#x2F;若两个气球没有交集，则需要加一根箭，因为之前那根箭只能射穿之前重叠的所有气球
+            if(points[i][0]&gt;points[i-1][1])&#123;
+                arrowNum++;
+            &#125;else&#123;      &#x2F;&#x2F;若两个气球是有交集的，那么就需要改变一下当前遍历气球的右边界，右边界取当前右边界和上一个气球右边界的最小值，之所以这么选是因为，取最小值可以保证这一支箭可以把所有重叠的气球都射穿，如果不对右边界进行更新，则只能保证气球之间两两重叠，无法保证所有发生重叠的气球都可以使用一只箭矢射穿
+                points[i][1]&#x3D;Math.min(points[i-1][1],points[i][1]);
+
+            &#125;
+
+        &#125;
+        return arrowNum;
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+        
+<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+    <div class="pagination-previous is-invisible is-hidden-mobile">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/0/">Prev</a>
+    </div>
+    <div class="pagination-next">
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/2/">Next</a>
+    </div>
+    <ul class="pagination-list is-hidden-mobile">
+        
+        <li><a class="pagination-link is-current" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">1</a></li>
+        
+        <li><a class="pagination-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/2/">2</a></li>
+        
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+        
+        <li><a class="pagination-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/page/12/">12</a></li>
+        
+    </ul>
+</nav>
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2023 John Doe&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>

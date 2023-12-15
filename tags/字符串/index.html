@@ -1,1 +1,979 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>字符串 | Hexo</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo</h1><a id="logo" href="/.">Hexo</a><p class="description"></p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> Home</i></a><a class="current" href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><h1 class="label-title">Reading articles in 字符串</h1><div class="post"><div class="post-archive"><h2>2022</h2><ul class="listing"><li><span class="date">2022-09-11</span><a href="/post/28-%E5%AE%9E%E7%8E%B0-strStr.html" title="28.实现 strStr()">28.实现 strStr()</a></li><li><span class="date">2022-09-10</span><a href="/post/459-%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2.html" title="459.重复的子字符串">459.重复的子字符串</a></li><li><span class="date">2022-09-07</span><a href="/post/%E5%89%91%E6%8C%87Offer58-II-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html" title="剑指Offer58-II.左旋转字符串">剑指Offer58-II.左旋转字符串</a></li><li><span class="date">2022-09-06</span><a href="/post/151-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D.html" title="151.反转字符串中的单词">151.反转字符串中的单词</a></li><li><span class="date">2022-09-05</span><a href="/post/05-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html" title="05.替换空格">05.替换空格</a></li><li><span class="date">2022-09-03</span><a href="/post/541-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%85%A1.html" title="541.反转字符串Ⅱ">541.反转字符串Ⅱ</a></li><li><span class="date">2022-09-02</span><a href="/post/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html" title="344.反转字符串">344.反转字符串</a></li></ul></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://example.com"/></form></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="About"><img class="nofancybox" src="/img/avatar.png"/></a><p>To be a better man.</p><a class="info-icon" href="https://twitter.com/username" title="Twitter" target="_blank" style="margin-inline:5px"> <i class="fa fa-twitter-square" style="margin-inline:5px"></i></a><a class="info-icon" href="mailto:admin@domain.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/username" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a><a class="info-icon" href="/atom.xml" title="RSS" target="_blank" style="margin-inline:5px"> <i class="fa fa-rss-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SDN/">SDN</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB%E5%89%8D%E7%AB%AF/">WEB前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E6%97%A5%E5%BF%97/">个人日志</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AE%9E%E9%AA%8C/">实验</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%9C%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结果与算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 15px;">动态规划</a> <a href="/tags/leetcode/" style="font-size: 15px;">leetcode</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 15px;">字符串</a> <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" style="font-size: 15px;">贪心算法</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 15px;">二叉树</a> <a href="/tags/%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" style="font-size: 15px;">栈和队列</a> <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" style="font-size: 15px;">回溯算法</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 15px;">链表</a> <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" style="font-size: 15px;">哈希表</a> <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" style="font-size: 15px;">单调栈</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/%E6%8A%A5%E9%94%99/" style="font-size: 15px;">报错</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" style="font-size: 15px;">使用说明</a> <a href="/tags/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98/" style="font-size: 15px;">Java并发编程实战</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15px;">数据结构</a> <a href="/tags/Pycharm/" style="font-size: 15px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF/" style="font-size: 15px;">语法错误</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 15px;">记录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" style="font-size: 15px;">使用方法</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 15px;">科研</a> <a href="/tags/%E6%A8%A1%E5%9D%97/" style="font-size: 15px;">模块</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/post/comeback.html">comeback</a></li><li class="post-list-item"><a class="post-list-link" href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8002.html">01背包理论基础02</a></li><li class="post-list-item"><a class="post-list-link" href="/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001.html">01背包理论基础01</a></li><li class="post-list-item"><a class="post-list-link" href="/post/84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2.html">84.柱状图中最大的矩形</a></li><li class="post-list-item"><a class="post-list-link" href="/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">42.接雨水</a></li><li class="post-list-item"><a class="post-list-link" href="/post/496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0%E2%85%A0.html">496.下一个更大元素Ⅰ</a></li><li class="post-list-item"><a class="post-list-link" href="/post/739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6.html">739.每日温度</a></li><li class="post-list-item"><a class="post-list-link" href="/post/62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.html">62.不同路径</a></li><li class="post-list-item"><a class="post-list-link" href="/post/509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html">509.斐波那契数列</a></li><li class="post-list-item"><a class="post-list-link" href="/post/968-%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.html">968.监控二叉树</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/." rel="nofollow">Hexo.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js?v=1.0.0" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Tag: 字符串 - Hexo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories/Music">Music</a>
+            
+            <a class="navbar-item "
+               href="/categories/Technology">Technology</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5>#字符串</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/28-%E5%AE%9E%E7%8E%B0-strStr.html" itemprop="url">28.实现 strStr()</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-11T14:34:12.000Z" itemprop="datePublished">Sep 11 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 435 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="28-实现-strStr"><a href="#28-实现-strStr" class="headerlink" title="28.实现 strStr()"></a>28.实现 strStr()</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="28">
+<li>实现 strStr()</li>
+</ol>
+<p>实现 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strStr()</a> 函数。</p>
+<p>给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回 <code>-1</code> 。</p>
+<p><strong>说明：</strong></p>
+<p>当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
+<p>对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 0 。这与 C 语言的 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strstr()</a> 以及 Java 的 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)">indexOf()</a> 定义相符。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot;
+输出：2</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;aaaaa&quot;, needle &#x3D; &quot;bba&quot;
+输出：-1</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= haystack.length, needle.length &lt;= 104</code></li>
+<li><code>haystack</code> 和 <code>needle</code> 仅由小写英文字符组成</li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 方法一
+class Solution &#123;
+    &#x2F;&#x2F;求出next数组
+    public void getNext(int[] next,String s)&#123;
+        int j&#x3D;-1;
+        next[0]&#x3D;j;
+        &#x2F;&#x2F;j指向前缀的末尾，i指向后缀的末尾
+        for(int i&#x3D;1;i&lt;next.length;i++)&#123;
+            &#x2F;&#x2F;若前缀的末尾和后缀的末尾不匹配，则将前缀的末尾进行回退
+            while(j&gt;&#x3D;0&amp;&amp;s.charAt(i)!&#x3D;s.charAt(j+1))&#123;
+                j&#x3D;next[j];
+            &#125;
+            &#x2F;&#x2F;若匹配成功，则i和j都向后移动
+            if(s.charAt(i)&#x3D;&#x3D;s.charAt(j+1))&#123;
+                j++;
+            &#125;
+            &#x2F;&#x2F;求得最大前后缀长度
+            next[i]&#x3D;j;
+        &#125;
+        
+    &#125;
+    
+    public int strStr(String haystack, String needle) &#123;
+        int[] next&#x3D;new int[needle.length()];
+        &#x2F;&#x2F;j为模式串指针
+        int j&#x3D;-1;
+        &#x2F;&#x2F;求next数组
+        getNext(next,needle);
+        &#x2F;&#x2F;i为匹配串指针
+        for(int i&#x3D;0;i&lt;haystack.length();i++)&#123;
+            &#x2F;&#x2F;若匹配失败，则模式串指针回退
+            while(j&gt;&#x3D;0&amp;&amp;haystack.charAt(i)!&#x3D;needle.charAt(j+1))&#123;
+                j&#x3D;next[j];
+            &#125;
+            &#x2F;&#x2F;匹配成功继续向后匹配
+            if(needle.charAt(j+1)&#x3D;&#x3D;haystack.charAt(i))&#123;
+                j++;
+            &#125;
+            &#x2F;&#x2F;判断模式串是否匹配成功，若j到达模式串末尾，则返回匹配成功位置
+            if(j&#x3D;&#x3D;needle.length()-1)&#123;
+                return i-needle.length()+1;
+            &#125;
+        &#125;
+        &#x2F;&#x2F;匹配失败
+        return -1;
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/459-%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2.html" itemprop="url">459.重复的子字符串</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-10T12:17:28.000Z" itemprop="datePublished">Sep 10 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 322 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="459-重复的子字符串"><a href="#459-重复的子字符串" class="headerlink" title="459.重复的子字符串"></a>459.重复的子字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="459">
+<li>重复的子字符串</li>
+</ol>
+<p>给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abab&quot;
+输出: true
+解释: 可由子串 &quot;ab&quot; 重复两次构成。</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;aba&quot;
+输出: false</code></pre>
+
+<p>example 3:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abcabcabcabc&quot;
+输出: true
+解释: 可由子串 &quot;abc&quot; 重复四次构成。 (或子串 &quot;abcabc&quot; 重复两次构成。)</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 104</code></li>
+<li><code>s</code> 由小写英文字母组成</li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/repeated-substring-pattern/">https://leetcode.cn/problems/repeated-substring-pattern/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
+将两个 ss 连在一起，并移除第一个和最后一个字符。如果 ss 是该字符串的子串，那么 ss 就满足题目要求。
+
+注意到我们证明的是如果 ss 满足题目要求，那么 ss 有这样的性质，而我们使用的方法却是如果 ss 有这样的性质，那么 ss 满足题目要求。因此，只证明了充分性是远远不够的，我们还需要证明必要性。
+*&#x2F;
+class Solution &#123;
+    public boolean repeatedSubstringPattern(String s) &#123;
+        &#x2F;&#x2F;将字符串进行拼接，查看拼接完后第二个字符串的位置，
+        return (s+s).indexOf(s,1)!&#x3D;s.length();
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/%E5%89%91%E6%8C%87Offer58-II-%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html" itemprop="url">剑指Offer58-II.左旋转字符串</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-07T13:28:59.000Z" itemprop="datePublished">Sep 7 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 270 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="剑指Offer58-II-左旋转字符串"><a href="#剑指Offer58-II-左旋转字符串" class="headerlink" title="剑指Offer58-II.左旋转字符串"></a>剑指Offer58-II.左旋转字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>剑指 Offer 58 - II. 左旋转字符串</p>
+<p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2
+输出: &quot;cdefgab&quot;</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;lrloseumgh&quot;, k &#x3D; 6
+输出: &quot;umghlrlose&quot;</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= k &lt; s.length &lt;= 10000</code></li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">剑指 Offer 58 - II. 左旋转字符串 - 力扣（LeetCode）</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">
+class Solution &#123;
+    &#x2F;&#x2F;先反转1-n的字符串，然后反转n+1到末尾的字符串
+    &#x2F;&#x2F;最后对整个字符串进行反转，不需要额外的空间
+    public String reverseLeftWords(String s, int n) &#123;
+        int len&#x3D;s.length();
+        StringBuilder sb&#x3D;new StringBuilder(s);
+        reverseString(sb,0,n-1);
+        reverseString(sb,n,len-1);
+        return sb.reverse().toString();
+    &#125;
+     public void reverseString(StringBuilder sb, int start, int end) &#123;
+        while (start &lt; end) &#123;
+            char temp &#x3D; sb.charAt(start);
+            sb.setCharAt(start, sb.charAt(end));
+            sb.setCharAt(end, temp);
+            start++;
+            end--;
+            &#125;
+        &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/151-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D.html" itemprop="url">151.反转字符串中的单词</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-06T13:39:09.000Z" itemprop="datePublished">Sep 6 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes read (About 564 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="151-反转字符串中的单词"><a href="#151-反转字符串中的单词" class="headerlink" title="151.反转字符串中的单词"></a>151.反转字符串中的单词</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="151">
+<li>反转字符串中的单词</li>
+</ol>
+<p>给你一个字符串 <code>s</code> ，请你反转字符串中 <strong>单词</strong> 的顺序。</p>
+<p><strong>单词</strong> 是由非空格字符组成的字符串。<code>s</code> 中使用至少一个空格将字符串中的 <strong>单词</strong> 分隔开。</p>
+<p>返回 <strong>单词</strong> 顺序颠倒且 <strong>单词</strong> 之间用单个空格连接的结果字符串。</p>
+<p><strong>注意：</strong>输入字符串 <code>s</code>中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;the sky is blue&quot;
+输出：&quot;blue is sky the&quot;</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;  hello world  &quot;
+输出：&quot;world hello&quot;
+解释：反转后的字符串中不能存在前导空格和尾随空格。</code></pre>
+
+<p>example 3:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;a good   example&quot;
+输出：&quot;example good a&quot;
+解释：如果两个单词间有多余的空格，反转后的字符串需要将单词间的空格减少到仅有一个。</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 104</code></li>
+<li><code>s</code> 包含英文大小写字母、数字和空格 <code>&#39; &#39;</code></li>
+<li><code>s</code> 中 <strong>至少存在一个</strong> 单词</li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-words-in-a-string">https://leetcode.cn/problems/reverse-words-in-a-string</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public String reverseWords(String s) &#123;
+        &#x2F;&#x2F;源字符数组
+        char[] s_char&#x3D;s.toCharArray();
+        &#x2F;&#x2F;创建新的字符数组
+        char[] new_str&#x3D;new char[s_char.length+1];
+        &#x2F;&#x2F;新字符数组指针
+        int newStr_index&#x3D;0;
+        &#x2F;&#x2F;源字符数组指针，从末尾开始
+        int i&#x3D;s_char.length-1;
+        &#x2F;&#x2F;从后向前遍历
+        while(i&gt;&#x3D;0)&#123;
+            &#x2F;&#x2F;找到最后一个单词的末尾位置并记录
+            while(i&gt;&#x3D;0&amp;&amp;s_char[i]&#x3D;&#x3D;&#39; &#39;) i--;
+            int right&#x3D;i;
+            &#x2F;&#x2F;找到最后一个单词的起始位置并记录
+            while(i&gt;&#x3D;0&amp;&amp;s_char[i]!&#x3D;&#39; &#39;) i--;
+            int left&#x3D;i+1;
+            &#x2F;&#x2F;将原字符数组的最后一个单词，存入新字符数组的第一个单词位置
+            for(int j&#x3D;left;j&lt;&#x3D;right;j++)&#123;
+                new_str[newStr_index++]&#x3D;s_char[j];
+                &#x2F;&#x2F;若遍历到单词末尾，则添加空格
+                if(j&#x3D;&#x3D;right)&#123;
+                    new_str[newStr_index++]&#x3D;&#39; &#39;;
+                &#125;
+            &#125;
+        &#125;
+        &#x2F;&#x2F;若原数组没有单词，则返回空字符串
+        if(newStr_index&#x3D;&#x3D;0)&#123;
+            return &quot;&quot;;
+            &#x2F;&#x2F;否则返回反转后的字符串
+        &#125;else&#123;
+            return new String(new_str,0,newStr_index-1);
+        &#125;
+
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/05-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html" itemprop="url">05.替换空格</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-05T14:29:42.000Z" itemprop="datePublished">Sep 5 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 385 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="05-替换空格"><a href="#05-替换空格" class="headerlink" title="05.替换空格"></a>05.替换空格</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>剑指 Offer 05. 替换空格</p>
+<p>请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;We are happy.&quot;
+输出：&quot;We%20are%20happy.&quot;</code></pre>
+
+<p>提示：</p>
+<p>0 &lt;&#x3D; s 的长度 &lt;&#x3D; 10000</p>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">https://leetcode.cn/problems/ti-huan-kong-ge-lcof/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;常规方法：从前向后遍历，遇到空格则替换为&quot;02%&quot;，可以使用StringBuilder实现，但是每次替换，后面的字符串需要向后移动
+&#x2F;&#x2F;使用一个新的对象，复制 str，复制的过程对其判断，是空格则替换，否则直接复制，类似于数组复制
+public static String replaceSpace(StringBuffer str) &#123;
+        if (str &#x3D;&#x3D; null) &#123;
+            return null;
+        &#125;
+		&#x2F;&#x2F;选用 StringBuilder 单线程使用，比较快，选不选都行
+        StringBuilder sb &#x3D; new StringBuilder();
+		&#x2F;&#x2F;使用 sb 逐个复制 str ，碰到空格则替换，否则直接复制
+        for (int i &#x3D; 0; i &lt; str.length(); i++) &#123;
+		&#x2F;&#x2F;str.charAt(i) 为 char 类型，为了比较需要将其转为和 &quot; &quot; 相同的字符串类型
+        &#x2F;&#x2F;if (&quot; &quot;.equals(String.valueOf(str.charAt(i))))&#123;
+            if (s.charAt(i) &#x3D;&#x3D; &#39; &#39;) &#123;
+                sb.append(&quot;%20&quot;);
+            &#125; else &#123;
+                sb.append(str.charAt(i));
+            &#125;
+        &#125;
+        return sb.toString();
+    &#125;
+&#x2F;&#x2F;从后向前遍历，使用双指针的方法进行实现，速度更快beat 100%
+class Solution &#123;
+    public String replaceSpace(String s) &#123;
+        &#x2F;&#x2F;判断参数是否合法
+        if(s.length()&#x3D;&#x3D;0||s&#x3D;&#x3D;null)&#123;
+            return s;
+        &#125;
+        &#x2F;&#x2F;拼接字符串
+        StringBuilder tail&#x3D;new StringBuilder();
+        &#x2F;&#x2F;每遍历到一个空格，拼接字符串扩大两个空格大小
+        for(int i&#x3D;0;i&lt;s.length();i++)&#123;
+            if(s.charAt(i)&#x3D;&#x3D;&#39; &#39;)&#123;
+                tail.append(&quot;  &quot;);
+            &#125;
+        &#125;
+        &#x2F;&#x2F;若不存在空格，则直接返回
+        if(tail.length()&#x3D;&#x3D;0)&#123;
+            return s;
+        &#125;
+        &#x2F;&#x2F;记录左右指针
+        int left&#x3D;s.length()-1;
+        s+&#x3D;tail;
+        int right&#x3D;s.length()-1;
+        char[] chars&#x3D;s.toCharArray();
+        &#x2F;&#x2F;左指针i从后向前遍历
+        while(left&gt;&#x3D;0)&#123;
+            if(chars[left]&#x3D;&#x3D;&#39; &#39;)&#123;
+                chars[right--]&#x3D;&#39;0&#39;;
+                chars[right--]&#x3D;&#39;2&#39;;
+                chars[right]&#x3D;&#39;%&#39;;
+            &#125;else&#123;
+                chars[right]&#x3D;chars[left];
+            &#125;
+            left--;
+            right--;
+        &#125;
+        return new String(chars);
+    &#125;
+&#125;
+</code></pre>
+
+
+
+
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/541-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%85%A1.html" itemprop="url">541.反转字符串Ⅱ</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-03T13:23:56.000Z" itemprop="datePublished">Sep 3 2022</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 322 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="541-反转字符串Ⅱ"><a href="#541-反转字符串Ⅱ" class="headerlink" title="541.反转字符串Ⅱ"></a>541.反转字符串Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="541">
+<li>反转字符串 II</li>
+</ol>
+<p>给定一个字符串 <code>s</code> 和一个整数 <code>k</code>，从字符串开头算起，每计数至 <code>2k</code> 个字符，就反转这 <code>2k</code> 字符中的前 <code>k</code> 个字符。</p>
+<ul>
+<li>如果剩余字符少于 <code>k</code> 个，则将剩余字符全部反转。</li>
+<li>如果剩余字符小于 <code>2k</code> 但大于或等于 <code>k</code> 个，则反转前 <code>k</code> 个字符，其余字符保持原样。</li>
+</ul>
+<p>example 1：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2
+输出：&quot;bacdfeg&quot;</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;abcd&quot;, k &#x3D; 2
+输出：&quot;bacd&quot;</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 104</code></li>
+<li><code>s</code> 仅由小写英文组成</li>
+<li><code>1 &lt;= k &lt;= 104</code></li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string-ii/">https://leetcode.cn/problems/reverse-string-ii/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public String reverseStr(String s, int k) &#123;
+        char[] ch &#x3D; s.toCharArray();
+        &#x2F;&#x2F; 1. 每隔 2k 个字符的前 k 个字符进行反转，每次循环挑出一个2k区间
+        for (int i &#x3D; 0; i&lt; ch.length; i +&#x3D; 2 * k) &#123;
+            &#x2F;&#x2F; 2. 剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符
+            if (i + k &lt;&#x3D; ch.length) &#123;
+                reverse(ch, i, i + k -1);
+                continue;
+            &#125;
+            &#x2F;&#x2F; 3. 剩余字符少于 k 个，则将剩余字符全部反转
+            reverse(ch, i, ch.length - 1);
+        &#125;
+        return  new String(ch);
+
+    &#125;
+    &#x2F;&#x2F; 定义翻转函数
+    public void reverse(char[] ch, int i, int j) &#123;
+    for (; i &lt; j; i++, j--) &#123;
+        char temp  &#x3D; ch[i];
+        ch[i] &#x3D; ch[j];
+        ch[j] &#x3D; temp;
+    &#125;
+
+    &#125;
+&#125;</code></pre>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html" itemprop="url">344.反转字符串</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-09-02T13:55:52.000Z" itemprop="datePublished">Sep 2 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes read (About 229 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344.反转字符串"></a>344.反转字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="344">
+<li>反转字符串</li>
+</ol>
+<p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>s</code> 的形式给出。</p>
+<p>不要给另外的数组分配额外的空间，你必须**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a>修改输入数组**、使用 O(1) 的额外空间解决这一问题。</p>
+<p>example 1:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
+输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</code></pre>
+
+<p>example 2:</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]
+输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</code></pre>
+
+<p>提示：</p>
+<ul>
+<li><code>1 &lt;= s.length &lt;= 105</code></li>
+<li><code>s[i]</code> 都是 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ASCII">ASCII</a> 码表中的可打印字符</li>
+</ul>
+<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string/">https://leetcode.cn/problems/reverse-string/</a></p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
+    public void reverseString(char[] s) &#123;
+        int left&#x3D;0;
+        int right&#x3D;s.length-1;
+        while(left&lt;right)&#123;
+            swap(s,left,right);
+            left++;
+            right--;
+        &#125;
+    &#125;
+
+    public void swap(char[] s,int left,int right)&#123;
+        char temp&#x3D;s[left];
+        s[left]&#x3D;s[right];
+        s[right]&#x3D;temp;
+    &#125;
+&#125;</code></pre>
+
+
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2023 John Doe&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
