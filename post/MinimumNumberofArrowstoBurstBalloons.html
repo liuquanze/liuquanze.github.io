@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="452.Minimum Number of Arrows to Burst Balloons题目描述：There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points wher">
+    <meta name="description" content="452.Minimum Number of Arrows to Burst Balloons&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represente">
 <meta property="og:type" content="article">
 <meta property="og:title" content="452.Minimum Number of Arrows to Burst Balloons">
 <meta property="og:url" content="http://example.com/post/MinimumNumberofArrowstoBurstBalloons.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="452.Minimum Number of Arrows to Burst Balloons题目描述：There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points wher">
+<meta property="og:description" content="452.Minimum Number of Arrows to Burst Balloons&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represente">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-27T02:11:15.000Z">
 <meta property="article:modified_time" content="2022-07-27T02:15:51.625Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,71 +151,23 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons" class="headerlink" title="452.Minimum Number of Arrows to Burst Balloons"></a>452.Minimum Number of Arrows to Burst Balloons</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] &#x3D; [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</p>
-<p>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;&#x3D; x &lt;&#x3D; xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</p>
+        <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons" class="headerlink" title="452.Minimum Number of Arrows to Burst Balloons"></a>452.Minimum Number of Arrows to Burst Balloons</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</p>
+<p>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</p>
 <p>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</p>
-<p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 points ，其中points[i] &#x3D; [xstart, xend] 表示水平直径在 xstart 和 xend之间的气球。你不知道气球的确切 y 坐标。</p>
-<p>一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个气球的直径的开始和结束坐标为 xstart，xend， 且满足  xstart ≤ x ≤ xend，则该气球会被 引爆 。可以射出的弓箭的数量 没有限制 。 弓箭一旦被射出之后，可以无限地前进。</p>
-<p>给你一个数组 points ，返回引爆所有气球所必须射出的 最小 弓箭数 。</p>
+<p>&#x6709;&#x4E00;&#x4E9B;&#x7403;&#x5F62;&#x6C14;&#x7403;&#x8D34;&#x5728;&#x4E00;&#x5835;&#x7528; XY &#x5E73;&#x9762;&#x8868;&#x793A;&#x7684;&#x5899;&#x9762;&#x4E0A;&#x3002;&#x5899;&#x9762;&#x4E0A;&#x7684;&#x6C14;&#x7403;&#x8BB0;&#x5F55;&#x5728;&#x6574;&#x6570;&#x6570;&#x7EC4; points &#xFF0C;&#x5176;&#x4E2D;points[i] = [xstart, xend] &#x8868;&#x793A;&#x6C34;&#x5E73;&#x76F4;&#x5F84;&#x5728; xstart &#x548C; xend&#x4E4B;&#x95F4;&#x7684;&#x6C14;&#x7403;&#x3002;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x6C14;&#x7403;&#x7684;&#x786E;&#x5207; y &#x5750;&#x6807;&#x3002;</p>
+<p>&#x4E00;&#x652F;&#x5F13;&#x7BAD;&#x53EF;&#x4EE5;&#x6CBF;&#x7740; x &#x8F74;&#x4ECE;&#x4E0D;&#x540C;&#x70B9; &#x5B8C;&#x5168;&#x5782;&#x76F4; &#x5730;&#x5C04;&#x51FA;&#x3002;&#x5728;&#x5750;&#x6807; x &#x5904;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x82E5;&#x6709;&#x4E00;&#x4E2A;&#x6C14;&#x7403;&#x7684;&#x76F4;&#x5F84;&#x7684;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x5750;&#x6807;&#x4E3A; xstart&#xFF0C;xend&#xFF0C; &#x4E14;&#x6EE1;&#x8DB3;  xstart &#x2264; x &#x2264; xend&#xFF0C;&#x5219;&#x8BE5;&#x6C14;&#x7403;&#x4F1A;&#x88AB; &#x5F15;&#x7206; &#x3002;&#x53EF;&#x4EE5;&#x5C04;&#x51FA;&#x7684;&#x5F13;&#x7BAD;&#x7684;&#x6570;&#x91CF; &#x6CA1;&#x6709;&#x9650;&#x5236; &#x3002; &#x5F13;&#x7BAD;&#x4E00;&#x65E6;&#x88AB;&#x5C04;&#x51FA;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5730;&#x524D;&#x8FDB;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; points &#xFF0C;&#x8FD4;&#x56DE;&#x5F15;&#x7206;&#x6240;&#x6709;&#x6C14;&#x7403;&#x6240;&#x5FC5;&#x987B;&#x5C04;&#x51FA;&#x7684; &#x6700;&#x5C0F; &#x5F13;&#x7BAD;&#x6570; &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[10,16],[2,8],[1,6],[7,12]]
-输出：2
-解释：气球可以用2支箭来爆破:
--在x &#x3D; 6处射出箭，击破气球[2,8]和[1,6]。
--在x &#x3D; 11处发射箭，击破气球[10,16]和[7,12]。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>-&#x5728;x = <span class="hljs-number">6</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]&#x548C;[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>]&#x3002;<br>-&#x5728;x = <span class="hljs-number">11</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>]&#x548C;[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[3,4],[5,6],[7,8]]
-输出：4
-解释：每个气球需要射出一支箭，总共需要4支箭。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">4</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6BCF;&#x4E2A;&#x6C14;&#x7403;&#x9700;&#x8981;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x603B;&#x5171;&#x9700;&#x8981;<span class="hljs-number">4</span>&#x652F;&#x7BAD;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[2,3],[3,4],[4,5]]
-输出：2
-解释：气球可以用2支箭来爆破:
-- 在x &#x3D; 2处发射箭，击破气球[1,2]和[2,3]。
-- 在x &#x3D; 4处射出箭，击破气球[3,4]和[4,5]。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>- &#x5728;x = <span class="hljs-number">2</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]&#x548C;[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]&#x3002;<br>- &#x5728;x = <span class="hljs-number">4</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#x548C;[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*排序+贪心*&#x2F;
-class Solution &#123;
-    public int findMinArrowShots(int[][] points) &#123;
-        &#x2F;&#x2F;检查数组是否合法
-        if(points.length&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        &#x2F;&#x2F;依据右边界的大小进行升序排序
-        Arrays.sort(points,new Comparator&lt;&gt;()&#123;
-            public int compare(int[] m,int[] n)&#123;
-                &#x2F;&#x2F;m小n大则不用交换位置，因为我们要的就是升序排序
-                if(m[1]&lt;n[1])&#123;
-                    return -1;
-                    &#x2F;&#x2F;m大n小，则需要交换位置，保证升序
-                &#125;else if(m[1]&gt;n[1])&#123;
-                    return 1;
-                    &#x2F;&#x2F;若m&#x3D;n则不需要交换位置，【当返回值小于等于0时，不进行元素交换，仅当返回值大于0时才需要进行交换！】
-                &#125;else&#123;
-
-                    return 0;
-                &#125;
-            &#125;
-        &#125;);
-        &#x2F;&#x2F;获取第一个元素的右边界作为初始右边界
-        long right&#x3D;points[0][1];
-        &#x2F;&#x2F;用于箭矢计数，初始值为1
-        int num&#x3D;1;
-        &#x2F;&#x2F;对元素进行遍历，如果需要遇到了不重叠的气球（即左边界大于right），则需要增加箭矢的数量，并更新右边界的值
-        for(int[] b:points)&#123;
-            if(b[0]&gt;right)&#123;
-                num++;
-                right&#x3D;b[1];
-            &#125;
-        &#125;
-        &#x2F;&#x2F;返回箭矢的数量
-        return num;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x94FE;&#x63A5;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*&#x6392;&#x5E8F;+&#x8D2A;&#x5FC3;*/</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] points)</span> {<br>        <span class="hljs-comment">//&#x68C0;&#x67E5;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(points.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x4F9D;&#x636E;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x5927;&#x5C0F;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</span><br>        Arrays.sort(points,<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;&gt;(){<br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span>[] m,<span class="hljs-type">int</span>[] n)</span>{<br>                <span class="hljs-comment">//m&#x5C0F;n&#x5927;&#x5219;&#x4E0D;&#x7528;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8981;&#x7684;&#x5C31;&#x662F;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</span><br>                <span class="hljs-keyword">if</span>(m[<span class="hljs-number">1</span>]&lt;n[<span class="hljs-number">1</span>]){<br>                    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>                    <span class="hljs-comment">//m&#x5927;n&#x5C0F;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x4FDD;&#x8BC1;&#x5347;&#x5E8F;</span><br>                }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(m[<span class="hljs-number">1</span>]&gt;n[<span class="hljs-number">1</span>]){<br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>                    <span class="hljs-comment">//&#x82E5;m=n&#x5219;&#x4E0D;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x3010;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;0&#x65F6;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x4EA4;&#x6362;&#xFF0C;&#x4EC5;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x5927;&#x4E8E;0&#x65F6;&#x624D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#xFF01;&#x3011;</span><br>                }<span class="hljs-keyword">else</span>{<br><br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                }<br>            }<br>        });<br>        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;</span><br>        <span class="hljs-type">long</span> right=points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x7528;&#x4E8E;&#x7BAD;&#x77E2;&#x8BA1;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;1</span><br>        <span class="hljs-type">int</span> num=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x9047;&#x5230;&#x4E86;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x6C14;&#x7403;&#xFF08;&#x5373;&#x5DE6;&#x8FB9;&#x754C;&#x5927;&#x4E8E;right&#xFF09;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x589E;&#x52A0;&#x7BAD;&#x77E2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x503C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span>[] b:points){<br>            <span class="hljs-keyword">if</span>(b[<span class="hljs-number">0</span>]&gt;right){<br>                num++;<br>                right=b[<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7BAD;&#x77E2;&#x7684;&#x6570;&#x91CF;</span><br>        <span class="hljs-keyword">return</span> num;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -248,9 +200,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -259,14 +210,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -353,6 +315,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

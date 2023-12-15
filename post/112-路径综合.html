@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="112.路径综合题目描述： 路径总和  给你二叉树的根节点 root 和一个表示目标和的整数 targetSum 。判断该树中是否存在 根节点到叶子节点 的路径，这条路径上所有节点值相加等于目标和 targetSum 。如果存在，返回 true ；否则，返回 false 。 叶子节点 是指没有子节点的节点。 example 1: 输入：root &#x3D; [5,4,8,11,null,13,4">
+    <meta name="description" content="112.&amp;#x8DEF;&amp;#x5F84;&amp;#x7EFC;&amp;#x5408;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x8DEF;&amp;#x5F84;&amp;#x603B;&amp;#x548C;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6839;&amp;#x8282;&amp;#x70B9; root &amp;#x548C;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="112.路径综合">
 <meta property="og:url" content="http://example.com/post/112-%E8%B7%AF%E5%BE%84%E7%BB%BC%E5%90%88.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="112.路径综合题目描述： 路径总和  给你二叉树的根节点 root 和一个表示目标和的整数 targetSum 。判断该树中是否存在 根节点到叶子节点 的路径，这条路径上所有节点值相加等于目标和 targetSum 。如果存在，返回 true ；否则，返回 false 。 叶子节点 是指没有子节点的节点。 example 1: 输入：root &#x3D; [5,4,8,11,null,13,4">
+<meta property="og:description" content="112.&amp;#x8DEF;&amp;#x5F84;&amp;#x7EFC;&amp;#x5408;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x8DEF;&amp;#x5F84;&amp;#x603B;&amp;#x548C;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6839;&amp;#x8282;&amp;#x70B9; root &amp;#x548C;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-01T15:19:03.000Z">
 <meta property="article:modified_time" content="2022-10-01T15:24:17.548Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,86 +152,28 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="112-路径综合"><a href="#112-路径综合" class="headerlink" title="112.路径综合"></a>112.路径综合</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="112">
-<li>路径总和</li>
+        <h1 id="112-&#x8DEF;&#x5F84;&#x7EFC;&#x5408;"><a href="#112-&#x8DEF;&#x5F84;&#x7EFC;&#x5408;" class="headerlink" title="112.&#x8DEF;&#x5F84;&#x7EFC;&#x5408;"></a>112.&#x8DEF;&#x5F84;&#x7EFC;&#x5408;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="112">
+<li>&#x8DEF;&#x5F84;&#x603B;&#x548C;</li>
 </ol>
-<p>给你二叉树的根节点 <code>root</code> 和一个表示目标和的整数 <code>targetSum</code> 。判断该树中是否存在 <strong>根节点到叶子节点</strong> 的路径，这条路径上所有节点值相加等于目标和 <code>targetSum</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-<p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
+<p>&#x7ED9;&#x4F60;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#x548C;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x76EE;&#x6807;&#x548C;&#x7684;&#x6574;&#x6570; <code>targetSum</code> &#x3002;&#x5224;&#x65AD;&#x8BE5;&#x6811;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728; <strong>&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;</strong> &#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x6761;&#x8DEF;&#x5F84;&#x4E0A;&#x6240;&#x6709;&#x8282;&#x70B9;&#x503C;&#x76F8;&#x52A0;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C; <code>targetSum</code> &#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE; <code>false</code> &#x3002;</p>
+<p><strong>&#x53F6;&#x5B50;&#x8282;&#x70B9;</strong> &#x662F;&#x6307;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum &#x3D; 22
-输出：true
-解释：等于目标和的根节点到叶节点路径如上图所示。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">8</span>,<span class="hljs-number">11</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">13</span>,<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>], targetSum = <span class="hljs-number">22</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x548C;&#x7684;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x5982;&#x4E0A;&#x56FE;&#x6240;&#x793A;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,2,3], targetSum &#x3D; 5
-输出：false
-解释：树中存在两条根节点到叶子节点的路径：
-(1 --&gt; 2): 和为 3
-(1 --&gt; 3): 和为 4
-不存在 sum &#x3D; 5 的根节点到叶子节点的路径。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], targetSum = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6811;&#x4E2D;&#x5B58;&#x5728;&#x4E24;&#x6761;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;<br>(<span class="hljs-number">1</span> --&gt; <span class="hljs-number">2</span>): &#x548C;&#x4E3A; <span class="hljs-number">3</span><br>(<span class="hljs-number">1</span> --&gt; <span class="hljs-number">3</span>): &#x548C;&#x4E3A; <span class="hljs-number">4</span><br>&#x4E0D;&#x5B58;&#x5728; sum = <span class="hljs-number">5</span> &#x7684;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [], targetSum &#x3D; 0
-输出：false
-解释：由于树是空的，所以不存在根节点到叶子节点的路径。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [], targetSum = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x7531;&#x4E8E;&#x6811;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5B58;&#x5728;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点的数目在范围 <code>[0, 5000]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; <code>[0, 5000]</code> &#x5185;</li>
 <li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 <li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/path-sum">https://leetcode.cn/problems/path-sum</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;递归，传入三个参数，第一个是当前节点，一个是从根节点到当前节点的父节点路径上的val之和，targetNum是目标路径上的节点val之和
-    public boolean traverse(TreeNode node,int count,int targetSum)&#123;
-        &#x2F;&#x2F;加上当前节点的val，表示根节点到当前节点这条路径上的所有节点的val之和
-        count+&#x3D;node.val;
-        &#x2F;&#x2F;如果当前节点是叶子节点，则判断当前路径节点的val之和是否等于目标路径的节点val之和，如果等于，则返回true，否则返回false
-        if(node.left&#x3D;&#x3D;null&amp;&amp;node.right&#x3D;&#x3D;null)&#123;
-            if(count&#x3D;&#x3D;targetSum)&#123;
-                return true;
-            &#125;else&#123;
-                return false;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;如果当前节点不是叶子节点，则分别判断左右子树中是否存在目标路径，下面两个变量分别存储左右子树是否存在目标路径
-        boolean left&#x3D;false;
-        boolean right&#x3D;false;
-        &#x2F;&#x2F;若左子树非空，则对左子树进行递归
-        if(node.left!&#x3D;null)&#123;
-            left&#x3D;traverse(node.left,count,targetSum);
-        &#125;
-        &#x2F;&#x2F;对右子树进行递归
-        if(node.right!&#x3D;null)&#123;
-            right&#x3D;traverse(node.right,count,targetSum);
-        &#125;
-        &#x2F;&#x2F;当左子树或者右子树中存在一条目标路径则表示该树存在目标路径，这里使用||
-        return left||right;
-
-    &#125;
-
-    public boolean hasPathSum(TreeNode root, int targetSum) &#123;
-        if(root&#x3D;&#x3D;null)
-            return false;
-        return traverse(root,0,targetSum);
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/path-sum">https://leetcode.cn/problems/path-sum</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x9012;&#x5F52;&#xFF0C;&#x4F20;&#x5165;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x5F53;&#x524D;&#x8282;&#x70B9;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;val&#x4E4B;&#x548C;&#xFF0C;targetNum&#x662F;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x8282;&#x70B9;val&#x4E4B;&#x548C;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">traverse</span><span class="hljs-params">(TreeNode node,<span class="hljs-type">int</span> count,<span class="hljs-type">int</span> targetSum)</span>{<br>        <span class="hljs-comment">//&#x52A0;&#x4E0A;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;val&#xFF0C;&#x8868;&#x793A;&#x6839;&#x8282;&#x70B9;&#x5230;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x8FD9;&#x6761;&#x8DEF;&#x5F84;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;val&#x4E4B;&#x548C;</span><br>        count+=node.val;<br>        <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x8282;&#x70B9;&#x7684;val&#x4E4B;&#x548C;&#x662F;&#x5426;&#x7B49;&#x4E8E;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#x7684;&#x8282;&#x70B9;val&#x4E4B;&#x548C;&#xFF0C;&#x5982;&#x679C;&#x7B49;&#x4E8E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</span><br>        <span class="hljs-keyword">if</span>(node.left==<span class="hljs-literal">null</span>&amp;&amp;node.right==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">if</span>(count==targetSum){<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>            }<span class="hljs-keyword">else</span>{<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E0D;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x5224;&#x65AD;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x5206;&#x522B;&#x5B58;&#x50A8;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x662F;&#x5426;&#x5B58;&#x5728;&#x76EE;&#x6807;&#x8DEF;&#x5F84;</span><br>        <span class="hljs-type">boolean</span> left=<span class="hljs-literal">false</span>;<br>        <span class="hljs-type">boolean</span> right=<span class="hljs-literal">false</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x5DE6;&#x5B50;&#x6811;&#x975E;&#x7A7A;&#xFF0C;&#x5219;&#x5BF9;&#x5DE6;&#x5B50;&#x6811;&#x8FDB;&#x884C;&#x9012;&#x5F52;</span><br>        <span class="hljs-keyword">if</span>(node.left!=<span class="hljs-literal">null</span>){<br>            left=traverse(node.left,count,targetSum);<br>        }<br>        <span class="hljs-comment">//&#x5BF9;&#x53F3;&#x5B50;&#x6811;&#x8FDB;&#x884C;&#x9012;&#x5F52;</span><br>        <span class="hljs-keyword">if</span>(node.right!=<span class="hljs-literal">null</span>){<br>            right=traverse(node.right,count,targetSum);<br>        }<br>        <span class="hljs-comment">//&#x5F53;&#x5DE6;&#x5B50;&#x6811;&#x6216;&#x8005;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x5B58;&#x5728;&#x4E00;&#x6761;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x6811;&#x5B58;&#x5728;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;||</span><br>        <span class="hljs-keyword">return</span> left||right;<br><br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">hasPathSum</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> targetSum)</span> {<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">return</span> traverse(root,<span class="hljs-number">0</span>,targetSum);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -266,9 +208,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -277,14 +218,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -371,6 +323,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

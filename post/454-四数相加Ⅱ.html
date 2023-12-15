@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="454.四数相加Ⅱ题目描述： 四数相加 II  给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：  0 &lt;&#x3D; i, j, k, l &lt; n nums1[i] + nums2[j] + nums3[k] + nums4[l] &#x3D;&#x3D; 0  example 1： 输入：nums1 &#x3D;">
+    <meta name="description" content="454.&amp;#x56DB;&amp;#x6570;&amp;#x76F8;&amp;#x52A0;&amp;#x2161;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x56DB;&amp;#x6570;&amp;#x76F8;&amp;#x52A0; II  &amp;#x7ED9;&amp;#x4F60;&amp;#x56DB;&amp;#x4E2A;&amp;#x6574;&amp;#x6570;&amp;#x6570;&amp;#x7EC4; nums1&amp;#x3001;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="454.四数相加Ⅱ">
 <meta property="og:url" content="http://example.com/post/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0%E2%85%A1.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="454.四数相加Ⅱ题目描述： 四数相加 II  给你四个整数数组 nums1、nums2、nums3 和 nums4 ，数组长度都是 n ，请你计算有多少个元组 (i, j, k, l) 能满足：  0 &lt;&#x3D; i, j, k, l &lt; n nums1[i] + nums2[j] + nums3[k] + nums4[l] &#x3D;&#x3D; 0  example 1： 输入：nums1 &#x3D;">
+<meta property="og:description" content="454.&amp;#x56DB;&amp;#x6570;&amp;#x76F8;&amp;#x52A0;&amp;#x2161;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x56DB;&amp;#x6570;&amp;#x76F8;&amp;#x52A0; II  &amp;#x7ED9;&amp;#x4F60;&amp;#x56DB;&amp;#x4E2A;&amp;#x6574;&amp;#x6570;&amp;#x6570;&amp;#x7EC4; nums1&amp;#x3001;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-31T01:01:44.000Z">
 <meta property="article:modified_time" content="2022-08-31T01:07:26.665Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,59 +152,24 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="454-四数相加Ⅱ"><a href="#454-四数相加Ⅱ" class="headerlink" title="454.四数相加Ⅱ"></a>454.四数相加Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="454">
-<li>四数相加 II</li>
+        <h1 id="454-&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;"><a href="#454-&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;" class="headerlink" title="454.&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;"></a>454.&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="454">
+<li>&#x56DB;&#x6570;&#x76F8;&#x52A0; II</li>
 </ol>
-<p>给你四个整数数组 <code>nums1</code>、<code>nums2</code>、<code>nums3</code> 和 <code>nums4</code> ，数组长度都是 <code>n</code> ，请你计算有多少个元组 <code>(i, j, k, l)</code> 能满足：</p>
+<p>&#x7ED9;&#x4F60;&#x56DB;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums1</code>&#x3001;<code>nums2</code>&#x3001;<code>nums3</code> &#x548C; <code>nums4</code> &#xFF0C;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x90FD;&#x662F; <code>n</code> &#xFF0C;&#x8BF7;&#x4F60;&#x8BA1;&#x7B97;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5143;&#x7EC4; <code>(i, j, k, l)</code> &#x80FD;&#x6EE1;&#x8DB3;&#xFF1A;</p>
 <ul>
 <li><code>0 &lt;= i, j, k, l &lt; n</code></li>
 <li><code>nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0</code></li>
 </ul>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [1,2], nums2 &#x3D; [-2,-1], nums3 &#x3D; [-1,2], nums4 &#x3D; [0,2]
-输出：2
-解释：
-两个元组如下：
-1. (0, 0, 0, 1) -&gt; nums1[0] + nums2[0] + nums3[0] + nums4[1] &#x3D; 1 + (-2) + (-1) + 2 &#x3D; 0
-2. (1, 1, 0, 0) -&gt; nums1[1] + nums2[1] + nums3[0] + nums4[0] &#x3D; 2 + (-1) + (-1) + 0 &#x3D; 0</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], nums2 = [-<span class="hljs-number">2</span>,-<span class="hljs-number">1</span>], nums3 = [-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], nums4 = [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x4E24;&#x4E2A;&#x5143;&#x7EC4;&#x5982;&#x4E0B;&#xFF1A;<br><span class="hljs-number">1.</span> (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>) -&gt; nums1[<span class="hljs-number">0</span>] + nums2[<span class="hljs-number">0</span>] + nums3[<span class="hljs-number">0</span>] + nums4[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span> + (-<span class="hljs-number">2</span>) + (-<span class="hljs-number">1</span>) + <span class="hljs-number">2</span> = <span class="hljs-number">0</span><br><span class="hljs-number">2.</span> (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>) -&gt; nums1[<span class="hljs-number">1</span>] + nums2[<span class="hljs-number">1</span>] + nums3[<span class="hljs-number">0</span>] + nums4[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span> + (-<span class="hljs-number">1</span>) + (-<span class="hljs-number">1</span>) + <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [0], nums2 &#x3D; [0], nums3 &#x3D; [0], nums4 &#x3D; [0]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">0</span>], nums2 = [<span class="hljs-number">0</span>], nums3 = [<span class="hljs-number">0</span>], nums4 = [<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>n &#x3D;&#x3D; nums1.length<br>n &#x3D;&#x3D; nums2.length<br>n &#x3D;&#x3D; nums3.length<br>n &#x3D;&#x3D; nums4.length<br>1 &lt;&#x3D; n &lt;&#x3D; 200<br>-228 &lt;&#x3D; nums1[i], nums2[i], nums3[i], nums4[i] &lt;&#x3D; 228</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sum-ii">https://leetcode.cn/problems/4sum-ii</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) &#123;
-        HashMap&lt;Integer,Integer&gt; hashMap&#x3D;new HashMap&lt;&gt;();
-        &#x2F;&#x2F;记录可以满足四数相加为0的组合的个数
-        int res&#x3D;0;
-        &#x2F;&#x2F;遍历nums1和nums2元素相加之和，存入map中，key为两数之和，value是key两数之和出现的次数
-        for(int num1:nums1)&#123;
-            for(int num2:nums2)&#123;
-                int temp&#x3D;num1+num2;
-                if(hashMap.containsKey(temp))&#123;
-                    hashMap.put(temp,hashMap.get(temp)+1);
-                &#125;else&#123;
-                    hashMap.put(temp,1);
-                &#125;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;遍历nums3和nums4元素相加之和，检查map中是否存在0-两数之和，如果存在，则表示存在一组满足条件的解，并将res加上map中的value，表示
-        &#x2F;&#x2F;存在多个解
-        for(int num3:nums3)&#123;
-            for(int num4:nums4)&#123;
-                int temp&#x3D;num3+num4;
-                if(hashMap.containsKey(0-temp))&#123;
-                    res+&#x3D;hashMap.get(0-temp);
-                &#125;
-            &#125;
-        &#125;
-        return res;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>n == nums1.length<br>n == nums2.length<br>n == nums3.length<br>n == nums4.length<br>1 &lt;= n &lt;= 200<br>-228 &lt;= nums1[i], nums2[i], nums3[i], nums4[i] &lt;= 228</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sum-ii">https://leetcode.cn/problems/4sum-ii</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fourSumCount</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums1, <span class="hljs-type">int</span>[] nums2, <span class="hljs-type">int</span>[] nums3, <span class="hljs-type">int</span>[] nums4)</span> {<br>        HashMap&lt;Integer,Integer&gt; hashMap=<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x4E3A;0&#x7684;&#x7EC4;&#x5408;&#x7684;&#x4E2A;&#x6570;</span><br>        <span class="hljs-type">int</span> res=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x904D;&#x5386;nums1&#x548C;nums2&#x5143;&#x7D20;&#x76F8;&#x52A0;&#x4E4B;&#x548C;&#xFF0C;&#x5B58;&#x5165;map&#x4E2D;&#xFF0C;key&#x4E3A;&#x4E24;&#x6570;&#x4E4B;&#x548C;&#xFF0C;value&#x662F;key&#x4E24;&#x6570;&#x4E4B;&#x548C;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num1:nums1){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num2:nums2){<br>                <span class="hljs-type">int</span> temp=num1+num2;<br>                <span class="hljs-keyword">if</span>(hashMap.containsKey(temp)){<br>                    hashMap.put(temp,hashMap.get(temp)+<span class="hljs-number">1</span>);<br>                }<span class="hljs-keyword">else</span>{<br>                    hashMap.put(temp,<span class="hljs-number">1</span>);<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;nums3&#x548C;nums4&#x5143;&#x7D20;&#x76F8;&#x52A0;&#x4E4B;&#x548C;&#xFF0C;&#x68C0;&#x67E5;map&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;0-&#x4E24;&#x6570;&#x4E4B;&#x548C;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x5B58;&#x5728;&#x4E00;&#x7EC4;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x89E3;&#xFF0C;&#x5E76;&#x5C06;res&#x52A0;&#x4E0A;map&#x4E2D;&#x7684;value&#xFF0C;&#x8868;&#x793A;</span><br>        <span class="hljs-comment">//&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x89E3;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num3:nums3){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num4:nums4){<br>                <span class="hljs-type">int</span> temp=num3+num4;<br>                <span class="hljs-keyword">if</span>(hashMap.containsKey(<span class="hljs-number">0</span>-temp)){<br>                    res+=hashMap.get(<span class="hljs-number">0</span>-temp);<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> res;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -239,9 +204,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -250,14 +214,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -344,6 +319,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="450.删除二叉搜索树中的节点题目描述： 删除二叉搜索树中的节点  给定一个二叉搜索树的根节点 root 和一个值 key，删除二叉搜索树中的 key 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。 一般来说，删除节点可分为两个步骤：  首先找到需要删除的节点； 如果找到了，删除它。  example 1： 输入：root &#x3D; [5,3,6,2,4">
+    <meta name="description" content="450.&amp;#x5220;&amp;#x9664;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x8282;&amp;#x70B9;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5220;&amp;#x9664;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="450.删除二叉搜索树中的节点">
 <meta property="og:url" content="http://example.com/post/450-%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="450.删除二叉搜索树中的节点题目描述： 删除二叉搜索树中的节点  给定一个二叉搜索树的根节点 root 和一个值 key，删除二叉搜索树中的 key 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。 一般来说，删除节点可分为两个步骤：  首先找到需要删除的节点； 如果找到了，删除它。  example 1： 输入：root &#x3D; [5,3,6,2,4">
+<meta property="og:description" content="450.&amp;#x5220;&amp;#x9664;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x8282;&amp;#x70B9;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5220;&amp;#x9664;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-15T03:25:12.000Z">
 <meta property="article:modified_time" content="2022-10-15T03:28:21.883Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,95 +152,36 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="450-删除二叉搜索树中的节点"><a href="#450-删除二叉搜索树中的节点" class="headerlink" title="450.删除二叉搜索树中的节点"></a>450.删除二叉搜索树中的节点</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="450">
-<li>删除二叉搜索树中的节点</li>
+        <h1 id="450-&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;"><a href="#450-&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;" class="headerlink" title="450.&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;"></a>450.&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="450">
+<li>&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;</li>
 </ol>
-<p>给定一个二叉搜索树的根节点 <strong>root</strong> 和一个值 <strong>key</strong>，删除二叉搜索树中的 <strong>key</strong> 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。</p>
-<p>一般来说，删除节点可分为两个步骤：</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <strong>root</strong> &#x548C;&#x4E00;&#x4E2A;&#x503C; <strong>key</strong>&#xFF0C;&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684; <strong>key</strong> &#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6027;&#x8D28;&#x4E0D;&#x53D8;&#x3002;&#x8FD4;&#x56DE;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x66F4;&#x65B0;&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5220;&#x9664;&#x8282;&#x70B9;&#x53EF;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
 <ol>
-<li>首先找到需要删除的节点；</li>
-<li>如果找到了，删除它。</li>
+<li>&#x9996;&#x5148;&#x627E;&#x5230;&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#xFF0C;&#x5220;&#x9664;&#x5B83;&#x3002;</li>
 </ol>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 3
-输出：[5,4,6,2,null,null,7]
-解释：给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。
-一个正确的答案是 [5,4,6,2,null,null,7], 如下图所示。
-另一个正确答案是 [5,2,6,null,4,null,7]。</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], key = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]<br>&#x89E3;&#x91CA;&#xFF1A;&#x7ED9;&#x5B9A;&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x503C;&#x662F; <span class="hljs-number">3</span>&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x627E;&#x5230; <span class="hljs-number">3</span> &#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5220;&#x9664;&#x5B83;&#x3002;<br>&#x4E00;&#x4E2A;&#x6B63;&#x786E;&#x7684;&#x7B54;&#x6848;&#x662F; [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], &#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;<br>&#x53E6;&#x4E00;&#x4E2A;&#x6B63;&#x786E;&#x7B54;&#x6848;&#x662F; [<span class="hljs-number">5</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 0
-输出: [5,3,6,2,4,null,7]
-解释: 二叉树不包含值为 0 的节点</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], key = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;: [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]<br>&#x89E3;&#x91CA;: &#x4E8C;&#x53C9;&#x6811;&#x4E0D;&#x5305;&#x542B;&#x503C;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x8282;&#x70B9;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [], key &#x3D; 0
-输出: []</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [], key = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;: []<br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>节点数的范围 <code>[0, 104]</code>.</li>
+<li>&#x8282;&#x70B9;&#x6570;&#x7684;&#x8303;&#x56F4; <code>[0, 104]</code>.</li>
 <li><code>-105 &lt;= Node.val &lt;= 105</code></li>
-<li>节点值唯一</li>
-<li><code>root</code> 是合法的二叉搜索树</li>
+<li>&#x8282;&#x70B9;&#x503C;&#x552F;&#x4E00;</li>
+<li><code>root</code> &#x662F;&#x5408;&#x6CD5;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 <li><code>-105 &lt;= key &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-bst/description/">https://leetcode.cn/problems/delete-node-in-a-bst/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode deleteNode(TreeNode root, int key) &#123;
-        &#x2F;&#x2F;节点为空
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若节点大于待删除节点，则更新左子树
-        if(root.val&gt;key)
-            root.left&#x3D;deleteNode(root.left,key);
-        &#x2F;&#x2F;若节点小于待删除节点，则更新右子树
-        else if(root.val&lt;key)
-            root.right&#x3D;deleteNode(root.right,key);
-        &#x2F;&#x2F;当前节点就是待删除节点
-        else&#123;
-            &#x2F;&#x2F;待删除节点为叶子节点，则直接返回null
-            if(root.left&#x3D;&#x3D;null&amp;&amp;root.right&#x3D;&#x3D;null)
-                return null;
-            &#x2F;&#x2F;左孩子为空，右孩子不空，则右孩子覆盖待删除节点
-            else if(root.left&#x3D;&#x3D;null&amp;&amp;root.right!&#x3D;null)&#123;
-                root&#x3D;root.right;
-            &#x2F;&#x2F;右孩子为空，左孩子不空，则左孩子覆盖待删除节点
-            &#125;else if(root.right&#x3D;&#x3D;null&amp;&amp;root.left!&#x3D;null)&#123;
-                root&#x3D;root.left;
-            &#x2F;&#x2F;左孩子不空，右孩子不空，则将左孩子放到右子树的最左下位置，然后将待删除节点替换为右孩子
-            &#125;else&#123;
-                TreeNode temp&#x3D;root.right;
-                while(temp.left!&#x3D;null)&#123;
-                    temp&#x3D;temp.left;
-                &#125;
-                temp.left&#x3D;root.left;
-                root&#x3D;root.right;
-            &#125;
-
-        &#125;
-        return root;
-    &#125;
-
-
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-bst/description/">https://leetcode.cn/problems/delete-node-in-a-bst/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">deleteNode</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> key)</span> {<br>        <span class="hljs-comment">//&#x8282;&#x70B9;&#x4E3A;&#x7A7A;</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x8282;&#x70B9;&#x5927;&#x4E8E;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x5DE6;&#x5B50;&#x6811;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;key)<br>            root.left=deleteNode(root.left,key);<br>        <span class="hljs-comment">//&#x82E5;&#x8282;&#x70B9;&#x5C0F;&#x4E8E;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x53F3;&#x5B50;&#x6811;</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.val&lt;key)<br>            root.right=deleteNode(root.right,key);<br>        <span class="hljs-comment">//&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>        <span class="hljs-keyword">else</span>{<br>            <span class="hljs-comment">//&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#x4E3A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;null</span><br>            <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right==<span class="hljs-literal">null</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>            <span class="hljs-comment">//&#x5DE6;&#x5B69;&#x5B50;&#x4E3A;&#x7A7A;&#xFF0C;&#x53F3;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x53F3;&#x5B69;&#x5B50;&#x8986;&#x76D6;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right!=<span class="hljs-literal">null</span>){<br>                root=root.right;<br>            <span class="hljs-comment">//&#x53F3;&#x5B69;&#x5B50;&#x4E3A;&#x7A7A;&#xFF0C;&#x5DE6;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x5DE6;&#x5B69;&#x5B50;&#x8986;&#x76D6;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.right==<span class="hljs-literal">null</span>&amp;&amp;root.left!=<span class="hljs-literal">null</span>){<br>                root=root.left;<br>            <span class="hljs-comment">//&#x5DE6;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x53F3;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x5C06;&#x5DE6;&#x5B69;&#x5B50;&#x653E;&#x5230;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x6700;&#x5DE6;&#x4E0B;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#x66FF;&#x6362;&#x4E3A;&#x53F3;&#x5B69;&#x5B50;</span><br>            }<span class="hljs-keyword">else</span>{<br>                TreeNode temp=root.right;<br>                <span class="hljs-keyword">while</span>(temp.left!=<span class="hljs-literal">null</span>){<br>                    temp=temp.left;<br>                }<br>                temp.left=root.left;<br>                root=root.right;<br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> root;<br>    }<br><br><br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -275,9 +216,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -286,14 +226,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -380,6 +331,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,65 +153,29 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="150-逆波兰表达式求值"><a href="#150-逆波兰表达式求值" class="headerlink" title="150.逆波兰表达式求值"></a>150.逆波兰表达式求值</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="150">
-<li>逆波兰表达式求值</li>
+        <h1 id="150-&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;"><a href="#150-&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;" class="headerlink" title="150.&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;"></a>150.&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="150">
+<li>&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;</li>
 </ol>
-<p>根据<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437"> 逆波兰表示法</a>，求表达式的值。</p>
-<p>有效的算符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
-<p><strong>注意</strong> 两个整数之间的除法只保留整数部分。</p>
-<p>可以保证给定的逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
+<p>&#x6839;&#x636E;<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437"> &#x9006;&#x6CE2;&#x5170;&#x8868;&#x793A;&#x6CD5;</a>&#xFF0C;&#x6C42;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x6709;&#x6548;&#x7684;&#x7B97;&#x7B26;&#x5305;&#x62EC; <code>+</code>&#x3001;<code>-</code>&#x3001;<code>*</code>&#x3001;<code>/</code> &#x3002;&#x6BCF;&#x4E2A;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x6570;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong> &#x4E24;&#x4E2A;&#x6574;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x9664;&#x6CD5;&#x53EA;&#x4FDD;&#x7559;&#x6574;&#x6570;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7ED9;&#x5B9A;&#x7684;&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x603B;&#x662F;&#x6709;&#x6548;&#x7684;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x603B;&#x4F1A;&#x5F97;&#x51FA;&#x6709;&#x6548;&#x6570;&#x503C;&#x4E14;&#x4E0D;&#x5B58;&#x5728;&#x9664;&#x6570;&#x4E3A; 0 &#x7684;&#x60C5;&#x51B5;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]
-输出：9
-解释：该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">9</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;((<span class="hljs-number">2</span> + <span class="hljs-number">1</span>) * <span class="hljs-number">3</span>) = <span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;4&quot;,&quot;13&quot;,&quot;5&quot;,&quot;&#x2F;&quot;,&quot;+&quot;]
-输出：6
-解释：该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;4&quot;</span>,<span class="hljs-string">&quot;13&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;(<span class="hljs-number">4</span> + (<span class="hljs-number">13</span> / <span class="hljs-number">5</span>)) = <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;&#x2F;&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]
-输出：22
-解释：该算式转化为常见的中缀算术表达式为：
-  ((10 * (6 &#x2F; ((9 + 3) * -11))) + 17) + 5
-&#x3D; ((10 * (6 &#x2F; (12 * -11))) + 17) + 5
-&#x3D; ((10 * (6 &#x2F; -132)) + 17) + 5
-&#x3D; ((10 * 0) + 17) + 5
-&#x3D; (0 + 17) + 5
-&#x3D; 17 + 5
-&#x3D; 22</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;10&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;-11&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;17&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">22</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;<br>  ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / ((<span class="hljs-number">9</span> + <span class="hljs-number">3</span>) * -<span class="hljs-number">11</span>))) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / (<span class="hljs-number">12</span> * -<span class="hljs-number">11</span>))) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / -<span class="hljs-number">132</span>)) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * <span class="hljs-number">0</span>) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= (<span class="hljs-number">0</span> + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= <span class="hljs-number">17</span> + <span class="hljs-number">5</span><br>= <span class="hljs-number">22</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>1 &lt;&#x3D; tokens.length &lt;&#x3D; 104</li>
-<li>tokens[i] 是一个算符（”+”、”-“、”*” 或 “&#x2F;“），或是在范围 [-200, 200] 内的一个整数</li>
+<li>1 &lt;= tokens.length &lt;= 104</li>
+<li>tokens[i] &#x662F;&#x4E00;&#x4E2A;&#x7B97;&#x7B26;&#xFF08;&#x201D;+&#x201D;&#x3001;&#x201D;-&#x201C;&#x3001;&#x201D;*&#x201D; &#x6216; &#x201C;/&#x201C;&#xFF09;&#xFF0C;&#x6216;&#x662F;&#x5728;&#x8303;&#x56F4; [-200, 200] &#x5185;&#x7684;&#x4E00;&#x4E2A;&#x6574;&#x6570;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">https://leetcode.cn/problems/evaluate-reverse-polish-notation</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    &#x2F;**
-    如果是遍历到数字，则进站，如果遍历到运算符，则将栈顶的两个元素出栈，然后经过该运算符运算，将运算结果入栈。遍历完成后将栈顶元素出栈，该元素就是最终的运算结果
-     *&#x2F;
-    public int evalRPN(String[] tokens) &#123;
-        Deque&lt;Integer&gt; stack &#x3D; new LinkedList();
-        for (String s : tokens) &#123;
-            if (&quot;+&quot;.equals(s)) &#123;        &#x2F;&#x2F; leetcode 内置jdk的问题，不能使用&#x3D;&#x3D;判断字符串是否相等
-                stack.push(stack.pop() + stack.pop());      &#x2F;&#x2F; 注意 - 和&#x2F; 需要特殊处理
-            &#125; else if (&quot;-&quot;.equals(s)) &#123;
-                stack.push(-stack.pop() + stack.pop());
-            &#125; else if (&quot;*&quot;.equals(s)) &#123;
-                stack.push(stack.pop() * stack.pop());
-            &#125; else if (&quot;&#x2F;&quot;.equals(s)) &#123;
-                int temp1 &#x3D; stack.pop();
-                int temp2 &#x3D; stack.pop();
-                stack.push(temp2 &#x2F; temp1);
-            &#125; else &#123;
-                stack.push(Integer.valueOf(s));
-            &#125;
-        &#125;
-        return stack.pop();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">https://leetcode.cn/problems/evaluate-reverse-polish-notation</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">    &#x5982;&#x679C;&#x662F;&#x904D;&#x5386;&#x5230;&#x6570;&#x5B57;&#xFF0C;&#x5219;&#x8FDB;&#x7AD9;&#xFF0C;&#x5982;&#x679C;&#x904D;&#x5386;&#x5230;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5219;&#x5C06;&#x6808;&#x9876;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x7ECF;&#x8FC7;&#x8BE5;&#x8FD0;&#x7B97;&#x7B26;&#x8FD0;&#x7B97;&#xFF0C;&#x5C06;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x5165;&#x6808;&#x3002;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x540E;&#x5C06;&#x6808;&#x9876;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x8BE5;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x6700;&#x7EC8;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">evalRPN</span><span class="hljs-params">(String[] tokens)</span> {<br>        Deque&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br>        <span class="hljs-keyword">for</span> (String s : tokens) {<br>            <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;+&quot;</span>.equals(s)) {        <span class="hljs-comment">// leetcode &#x5185;&#x7F6E;jdk&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;==&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x7B49;</span><br>                stack.push(stack.pop() + stack.pop());      <span class="hljs-comment">// &#x6CE8;&#x610F; - &#x548C;/ &#x9700;&#x8981;&#x7279;&#x6B8A;&#x5904;&#x7406;</span><br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;-&quot;</span>.equals(s)) {<br>                stack.push(-stack.pop() + stack.pop());<br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;*&quot;</span>.equals(s)) {<br>                stack.push(stack.pop() * stack.pop());<br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;/&quot;</span>.equals(s)) {<br>                <span class="hljs-type">int</span> <span class="hljs-variable">temp1</span> <span class="hljs-operator">=</span> stack.pop();<br>                <span class="hljs-type">int</span> <span class="hljs-variable">temp2</span> <span class="hljs-operator">=</span> stack.pop();<br>                stack.push(temp2 / temp1);<br>            } <span class="hljs-keyword">else</span> {<br>                stack.push(Integer.valueOf(s));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> stack.pop();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -252,47 +216,22 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="1047-删除字符串中所有相邻重复项"><a href="#1047-删除字符串中所有相邻重复项" class="headerlink" title="1047.删除字符串中所有相邻重复项"></a>1047.删除字符串中所有相邻重复项</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="1047">
-<li>删除字符串中的所有相邻重复项</li>
+        <h1 id="1047-&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;"><a href="#1047-&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;" class="headerlink" title="1047.&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;"></a>1047.&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="1047">
+<li>&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;</li>
 </ol>
-<p>给出由小写字母组成的字符串 <code>S</code>，<strong>重复项删除操作</strong>会选择两个相邻且相同的字母，并删除它们。</p>
-<p>在 S 上反复执行重复项删除操作，直到无法继续删除。</p>
-<p>在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
+<p>&#x7ED9;&#x51FA;&#x7531;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32; <code>S</code>&#xFF0C;<strong>&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;</strong>&#x4F1A;&#x9009;&#x62E9;&#x4E24;&#x4E2A;&#x76F8;&#x90BB;&#x4E14;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x5728; S &#x4E0A;&#x53CD;&#x590D;&#x6267;&#x884C;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5728;&#x5B8C;&#x6210;&#x6240;&#x6709;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x540E;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7B54;&#x6848;&#x4FDD;&#x8BC1;&#x552F;&#x4E00;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：&quot;abbaca&quot;
-输出：&quot;ca&quot;
-解释：
-例如，在 &quot;abbaca&quot; 中，我们可以删除 &quot;bb&quot; 由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串 &quot;aaca&quot;，其中又只有 &quot;aa&quot; 可以执行重复项删除操作，所以最后的字符串为 &quot;ca&quot;。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;<span class="hljs-string">&quot;abbaca&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;ca&quot;</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x4F8B;&#x5982;&#xFF0C;&#x5728; <span class="hljs-string">&quot;abbaca&quot;</span> &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5220;&#x9664; <span class="hljs-string">&quot;bb&quot;</span> &#x7531;&#x4E8E;&#x4E24;&#x5B57;&#x6BCD;&#x76F8;&#x90BB;&#x4E14;&#x76F8;&#x540C;&#xFF0C;&#x8FD9;&#x662F;&#x6B64;&#x65F6;&#x552F;&#x4E00;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x7684;&#x91CD;&#x590D;&#x9879;&#x3002;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x5B57;&#x7B26;&#x4E32; <span class="hljs-string">&quot;aaca&quot;</span>&#xFF0C;&#x5176;&#x4E2D;&#x53C8;&#x53EA;&#x6709; <span class="hljs-string">&quot;aa&quot;</span> &#x53EF;&#x4EE5;&#x6267;&#x884C;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E3A; <span class="hljs-string">&quot;ca&quot;</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ol>
 <li><code>1 &lt;= S.length &lt;= 20000</code></li>
-<li><code>S</code> 仅由小写英文字母组成。</li>
+<li><code>S</code> &#x4EC5;&#x7531;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x3002;</li>
 </ol>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string">https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public String removeDuplicates(String S) &#123;
-        &#x2F;&#x2F;创建deque
-        ArrayDeque&lt;Character&gt; deque &#x3D; new ArrayDeque&lt;&gt;();
-        char ch;
-        &#x2F;&#x2F;遍历字符串，检查栈顶元素是否与当前遍历元素相同，如果相同，则栈顶元素出栈，否则当前遍历元素入栈。，若栈为空，则直接入栈
-        for (int i &#x3D; 0; i &lt; S.length(); i++) &#123;
-            ch &#x3D; S.charAt(i);
-            if (deque.isEmpty() || deque.peek() !&#x3D; ch) &#123;
-                deque.push(ch);
-            &#125; else &#123;
-                deque.pop();
-            &#125;
-        &#125;
-        String str &#x3D; &quot;&quot;;
-        &#x2F;&#x2F;剩余的元素即为不重复的元素，注意这里是出栈元素拼接str，不要搞反，因为出栈的字符是逆序的
-        while (!deque.isEmpty()) &#123;
-            str &#x3D; deque.pop() + str;
-        &#125;
-        return str;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string">https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">removeDuplicates</span><span class="hljs-params">(String S)</span> {<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;deque</span><br>        ArrayDeque&lt;Character&gt; deque = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDeque</span>&lt;&gt;();<br>        <span class="hljs-type">char</span> ch;<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x68C0;&#x67E5;&#x6808;&#x9876;&#x5143;&#x7D20;&#x662F;&#x5426;&#x4E0E;&#x5F53;&#x524D;&#x904D;&#x5386;&#x5143;&#x7D20;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x6808;&#x9876;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x5426;&#x5219;&#x5F53;&#x524D;&#x904D;&#x5386;&#x5143;&#x7D20;&#x5165;&#x6808;&#x3002;&#xFF0C;&#x82E5;&#x6808;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5165;&#x6808;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; S.length(); i++) {<br>            ch = S.charAt(i);<br>            <span class="hljs-keyword">if</span> (deque.isEmpty() || deque.peek() != ch) {<br>                deque.push(ch);<br>            } <span class="hljs-keyword">else</span> {<br>                deque.pop();<br>            }<br>        }<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-comment">//&#x5269;&#x4F59;&#x7684;&#x5143;&#x7D20;&#x5373;&#x4E3A;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x662F;&#x51FA;&#x6808;&#x5143;&#x7D20;&#x62FC;&#x63A5;str&#xFF0C;&#x4E0D;&#x8981;&#x641E;&#x53CD;&#xFF0C;&#x56E0;&#x4E3A;&#x51FA;&#x6808;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x9006;&#x5E8F;&#x7684;</span><br>        <span class="hljs-keyword">while</span> (!deque.isEmpty()) {<br>            str = deque.pop() + str;<br>        }<br>        <span class="hljs-keyword">return</span> str;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -333,57 +272,32 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20.有效的括号"></a>20.有效的括号</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="20">
-<li>有效的括号</li>
+        <h1 id="20-&#x6709;&#x6548;&#x7684;&#x62EC;&#x53F7;"><a href="#20-&#x6709;&#x6548;&#x7684;&#x62EC;&#x53F7;" class="headerlink" title="20.&#x6709;&#x6548;&#x7684;&#x62EC;&#x53F7;"></a>20.&#x6709;&#x6548;&#x7684;&#x62EC;&#x53F7;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="20">
+<li>&#x6709;&#x6548;&#x7684;&#x62EC;&#x53F7;</li>
 </ol>
-<p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
-<p>有效字符串需满足：</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53EA;&#x5305;&#x62EC; <code>&apos;(&apos;</code>&#xFF0C;<code>&apos;)&apos;</code>&#xFF0C;<code>&apos;{&apos;</code>&#xFF0C;<code>&apos;}&apos;</code>&#xFF0C;<code>&apos;[&apos;</code>&#xFF0C;<code>&apos;]&apos;</code> &#x7684;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#xFF0C;&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x6709;&#x6548;&#x3002;</p>
+<p>&#x6709;&#x6548;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x6EE1;&#x8DB3;&#xFF1A;</p>
 <ol>
-<li>左括号必须用相同类型的右括号闭合。</li>
-<li>左括号必须以正确的顺序闭合。</li>
-<li>每个右括号都有一个对应的相同类型的左括号。</li>
+<li>&#x5DE6;&#x62EC;&#x53F7;&#x5FC5;&#x987B;&#x7528;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x53F3;&#x62EC;&#x53F7;&#x95ED;&#x5408;&#x3002;</li>
+<li>&#x5DE6;&#x62EC;&#x53F7;&#x5FC5;&#x987B;&#x4EE5;&#x6B63;&#x786E;&#x7684;&#x987A;&#x5E8F;&#x95ED;&#x5408;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A;&#x53F3;&#x62EC;&#x53F7;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5DE6;&#x62EC;&#x53F7;&#x3002;</li>
 </ol>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;()&quot;
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;()&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;()[]&#123;&#125;&quot;
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;()[]{}&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;(]&quot;
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;(]&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length &lt;= 104</code></li>
-<li><code>s</code> 仅由括号 <code>&#39;()[]&#123;&#125;&#39;</code> 组成</li>
+<li><code>s</code> &#x4EC5;&#x7531;&#x62EC;&#x53F7; <code>&apos;()[]{}&apos;</code> &#x7EC4;&#x6210;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">https://leetcode.cn/problems/valid-parentheses/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean isValid(String s) &#123;
-        Deque&lt;Character&gt; deque &#x3D; new LinkedList&lt;&gt;();
-        char ch;
-        for (int i &#x3D; 0; i &lt; s.length(); i++) &#123;
-            ch &#x3D; s.charAt(i);
-            &#x2F;&#x2F;碰到左括号，就把相应的右括号入栈
-            if (ch &#x3D;&#x3D; &#39;(&#39;) &#123;
-                deque.push(&#39;)&#39;);
-            &#125;else if (ch &#x3D;&#x3D; &#39;&#123;&#39;) &#123;
-                deque.push(&#39;&#125;&#39;);
-            &#125;else if (ch &#x3D;&#x3D; &#39;[&#39;) &#123;
-                deque.push(&#39;]&#39;);
-            &#125; else if (deque.isEmpty() || deque.peek() !&#x3D; ch) &#123;
-                return false;
-            &#125;else &#123;&#x2F;&#x2F;如果是右括号判断是否和栈顶元素匹配
-                deque.pop();
-            &#125;
-        &#125;
-        &#x2F;&#x2F;最后判断栈中元素是否匹配
-        return deque.isEmpty();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">https://leetcode.cn/problems/valid-parentheses/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isValid</span><span class="hljs-params">(String s)</span> {<br>        Deque&lt;Character&gt; deque = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();<br>        <span class="hljs-type">char</span> ch;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) {<br>            ch = s.charAt(i);<br>            <span class="hljs-comment">//&#x78B0;&#x5230;&#x5DE6;&#x62EC;&#x53F7;&#xFF0C;&#x5C31;&#x628A;&#x76F8;&#x5E94;&#x7684;&#x53F3;&#x62EC;&#x53F7;&#x5165;&#x6808;</span><br>            <span class="hljs-keyword">if</span> (ch == <span class="hljs-string">&apos;(&apos;</span>) {<br>                deque.push(<span class="hljs-string">&apos;)&apos;</span>);<br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ch == <span class="hljs-string">&apos;{&apos;</span>) {<br>                deque.push(<span class="hljs-string">&apos;}&apos;</span>);<br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ch == <span class="hljs-string">&apos;[&apos;</span>) {<br>                deque.push(<span class="hljs-string">&apos;]&apos;</span>);<br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (deque.isEmpty() || deque.peek() != ch) {<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            }<span class="hljs-keyword">else</span> {<span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x53F3;&#x62EC;&#x53F7;&#x5224;&#x65AD;&#x662F;&#x5426;&#x548C;&#x6808;&#x9876;&#x5143;&#x7D20;&#x5339;&#x914D;</span><br>                deque.pop();<br>            }<br>        }<br>        <span class="hljs-comment">//&#x6700;&#x540E;&#x5224;&#x65AD;&#x6808;&#x4E2D;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5339;&#x914D;</span><br>        <span class="hljs-keyword">return</span> deque.isEmpty();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -424,102 +338,33 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="225-用队列实现栈"><a href="#225-用队列实现栈" class="headerlink" title="225.用队列实现栈"></a>225.用队列实现栈</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ol start="225">
-<li>用队列实现栈</li>
+        <h1 id="225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;"><a href="#225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;" class="headerlink" title="225.&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;"></a>225.&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="225">
+<li>&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;</li>
 </ol>
-<p>请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（<code>push</code>、<code>top</code>、<code>pop</code> 和 <code>empty</code>）。</p>
-<p>实现 <code>MyStack</code> 类：</p>
+<p>&#x8BF7;&#x4F60;&#x4EC5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x540E;&#x5165;&#x5148;&#x51FA;&#xFF08;LIFO&#xFF09;&#x7684;&#x6808;&#xFF0C;&#x5E76;&#x652F;&#x6301;&#x666E;&#x901A;&#x6808;&#x7684;&#x5168;&#x90E8;&#x56DB;&#x79CD;&#x64CD;&#x4F5C;&#xFF08;<code>push</code>&#x3001;<code>top</code>&#x3001;<code>pop</code> &#x548C; <code>empty</code>&#xFF09;&#x3002;</p>
+<p>&#x5B9E;&#x73B0; <code>MyStack</code> &#x7C7B;&#xFF1A;</p>
 <ul>
-<li><code>void push(int x)</code> 将元素 x 压入栈顶。</li>
-<li><code>int pop()</code> 移除并返回栈顶元素。</li>
-<li><code>int top()</code> 返回栈顶元素。</li>
-<li><code>boolean empty()</code> 如果栈是空的，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
+<li><code>void push(int x)</code> &#x5C06;&#x5143;&#x7D20; x &#x538B;&#x5165;&#x6808;&#x9876;&#x3002;</li>
+<li><code>int pop()</code> &#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x6808;&#x9876;&#x5143;&#x7D20;&#x3002;</li>
+<li><code>int top()</code> &#x8FD4;&#x56DE;&#x6808;&#x9876;&#x5143;&#x7D20;&#x3002;</li>
+<li><code>boolean empty()</code> &#x5982;&#x679C;&#x6808;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE; <code>false</code> &#x3002;</li>
 </ul>
-<p><strong>注意：</strong></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
 <ul>
-<li>你只能使用队列的基本操作 —— 也就是 <code>push to back</code>、<code>peek/pop from front</code>、<code>size</code> 和 <code>is empty</code> 这些操作。</li>
-<li>你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
+<li>&#x4F60;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C; &#x2014;&#x2014; &#x4E5F;&#x5C31;&#x662F; <code>push to back</code>&#x3001;<code>peek/pop from front</code>&#x3001;<code>size</code> &#x548C; <code>is empty</code> &#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x4F60;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;&#x4E5F;&#x8BB8;&#x4E0D;&#x652F;&#x6301;&#x961F;&#x5217;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; list &#xFF08;&#x5217;&#x8868;&#xFF09;&#x6216;&#x8005; deque&#xFF08;&#x53CC;&#x7AEF;&#x961F;&#x5217;&#xFF09;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x961F;&#x5217; , &#x53EA;&#x8981;&#x662F;&#x6807;&#x51C6;&#x7684;&#x961F;&#x5217;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</li>
 </ul>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：
-[&quot;MyStack&quot;, &quot;push&quot;, &quot;push&quot;, &quot;top&quot;, &quot;pop&quot;, &quot;empty&quot;]
-[[], [1], [2], [], [], []]
-输出：
-[null, null, null, 2, 2, false]
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;<br>[<span class="hljs-string">&quot;MyStack&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;top&quot;</span>, <span class="hljs-string">&quot;pop&quot;</span>, <span class="hljs-string">&quot;empty&quot;</span>]<br>[[], [<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>], [], [], []]<br>&#x8F93;&#x51FA;&#xFF1A;<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">false</span>]<br><br>&#x89E3;&#x91CA;&#xFF1A;<br><span class="hljs-type">MyStack</span> <span class="hljs-variable">myStack</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyStack</span>();<br>myStack.push(<span class="hljs-number">1</span>);<br>myStack.push(<span class="hljs-number">2</span>);<br>myStack.top(); <span class="hljs-comment">// &#x8FD4;&#x56DE; 2</span><br>myStack.pop(); <span class="hljs-comment">// &#x8FD4;&#x56DE; 2</span><br>myStack.empty(); <span class="hljs-comment">// &#x8FD4;&#x56DE; False</span><br></code></pre></td></tr></table></figure>
 
-解释：
-MyStack myStack &#x3D; new MyStack();
-myStack.push(1);
-myStack.push(2);
-myStack.top(); &#x2F;&#x2F; 返回 2
-myStack.pop(); &#x2F;&#x2F; 返回 2
-myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
-
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= x &lt;= 9</code></li>
-<li>最多调用<code>100</code> 次 <code>push</code>、<code>pop</code>、<code>top</code> 和 <code>empty</code></li>
-<li>每次调用 <code>pop</code> 和 <code>top</code> 都保证栈不为空</li>
+<li>&#x6700;&#x591A;&#x8C03;&#x7528;<code>100</code> &#x6B21; <code>push</code>&#x3001;<code>pop</code>&#x3001;<code>top</code> &#x548C; <code>empty</code></li>
+<li>&#x6BCF;&#x6B21;&#x8C03;&#x7528; <code>pop</code> &#x548C; <code>top</code> &#x90FD;&#x4FDD;&#x8BC1;&#x6808;&#x4E0D;&#x4E3A;&#x7A7A;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-stack-using-queues">https://leetcode.cn/problems/implement-stack-using-queues</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class MyStack &#123;
-    &#x2F;** 
-        队列模拟栈，其实一个队列就够了，那么我们先说一说两个队列来实现栈的思路。
-
-    队列是先进先出的规则，把一个队列中的数据导入另一个队列中，数据的顺序并没有变，并没有变成先进后出的顺序。
-
-    所以用栈实现队列， 和用队列实现栈的思路还是不一样的，这取决于这两个数据结构的性质。
-
-    但是依然还是要用两个队列来模拟栈，只不过没有输入和输出的关系，而是另一个队列完全用又来备份的！
-
-    如下面动画所示，用两个队列que1和que2实现队列的功能，que2其实完全就是一个备份的作用，把que1最后面的元素以外的元素都备份到que2，然后弹出最后面的元素，再把其他元素从que2导回que1。
-    *&#x2F;
-    &#x2F;&#x2F; Deque 接口继承了 Queue 接口
-    &#x2F;&#x2F; 所以 Queue 中的 add、poll、peek等效于 Deque 中的 addLast、pollFirst、peekFirst
-    Deque&lt;Integer&gt; que1;
-    &#x2F;** Initialize your data structure here. *&#x2F;
-    public MyStack() &#123;
-        que1 &#x3D; new ArrayDeque&lt;&gt;();
-    &#125;
-    
-    &#x2F;** Push element x onto stack. *&#x2F;
-    public void push(int x) &#123;
-        que1.addLast(x);
-    &#125;
-    
-    &#x2F;** Removes the element on top of the stack and returns that element. *&#x2F;
-    public int pop() &#123;
-        int size &#x3D; que1.size();
-        size--;
-        &#x2F;&#x2F; 将 que1 除了最后一个元素之外的所有元素从队头移到队尾，相当于暴露最后一个元素，用以满足栈的先进后出的特性，同时将元素从队头移到队尾的操作可以替换原先的使用另一个辅助队列的方式，降低了时间复杂度
-        while (size-- &gt; 0) &#123;
-            que1.addLast(que1.peekFirst());
-            que1.pollFirst();
-        &#125;
-
-        int res &#x3D; que1.pollFirst();
-        return res;
-    &#125;
-    
-    &#x2F;** Get the top element. *&#x2F;
-    public int top() &#123;
-        return que1.peekLast();
-    &#125;
-    
-    &#x2F;** Returns whether the stack is empty. *&#x2F;
-    public boolean empty() &#123;
-        return que1.isEmpty();
-    &#125;
-&#125;
-
-&#x2F;**
- * Your MyStack object will be instantiated and called as such:
- * MyStack obj &#x3D; new MyStack();
- * obj.push(x);
- * int param_2 &#x3D; obj.pop();
- * int param_3 &#x3D; obj.top();
- * boolean param_4 &#x3D; obj.empty();
- *&#x2F;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-stack-using-queues">https://leetcode.cn/problems/implement-stack-using-queues</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyStack</span> {<br>    <span class="hljs-comment">/** </span><br><span class="hljs-comment">        &#x961F;&#x5217;&#x6A21;&#x62DF;&#x6808;&#xFF0C;&#x5176;&#x5B9E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5148;&#x8BF4;&#x4E00;&#x8BF4;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x6765;&#x5B9E;&#x73B0;&#x6808;&#x7684;&#x601D;&#x8DEF;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x961F;&#x5217;&#x662F;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x628A;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x53E6;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#x6210;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x6240;&#x4EE5;&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;&#xFF0C; &#x548C;&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;&#x7684;&#x601D;&#x8DEF;&#x8FD8;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x6027;&#x8D28;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x4F46;&#x662F;&#x4F9D;&#x7136;&#x8FD8;&#x662F;&#x8981;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x6765;&#x6A21;&#x62DF;&#x6808;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6CA1;&#x6709;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5B8C;&#x5168;&#x7528;&#x53C8;&#x6765;&#x5907;&#x4EFD;&#x7684;&#xFF01;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x5982;&#x4E0B;&#x9762;&#x52A8;&#x753B;&#x6240;&#x793A;&#xFF0C;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;que1&#x548C;que2&#x5B9E;&#x73B0;&#x961F;&#x5217;&#x7684;&#x529F;&#x80FD;&#xFF0C;que2&#x5176;&#x5B9E;&#x5B8C;&#x5168;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x628A;que1&#x6700;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x4EE5;&#x5916;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5907;&#x4EFD;&#x5230;que2&#xFF0C;&#x7136;&#x540E;&#x5F39;&#x51FA;&#x6700;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x518D;&#x628A;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4ECE;que2&#x5BFC;&#x56DE;que1&#x3002;</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-comment">// Deque &#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x4E86; Queue &#x63A5;&#x53E3;</span><br>    <span class="hljs-comment">// &#x6240;&#x4EE5; Queue &#x4E2D;&#x7684; add&#x3001;poll&#x3001;peek&#x7B49;&#x6548;&#x4E8E; Deque &#x4E2D;&#x7684; addLast&#x3001;pollFirst&#x3001;peekFirst</span><br>    Deque&lt;Integer&gt; que1;<br>    <span class="hljs-comment">/** Initialize your data structure here. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyStack</span><span class="hljs-params">()</span> {<br>        que1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDeque</span>&lt;&gt;();<br>    }<br>    <br>    <span class="hljs-comment">/** Push element x onto stack. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">push</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> {<br>        que1.addLast(x);<br>    }<br>    <br>    <span class="hljs-comment">/** Removes the element on top of the stack and returns that element. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">pop</span><span class="hljs-params">()</span> {<br>        <span class="hljs-type">int</span> <span class="hljs-variable">size</span> <span class="hljs-operator">=</span> que1.size();<br>        size--;<br>        <span class="hljs-comment">// &#x5C06; que1 &#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x5916;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x4ECE;&#x961F;&#x5934;&#x79FB;&#x5230;&#x961F;&#x5C3E;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x66B4;&#x9732;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7528;&#x4EE5;&#x6EE1;&#x8DB3;&#x6808;&#x7684;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x5143;&#x7D20;&#x4ECE;&#x961F;&#x5934;&#x79FB;&#x5230;&#x961F;&#x5C3E;&#x7684;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x539F;&#x5148;&#x7684;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x964D;&#x4F4E;&#x4E86;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</span><br>        <span class="hljs-keyword">while</span> (size-- &gt; <span class="hljs-number">0</span>) {<br>            que1.addLast(que1.peekFirst());<br>            que1.pollFirst();<br>        }<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> que1.pollFirst();<br>        <span class="hljs-keyword">return</span> res;<br>    }<br>    <br>    <span class="hljs-comment">/** Get the top element. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">top</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">return</span> que1.peekLast();<br>    }<br>    <br>    <span class="hljs-comment">/** Returns whether the stack is empty. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">empty</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">return</span> que1.isEmpty();<br>    }<br>}<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your MyStack object will be instantiated and called as such:</span><br><span class="hljs-comment"> * MyStack obj = new MyStack();</span><br><span class="hljs-comment"> * obj.push(x);</span><br><span class="hljs-comment"> * int param_2 = obj.pop();</span><br><span class="hljs-comment"> * int param_3 = obj.top();</span><br><span class="hljs-comment"> * boolean param_4 = obj.empty();</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
 
 
     
@@ -560,91 +405,29 @@ myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="232-用栈实现队列"><a href="#232-用栈实现队列" class="headerlink" title="232.用栈实现队列"></a>232.用栈实现队列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="232">
-<li>用栈实现队列</li>
+        <h1 id="232-&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;"><a href="#232-&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;" class="headerlink" title="232.&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;"></a>232.&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="232">
+<li>&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;</li>
 </ol>
-<p>请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（<code>push</code>、<code>pop</code>、<code>peek</code>、<code>empty</code>）：</p>
-<p>实现 <code>MyQueue</code> 类：</p>
+<p>&#x8BF7;&#x4F60;&#x4EC5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6808;&#x5B9E;&#x73B0;&#x5148;&#x5165;&#x5148;&#x51FA;&#x961F;&#x5217;&#x3002;&#x961F;&#x5217;&#x5E94;&#x5F53;&#x652F;&#x6301;&#x4E00;&#x822C;&#x961F;&#x5217;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#xFF08;<code>push</code>&#x3001;<code>pop</code>&#x3001;<code>peek</code>&#x3001;<code>empty</code>&#xFF09;&#xFF1A;</p>
+<p>&#x5B9E;&#x73B0; <code>MyQueue</code> &#x7C7B;&#xFF1A;</p>
 <ul>
-<li><code>void push(int x)</code> 将元素 x 推到队列的末尾</li>
-<li><code>int pop()</code> 从队列的开头移除并返回元素</li>
-<li><code>int peek()</code> 返回队列开头的元素</li>
-<li><code>boolean empty()</code> 如果队列为空，返回 <code>true</code> ；否则，返回 <code>false</code></li>
+<li><code>void push(int x)</code> &#x5C06;&#x5143;&#x7D20; x &#x63A8;&#x5230;&#x961F;&#x5217;&#x7684;&#x672B;&#x5C3E;</li>
+<li><code>int pop()</code> &#x4ECE;&#x961F;&#x5217;&#x7684;&#x5F00;&#x5934;&#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x5143;&#x7D20;</li>
+<li><code>int peek()</code> &#x8FD4;&#x56DE;&#x961F;&#x5217;&#x5F00;&#x5934;&#x7684;&#x5143;&#x7D20;</li>
+<li><code>boolean empty()</code> &#x5982;&#x679C;&#x961F;&#x5217;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE; <code>false</code></li>
 </ul>
-<p><strong>说明：</strong></p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong></p>
 <ul>
-<li>你 <strong>只能</strong> 使用标准的栈操作 —— 也就是只有 <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, 和 <code>is empty</code> 操作是合法的。</li>
-<li>你所使用的语言也许不支持栈。你可以使用 list 或者 deque（双端队列）来模拟一个栈，只要是标准的栈操作即可。</li>
+<li>&#x4F60; <strong>&#x53EA;&#x80FD;</strong> &#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684;&#x6808;&#x64CD;&#x4F5C; &#x2014;&#x2014; &#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709; <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, &#x548C; <code>is empty</code> &#x64CD;&#x4F5C;&#x662F;&#x5408;&#x6CD5;&#x7684;&#x3002;</li>
+<li>&#x4F60;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;&#x4E5F;&#x8BB8;&#x4E0D;&#x652F;&#x6301;&#x6808;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; list &#x6216;&#x8005; deque&#xFF08;&#x53CC;&#x7AEF;&#x961F;&#x5217;&#xFF09;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x6808;&#xFF0C;&#x53EA;&#x8981;&#x662F;&#x6807;&#x51C6;&#x7684;&#x6808;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</li>
 </ul>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：
-[&quot;MyQueue&quot;, &quot;push&quot;, &quot;push&quot;, &quot;peek&quot;, &quot;pop&quot;, &quot;empty&quot;]
-[[], [1], [2], [], [], []]
-输出：
-[null, null, null, 1, 1, false]
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;<br>[<span class="hljs-string">&quot;MyQueue&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;peek&quot;</span>, <span class="hljs-string">&quot;pop&quot;</span>, <span class="hljs-string">&quot;empty&quot;</span>]<br>[[], [<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>], [], [], []]<br>&#x8F93;&#x51FA;&#xFF1A;<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">false</span>]<br><br>&#x89E3;&#x91CA;&#xFF1A;<br><span class="hljs-type">MyQueue</span> <span class="hljs-variable">myQueue</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyQueue</span>();<br>myQueue.push(<span class="hljs-number">1</span>); <span class="hljs-comment">// queue is: [1]</span><br>myQueue.push(<span class="hljs-number">2</span>); <span class="hljs-comment">// queue is: [1, 2] (leftmost is front of the queue)</span><br>myQueue.peek(); <span class="hljs-comment">// return 1</span><br>myQueue.pop(); <span class="hljs-comment">// return 1, queue is [2]</span><br>myQueue.empty(); <span class="hljs-comment">// return false</span><br></code></pre></td></tr></table></figure>
 
-解释：
-MyQueue myQueue &#x3D; new MyQueue();
-myQueue.push(1); &#x2F;&#x2F; queue is: [1]
-myQueue.push(2); &#x2F;&#x2F; queue is: [1, 2] (leftmost is front of the queue)
-myQueue.peek(); &#x2F;&#x2F; return 1
-myQueue.pop(); &#x2F;&#x2F; return 1, queue is [2]
-myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
-
-<p>提示：</p>
-<p>1 &lt;&#x3D; x &lt;&#x3D; 9<br>最多调用 100 次 push、pop、peek 和 empty<br>假设所有操作都是有效的 （例如，一个空的队列不会调用 pop 或者 peek 操作）</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-queue-using-stacks">https://leetcode.cn/problems/implement-queue-using-stacks</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class MyQueue &#123;
-    Stack&lt;Integer&gt; in;
-    Stack&lt;Integer&gt; out;
-
-    public MyQueue() &#123;
-        in&#x3D;new Stack&lt;&gt;();
-        out&#x3D;new Stack&lt;&gt;();
-    &#125;
-    
-    public void push(int x) &#123;
-        in.push(x);
-    &#125;
-    
-    &#x2F;&#x2F;输出栈为空，则将输入栈的元素全部存入输出栈，然后pop输出栈；若输出栈不为空，则直接pop输出栈
-    public int pop() &#123;
-        if(out.isEmpty())&#123;
-            while(!in.isEmpty())&#123;
-                int temp&#x3D;in.pop();
-                out.push(temp);
-            &#125;
-        &#125;
-        return out.pop();
-
-
-    &#125;
-    
-    &#x2F;&#x2F;输出栈为空，则将输入栈的元素全部存入输出栈，然后peek输出栈；若输出栈不为空，则直接peek输出栈
-    public int peek() &#123;
-        if(out.isEmpty())&#123;
-            while(!in.isEmpty())&#123;
-                int temp&#x3D;in.pop();
-                out.push(temp);
-            &#125;
-        &#125;
-        return out.peek();
-    &#125;
-    &#x2F;&#x2F;输入输出栈均为空时，队列为空
-    public boolean empty() &#123;
-        return in.isEmpty()&amp;&amp;out.isEmpty();
-
-    &#125;
-&#125;
-
-&#x2F;**
- * Your MyQueue object will be instantiated and called as such:
- * MyQueue obj &#x3D; new MyQueue();
- * obj.push(x);
- * int param_2 &#x3D; obj.pop();
- * int param_3 &#x3D; obj.peek();
- * boolean param_4 &#x3D; obj.empty();
- *&#x2F;</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>1 &lt;= x &lt;= 9<br>&#x6700;&#x591A;&#x8C03;&#x7528; 100 &#x6B21; push&#x3001;pop&#x3001;peek &#x548C; empty<br>&#x5047;&#x8BBE;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x6709;&#x6548;&#x7684; &#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x961F;&#x5217;&#x4E0D;&#x4F1A;&#x8C03;&#x7528; pop &#x6216;&#x8005; peek &#x64CD;&#x4F5C;&#xFF09;</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-queue-using-stacks">https://leetcode.cn/problems/implement-queue-using-stacks</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyQueue</span> {<br>    Stack&lt;Integer&gt; in;<br>    Stack&lt;Integer&gt; out;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyQueue</span><span class="hljs-params">()</span> {<br>        in=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br>        out=<span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br>    }<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">push</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> {<br>        in.push(x);<br>    }<br>    <br>    <span class="hljs-comment">//&#x8F93;&#x51FA;&#x6808;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x5C06;&#x8F93;&#x5165;&#x6808;&#x7684;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x5B58;&#x5165;&#x8F93;&#x51FA;&#x6808;&#xFF0C;&#x7136;&#x540E;pop&#x8F93;&#x51FA;&#x6808;&#xFF1B;&#x82E5;&#x8F93;&#x51FA;&#x6808;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x76F4;&#x63A5;pop&#x8F93;&#x51FA;&#x6808;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">pop</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">if</span>(out.isEmpty()){<br>            <span class="hljs-keyword">while</span>(!in.isEmpty()){<br>                <span class="hljs-type">int</span> temp=in.pop();<br>                out.push(temp);<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> out.pop();<br><br><br>    }<br>    <br>    <span class="hljs-comment">//&#x8F93;&#x51FA;&#x6808;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x5C06;&#x8F93;&#x5165;&#x6808;&#x7684;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x5B58;&#x5165;&#x8F93;&#x51FA;&#x6808;&#xFF0C;&#x7136;&#x540E;peek&#x8F93;&#x51FA;&#x6808;&#xFF1B;&#x82E5;&#x8F93;&#x51FA;&#x6808;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x76F4;&#x63A5;peek&#x8F93;&#x51FA;&#x6808;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">peek</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">if</span>(out.isEmpty()){<br>            <span class="hljs-keyword">while</span>(!in.isEmpty()){<br>                <span class="hljs-type">int</span> temp=in.pop();<br>                out.push(temp);<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> out.peek();<br>    }<br>    <span class="hljs-comment">//&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6808;&#x5747;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x961F;&#x5217;&#x4E3A;&#x7A7A;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">empty</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">return</span> in.isEmpty()&amp;&amp;out.isEmpty();<br><br>    }<br>}<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your MyQueue object will be instantiated and called as such:</span><br><span class="hljs-comment"> * MyQueue obj = new MyQueue();</span><br><span class="hljs-comment"> * obj.push(x);</span><br><span class="hljs-comment"> * int param_2 = obj.pop();</span><br><span class="hljs-comment"> * int param_3 = obj.peek();</span><br><span class="hljs-comment"> * boolean param_4 = obj.empty();</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
 
 
     
@@ -685,75 +468,27 @@ myQueue.empty(); &#x2F;&#x2F; return false</code></pre>
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="28-实现-strStr"><a href="#28-实现-strStr" class="headerlink" title="28.实现 strStr()"></a>28.实现 strStr()</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="28">
-<li>实现 strStr()</li>
+        <h1 id="28-&#x5B9E;&#x73B0;-strStr"><a href="#28-&#x5B9E;&#x73B0;-strStr" class="headerlink" title="28.&#x5B9E;&#x73B0; strStr()"></a>28.&#x5B9E;&#x73B0; strStr()</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="28">
+<li>&#x5B9E;&#x73B0; strStr()</li>
 </ol>
-<p>实现 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strStr()</a> 函数。</p>
-<p>给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回 <code>-1</code> 。</p>
-<p><strong>说明：</strong></p>
-<p>当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
-<p>对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 0 。这与 C 语言的 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strstr()</a> 以及 Java 的 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)">indexOf()</a> 定义相符。</p>
+<p>&#x5B9E;&#x73B0; <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strStr()</a> &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; <code>haystack</code> &#x548C; <code>needle</code> &#xFF0C;&#x8BF7;&#x4F60;&#x5728; <code>haystack</code> &#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x627E;&#x51FA; <code>needle</code> &#x5B57;&#x7B26;&#x4E32;&#x51FA;&#x73B0;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF08;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>-1</code> &#x3002;</p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>&#x5F53; <code>needle</code> &#x662F;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x5F53;&#x8FD4;&#x56DE;&#x4EC0;&#x4E48;&#x503C;&#x5462;&#xFF1F;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x9762;&#x8BD5;&#x4E2D;&#x5F88;&#x597D;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x672C;&#x9898;&#x800C;&#x8A00;&#xFF0C;&#x5F53; <code>needle</code> &#x662F;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#x6211;&#x4EEC;&#x5E94;&#x5F53;&#x8FD4;&#x56DE; 0 &#x3002;&#x8FD9;&#x4E0E; C &#x8BED;&#x8A00;&#x7684; <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/strstr/811469">strstr()</a> &#x4EE5;&#x53CA; Java &#x7684; <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)">indexOf()</a> &#x5B9A;&#x4E49;&#x76F8;&#x7B26;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot;
-输出：2</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;haystack = <span class="hljs-string">&quot;hello&quot;</span>, needle = <span class="hljs-string">&quot;ll&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：haystack &#x3D; &quot;aaaaa&quot;, needle &#x3D; &quot;bba&quot;
-输出：-1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;haystack = <span class="hljs-string">&quot;aaaaa&quot;</span>, needle = <span class="hljs-string">&quot;bba&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;-<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= haystack.length, needle.length &lt;= 104</code></li>
-<li><code>haystack</code> 和 <code>needle</code> 仅由小写英文字符组成</li>
+<li><code>haystack</code> &#x548C; <code>needle</code> &#x4EC5;&#x7531;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x7EC4;&#x6210;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F; 方法一
-class Solution &#123;
-    &#x2F;&#x2F;求出next数组
-    public void getNext(int[] next,String s)&#123;
-        int j&#x3D;-1;
-        next[0]&#x3D;j;
-        &#x2F;&#x2F;j指向前缀的末尾，i指向后缀的末尾
-        for(int i&#x3D;1;i&lt;next.length;i++)&#123;
-            &#x2F;&#x2F;若前缀的末尾和后缀的末尾不匹配，则将前缀的末尾进行回退
-            while(j&gt;&#x3D;0&amp;&amp;s.charAt(i)!&#x3D;s.charAt(j+1))&#123;
-                j&#x3D;next[j];
-            &#125;
-            &#x2F;&#x2F;若匹配成功，则i和j都向后移动
-            if(s.charAt(i)&#x3D;&#x3D;s.charAt(j+1))&#123;
-                j++;
-            &#125;
-            &#x2F;&#x2F;求得最大前后缀长度
-            next[i]&#x3D;j;
-        &#125;
-        
-    &#125;
-    
-    public int strStr(String haystack, String needle) &#123;
-        int[] next&#x3D;new int[needle.length()];
-        &#x2F;&#x2F;j为模式串指针
-        int j&#x3D;-1;
-        &#x2F;&#x2F;求next数组
-        getNext(next,needle);
-        &#x2F;&#x2F;i为匹配串指针
-        for(int i&#x3D;0;i&lt;haystack.length();i++)&#123;
-            &#x2F;&#x2F;若匹配失败，则模式串指针回退
-            while(j&gt;&#x3D;0&amp;&amp;haystack.charAt(i)!&#x3D;needle.charAt(j+1))&#123;
-                j&#x3D;next[j];
-            &#125;
-            &#x2F;&#x2F;匹配成功继续向后匹配
-            if(needle.charAt(j+1)&#x3D;&#x3D;haystack.charAt(i))&#123;
-                j++;
-            &#125;
-            &#x2F;&#x2F;判断模式串是否匹配成功，若j到达模式串末尾，则返回匹配成功位置
-            if(j&#x3D;&#x3D;needle.length()-1)&#123;
-                return i-needle.length()+1;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;匹配失败
-        return -1;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/">https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// &#x65B9;&#x6CD5;&#x4E00;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x6C42;&#x51FA;next&#x6570;&#x7EC4;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">getNext</span><span class="hljs-params">(<span class="hljs-type">int</span>[] next,String s)</span>{<br>        <span class="hljs-type">int</span> j=-<span class="hljs-number">1</span>;<br>        next[<span class="hljs-number">0</span>]=j;<br>        <span class="hljs-comment">//j&#x6307;&#x5411;&#x524D;&#x7F00;&#x7684;&#x672B;&#x5C3E;&#xFF0C;i&#x6307;&#x5411;&#x540E;&#x7F00;&#x7684;&#x672B;&#x5C3E;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;next.length;i++){<br>            <span class="hljs-comment">//&#x82E5;&#x524D;&#x7F00;&#x7684;&#x672B;&#x5C3E;&#x548C;&#x540E;&#x7F00;&#x7684;&#x672B;&#x5C3E;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x5C06;&#x524D;&#x7F00;&#x7684;&#x672B;&#x5C3E;&#x8FDB;&#x884C;&#x56DE;&#x9000;</span><br>            <span class="hljs-keyword">while</span>(j&gt;=<span class="hljs-number">0</span>&amp;&amp;s.charAt(i)!=s.charAt(j+<span class="hljs-number">1</span>)){<br>                j=next[j];<br>            }<br>            <span class="hljs-comment">//&#x82E5;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x5219;i&#x548C;j&#x90FD;&#x5411;&#x540E;&#x79FB;&#x52A8;</span><br>            <span class="hljs-keyword">if</span>(s.charAt(i)==s.charAt(j+<span class="hljs-number">1</span>)){<br>                j++;<br>            }<br>            <span class="hljs-comment">//&#x6C42;&#x5F97;&#x6700;&#x5927;&#x524D;&#x540E;&#x7F00;&#x957F;&#x5EA6;</span><br>            next[i]=j;<br>        }<br>        <br>    }<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">strStr</span><span class="hljs-params">(String haystack, String needle)</span> {<br>        <span class="hljs-type">int</span>[] next=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[needle.length()];<br>        <span class="hljs-comment">//j&#x4E3A;&#x6A21;&#x5F0F;&#x4E32;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> j=-<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x6C42;next&#x6570;&#x7EC4;</span><br>        getNext(next,needle);<br>        <span class="hljs-comment">//i&#x4E3A;&#x5339;&#x914D;&#x4E32;&#x6307;&#x9488;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;haystack.length();i++){<br>            <span class="hljs-comment">//&#x82E5;&#x5339;&#x914D;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x6A21;&#x5F0F;&#x4E32;&#x6307;&#x9488;&#x56DE;&#x9000;</span><br>            <span class="hljs-keyword">while</span>(j&gt;=<span class="hljs-number">0</span>&amp;&amp;haystack.charAt(i)!=needle.charAt(j+<span class="hljs-number">1</span>)){<br>                j=next[j];<br>            }<br>            <span class="hljs-comment">//&#x5339;&#x914D;&#x6210;&#x529F;&#x7EE7;&#x7EED;&#x5411;&#x540E;&#x5339;&#x914D;</span><br>            <span class="hljs-keyword">if</span>(needle.charAt(j+<span class="hljs-number">1</span>)==haystack.charAt(i)){<br>                j++;<br>            }<br>            <span class="hljs-comment">//&#x5224;&#x65AD;&#x6A21;&#x5F0F;&#x4E32;&#x662F;&#x5426;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x82E5;j&#x5230;&#x8FBE;&#x6A21;&#x5F0F;&#x4E32;&#x672B;&#x5C3E;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x6210;&#x529F;&#x4F4D;&#x7F6E;</span><br>            <span class="hljs-keyword">if</span>(j==needle.length()-<span class="hljs-number">1</span>){<br>                <span class="hljs-keyword">return</span> i-needle.length()+<span class="hljs-number">1</span>;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5339;&#x914D;&#x5931;&#x8D25;</span><br>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -794,41 +529,26 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="459-重复的子字符串"><a href="#459-重复的子字符串" class="headerlink" title="459.重复的子字符串"></a>459.重复的子字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="459">
-<li>重复的子字符串</li>
+        <h1 id="459-&#x91CD;&#x590D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;"><a href="#459-&#x91CD;&#x590D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="459.&#x91CD;&#x590D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;"></a>459.&#x91CD;&#x590D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="459">
+<li>&#x91CD;&#x590D;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;</li>
 </ol>
-<p>给定一个非空的字符串 <code>s</code> ，检查是否可以通过由它的一个子串重复多次构成。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x7684;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7531;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x4E32;&#x91CD;&#x590D;&#x591A;&#x6B21;&#x6784;&#x6210;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abab&quot;
-输出: true
-解释: 可由子串 &quot;ab&quot; 重复两次构成。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;abab&quot;</span><br>&#x8F93;&#x51FA;: <span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;: &#x53EF;&#x7531;&#x5B50;&#x4E32; <span class="hljs-string">&quot;ab&quot;</span> &#x91CD;&#x590D;&#x4E24;&#x6B21;&#x6784;&#x6210;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;aba&quot;
-输出: false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;aba&quot;</span><br>&#x8F93;&#x51FA;: <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abcabcabcabc&quot;
-输出: true
-解释: 可由子串 &quot;abc&quot; 重复四次构成。 (或子串 &quot;abcabc&quot; 重复两次构成。)</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;abcabcabcabc&quot;</span><br>&#x8F93;&#x51FA;: <span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;: &#x53EF;&#x7531;&#x5B50;&#x4E32; <span class="hljs-string">&quot;abc&quot;</span> &#x91CD;&#x590D;&#x56DB;&#x6B21;&#x6784;&#x6210;&#x3002; (&#x6216;&#x5B50;&#x4E32; <span class="hljs-string">&quot;abcabc&quot;</span> &#x91CD;&#x590D;&#x4E24;&#x6B21;&#x6784;&#x6210;&#x3002;)<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length &lt;= 104</code></li>
-<li><code>s</code> 由小写英文字母组成</li>
+<li><code>s</code> &#x7531;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/repeated-substring-pattern/">https://leetcode.cn/problems/repeated-substring-pattern/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-将两个 ss 连在一起，并移除第一个和最后一个字符。如果 ss 是该字符串的子串，那么 ss 就满足题目要求。
-
-注意到我们证明的是如果 ss 满足题目要求，那么 ss 有这样的性质，而我们使用的方法却是如果 ss 有这样的性质，那么 ss 满足题目要求。因此，只证明了充分性是远远不够的，我们还需要证明必要性。
-*&#x2F;
-class Solution &#123;
-    public boolean repeatedSubstringPattern(String s) &#123;
-        &#x2F;&#x2F;将字符串进行拼接，查看拼接完后第二个字符串的位置，
-        return (s+s).indexOf(s,1)!&#x3D;s.length();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/repeated-substring-pattern/">https://leetcode.cn/problems/repeated-substring-pattern/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">&#x5C06;&#x4E24;&#x4E2A; ss &#x8FDE;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5E76;&#x79FB;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5982;&#x679C; ss &#x662F;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x90A3;&#x4E48; ss &#x5C31;&#x6EE1;&#x8DB3;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x6CE8;&#x610F;&#x5230;&#x6211;&#x4EEC;&#x8BC1;&#x660E;&#x7684;&#x662F;&#x5982;&#x679C; ss &#x6EE1;&#x8DB3;&#x9898;&#x76EE;&#x8981;&#x6C42;&#xFF0C;&#x90A3;&#x4E48; ss &#x6709;&#x8FD9;&#x6837;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x5374;&#x662F;&#x5982;&#x679C; ss &#x6709;&#x8FD9;&#x6837;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x90A3;&#x4E48; ss &#x6EE1;&#x8DB3;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x8BC1;&#x660E;&#x4E86;&#x5145;&#x5206;&#x6027;&#x662F;&#x8FDC;&#x8FDC;&#x4E0D;&#x591F;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x8BC1;&#x660E;&#x5FC5;&#x8981;&#x6027;&#x3002;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">repeatedSubstringPattern</span><span class="hljs-params">(String s)</span> {<br>        <span class="hljs-comment">//&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#xFF0C;&#x67E5;&#x770B;&#x62FC;&#x63A5;&#x5B8C;&#x540E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;</span><br>        <span class="hljs-keyword">return</span> (s+s).indexOf(s,<span class="hljs-number">1</span>)!=s.length();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -869,42 +589,20 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="剑指Offer58-II-左旋转字符串"><a href="#剑指Offer58-II-左旋转字符串" class="headerlink" title="剑指Offer58-II.左旋转字符串"></a>剑指Offer58-II.左旋转字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>剑指 Offer 58 - II. 左旋转字符串</p>
-<p>字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串”abcdefg”和数字2，该函数将返回左旋转两位得到的结果”cdefgab”。</p>
+        <h1 id="&#x5251;&#x6307;Offer58-II-&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"><a href="#&#x5251;&#x6307;Offer58-II-&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="&#x5251;&#x6307;Offer58-II.&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"></a>&#x5251;&#x6307;Offer58-II.&#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5251;&#x6307; Offer 58 - II. &#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5DE6;&#x65CB;&#x8F6C;&#x64CD;&#x4F5C;&#x662F;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x524D;&#x9762;&#x7684;&#x82E5;&#x5E72;&#x4E2A;&#x5B57;&#x7B26;&#x8F6C;&#x79FB;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5C3E;&#x90E8;&#x3002;&#x8BF7;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x5B57;&#x7B26;&#x4E32;&#x5DE6;&#x65CB;&#x8F6C;&#x64CD;&#x4F5C;&#x7684;&#x529F;&#x80FD;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x201D;abcdefg&#x201D;&#x548C;&#x6570;&#x5B57;2&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x8FD4;&#x56DE;&#x5DE6;&#x65CB;&#x8F6C;&#x4E24;&#x4F4D;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x201D;cdefgab&#x201D;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2
-输出: &quot;cdefgab&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;abcdefg&quot;</span>, k = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;: <span class="hljs-string">&quot;cdefgab&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;lrloseumgh&quot;, k &#x3D; 6
-输出: &quot;umghlrlose&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;lrloseumgh&quot;</span>, k = <span class="hljs-number">6</span><br>&#x8F93;&#x51FA;: <span class="hljs-string">&quot;umghlrlose&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= k &lt; s.length &lt;= 10000</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">剑指 Offer 58 - II. 左旋转字符串 - 力扣（LeetCode）</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">
-class Solution &#123;
-    &#x2F;&#x2F;先反转1-n的字符串，然后反转n+1到末尾的字符串
-    &#x2F;&#x2F;最后对整个字符串进行反转，不需要额外的空间
-    public String reverseLeftWords(String s, int n) &#123;
-        int len&#x3D;s.length();
-        StringBuilder sb&#x3D;new StringBuilder(s);
-        reverseString(sb,0,n-1);
-        reverseString(sb,n,len-1);
-        return sb.reverse().toString();
-    &#125;
-     public void reverseString(StringBuilder sb, int start, int end) &#123;
-        while (start &lt; end) &#123;
-            char temp &#x3D; sb.charAt(start);
-            sb.setCharAt(start, sb.charAt(end));
-            sb.setCharAt(end, temp);
-            start++;
-            end--;
-            &#125;
-        &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/">&#x5251;&#x6307; Offer 58 - II. &#x5DE6;&#x65CB;&#x8F6C;&#x5B57;&#x7B26;&#x4E32; - &#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x5148;&#x53CD;&#x8F6C;1-n&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x7136;&#x540E;&#x53CD;&#x8F6C;n+1&#x5230;&#x672B;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br>    <span class="hljs-comment">//&#x6700;&#x540E;&#x5BF9;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x95F4;</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">reverseLeftWords</span><span class="hljs-params">(String s, <span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-type">int</span> len=s.length();<br>        StringBuilder sb=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(s);<br>        reverseString(sb,<span class="hljs-number">0</span>,n-<span class="hljs-number">1</span>);<br>        reverseString(sb,n,len-<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">return</span> sb.reverse().toString();<br>    }<br>     <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">reverseString</span><span class="hljs-params">(StringBuilder sb, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> {<br>        <span class="hljs-keyword">while</span> (start &lt; end) {<br>            <span class="hljs-type">char</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> sb.charAt(start);<br>            sb.setCharAt(start, sb.charAt(end));<br>            sb.setCharAt(end, temp);<br>            start++;<br>            end--;<br>            }<br>        }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -945,71 +643,30 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="151-反转字符串中的单词"><a href="#151-反转字符串中的单词" class="headerlink" title="151.反转字符串中的单词"></a>151.反转字符串中的单词</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="151">
-<li>反转字符串中的单词</li>
+        <h1 id="151-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5355;&#x8BCD;"><a href="#151-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5355;&#x8BCD;" class="headerlink" title="151.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5355;&#x8BCD;"></a>151.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5355;&#x8BCD;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="151">
+<li>&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x5355;&#x8BCD;</li>
 </ol>
-<p>给你一个字符串 <code>s</code> ，请你反转字符串中 <strong>单词</strong> 的顺序。</p>
-<p><strong>单词</strong> 是由非空格字符组成的字符串。<code>s</code> 中使用至少一个空格将字符串中的 <strong>单词</strong> 分隔开。</p>
-<p>返回 <strong>单词</strong> 顺序颠倒且 <strong>单词</strong> 之间用单个空格连接的结果字符串。</p>
-<p><strong>注意：</strong>输入字符串 <code>s</code>中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#xFF0C;&#x8BF7;&#x4F60;&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D; <strong>&#x5355;&#x8BCD;</strong> &#x7684;&#x987A;&#x5E8F;&#x3002;</p>
+<p><strong>&#x5355;&#x8BCD;</strong> &#x662F;&#x7531;&#x975E;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;<code>s</code> &#x4E2D;&#x4F7F;&#x7528;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684; <strong>&#x5355;&#x8BCD;</strong> &#x5206;&#x9694;&#x5F00;&#x3002;</p>
+<p>&#x8FD4;&#x56DE; <strong>&#x5355;&#x8BCD;</strong> &#x987A;&#x5E8F;&#x98A0;&#x5012;&#x4E14; <strong>&#x5355;&#x8BCD;</strong> &#x4E4B;&#x95F4;&#x7528;&#x5355;&#x4E2A;&#x7A7A;&#x683C;&#x8FDE;&#x63A5;&#x7684;&#x7ED3;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32; <code>s</code>&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x5B58;&#x5728;&#x524D;&#x5BFC;&#x7A7A;&#x683C;&#x3001;&#x5C3E;&#x968F;&#x7A7A;&#x683C;&#x6216;&#x8005;&#x5355;&#x8BCD;&#x95F4;&#x7684;&#x591A;&#x4E2A;&#x7A7A;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x5355;&#x8BCD;&#x95F4;&#x5E94;&#x5F53;&#x4EC5;&#x7528;&#x5355;&#x4E2A;&#x7A7A;&#x683C;&#x5206;&#x9694;&#xFF0C;&#x4E14;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x683C;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;the sky is blue&quot;
-输出：&quot;blue is sky the&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;the sky is blue&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;blue is sky the&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;  hello world  &quot;
-输出：&quot;world hello&quot;
-解释：反转后的字符串中不能存在前导空格和尾随空格。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;  hello world  &quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;world hello&quot;</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4E0D;&#x80FD;&#x5B58;&#x5728;&#x524D;&#x5BFC;&#x7A7A;&#x683C;&#x548C;&#x5C3E;&#x968F;&#x7A7A;&#x683C;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;a good   example&quot;
-输出：&quot;example good a&quot;
-解释：如果两个单词间有多余的空格，反转后的字符串需要将单词间的空格减少到仅有一个。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;a good &#xA0; example&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;example good a&quot;</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5355;&#x8BCD;&#x95F4;&#x6709;&#x591A;&#x4F59;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x8981;&#x5C06;&#x5355;&#x8BCD;&#x95F4;&#x7684;&#x7A7A;&#x683C;&#x51CF;&#x5C11;&#x5230;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length &lt;= 104</code></li>
-<li><code>s</code> 包含英文大小写字母、数字和空格 <code>&#39; &#39;</code></li>
-<li><code>s</code> 中 <strong>至少存在一个</strong> 单词</li>
+<li><code>s</code> &#x5305;&#x542B;&#x82F1;&#x6587;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x7A7A;&#x683C; <code>&apos; &apos;</code></li>
+<li><code>s</code> &#x4E2D; <strong>&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;</strong> &#x5355;&#x8BCD;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-words-in-a-string">https://leetcode.cn/problems/reverse-words-in-a-string</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public String reverseWords(String s) &#123;
-        &#x2F;&#x2F;源字符数组
-        char[] s_char&#x3D;s.toCharArray();
-        &#x2F;&#x2F;创建新的字符数组
-        char[] new_str&#x3D;new char[s_char.length+1];
-        &#x2F;&#x2F;新字符数组指针
-        int newStr_index&#x3D;0;
-        &#x2F;&#x2F;源字符数组指针，从末尾开始
-        int i&#x3D;s_char.length-1;
-        &#x2F;&#x2F;从后向前遍历
-        while(i&gt;&#x3D;0)&#123;
-            &#x2F;&#x2F;找到最后一个单词的末尾位置并记录
-            while(i&gt;&#x3D;0&amp;&amp;s_char[i]&#x3D;&#x3D;&#39; &#39;) i--;
-            int right&#x3D;i;
-            &#x2F;&#x2F;找到最后一个单词的起始位置并记录
-            while(i&gt;&#x3D;0&amp;&amp;s_char[i]!&#x3D;&#39; &#39;) i--;
-            int left&#x3D;i+1;
-            &#x2F;&#x2F;将原字符数组的最后一个单词，存入新字符数组的第一个单词位置
-            for(int j&#x3D;left;j&lt;&#x3D;right;j++)&#123;
-                new_str[newStr_index++]&#x3D;s_char[j];
-                &#x2F;&#x2F;若遍历到单词末尾，则添加空格
-                if(j&#x3D;&#x3D;right)&#123;
-                    new_str[newStr_index++]&#x3D;&#39; &#39;;
-                &#125;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若原数组没有单词，则返回空字符串
-        if(newStr_index&#x3D;&#x3D;0)&#123;
-            return &quot;&quot;;
-            &#x2F;&#x2F;否则返回反转后的字符串
-        &#125;else&#123;
-            return new String(new_str,0,newStr_index-1);
-        &#125;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-words-in-a-string">https://leetcode.cn/problems/reverse-words-in-a-string</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">reverseWords</span><span class="hljs-params">(String s)</span> {<br>        <span class="hljs-comment">//&#x6E90;&#x5B57;&#x7B26;&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">char</span>[] s_char=s.toCharArray();<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">char</span>[] new_str=<span class="hljs-keyword">new</span> <span class="hljs-title class_">char</span>[s_char.length+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x65B0;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> newStr_index=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x6E90;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x672B;&#x5C3E;&#x5F00;&#x59CB;</span><br>        <span class="hljs-type">int</span> i=s_char.length-<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;</span><br>        <span class="hljs-keyword">while</span>(i&gt;=<span class="hljs-number">0</span>){<br>            <span class="hljs-comment">//&#x627E;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x672B;&#x5C3E;&#x4F4D;&#x7F6E;&#x5E76;&#x8BB0;&#x5F55;</span><br>            <span class="hljs-keyword">while</span>(i&gt;=<span class="hljs-number">0</span>&amp;&amp;s_char[i]==<span class="hljs-string">&apos; &apos;</span>) i--;<br>            <span class="hljs-type">int</span> right=i;<br>            <span class="hljs-comment">//&#x627E;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5E76;&#x8BB0;&#x5F55;</span><br>            <span class="hljs-keyword">while</span>(i&gt;=<span class="hljs-number">0</span>&amp;&amp;s_char[i]!=<span class="hljs-string">&apos; &apos;</span>) i--;<br>            <span class="hljs-type">int</span> left=i+<span class="hljs-number">1</span>;<br>            <span class="hljs-comment">//&#x5C06;&#x539F;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x5B58;&#x5165;&#x65B0;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x4F4D;&#x7F6E;</span><br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=left;j&lt;=right;j++){<br>                new_str[newStr_index++]=s_char[j];<br>                <span class="hljs-comment">//&#x82E5;&#x904D;&#x5386;&#x5230;&#x5355;&#x8BCD;&#x672B;&#x5C3E;&#xFF0C;&#x5219;&#x6DFB;&#x52A0;&#x7A7A;&#x683C;</span><br>                <span class="hljs-keyword">if</span>(j==right){<br>                    new_str[newStr_index++]=<span class="hljs-string">&apos; &apos;</span>;<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x539F;&#x6570;&#x7EC4;&#x6CA1;&#x6709;&#x5355;&#x8BCD;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span><br>        <span class="hljs-keyword">if</span>(newStr_index==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>            <span class="hljs-comment">//&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span><br>        }<span class="hljs-keyword">else</span>{<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(new_str,<span class="hljs-number">0</span>,newStr_index-<span class="hljs-number">1</span>);<br>        }<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1050,75 +707,15 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="05-替换空格"><a href="#05-替换空格" class="headerlink" title="05.替换空格"></a>05.替换空格</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>剑指 Offer 05. 替换空格</p>
-<p>请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。</p>
+        <h1 id="05-&#x66FF;&#x6362;&#x7A7A;&#x683C;"><a href="#05-&#x66FF;&#x6362;&#x7A7A;&#x683C;" class="headerlink" title="05.&#x66FF;&#x6362;&#x7A7A;&#x683C;"></a>05.&#x66FF;&#x6362;&#x7A7A;&#x683C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5251;&#x6307; Offer 05. &#x66FF;&#x6362;&#x7A7A;&#x683C;</p>
+<p>&#x8BF7;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x628A;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x7A7A;&#x683C;&#x66FF;&#x6362;&#x6210;&#x201D;%20&#x201D;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;We are happy.&quot;
-输出：&quot;We%20are%20happy.&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;We are happy.&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;We%20are%20happy.&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>0 &lt;&#x3D; s 的长度 &lt;&#x3D; 10000</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">https://leetcode.cn/problems/ti-huan-kong-ge-lcof/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;常规方法：从前向后遍历，遇到空格则替换为&quot;02%&quot;，可以使用StringBuilder实现，但是每次替换，后面的字符串需要向后移动
-&#x2F;&#x2F;使用一个新的对象，复制 str，复制的过程对其判断，是空格则替换，否则直接复制，类似于数组复制
-public static String replaceSpace(StringBuffer str) &#123;
-        if (str &#x3D;&#x3D; null) &#123;
-            return null;
-        &#125;
-		&#x2F;&#x2F;选用 StringBuilder 单线程使用，比较快，选不选都行
-        StringBuilder sb &#x3D; new StringBuilder();
-		&#x2F;&#x2F;使用 sb 逐个复制 str ，碰到空格则替换，否则直接复制
-        for (int i &#x3D; 0; i &lt; str.length(); i++) &#123;
-		&#x2F;&#x2F;str.charAt(i) 为 char 类型，为了比较需要将其转为和 &quot; &quot; 相同的字符串类型
-        &#x2F;&#x2F;if (&quot; &quot;.equals(String.valueOf(str.charAt(i))))&#123;
-            if (s.charAt(i) &#x3D;&#x3D; &#39; &#39;) &#123;
-                sb.append(&quot;%20&quot;);
-            &#125; else &#123;
-                sb.append(str.charAt(i));
-            &#125;
-        &#125;
-        return sb.toString();
-    &#125;
-&#x2F;&#x2F;从后向前遍历，使用双指针的方法进行实现，速度更快beat 100%
-class Solution &#123;
-    public String replaceSpace(String s) &#123;
-        &#x2F;&#x2F;判断参数是否合法
-        if(s.length()&#x3D;&#x3D;0||s&#x3D;&#x3D;null)&#123;
-            return s;
-        &#125;
-        &#x2F;&#x2F;拼接字符串
-        StringBuilder tail&#x3D;new StringBuilder();
-        &#x2F;&#x2F;每遍历到一个空格，拼接字符串扩大两个空格大小
-        for(int i&#x3D;0;i&lt;s.length();i++)&#123;
-            if(s.charAt(i)&#x3D;&#x3D;&#39; &#39;)&#123;
-                tail.append(&quot;  &quot;);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若不存在空格，则直接返回
-        if(tail.length()&#x3D;&#x3D;0)&#123;
-            return s;
-        &#125;
-        &#x2F;&#x2F;记录左右指针
-        int left&#x3D;s.length()-1;
-        s+&#x3D;tail;
-        int right&#x3D;s.length()-1;
-        char[] chars&#x3D;s.toCharArray();
-        &#x2F;&#x2F;左指针i从后向前遍历
-        while(left&gt;&#x3D;0)&#123;
-            if(chars[left]&#x3D;&#x3D;&#39; &#39;)&#123;
-                chars[right--]&#x3D;&#39;0&#39;;
-                chars[right--]&#x3D;&#39;2&#39;;
-                chars[right]&#x3D;&#39;%&#39;;
-            &#125;else&#123;
-                chars[right]&#x3D;chars[left];
-            &#125;
-            left--;
-            right--;
-        &#125;
-        return new String(chars);
-    &#125;
-&#125;
-</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>0 &lt;= s &#x7684;&#x957F;&#x5EA6; &lt;= 10000</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">https://leetcode.cn/problems/ti-huan-kong-ge-lcof/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x5E38;&#x89C4;&#x65B9;&#x6CD5;&#xFF1A;&#x4ECE;&#x524D;&#x5411;&#x540E;&#x904D;&#x5386;&#xFF0C;&#x9047;&#x5230;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#x4E3A;&quot;02%&quot;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;StringBuilder&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x66FF;&#x6362;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x8981;&#x5411;&#x540E;&#x79FB;&#x52A8;</span><br><span class="hljs-comment">//&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x590D;&#x5236; str&#xFF0C;&#x590D;&#x5236;&#x7684;&#x8FC7;&#x7A0B;&#x5BF9;&#x5176;&#x5224;&#x65AD;&#xFF0C;&#x662F;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x590D;&#x5236;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x6570;&#x7EC4;&#x590D;&#x5236;</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title function_">replaceSpace</span><span class="hljs-params">(StringBuffer str)</span> {<br>        <span class="hljs-keyword">if</span> (str == <span class="hljs-literal">null</span>) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        }<br>		<span class="hljs-comment">//&#x9009;&#x7528; StringBuilder &#x5355;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#xFF0C;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x9009;&#x4E0D;&#x9009;&#x90FD;&#x884C;</span><br>        <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>		<span class="hljs-comment">//&#x4F7F;&#x7528; sb &#x9010;&#x4E2A;&#x590D;&#x5236; str &#xFF0C;&#x78B0;&#x5230;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x590D;&#x5236;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; str.length(); i++) {<br>		<span class="hljs-comment">//str.charAt(i) &#x4E3A; char &#x7C7B;&#x578B;&#xFF0C;&#x4E3A;&#x4E86;&#x6BD4;&#x8F83;&#x9700;&#x8981;&#x5C06;&#x5176;&#x8F6C;&#x4E3A;&#x548C; &quot; &quot; &#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span><br>        <span class="hljs-comment">//if (&quot; &quot;.equals(String.valueOf(str.charAt(i)))){</span><br>            <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {<br>                sb.append(<span class="hljs-string">&quot;%20&quot;</span>);<br>            } <span class="hljs-keyword">else</span> {<br>                sb.append(str.charAt(i));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> sb.toString();<br>    }<br><span class="hljs-comment">//&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;&#xFF0C;&#x4F7F;&#x7528;&#x53CC;&#x6307;&#x9488;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;beat 100%</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">replaceSpace</span><span class="hljs-params">(String s)</span> {<br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(s.length()==<span class="hljs-number">0</span>||s==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> s;<br>        }<br>        <span class="hljs-comment">//&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</span><br>        StringBuilder tail=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>        <span class="hljs-comment">//&#x6BCF;&#x904D;&#x5386;&#x5230;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x6269;&#x5927;&#x4E24;&#x4E2A;&#x7A7A;&#x683C;&#x5927;&#x5C0F;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.length();i++){<br>            <span class="hljs-keyword">if</span>(s.charAt(i)==<span class="hljs-string">&apos; &apos;</span>){<br>                tail.append(<span class="hljs-string">&quot;  &quot;</span>);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#x7A7A;&#x683C;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(tail.length()==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> s;<br>        }<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5DE6;&#x53F3;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> left=s.length()-<span class="hljs-number">1</span>;<br>        s+=tail;<br>        <span class="hljs-type">int</span> right=s.length()-<span class="hljs-number">1</span>;<br>        <span class="hljs-type">char</span>[] chars=s.toCharArray();<br>        <span class="hljs-comment">//&#x5DE6;&#x6307;&#x9488;i&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;</span><br>        <span class="hljs-keyword">while</span>(left&gt;=<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">if</span>(chars[left]==<span class="hljs-string">&apos; &apos;</span>){<br>                chars[right--]=<span class="hljs-string">&apos;0&apos;</span>;<br>                chars[right--]=<span class="hljs-string">&apos;2&apos;</span>;<br>                chars[right]=<span class="hljs-string">&apos;%&apos;</span>;<br>            }<span class="hljs-keyword">else</span>{<br>                chars[right]=chars[left];<br>            }<br>            left--;<br>            right--;<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chars);<br>    }<br>}<br><br></code></pre></td></tr></table></figure>
 
 
 
@@ -1247,6 +844,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

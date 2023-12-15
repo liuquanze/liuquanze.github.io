@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="Sort Characters By Frequency——桶排序题目描述：Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the stri">
+    <meta name="description" content="Sort Characters By Frequency&amp;#x2014;&amp;#x2014;&amp;#x6876;&amp;#x6392;&amp;#x5E8F;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;Given a string s, sort it in decreasing order based on the frequency of the characters. The">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sort Characters By Frequency_桶排序">
 <meta property="og:url" content="http://example.com/post/SortCharactersByFrequency-BucketSort.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Sort Characters By Frequency——桶排序题目描述：Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the stri">
+<meta property="og:description" content="Sort Characters By Frequency&amp;#x2014;&amp;#x2014;&amp;#x6876;&amp;#x6392;&amp;#x5E8F;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;Given a string s, sort it in decreasing order based on the frequency of the characters. The">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-21T03:08:16.000Z">
 <meta property="article:modified_time" content="2022-07-21T03:10:47.828Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,66 +151,21 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Sort-Characters-By-Frequency——桶排序"><a href="#Sort-Characters-By-Frequency——桶排序" class="headerlink" title="Sort Characters By Frequency——桶排序"></a>Sort Characters By Frequency——桶排序</h1><h1 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h1><p>Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.</p>
+        <h1 id="Sort-Characters-By-Frequency&#x2014;&#x2014;&#x6876;&#x6392;&#x5E8F;"><a href="#Sort-Characters-By-Frequency&#x2014;&#x2014;&#x6876;&#x6392;&#x5E8F;" class="headerlink" title="Sort Characters By Frequency&#x2014;&#x2014;&#x6876;&#x6392;&#x5E8F;"></a>Sort Characters By Frequency&#x2014;&#x2014;&#x6876;&#x6392;&#x5E8F;</h1><h1 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h1><p>Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.</p>
 <p>Return the sorted string. If there are multiple answers, return any of them.</p>
 <p>example 1:</p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">Input: s &#x3D; &quot;tree&quot;
-Output: &quot;eert&quot;
-Explanation: &#39;e&#39; appears twice while &#39;r&#39; and &#39;t&#39; both appear once.
-So &#39;e&#39; must appear before both &#39;r&#39; and &#39;t&#39;. Therefore &quot;eetr&quot; is also a valid answer.</code></pre>
+<figure class="highlight txt hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">Input: s = &quot;tree&quot;<br>Output: &quot;eert&quot;<br>Explanation: &apos;e&apos; appears twice while &apos;r&apos; and &apos;t&apos; both appear once.<br>So &apos;e&apos; must appear before both &apos;r&apos; and &apos;t&apos;. Therefore &quot;eetr&quot; is also a valid answer.<br></code></pre></td></tr></table></figure>
 
 
 
 <p>example 2:</p>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">Input: s &#x3D; &quot;cccaaa&quot;
-Output: &quot;aaaccc&quot;
-Explanation: Both &#39;c&#39; and &#39;a&#39; appear three times, so both &quot;cccaaa&quot; and &quot;aaaccc&quot; are valid answers.
-Note that &quot;cacaca&quot; is incorrect, as the same characters must be together.</code></pre>
+<figure class="highlight txt hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">Input: s = &quot;cccaaa&quot;<br>Output: &quot;aaaccc&quot;<br>Explanation: Both &apos;c&apos; and &apos;a&apos; appear three times, so both &quot;cccaaa&quot; and &quot;aaaccc&quot; are valid answers.<br>Note that &quot;cacaca&quot; is incorrect, as the same characters must be together.<br></code></pre></td></tr></table></figure>
 
 
 
 
 
-<h1 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h1><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public String frequencySort(String s) &#123;
-        &#x2F;&#x2F;创建map存储字符及其出现次数
-        Map&lt;Character,Integer&gt; map&#x3D;new HashMap&lt;&gt;();
-        int max_frequency&#x3D;0;
-        int frequency&#x3D;0;
-        char ch&#x3D;&#39; &#39;;
-        for(int i&#x3D;0;i&lt;s.length();i++)&#123;
-            ch&#x3D;s.charAt(i);
-            map.put(ch,map.getOrDefault(ch,0)+1);
-            max_frequency&#x3D;Math.max(max_frequency,map.get(ch));
-        &#125;
-
-        &#x2F;&#x2F;创建buckets，并初始化buckets
-        StringBuffer[] buckets&#x3D;new StringBuffer[max_frequency+1];
-        for(int i&#x3D;0;i&lt;max_frequency+1;i++)&#123;
-            buckets[i]&#x3D;new StringBuffer();
-        &#125;
-        for(Map.Entry&lt;Character,Integer&gt; entry:map.entrySet())&#123;
-            ch&#x3D;entry.getKey();
-            frequency&#x3D;entry.getValue();
-            buckets[frequency].append(ch);
-        &#125;
-        &#x2F;&#x2F;创建返回值
-        StringBuffer ret&#x3D;new StringBuffer();
-        &#x2F;&#x2F;添加返回值
-        for(int i&#x3D;max_frequency;i&gt;&#x3D;1;i--)&#123;
-            StringBuffer bucket&#x3D;buckets[i];
-            for(int j&#x3D;0;j&lt;bucket.length();j++)&#123;
-                for(int k&#x3D;0;k&lt;i;k++)&#123;
-                    ret.append(bucket.charAt(j));
-                &#125;
-            &#125;
-
-        &#125;
-        return ret.toString();
-
-
-    &#125;
-&#125;</code></pre>
+<h1 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h1><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">frequencySort</span><span class="hljs-params">(String s)</span> {<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;map&#x5B58;&#x50A8;&#x5B57;&#x7B26;&#x53CA;&#x5176;&#x51FA;&#x73B0;&#x6B21;&#x6570;</span><br>        Map&lt;Character,Integer&gt; map=<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>        <span class="hljs-type">int</span> max_frequency=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> frequency=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">char</span> ch=<span class="hljs-string">&apos; &apos;</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.length();i++){<br>            ch=s.charAt(i);<br>            map.put(ch,map.getOrDefault(ch,<span class="hljs-number">0</span>)+<span class="hljs-number">1</span>);<br>            max_frequency=Math.max(max_frequency,map.get(ch));<br>        }<br><br>        <span class="hljs-comment">//&#x521B;&#x5EFA;buckets&#xFF0C;&#x5E76;&#x521D;&#x59CB;&#x5316;buckets</span><br>        StringBuffer[] buckets=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>[max_frequency+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;max_frequency+<span class="hljs-number">1</span>;i++){<br>            buckets[i]=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>();<br>        }<br>        <span class="hljs-keyword">for</span>(Map.Entry&lt;Character,Integer&gt; entry:map.entrySet()){<br>            ch=entry.getKey();<br>            frequency=entry.getValue();<br>            buckets[frequency].append(ch);<br>        }<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FD4;&#x56DE;&#x503C;</span><br>        StringBuffer ret=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>();<br>        <span class="hljs-comment">//&#x6DFB;&#x52A0;&#x8FD4;&#x56DE;&#x503C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=max_frequency;i&gt;=<span class="hljs-number">1</span>;i--){<br>            StringBuffer bucket=buckets[i];<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;bucket.length();j++){<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k=<span class="hljs-number">0</span>;k&lt;i;k++){<br>                    ret.append(bucket.charAt(j));<br>                }<br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> ret.toString();<br><br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -243,9 +198,8 @@ Note that &quot;cacaca&quot; is incorrect, as the same characters must be togeth
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -254,14 +208,25 @@ Note that &quot;cacaca&quot; is incorrect, as the same characters must be togeth
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -348,6 +313,19 @@ Note that &quot;cacaca&quot; is incorrect, as the same characters must be togeth
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

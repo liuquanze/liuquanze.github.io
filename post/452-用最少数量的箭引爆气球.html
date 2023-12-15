@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="452.用最少数量的箭引爆气球题目描述： 用最少数量的箭引爆气球  有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 points ，其中points[i] &#x3D; [xstart, xend] 表示水平直径在 xstart 和 xend之间的气球。你不知道气球的确切 y 坐标。 一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个气球的直">
+    <meta name="description" content="452.&amp;#x7528;&amp;#x6700;&amp;#x5C11;&amp;#x6570;&amp;#x91CF;&amp;#x7684;&amp;#x7BAD;&amp;#x5F15;&amp;#x7206;&amp;#x6C14;&amp;#x7403;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7528;&amp;#x6700;&amp;#x5C11;&amp;#x6570;&amp;#x91CF;&amp;#x7684;&amp;#x7BAD;&amp;#x5F15;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="452.用最少数量的箭引爆气球">
 <meta property="og:url" content="http://example.com/post/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="452.用最少数量的箭引爆气球题目描述： 用最少数量的箭引爆气球  有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 points ，其中points[i] &#x3D; [xstart, xend] 表示水平直径在 xstart 和 xend之间的气球。你不知道气球的确切 y 坐标。 一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个气球的直">
+<meta property="og:description" content="452.&amp;#x7528;&amp;#x6700;&amp;#x5C11;&amp;#x6570;&amp;#x91CF;&amp;#x7684;&amp;#x7BAD;&amp;#x5F15;&amp;#x7206;&amp;#x6C14;&amp;#x7403;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7528;&amp;#x6700;&amp;#x5C11;&amp;#x6570;&amp;#x91CF;&amp;#x7684;&amp;#x7BAD;&amp;#x5F15;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-20T12:00:52.000Z">
 <meta property="article:modified_time" content="2022-12-20T12:03:07.557Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,58 +152,30 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="452-用最少数量的箭引爆气球"><a href="#452-用最少数量的箭引爆气球" class="headerlink" title="452.用最少数量的箭引爆气球"></a>452.用最少数量的箭引爆气球</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="452">
-<li>用最少数量的箭引爆气球</li>
+        <h1 id="452-&#x7528;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x7BAD;&#x5F15;&#x7206;&#x6C14;&#x7403;"><a href="#452-&#x7528;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x7BAD;&#x5F15;&#x7206;&#x6C14;&#x7403;" class="headerlink" title="452.&#x7528;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x7BAD;&#x5F15;&#x7206;&#x6C14;&#x7403;"></a>452.&#x7528;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x7BAD;&#x5F15;&#x7206;&#x6C14;&#x7403;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="452">
+<li>&#x7528;&#x6700;&#x5C11;&#x6570;&#x91CF;&#x7684;&#x7BAD;&#x5F15;&#x7206;&#x6C14;&#x7403;</li>
 </ol>
-<p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 <code>points</code> ，其中<code>points[i] = [xstart, xend]</code> 表示水平直径在 <code>xstart</code> 和 <code>xend</code>之间的气球。你不知道气球的确切 y 坐标。</p>
-<p>一支弓箭可以沿着 x 轴从不同点 <strong>完全垂直</strong> 地射出。在坐标 <code>x</code> 处射出一支箭，若有一个气球的直径的开始和结束坐标为 <code>x``start</code>，<code>x``end</code>， 且满足  <code>xstart ≤ x ≤ x``end</code>，则该气球会被 <strong>引爆</strong> 。可以射出的弓箭的数量 <strong>没有限制</strong> 。 弓箭一旦被射出之后，可以无限地前进。</p>
-<p>给你一个数组 <code>points</code> ，<em>返回引爆所有气球所必须射出的 <strong>最小</strong> 弓箭数</em> 。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[10,16],[2,8],[1,6],[7,12]]
-输出：2
-解释：气球可以用2支箭来爆破:
--在x &#x3D; 6处射出箭，击破气球[2,8]和[1,6]。
--在x &#x3D; 11处发射箭，击破气球[10,16]和[7,12]。</code></pre>
+<p>&#x6709;&#x4E00;&#x4E9B;&#x7403;&#x5F62;&#x6C14;&#x7403;&#x8D34;&#x5728;&#x4E00;&#x5835;&#x7528; XY &#x5E73;&#x9762;&#x8868;&#x793A;&#x7684;&#x5899;&#x9762;&#x4E0A;&#x3002;&#x5899;&#x9762;&#x4E0A;&#x7684;&#x6C14;&#x7403;&#x8BB0;&#x5F55;&#x5728;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>points</code> &#xFF0C;&#x5176;&#x4E2D;<code>points[i] = [xstart, xend]</code> &#x8868;&#x793A;&#x6C34;&#x5E73;&#x76F4;&#x5F84;&#x5728; <code>xstart</code> &#x548C; <code>xend</code>&#x4E4B;&#x95F4;&#x7684;&#x6C14;&#x7403;&#x3002;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x6C14;&#x7403;&#x7684;&#x786E;&#x5207; y &#x5750;&#x6807;&#x3002;</p>
+<p>&#x4E00;&#x652F;&#x5F13;&#x7BAD;&#x53EF;&#x4EE5;&#x6CBF;&#x7740; x &#x8F74;&#x4ECE;&#x4E0D;&#x540C;&#x70B9; <strong>&#x5B8C;&#x5168;&#x5782;&#x76F4;</strong> &#x5730;&#x5C04;&#x51FA;&#x3002;&#x5728;&#x5750;&#x6807; <code>x</code> &#x5904;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x82E5;&#x6709;&#x4E00;&#x4E2A;&#x6C14;&#x7403;&#x7684;&#x76F4;&#x5F84;&#x7684;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x5750;&#x6807;&#x4E3A; <code>x``start</code>&#xFF0C;<code>x``end</code>&#xFF0C; &#x4E14;&#x6EE1;&#x8DB3;  <code>xstart &#x2264; x &#x2264; x``end</code>&#xFF0C;&#x5219;&#x8BE5;&#x6C14;&#x7403;&#x4F1A;&#x88AB; <strong>&#x5F15;&#x7206;</strong> &#x3002;&#x53EF;&#x4EE5;&#x5C04;&#x51FA;&#x7684;&#x5F13;&#x7BAD;&#x7684;&#x6570;&#x91CF; <strong>&#x6CA1;&#x6709;&#x9650;&#x5236;</strong> &#x3002; &#x5F13;&#x7BAD;&#x4E00;&#x65E6;&#x88AB;&#x5C04;&#x51FA;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5730;&#x524D;&#x8FDB;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; <code>points</code> &#xFF0C;<em>&#x8FD4;&#x56DE;&#x5F15;&#x7206;&#x6240;&#x6709;&#x6C14;&#x7403;&#x6240;&#x5FC5;&#x987B;&#x5C04;&#x51FA;&#x7684; <strong>&#x6700;&#x5C0F;</strong> &#x5F13;&#x7BAD;&#x6570;</em> &#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>-&#x5728;x = <span class="hljs-number">6</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]&#x548C;[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>]&#x3002;<br>-&#x5728;x = <span class="hljs-number">11</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>]&#x548C;[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>example 2：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[3,4],[5,6],[7,8]]
-输出：4
-解释：每个气球需要射出一支箭，总共需要4支箭。</code></pre>
+<p>example 2&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">4</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6BCF;&#x4E2A;&#x6C14;&#x7403;&#x9700;&#x8981;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x603B;&#x5171;&#x9700;&#x8981;<span class="hljs-number">4</span>&#x652F;&#x7BAD;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[2,3],[3,4],[4,5]]
-输出：2
-解释：气球可以用2支箭来爆破:
-- 在x &#x3D; 2处发射箭，击破气球[1,2]和[2,3]。
-- 在x &#x3D; 4处射出箭，击破气球[3,4]和[4,5]。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>- &#x5728;x = <span class="hljs-number">2</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]&#x548C;[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]&#x3002;<br>- &#x5728;x = <span class="hljs-number">4</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#x548C;[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= points.length &lt;= 105</code></li>
 <li><code>points[i].length == 2</code></li>
 <li><code>-231 &lt;= xstart &lt; xend &lt;= 231 - 1</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int findMinArrowShots(int[][] points) &#123;
-        Arrays.sort(points,(a,b)-&gt;Integer.compare(a[0],b[0]));
-
-        &#x2F;&#x2F;初始状态最少需要一根箭
-        int arrowNum&#x3D;1;
-        for(int i&#x3D;1;i&lt;points.length;i++)&#123;
-            &#x2F;&#x2F;若两个气球没有交集，则需要加一根箭，因为之前那根箭只能射穿之前重叠的所有气球
-            if(points[i][0]&gt;points[i-1][1])&#123;
-                arrowNum++;
-            &#125;else&#123;      &#x2F;&#x2F;若两个气球是有交集的，那么就需要改变一下当前遍历气球的右边界，右边界取当前右边界和上一个气球右边界的最小值，之所以这么选是因为，取最小值可以保证这一支箭可以把所有重叠的气球都射穿，如果不对右边界进行更新，则只能保证气球之间两两重叠，无法保证所有发生重叠的气球都可以使用一只箭矢射穿
-                points[i][1]&#x3D;Math.min(points[i-1][1],points[i][1]);
-
-            &#125;
-
-        &#125;
-        return arrowNum;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] points)</span> {<br>        Arrays.sort(points,(a,b)-&gt;Integer.compare(a[<span class="hljs-number">0</span>],b[<span class="hljs-number">0</span>]));<br><br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x72B6;&#x6001;&#x6700;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x6839;&#x7BAD;</span><br>        <span class="hljs-type">int</span> arrowNum=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;points.length;i++){<br>            <span class="hljs-comment">//&#x82E5;&#x4E24;&#x4E2A;&#x6C14;&#x7403;&#x6CA1;&#x6709;&#x4EA4;&#x96C6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x52A0;&#x4E00;&#x6839;&#x7BAD;&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x90A3;&#x6839;&#x7BAD;&#x53EA;&#x80FD;&#x5C04;&#x7A7F;&#x4E4B;&#x524D;&#x91CD;&#x53E0;&#x7684;&#x6240;&#x6709;&#x6C14;&#x7403;</span><br>            <span class="hljs-keyword">if</span>(points[i][<span class="hljs-number">0</span>]&gt;points[i-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]){<br>                arrowNum++;<br>            }<span class="hljs-keyword">else</span>{      <span class="hljs-comment">//&#x82E5;&#x4E24;&#x4E2A;&#x6C14;&#x7403;&#x662F;&#x6709;&#x4EA4;&#x96C6;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x6539;&#x53D8;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x904D;&#x5386;&#x6C14;&#x7403;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#xFF0C;&#x53F3;&#x8FB9;&#x754C;&#x53D6;&#x5F53;&#x524D;&#x53F3;&#x8FB9;&#x754C;&#x548C;&#x4E0A;&#x4E00;&#x4E2A;&#x6C14;&#x7403;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x4E48;&#x9009;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x53D6;&#x6700;&#x5C0F;&#x503C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E00;&#x652F;&#x7BAD;&#x53EF;&#x4EE5;&#x628A;&#x6240;&#x6709;&#x91CD;&#x53E0;&#x7684;&#x6C14;&#x7403;&#x90FD;&#x5C04;&#x7A7F;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5BF9;&#x53F3;&#x8FB9;&#x754C;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x5219;&#x53EA;&#x80FD;&#x4FDD;&#x8BC1;&#x6C14;&#x7403;&#x4E4B;&#x95F4;&#x4E24;&#x4E24;&#x91CD;&#x53E0;&#xFF0C;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x53D1;&#x751F;&#x91CD;&#x53E0;&#x7684;&#x6C14;&#x7403;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x53EA;&#x7BAD;&#x77E2;&#x5C04;&#x7A7F;</span><br>                points[i][<span class="hljs-number">1</span>]=Math.min(points[i-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>],points[i][<span class="hljs-number">1</span>]);<br><br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> arrowNum;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -238,9 +210,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -249,14 +220,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -343,6 +325,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

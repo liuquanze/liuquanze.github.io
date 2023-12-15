@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="226. 翻转二叉树题目描述：example 1: 		4       |    |       2    7     |   |  |   |     1   3   6   9         4       |    |       7    2     |   |  |   |     9   6   3   1 输入：root &#x3D; [4,2,7,1,3,6,9] 输出：[4,7">
+    <meta name="description" content="226. &amp;#x7FFB;&amp;#x8F6C;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;example 1: 123456789101112		4      |    |      2    7    |   |  |   |    1   3   6   9        4      |    |      7">
 <meta property="og:type" content="article">
 <meta property="og:title" content="226.翻转二叉树">
 <meta property="og:url" content="http://example.com/post/226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="226. 翻转二叉树题目描述：example 1: 		4       |    |       2    7     |   |  |   |     1   3   6   9         4       |    |       7    2     |   |  |   |     9   6   3   1 输入：root &#x3D; [4,2,7,1,3,6,9] 输出：[4,7">
+<meta property="og:description" content="226. &amp;#x7FFB;&amp;#x8F6C;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;example 1: 123456789101112		4      |    |      2    7    |   |  |   |    1   3   6   9        4      |    |      7">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-22T14:25:52.000Z">
 <meta property="article:modified_time" content="2022-09-22T14:31:11.456Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,74 +152,22 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a>226. 翻转二叉树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">		4
-      |    |
-      2    7
-    |   |  |   |
-    1   3   6   9
-        4
-      |    |
-      7    2
-    |   |  |   |
-    9   6   3   1
-输入：root &#x3D; [4,2,7,1,3,6,9]
-输出：[4,7,2,9,6,3,1]</code></pre>
+        <h1 id="226-&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;"><a href="#226-&#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;" class="headerlink" title="226. &#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;"></a>226. &#x7FFB;&#x8F6C;&#x4E8C;&#x53C9;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>example 1:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">		<span class="hljs-number">4</span><br>      |    |<br>      <span class="hljs-number">2</span>    <span class="hljs-number">7</span><br>    |   |  |   |<br>    <span class="hljs-number">1</span>   <span class="hljs-number">3</span>   <span class="hljs-number">6</span>   <span class="hljs-number">9</span><br>        <span class="hljs-number">4</span><br>      |    |<br>      <span class="hljs-number">7</span>    <span class="hljs-number">2</span><br>    |   |  |   |<br>    <span class="hljs-number">9</span>   <span class="hljs-number">6</span>   <span class="hljs-number">3</span>   <span class="hljs-number">1</span><br>&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">9</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">2</span>,<span class="hljs-number">9</span>,<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">		2
-      |    |
-      1    3
-        2
-      |    |
-      1    3
-输入：root &#x3D; [2,1,3]
-输出：[2,3,1]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">		<span class="hljs-number">2</span><br>      |    |<br>      <span class="hljs-number">1</span>    <span class="hljs-number">3</span><br>        <span class="hljs-number">2</span><br>      |    |<br>      <span class="hljs-number">1</span>    <span class="hljs-number">3</span><br>&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; []
-输出：[]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = []<br>&#x8F93;&#x51FA;&#xFF1A;[]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点数目范围在 <code>[0, 100]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x5728; <code>[0, 100]</code> &#x5185;</li>
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<p>题目来源:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/invert-binary-tree/">https://leetcode.cn/problems/invert-binary-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;后序遍历，若将遍历节点的左右孩子互换
-    public void postOrder(TreeNode root)&#123;
-        if(root&#x3D;&#x3D;null)
-            return;
-        if(root.left!&#x3D;null) postOrder(root.left);
-        if(root.right!&#x3D;null) postOrder(root.right);
-        TreeNode temp&#x3D;root.left;
-        root.left&#x3D;root.right;
-        root.right&#x3D;temp;
-        
-    &#125;
-    public TreeNode invertTree(TreeNode root) &#123;
-        if(root&#x3D;&#x3D;null)
-            return null;
-        postOrder(root);
-        return root;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/invert-binary-tree/">https://leetcode.cn/problems/invert-binary-tree/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x540E;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x82E5;&#x5C06;&#x904D;&#x5386;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x53F3;&#x5B69;&#x5B50;&#x4E92;&#x6362;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">postOrder</span><span class="hljs-params">(TreeNode root)</span>{<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span>;<br>        <span class="hljs-keyword">if</span>(root.left!=<span class="hljs-literal">null</span>) postOrder(root.left);<br>        <span class="hljs-keyword">if</span>(root.right!=<span class="hljs-literal">null</span>) postOrder(root.right);<br>        TreeNode temp=root.left;<br>        root.left=root.right;<br>        root.right=temp;<br>        <br>    }<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">invertTree</span><span class="hljs-params">(TreeNode root)</span> {<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        postOrder(root);<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -256,9 +204,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -267,14 +214,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -361,6 +319,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

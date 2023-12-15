@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="209.长度最小的子数组题目描述： 长度最小的子数组  给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 example 1: 输入：target &#x3D; 7, nums &amp;#x3">
+    <meta name="description" content="209.&amp;#x957F;&amp;#x5EA6;&amp;#x6700;&amp;#x5C0F;&amp;#x7684;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x957F;&amp;#x5EA6;&amp;#x6700;&amp;#x5C0F;&amp;#x7684;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="209.长度最小的子数组">
 <meta property="og:url" content="http://example.com/post/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="209.长度最小的子数组题目描述： 长度最小的子数组  给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。 example 1: 输入：target &#x3D; 7, nums &amp;#x3">
+<meta property="og:description" content="209.&amp;#x957F;&amp;#x5EA6;&amp;#x6700;&amp;#x5C0F;&amp;#x7684;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x957F;&amp;#x5EA6;&amp;#x6700;&amp;#x5C0F;&amp;#x7684;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-19T12:21:28.000Z">
 <meta property="article:modified_time" content="2022-08-19T12:24:53.929Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,69 +151,31 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="209">
-<li>长度最小的子数组</li>
+        <h1 id="209-&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;"><a href="#209-&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;" class="headerlink" title="209.&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;"></a>209.&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="209">
+<li>&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;</li>
 </ol>
-<p>给定一个含有 <code>n</code> 个正整数的数组和一个正整数 <code>target</code> <strong>。</strong></p>
-<p>找出该数组中满足其和 <code>≥ target</code> 的长度最小的 <strong>连续子数组</strong> <code>[numsl, numsl+1, ..., numsr-1, numsr]</code> ，并返回其长度<strong>。</strong>如果不存在符合条件的子数组，返回 <code>0</code> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x542B;&#x6709; <code>n</code> &#x4E2A;&#x6B63;&#x6574;&#x6570;&#x7684;&#x6570;&#x7EC4;&#x548C;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570; <code>target</code> <strong>&#x3002;</strong></p>
+<p>&#x627E;&#x51FA;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x6EE1;&#x8DB3;&#x5176;&#x548C; <code>&#x2265; target</code> &#x7684;&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684; <strong>&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;</strong> <code>[numsl, numsl+1, ..., numsr-1, numsr]</code> &#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x957F;&#x5EA6;<strong>&#x3002;</strong>&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE; <code>0</code> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：target &#x3D; 7, nums &#x3D; [2,3,1,2,4,3]
-输出：2
-解释：子数组 [4,3] 是该条件下的长度最小的子数组。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">7</span>, nums = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5B50;&#x6570;&#x7EC4; [<span class="hljs-number">4</span>,<span class="hljs-number">3</span>] &#x662F;&#x8BE5;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：target &#x3D; 4, nums &#x3D; [1,4,4]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">4</span>, nums = [<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：target &#x3D; 11, nums &#x3D; [1,1,1,1,1,1,1,1]
-输出：0</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">11</span>, nums = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= target &lt;= 109</code></li>
 <li><code>1 &lt;= nums.length &lt;= 105</code></li>
 <li><code>1 &lt;= nums[i] &lt;= 105</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/">https://leetcode.cn/problems/minimum-size-subarray-sum/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int minSubArrayLen(int target, int[] nums) &#123;
-        &#x2F;&#x2F;滑动窗口
-        &#x2F;*
-        基本思想：
-            1.定义两个指针，初始值均为数组左边界
-            2.定义变量记录两个指针区域之间子序列的和，再定义一个变量记录当前满足条件的最小子序列长度，初始值为无穷大
-            3.不断右移右指针，并计算子区域元素之和，当子区域和满足条件时记录当前子区域长度并更新最小子区域长度，随后将左指针右移，若依旧满足条件则继续更新最小子区域长度，直到子区域之和不满足条件，之后重新开始右移右指针
-        *&#x2F;
-        &#x2F;&#x2F;判断参数是否合法
-        if(nums&#x3D;&#x3D;null||nums.length&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        &#x2F;&#x2F;初始化指针，j为右指针，i为左指针
-        int i&#x3D;0;
-        int j&#x3D;0;
-        &#x2F;&#x2F;sum表示i~j子序列之和
-        int sum&#x3D;0;
-        &#x2F;&#x2F;ret记录当前的最小子序列
-        int ret&#x3D;Integer.MAX_VALUE;
-        &#x2F;&#x2F;当遍历子序列之和没有超过target，则将j右移
-        while(j&lt;nums.length)&#123;
-            sum+&#x3D;nums[j];
-            &#x2F;&#x2F;若子序列之和满足条件，则计算子序列长度，并判断是否更新ret，并将左边界右移，更新子序列之和，循环右移并更新子序列长度。
-            while(sum&gt;&#x3D;target)&#123;
-                int sub_length&#x3D;j-i+1;
-                ret&#x3D;ret&gt;sub_length? sub_length:ret;
-                sum-&#x3D;nums[i++]; 
-            &#125;
-            j++;
-        &#125;
-        &#x2F;&#x2F;若ret的值发生改变，则返回，否则返回0，表示没有满足条件的解
-        return ret&#x3D;&#x3D;Integer.MAX_VALUE? 0:ret;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, <span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-comment">//&#x6ED1;&#x52A8;&#x7A97;&#x53E3;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        &#x57FA;&#x672C;&#x601D;&#x60F3;&#xFF1A;</span><br><span class="hljs-comment">            1.&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x5747;&#x4E3A;&#x6570;&#x7EC4;&#x5DE6;&#x8FB9;&#x754C;</span><br><span class="hljs-comment">            2.&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x533A;&#x57DF;&#x4E4B;&#x95F4;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x548C;&#xFF0C;&#x518D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x6700;&#x5C0F;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;&#x65E0;&#x7A77;&#x5927;</span><br><span class="hljs-comment">            3.&#x4E0D;&#x65AD;&#x53F3;&#x79FB;&#x53F3;&#x6307;&#x9488;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x5B50;&#x533A;&#x57DF;&#x5143;&#x7D20;&#x4E4B;&#x548C;&#xFF0C;&#x5F53;&#x5B50;&#x533A;&#x57DF;&#x548C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#x5E76;&#x66F4;&#x65B0;&#x6700;&#x5C0F;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x5DE6;&#x6307;&#x9488;&#x53F3;&#x79FB;&#xFF0C;&#x82E5;&#x4F9D;&#x65E7;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x5219;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;&#x6700;&#x5C0F;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#xFF0C;&#x76F4;&#x5230;&#x5B50;&#x533A;&#x57DF;&#x4E4B;&#x548C;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x4E4B;&#x540E;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x53F3;&#x79FB;&#x53F3;&#x6307;&#x9488;</span><br><span class="hljs-comment">        */</span><br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x6307;&#x9488;&#xFF0C;j&#x4E3A;&#x53F3;&#x6307;&#x9488;&#xFF0C;i&#x4E3A;&#x5DE6;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//sum&#x8868;&#x793A;i~j&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;</span><br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//ret&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x5B50;&#x5E8F;&#x5217;</span><br>        <span class="hljs-type">int</span> ret=Integer.MAX_VALUE;<br>        <span class="hljs-comment">//&#x5F53;&#x904D;&#x5386;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#x6CA1;&#x6709;&#x8D85;&#x8FC7;target&#xFF0C;&#x5219;&#x5C06;j&#x53F3;&#x79FB;</span><br>        <span class="hljs-keyword">while</span>(j&lt;nums.length){<br>            sum+=nums[j];<br>            <span class="hljs-comment">//&#x82E5;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x8BA1;&#x7B97;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x5E76;&#x5224;&#x65AD;&#x662F;&#x5426;&#x66F4;&#x65B0;ret&#xFF0C;&#x5E76;&#x5C06;&#x5DE6;&#x8FB9;&#x754C;&#x53F3;&#x79FB;&#xFF0C;&#x66F4;&#x65B0;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#xFF0C;&#x5FAA;&#x73AF;&#x53F3;&#x79FB;&#x5E76;&#x66F4;&#x65B0;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x3002;</span><br>            <span class="hljs-keyword">while</span>(sum&gt;=target){<br>                <span class="hljs-type">int</span> sub_length=j-i+<span class="hljs-number">1</span>;<br>                ret=ret&gt;sub_length? sub_length:ret;<br>                sum-=nums[i++]; <br>            }<br>            j++;<br>        }<br>        <span class="hljs-comment">//&#x82E5;ret&#x7684;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0&#xFF0C;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x89E3;</span><br>        <span class="hljs-keyword">return</span> ret==Integer.MAX_VALUE? <span class="hljs-number">0</span>:ret;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -246,9 +208,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -257,14 +218,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -351,6 +323,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

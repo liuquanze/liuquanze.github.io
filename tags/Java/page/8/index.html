@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -148,55 +148,28 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="541-反转字符串Ⅱ"><a href="#541-反转字符串Ⅱ" class="headerlink" title="541.反转字符串Ⅱ"></a>541.反转字符串Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="541">
-<li>反转字符串 II</li>
+        <h1 id="541-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x2161;"><a href="#541-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x2161;" class="headerlink" title="541.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x2161;"></a>541.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="541">
+<li>&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32; II</li>
 </ol>
-<p>给定一个字符串 <code>s</code> 和一个整数 <code>k</code>，从字符串开头算起，每计数至 <code>2k</code> 个字符，就反转这 <code>2k</code> 字符中的前 <code>k</code> 个字符。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570; <code>k</code>&#xFF0C;&#x4ECE;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#x7B97;&#x8D77;&#xFF0C;&#x6BCF;&#x8BA1;&#x6570;&#x81F3; <code>2k</code> &#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5C31;&#x53CD;&#x8F6C;&#x8FD9; <code>2k</code> &#x5B57;&#x7B26;&#x4E2D;&#x7684;&#x524D; <code>k</code> &#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
 <ul>
-<li>如果剩余字符少于 <code>k</code> 个，则将剩余字符全部反转。</li>
-<li>如果剩余字符小于 <code>2k</code> 但大于或等于 <code>k</code> 个，则反转前 <code>k</code> 个字符，其余字符保持原样。</li>
+<li>&#x5982;&#x679C;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C11;&#x4E8E; <code>k</code> &#x4E2A;&#xFF0C;&#x5219;&#x5C06;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x53CD;&#x8F6C;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C0F;&#x4E8E; <code>2k</code> &#x4F46;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; <code>k</code> &#x4E2A;&#xFF0C;&#x5219;&#x53CD;&#x8F6C;&#x524D; <code>k</code> &#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4F59;&#x5B57;&#x7B26;&#x4FDD;&#x6301;&#x539F;&#x6837;&#x3002;</li>
 </ul>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;abcdefg&quot;, k &#x3D; 2
-输出：&quot;bacdfeg&quot;</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;abcdefg&quot;</span>, k = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;bacdfeg&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;abcd&quot;, k &#x3D; 2
-输出：&quot;bacd&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;abcd&quot;</span>, k = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;bacd&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length &lt;= 104</code></li>
-<li><code>s</code> 仅由小写英文组成</li>
+<li><code>s</code> &#x4EC5;&#x7531;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x7EC4;&#x6210;</li>
 <li><code>1 &lt;= k &lt;= 104</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string-ii/">https://leetcode.cn/problems/reverse-string-ii/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public String reverseStr(String s, int k) &#123;
-        char[] ch &#x3D; s.toCharArray();
-        &#x2F;&#x2F; 1. 每隔 2k 个字符的前 k 个字符进行反转，每次循环挑出一个2k区间
-        for (int i &#x3D; 0; i&lt; ch.length; i +&#x3D; 2 * k) &#123;
-            &#x2F;&#x2F; 2. 剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符
-            if (i + k &lt;&#x3D; ch.length) &#123;
-                reverse(ch, i, i + k -1);
-                continue;
-            &#125;
-            &#x2F;&#x2F; 3. 剩余字符少于 k 个，则将剩余字符全部反转
-            reverse(ch, i, ch.length - 1);
-        &#125;
-        return  new String(ch);
-
-    &#125;
-    &#x2F;&#x2F; 定义翻转函数
-    public void reverse(char[] ch, int i, int j) &#123;
-    for (; i &lt; j; i++, j--) &#123;
-        char temp  &#x3D; ch[i];
-        ch[i] &#x3D; ch[j];
-        ch[j] &#x3D; temp;
-    &#125;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string-ii/">https://leetcode.cn/problems/reverse-string-ii/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">reverseStr</span><span class="hljs-params">(String s, <span class="hljs-type">int</span> k)</span> {<br>        <span class="hljs-type">char</span>[] ch = s.toCharArray();<br>        <span class="hljs-comment">// 1. &#x6BCF;&#x9694; 2k &#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x524D; k &#x4E2A;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#xFF0C;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x6311;&#x51FA;&#x4E00;&#x4E2A;2k&#x533A;&#x95F4;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i&lt; ch.length; i += <span class="hljs-number">2</span> * k) {<br>            <span class="hljs-comment">// 2. &#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C0F;&#x4E8E; 2k &#x4F46;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; k &#x4E2A;&#xFF0C;&#x5219;&#x53CD;&#x8F6C;&#x524D; k &#x4E2A;&#x5B57;&#x7B26;</span><br>            <span class="hljs-keyword">if</span> (i + k &lt;= ch.length) {<br>                reverse(ch, i, i + k -<span class="hljs-number">1</span>);<br>                <span class="hljs-keyword">continue</span>;<br>            }<br>            <span class="hljs-comment">// 3. &#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5C11;&#x4E8E; k &#x4E2A;&#xFF0C;&#x5219;&#x5C06;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x5168;&#x90E8;&#x53CD;&#x8F6C;</span><br>            reverse(ch, i, ch.length - <span class="hljs-number">1</span>);<br>        }<br>        <span class="hljs-keyword">return</span>  <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(ch);<br><br>    }<br>    <span class="hljs-comment">// &#x5B9A;&#x4E49;&#x7FFB;&#x8F6C;&#x51FD;&#x6570;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">char</span>[] ch, <span class="hljs-type">int</span> i, <span class="hljs-type">int</span> j)</span> {<br>    <span class="hljs-keyword">for</span> (; i &lt; j; i++, j--) {<br>        <span class="hljs-type">char</span> <span class="hljs-variable">temp</span>  <span class="hljs-operator">=</span> ch[i];<br>        ch[i] = ch[j];<br>        ch[j] = temp;<br>    }<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -237,42 +210,24 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344.反转字符串"></a>344.反转字符串</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="344">
-<li>反转字符串</li>
+        <h1 id="344-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"><a href="#344-&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;" class="headerlink" title="344.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"></a>344.&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="344">
+<li>&#x53CD;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</li>
 </ol>
-<p>编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 <code>s</code> 的形式给出。</p>
-<p>不要给另外的数组分配额外的空间，你必须**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a>修改输入数组**、使用 O(1) 的额外空间解决这一问题。</p>
+<p>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53CD;&#x8F6C;&#x8FC7;&#x6765;&#x3002;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x5B57;&#x7B26;&#x6570;&#x7EC4; <code>s</code> &#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;&#x3002;</p>
+<p>&#x4E0D;&#x8981;&#x7ED9;&#x53E6;&#x5916;&#x7684;&#x6570;&#x7EC4;&#x5206;&#x914D;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">&#x539F;&#x5730;</a>&#x4FEE;&#x6539;&#x8F93;&#x5165;&#x6570;&#x7EC4;**&#x3001;&#x4F7F;&#x7528; O(1) &#x7684;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
-输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = [<span class="hljs-string">&quot;h&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;o&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-string">&quot;o&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;h&quot;</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]
-输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = [<span class="hljs-string">&quot;H&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;h&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-string">&quot;h&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;H&quot;</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length &lt;= 105</code></li>
-<li><code>s[i]</code> 都是 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ASCII">ASCII</a> 码表中的可打印字符</li>
+<li><code>s[i]</code> &#x90FD;&#x662F; <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ASCII">ASCII</a> &#x7801;&#x8868;&#x4E2D;&#x7684;&#x53EF;&#x6253;&#x5370;&#x5B57;&#x7B26;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string/">https://leetcode.cn/problems/reverse-string/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public void reverseString(char[] s) &#123;
-        int left&#x3D;0;
-        int right&#x3D;s.length-1;
-        while(left&lt;right)&#123;
-            swap(s,left,right);
-            left++;
-            right--;
-        &#125;
-    &#125;
-
-    public void swap(char[] s,int left,int right)&#123;
-        char temp&#x3D;s[left];
-        s[left]&#x3D;s[right];
-        s[right]&#x3D;temp;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string/">https://leetcode.cn/problems/reverse-string/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">reverseString</span><span class="hljs-params">(<span class="hljs-type">char</span>[] s)</span> {<br>        <span class="hljs-type">int</span> left=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> right=s.length-<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span>(left&lt;right){<br>            swap(s,left,right);<br>            left++;<br>            right--;<br>        }<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">char</span>[] s,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-type">char</span> temp=s[left];<br>        s[left]=s[right];<br>        s[right]=temp;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -315,85 +270,28 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="15-三数之和"><a href="#15-三数之和" class="headerlink" title="15.三数之和"></a>15.三数之和</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="15">
-<li>三数之和</li>
+        <h1 id="15-&#x4E09;&#x6570;&#x4E4B;&#x548C;"><a href="#15-&#x4E09;&#x6570;&#x4E4B;&#x548C;" class="headerlink" title="15.&#x4E09;&#x6570;&#x4E4B;&#x548C;"></a>15.&#x4E09;&#x6570;&#x4E4B;&#x548C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="15">
+<li>&#x4E09;&#x6570;&#x4E4B;&#x548C;</li>
 </ol>
-<p>给你一个整数数组 <code>nums</code> ，判断是否存在三元组 <code>[nums[i], nums[j], nums[k]]</code> 满足 <code>i != j</code>、<code>i != k</code> 且 <code>j != k</code> ，同时还满足 <code>nums[i] + nums[j] + nums[k] == 0</code> 。请</p>
-<p>你返回所有和为 <code>0</code> 且不重复的三元组。</p>
-<p><strong>注意：</strong>答案中不可以包含重复的三元组。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E09;&#x5143;&#x7EC4; <code>[nums[i], nums[j], nums[k]]</code> &#x6EE1;&#x8DB3; <code>i != j</code>&#x3001;<code>i != k</code> &#x4E14; <code>j != k</code> &#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x6EE1;&#x8DB3; <code>nums[i] + nums[j] + nums[k] == 0</code> &#x3002;&#x8BF7;</p>
+<p>&#x4F60;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x548C;&#x4E3A; <code>0</code> &#x4E14;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x7B54;&#x6848;&#x4E2D;&#x4E0D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x91CD;&#x590D;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [-1,0,1,2,-1,-4]
-输出：[[-1,-1,2],[-1,0,1]]
-解释：
-nums[0] + nums[1] + nums[2] &#x3D; (-1) + 0 + 1 &#x3D; 0 。
-nums[1] + nums[2] + nums[4] &#x3D; 0 + 1 + (-1) &#x3D; 0 。
-nums[0] + nums[3] + nums[4] &#x3D; (-1) + 2 + (-1) &#x3D; 0 。
-不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。
-注意，输出的顺序和三元组的顺序并不重要。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [-<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[-<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>]]<br>&#x89E3;&#x91CA;&#xFF1A;<br>nums[<span class="hljs-number">0</span>] + nums[<span class="hljs-number">1</span>] + nums[<span class="hljs-number">2</span>] = (-<span class="hljs-number">1</span>) + <span class="hljs-number">0</span> + <span class="hljs-number">1</span> = <span class="hljs-number">0</span> &#x3002;<br>nums[<span class="hljs-number">1</span>] + nums[<span class="hljs-number">2</span>] + nums[<span class="hljs-number">4</span>] = <span class="hljs-number">0</span> + <span class="hljs-number">1</span> + (-<span class="hljs-number">1</span>) = <span class="hljs-number">0</span> &#x3002;<br>nums[<span class="hljs-number">0</span>] + nums[<span class="hljs-number">3</span>] + nums[<span class="hljs-number">4</span>] = (-<span class="hljs-number">1</span>) + <span class="hljs-number">2</span> + (-<span class="hljs-number">1</span>) = <span class="hljs-number">0</span> &#x3002;<br>&#x4E0D;&#x540C;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x662F; [-<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>] &#x548C; [-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>] &#x3002;<br>&#x6CE8;&#x610F;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x548C;&#x4E09;&#x5143;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5E76;&#x4E0D;&#x91CD;&#x8981;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [0,1,1]
-输出：[]
-解释：唯一可能的三元组和不为 0 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[]<br>&#x89E3;&#x91CA;&#xFF1A;&#x552F;&#x4E00;&#x53EF;&#x80FD;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x548C;&#x4E0D;&#x4E3A; <span class="hljs-number">0</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [0,0,0]
-输出：[[0,0,0]]
-解释：唯一可能的三元组和为 0 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]]<br>&#x89E3;&#x91CA;&#xFF1A;&#x552F;&#x4E00;&#x53EF;&#x80FD;&#x7684;&#x4E09;&#x5143;&#x7EC4;&#x548C;&#x4E3A; <span class="hljs-number">0</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>3 &lt;= nums.length &lt;= 3000</code></li>
 <li><code>-105 &lt;= nums[i] &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum">https://leetcode.cn/problems/3sum</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &#123;
-        List&lt;List&lt;Integer&gt;&gt; result &#x3D; new ArrayList&lt;&gt;();
-        &#x2F;&#x2F;对数组进行排序
-        Arrays.sort(nums);
-
-        
-        for (int i &#x3D; 0; i &lt; nums.length; i++) &#123;
-            &#x2F;&#x2F;因为已经排序了，如果第i个元素大于0，则之后的元素均大于0， 不能满足和为0，直接退出
-            if (nums[i] &gt; 0) &#123;
-                return result;
-            &#125;
-
-            &#x2F;&#x2F;去重，如果i和i-1的元素相同，则遍历下一个
-            if (i &gt; 0 &amp;&amp; nums[i] &#x3D;&#x3D; nums[i - 1]) &#123;
-                continue;
-            &#125;
-
-            &#x2F;&#x2F;left初始指向i+1，right指向数组末尾
-            int left &#x3D; i + 1;
-            int right &#x3D; nums.length - 1;
-            &#x2F;&#x2F;寻找满足条件的三个数
-            while (right &gt; left) &#123;
-                &#x2F;&#x2F;获取三个指针指向的值
-                int sum &#x3D; nums[i] + nums[left] + nums[right];
-                &#x2F;&#x2F;如果sum大于0，表示和太大，right指针左移，将和减小
-                if (sum &gt; 0) &#123;
-                    right--;
-                    &#x2F;&#x2F;若sum小于0，则表示太小，left右移，扩大sum
-                &#125; else if (sum &lt; 0) &#123;
-                    left++;
-                    &#x2F;&#x2F;当sum&#x3D;&#x3D;0，则表示满足条件
-                &#125; else &#123;
-                    &#x2F;&#x2F;将该组合加入结果集合
-                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
-                    &#x2F;&#x2F;寻找下一组满足条件的和，但是需要去重
-                    while (right &gt; left &amp;&amp; nums[right] &#x3D;&#x3D; nums[right - 1]) right--;
-                    while (right &gt; left &amp;&amp; nums[left] &#x3D;&#x3D; nums[left + 1]) left++;
-                    
-                    right--; 
-                    left++;
-                &#125;
-            &#125;
-        &#125;
-        return result;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum">https://leetcode.cn/problems/3sum</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="hljs-title function_">threeSum</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        List&lt;List&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</span><br>        Arrays.sort(nums);<br><br>        <br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; nums.length; i++) {<br>            <span class="hljs-comment">//&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x6392;&#x5E8F;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#x5927;&#x4E8E;0&#xFF0C;&#x5219;&#x4E4B;&#x540E;&#x7684;&#x5143;&#x7D20;&#x5747;&#x5927;&#x4E8E;0&#xFF0C; &#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x548C;&#x4E3A;0&#xFF0C;&#x76F4;&#x63A5;&#x9000;&#x51FA;</span><br>            <span class="hljs-keyword">if</span> (nums[i] &gt; <span class="hljs-number">0</span>) {<br>                <span class="hljs-keyword">return</span> result;<br>            }<br><br>            <span class="hljs-comment">//&#x53BB;&#x91CD;&#xFF0C;&#x5982;&#x679C;i&#x548C;i-1&#x7684;&#x5143;&#x7D20;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x904D;&#x5386;&#x4E0B;&#x4E00;&#x4E2A;</span><br>            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] == nums[i - <span class="hljs-number">1</span>]) {<br>                <span class="hljs-keyword">continue</span>;<br>            }<br><br>            <span class="hljs-comment">//left&#x521D;&#x59CB;&#x6307;&#x5411;i+1&#xFF0C;right&#x6307;&#x5411;&#x6570;&#x7EC4;&#x672B;&#x5C3E;</span><br>            <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> i + <span class="hljs-number">1</span>;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> nums.length - <span class="hljs-number">1</span>;<br>            <span class="hljs-comment">//&#x5BFB;&#x627E;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x4E09;&#x4E2A;&#x6570;</span><br>            <span class="hljs-keyword">while</span> (right &gt; left) {<br>                <span class="hljs-comment">//&#x83B7;&#x53D6;&#x4E09;&#x4E2A;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x503C;</span><br>                <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> nums[i] + nums[left] + nums[right];<br>                <span class="hljs-comment">//&#x5982;&#x679C;sum&#x5927;&#x4E8E;0&#xFF0C;&#x8868;&#x793A;&#x548C;&#x592A;&#x5927;&#xFF0C;right&#x6307;&#x9488;&#x5DE6;&#x79FB;&#xFF0C;&#x5C06;&#x548C;&#x51CF;&#x5C0F;</span><br>                <span class="hljs-keyword">if</span> (sum &gt; <span class="hljs-number">0</span>) {<br>                    right--;<br>                    <span class="hljs-comment">//&#x82E5;sum&#x5C0F;&#x4E8E;0&#xFF0C;&#x5219;&#x8868;&#x793A;&#x592A;&#x5C0F;&#xFF0C;left&#x53F3;&#x79FB;&#xFF0C;&#x6269;&#x5927;sum</span><br>                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sum &lt; <span class="hljs-number">0</span>) {<br>                    left++;<br>                    <span class="hljs-comment">//&#x5F53;sum==0&#xFF0C;&#x5219;&#x8868;&#x793A;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;</span><br>                } <span class="hljs-keyword">else</span> {<br>                    <span class="hljs-comment">//&#x5C06;&#x8BE5;&#x7EC4;&#x5408;&#x52A0;&#x5165;&#x7ED3;&#x679C;&#x96C6;&#x5408;</span><br>                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));<br>                    <span class="hljs-comment">//&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x7EC4;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x548C;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x53BB;&#x91CD;</span><br>                    <span class="hljs-keyword">while</span> (right &gt; left &amp;&amp; nums[right] == nums[right - <span class="hljs-number">1</span>]) right--;<br>                    <span class="hljs-keyword">while</span> (right &gt; left &amp;&amp; nums[left] == nums[left + <span class="hljs-number">1</span>]) left++;<br>                    <br>                    right--; <br>                    left++;<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> result;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -434,59 +332,24 @@ nums[0] + nums[3] + nums[4] &#x3D; (-1) + 2 + (-1) &#x3D; 0 。
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="454-四数相加Ⅱ"><a href="#454-四数相加Ⅱ" class="headerlink" title="454.四数相加Ⅱ"></a>454.四数相加Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="454">
-<li>四数相加 II</li>
+        <h1 id="454-&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;"><a href="#454-&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;" class="headerlink" title="454.&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;"></a>454.&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="454">
+<li>&#x56DB;&#x6570;&#x76F8;&#x52A0; II</li>
 </ol>
-<p>给你四个整数数组 <code>nums1</code>、<code>nums2</code>、<code>nums3</code> 和 <code>nums4</code> ，数组长度都是 <code>n</code> ，请你计算有多少个元组 <code>(i, j, k, l)</code> 能满足：</p>
+<p>&#x7ED9;&#x4F60;&#x56DB;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums1</code>&#x3001;<code>nums2</code>&#x3001;<code>nums3</code> &#x548C; <code>nums4</code> &#xFF0C;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x90FD;&#x662F; <code>n</code> &#xFF0C;&#x8BF7;&#x4F60;&#x8BA1;&#x7B97;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5143;&#x7EC4; <code>(i, j, k, l)</code> &#x80FD;&#x6EE1;&#x8DB3;&#xFF1A;</p>
 <ul>
 <li><code>0 &lt;= i, j, k, l &lt; n</code></li>
 <li><code>nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0</code></li>
 </ul>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [1,2], nums2 &#x3D; [-2,-1], nums3 &#x3D; [-1,2], nums4 &#x3D; [0,2]
-输出：2
-解释：
-两个元组如下：
-1. (0, 0, 0, 1) -&gt; nums1[0] + nums2[0] + nums3[0] + nums4[1] &#x3D; 1 + (-2) + (-1) + 2 &#x3D; 0
-2. (1, 1, 0, 0) -&gt; nums1[1] + nums2[1] + nums3[0] + nums4[0] &#x3D; 2 + (-1) + (-1) + 0 &#x3D; 0</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], nums2 = [-<span class="hljs-number">2</span>,-<span class="hljs-number">1</span>], nums3 = [-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], nums4 = [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x4E24;&#x4E2A;&#x5143;&#x7EC4;&#x5982;&#x4E0B;&#xFF1A;<br><span class="hljs-number">1.</span> (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>) -&gt; nums1[<span class="hljs-number">0</span>] + nums2[<span class="hljs-number">0</span>] + nums3[<span class="hljs-number">0</span>] + nums4[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span> + (-<span class="hljs-number">2</span>) + (-<span class="hljs-number">1</span>) + <span class="hljs-number">2</span> = <span class="hljs-number">0</span><br><span class="hljs-number">2.</span> (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>) -&gt; nums1[<span class="hljs-number">1</span>] + nums2[<span class="hljs-number">1</span>] + nums3[<span class="hljs-number">0</span>] + nums4[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span> + (-<span class="hljs-number">1</span>) + (-<span class="hljs-number">1</span>) + <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [0], nums2 &#x3D; [0], nums3 &#x3D; [0], nums4 &#x3D; [0]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">0</span>], nums2 = [<span class="hljs-number">0</span>], nums3 = [<span class="hljs-number">0</span>], nums4 = [<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>n &#x3D;&#x3D; nums1.length<br>n &#x3D;&#x3D; nums2.length<br>n &#x3D;&#x3D; nums3.length<br>n &#x3D;&#x3D; nums4.length<br>1 &lt;&#x3D; n &lt;&#x3D; 200<br>-228 &lt;&#x3D; nums1[i], nums2[i], nums3[i], nums4[i] &lt;&#x3D; 228</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sum-ii">https://leetcode.cn/problems/4sum-ii</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) &#123;
-        HashMap&lt;Integer,Integer&gt; hashMap&#x3D;new HashMap&lt;&gt;();
-        &#x2F;&#x2F;记录可以满足四数相加为0的组合的个数
-        int res&#x3D;0;
-        &#x2F;&#x2F;遍历nums1和nums2元素相加之和，存入map中，key为两数之和，value是key两数之和出现的次数
-        for(int num1:nums1)&#123;
-            for(int num2:nums2)&#123;
-                int temp&#x3D;num1+num2;
-                if(hashMap.containsKey(temp))&#123;
-                    hashMap.put(temp,hashMap.get(temp)+1);
-                &#125;else&#123;
-                    hashMap.put(temp,1);
-                &#125;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;遍历nums3和nums4元素相加之和，检查map中是否存在0-两数之和，如果存在，则表示存在一组满足条件的解，并将res加上map中的value，表示
-        &#x2F;&#x2F;存在多个解
-        for(int num3:nums3)&#123;
-            for(int num4:nums4)&#123;
-                int temp&#x3D;num3+num4;
-                if(hashMap.containsKey(0-temp))&#123;
-                    res+&#x3D;hashMap.get(0-temp);
-                &#125;
-            &#125;
-        &#125;
-        return res;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>n == nums1.length<br>n == nums2.length<br>n == nums3.length<br>n == nums4.length<br>1 &lt;= n &lt;= 200<br>-228 &lt;= nums1[i], nums2[i], nums3[i], nums4[i] &lt;= 228</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sum-ii">https://leetcode.cn/problems/4sum-ii</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fourSumCount</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums1, <span class="hljs-type">int</span>[] nums2, <span class="hljs-type">int</span>[] nums3, <span class="hljs-type">int</span>[] nums4)</span> {<br>        HashMap&lt;Integer,Integer&gt; hashMap=<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x56DB;&#x6570;&#x76F8;&#x52A0;&#x4E3A;0&#x7684;&#x7EC4;&#x5408;&#x7684;&#x4E2A;&#x6570;</span><br>        <span class="hljs-type">int</span> res=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x904D;&#x5386;nums1&#x548C;nums2&#x5143;&#x7D20;&#x76F8;&#x52A0;&#x4E4B;&#x548C;&#xFF0C;&#x5B58;&#x5165;map&#x4E2D;&#xFF0C;key&#x4E3A;&#x4E24;&#x6570;&#x4E4B;&#x548C;&#xFF0C;value&#x662F;key&#x4E24;&#x6570;&#x4E4B;&#x548C;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num1:nums1){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num2:nums2){<br>                <span class="hljs-type">int</span> temp=num1+num2;<br>                <span class="hljs-keyword">if</span>(hashMap.containsKey(temp)){<br>                    hashMap.put(temp,hashMap.get(temp)+<span class="hljs-number">1</span>);<br>                }<span class="hljs-keyword">else</span>{<br>                    hashMap.put(temp,<span class="hljs-number">1</span>);<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;nums3&#x548C;nums4&#x5143;&#x7D20;&#x76F8;&#x52A0;&#x4E4B;&#x548C;&#xFF0C;&#x68C0;&#x67E5;map&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;0-&#x4E24;&#x6570;&#x4E4B;&#x548C;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x5B58;&#x5728;&#x4E00;&#x7EC4;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x89E3;&#xFF0C;&#x5E76;&#x5C06;res&#x52A0;&#x4E0A;map&#x4E2D;&#x7684;value&#xFF0C;&#x8868;&#x793A;</span><br>        <span class="hljs-comment">//&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x89E3;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num3:nums3){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num4:nums4){<br>                <span class="hljs-type">int</span> temp=num3+num4;<br>                <span class="hljs-keyword">if</span>(hashMap.containsKey(<span class="hljs-number">0</span>-temp)){<br>                    res+=hashMap.get(<span class="hljs-number">0</span>-temp);<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> res;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -527,57 +390,29 @@ nums[0] + nums[3] + nums[4] &#x3D; (-1) + 2 + (-1) &#x3D; 0 。
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="202-快乐数"><a href="#202-快乐数" class="headerlink" title="202.快乐数"></a>202.快乐数</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="202">
-<li>快乐数</li>
+        <h1 id="202-&#x5FEB;&#x4E50;&#x6570;"><a href="#202-&#x5FEB;&#x4E50;&#x6570;" class="headerlink" title="202.&#x5FEB;&#x4E50;&#x6570;"></a>202.&#x5FEB;&#x4E50;&#x6570;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="202">
+<li>&#x5FEB;&#x4E50;&#x6570;</li>
 </ol>
-<p>编写一个算法来判断一个数 <code>n</code> 是不是快乐数。</p>
-<p><strong>「快乐数」</strong> 定义为：</p>
+<p>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6765;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6570; <code>n</code> &#x662F;&#x4E0D;&#x662F;&#x5FEB;&#x4E50;&#x6570;&#x3002;</p>
+<p><strong>&#x300C;&#x5FEB;&#x4E50;&#x6570;&#x300D;</strong> &#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;</p>
 <ul>
-<li>对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。</li>
-<li>然后重复这个过程直到这个数变为 1，也可能是 <strong>无限循环</strong> 但始终变不到 1。</li>
-<li>如果这个过程 <strong>结果为</strong> 1，那么这个数就是快乐数。</li>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x5C06;&#x8BE5;&#x6570;&#x66FF;&#x6362;&#x4E3A;&#x5B83;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x6570;&#x5B57;&#x7684;&#x5E73;&#x65B9;&#x548C;&#x3002;</li>
+<li>&#x7136;&#x540E;&#x91CD;&#x590D;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x76F4;&#x5230;&#x8FD9;&#x4E2A;&#x6570;&#x53D8;&#x4E3A; 1&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F; <strong>&#x65E0;&#x9650;&#x5FAA;&#x73AF;</strong> &#x4F46;&#x59CB;&#x7EC8;&#x53D8;&#x4E0D;&#x5230; 1&#x3002;</li>
+<li>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B; <strong>&#x7ED3;&#x679C;&#x4E3A;</strong> 1&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6570;&#x5C31;&#x662F;&#x5FEB;&#x4E50;&#x6570;&#x3002;</li>
 </ul>
-<p>如果 <code>n</code> 是 <em>快乐数</em> 就返回 <code>true</code> ；不是，则返回 <code>false</code> 。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 19
-输出：true
-解释：
-12 + 92 &#x3D; 82
-82 + 22 &#x3D; 68
-62 + 82 &#x3D; 100
-12 + 02 + 02 &#x3D; 1</code></pre>
+<p>&#x5982;&#x679C; <code>n</code> &#x662F; <em>&#x5FEB;&#x4E50;&#x6570;</em> &#x5C31;&#x8FD4;&#x56DE; <code>true</code> &#xFF1B;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>false</code> &#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">19</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;&#xFF1A;<br><span class="hljs-number">12</span> + <span class="hljs-number">92</span> = <span class="hljs-number">82</span><br><span class="hljs-number">82</span> + <span class="hljs-number">22</span> = <span class="hljs-number">68</span><br><span class="hljs-number">62</span> + <span class="hljs-number">82</span> = <span class="hljs-number">100</span><br><span class="hljs-number">12</span> + <span class="hljs-number">02</span> + <span class="hljs-number">02</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 2
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= n &lt;= 231 - 1</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/happy-number/">https://leetcode.cn/problems/happy-number/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean isHappy(int n) &#123;
-        &#x2F;&#x2F;存储替换过的数字，因为题目说了可能会出现无限循环的情况，会重复出现某个数字，比如
-        &#x2F;&#x2F;2，4，16，37，58，89，145，42，20，2
-        HashSet&lt;Integer&gt; set&#x3D;new HashSet&lt;Integer&gt;();
-        while(n!&#x3D;1&amp;&amp;!set.contains(n))&#123;
-            set.add(n);
-            n&#x3D;getNextNumber(n);
-        &#125;
-        return n&#x3D;&#x3D;1;
-    &#125;
-    &#x2F;&#x2F;计算下一个数字
-    public int getNextNumber(int n)&#123;
-        int res&#x3D;0;
-        while(n&gt;0)&#123;
-            int temp&#x3D;n%10;
-            res+&#x3D;temp*temp;
-            n&#x3D;n&#x2F;10;
-        &#125;
-        return res;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/happy-number/">https://leetcode.cn/problems/happy-number/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isHappy</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//&#x5B58;&#x50A8;&#x66FF;&#x6362;&#x8FC7;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x56E0;&#x4E3A;&#x9898;&#x76EE;&#x8BF4;&#x4E86;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F1A;&#x91CD;&#x590D;&#x51FA;&#x73B0;&#x67D0;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x6BD4;&#x5982;</span><br>        <span class="hljs-comment">//2&#xFF0C;4&#xFF0C;16&#xFF0C;37&#xFF0C;58&#xFF0C;89&#xFF0C;145&#xFF0C;42&#xFF0C;20&#xFF0C;2</span><br>        HashSet&lt;Integer&gt; set=<span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;Integer&gt;();<br>        <span class="hljs-keyword">while</span>(n!=<span class="hljs-number">1</span>&amp;&amp;!set.contains(n)){<br>            set.add(n);<br>            n=getNextNumber(n);<br>        }<br>        <span class="hljs-keyword">return</span> n==<span class="hljs-number">1</span>;<br>    }<br>    <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x4E0B;&#x4E00;&#x4E2A;&#x6570;&#x5B57;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getNextNumber</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span>{<br>        <span class="hljs-type">int</span> res=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(n&gt;<span class="hljs-number">0</span>){<br>            <span class="hljs-type">int</span> temp=n%<span class="hljs-number">10</span>;<br>            res+=temp*temp;<br>            n=n/<span class="hljs-number">10</span>;<br>        }<br>        <span class="hljs-keyword">return</span> res;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -618,48 +453,23 @@ nums[0] + nums[3] + nums[4] &#x3D; (-1) + 2 + (-1) &#x3D; 0 。
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349.两个数组的交集"></a>349.两个数组的交集</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="349">
-<li>两个数组的交集</li>
+        <h1 id="349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;"><a href="#349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;" class="headerlink" title="349.&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;"></a>349.&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="349">
+<li>&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</li>
 </ol>
-<p>给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6570;&#x7EC4; <code>nums1</code> &#x548C; <code>nums2</code> &#xFF0C;&#x8FD4;&#x56DE; <em>&#x5B83;&#x4EEC;&#x7684;&#x4EA4;&#x96C6;</em> &#x3002;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x662F; <strong>&#x552F;&#x4E00;</strong> &#x7684;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5; <strong>&#x4E0D;&#x8003;&#x8651;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x987A;&#x5E8F;</strong> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [1,2,2,1], nums2 &#x3D; [2,2]
-输出：[2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>], nums2 = [<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [4,9,5], nums2 &#x3D; [9,4,9,8,4]
-输出：[9,4]
-解释：[4,9] 也是可通过的</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>], nums2 = [<span class="hljs-number">9</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">9</span>,<span class="hljs-number">4</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">9</span>] &#x4E5F;&#x662F;&#x53EF;&#x901A;&#x8FC7;&#x7684;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
 <li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-arrays/">https://leetcode.cn/problems/intersection-of-two-arrays/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int[] intersection(int[] nums1, int[] nums2) &#123;
-        if (nums1 &#x3D;&#x3D; null || nums1.length &#x3D;&#x3D; 0 || nums2 &#x3D;&#x3D; null || nums2.length &#x3D;&#x3D; 0) &#123;
-            return new int[0];
-        &#125;
-        &#x2F;&#x2F;存储数组元素
-        Set&lt;Integer&gt; set1 &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;存储结果
-        Set&lt;Integer&gt; resSet &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;遍历数组1
-        for (int i : nums1) &#123;
-            set1.add(i);
-        &#125;
-        &#x2F;&#x2F;遍历数组2的过程中判断哈希表中是否存在该元素，若存在，则存入resSet中，因为输出结果是唯一的，因此并集的结果使用set集合来存储
-        for (int i : nums2) &#123;
-            if (set1.contains(i)) &#123;
-                resSet.add(i);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;将结果集合转为数组
-        return resSet.stream().mapToInt(x -&gt; x).toArray();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-arrays/">https://leetcode.cn/problems/intersection-of-two-arrays/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[] intersection(<span class="hljs-type">int</span>[] nums1, <span class="hljs-type">int</span>[] nums2) {<br>        <span class="hljs-keyword">if</span> (nums1 == <span class="hljs-literal">null</span> || nums1.length == <span class="hljs-number">0</span> || nums2 == <span class="hljs-literal">null</span> || nums2.length == <span class="hljs-number">0</span>) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-comment">//&#x5B58;&#x50A8;&#x6570;&#x7EC4;&#x5143;&#x7D20;</span><br>        Set&lt;Integer&gt; set1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x5B58;&#x50A8;&#x7ED3;&#x679C;</span><br>        Set&lt;Integer&gt; resSet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;1</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i : nums1) {<br>            set1.add(i);<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;2&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5224;&#x65AD;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5B58;&#x5165;resSet&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5E76;&#x96C6;&#x7684;&#x7ED3;&#x679C;&#x4F7F;&#x7528;set&#x96C6;&#x5408;&#x6765;&#x5B58;&#x50A8;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i : nums2) {<br>            <span class="hljs-keyword">if</span> (set1.contains(i)) {<br>                resSet.add(i);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5C06;&#x7ED3;&#x679C;&#x96C6;&#x5408;&#x8F6C;&#x4E3A;&#x6570;&#x7EC4;</span><br>        <span class="hljs-keyword">return</span> resSet.stream().mapToInt(x -&gt; x).toArray();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -700,57 +510,24 @@ nums[0] + nums[3] + nums[4] &#x3D; (-1) + 2 + (-1) &#x3D; 0 。
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="242">
-<li>有效的字母异位词</li>
+        <h1 id="242-&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;"><a href="#242-&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;" class="headerlink" title="242.&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;"></a>242.&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="242">
+<li>&#x6709;&#x6548;&#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;</li>
 </ol>
-<p>给定两个字符串 <code>*s*</code> 和 <code>*t*</code> ，编写一个函数来判断 <code>*t*</code> 是否是 <code>*s*</code> 的字母异位词。</p>
-<p><strong>注意：</strong>若 <code>*s*</code> 和 <code>*t*</code> 中每个字符出现的次数都相同，则称 <code>*s*</code> 和 <code>*t*</code> 互为字母异位词。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;anagram&quot;, t &#x3D; &quot;nagaram&quot;
-输出: true</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; <code>*s*</code> &#x548C; <code>*t*</code> &#xFF0C;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x5224;&#x65AD; <code>*t*</code> &#x662F;&#x5426;&#x662F; <code>*s*</code> &#x7684;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x82E5; <code>*s*</code> &#x548C; <code>*t*</code> &#x4E2D;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x90FD;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x79F0; <code>*s*</code> &#x548C; <code>*t*</code> &#x4E92;&#x4E3A;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;anagram&quot;</span>, t = <span class="hljs-string">&quot;nagaram&quot;</span><br>&#x8F93;&#x51FA;: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: s &#x3D; &quot;rat&quot;, t &#x3D; &quot;car&quot;
-输出: false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: s = <span class="hljs-string">&quot;rat&quot;</span>, t = <span class="hljs-string">&quot;car&quot;</span><br>&#x8F93;&#x51FA;: <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= s.length, t.length &lt;= 5 * 104</code></li>
-<li><code>s</code> 和 <code>t</code> 仅包含小写字母</li>
+<li><code>s</code> &#x548C; <code>t</code> &#x4EC5;&#x5305;&#x542B;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-anagram/">https://leetcode.cn/problems/valid-anagram/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-定义一个数组，来记录字符串s里字符出现的次数。
-需要把字符映射到数组也就是哈希表的索引下标上，因为字符a到字符z的ASCII是26个连续的数值，所以字符a映射为下标0，相应的字符z映射为下标25。
-
-再遍历 字符串s的时候，只需要将 s[i] - ‘a’ 所在的元素做+1 操作即可，并不需要记住字符a的ASCII，只要求出一个相对数值就可以了。 这样就将字符串s中字符出现的次数，统计出来了。
-
-那看一下如何检查字符串t中是否出现了这些字符，同样在遍历字符串t的时候，对t中出现的字符映射哈希表索引上的数值再做-1的操作。
-
-那么最后检查一下，record数组如果有的元素不为零0，说明字符串s和t一定是谁多了字符或者谁少了字符，return false。
-
-最后如果record数组所有元素都为零0，说明字符串s和t是字母异位词，return true。
-
-时间复杂度为O(n)，空间上因为定义是的一个常量大小的辅助数组，所以空间复杂度为O(1)。
-*&#x2F;
-class Solution &#123;
-    public boolean isAnagram(String s, String t) &#123;
-
-        int[] record &#x3D; new int[26];
-        for (char c : s.toCharArray()) &#123;
-            record[c - &#39;a&#39;] +&#x3D; 1;
-        &#125;
-        for (char c : t.toCharArray()) &#123;
-            record[c - &#39;a&#39;] -&#x3D; 1;
-        &#125;
-        for (int i : record) &#123;
-            if (i !&#x3D; 0) &#123;
-                return false;
-            &#125;
-        &#125;
-        return true;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-anagram/">https://leetcode.cn/problems/valid-anagram/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6765;&#x8BB0;&#x5F55;&#x5B57;&#x7B26;&#x4E32;s&#x91CC;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x3002;</span><br><span class="hljs-comment">&#x9700;&#x8981;&#x628A;&#x5B57;&#x7B26;&#x6620;&#x5C04;&#x5230;&#x6570;&#x7EC4;&#x4E5F;&#x5C31;&#x662F;&#x54C8;&#x5E0C;&#x8868;&#x7684;&#x7D22;&#x5F15;&#x4E0B;&#x6807;&#x4E0A;&#xFF0C;&#x56E0;&#x4E3A;&#x5B57;&#x7B26;a&#x5230;&#x5B57;&#x7B26;z&#x7684;ASCII&#x662F;26&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x5B57;&#x7B26;a&#x6620;&#x5C04;&#x4E3A;&#x4E0B;&#x6807;0&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x7B26;z&#x6620;&#x5C04;&#x4E3A;&#x4E0B;&#x6807;25&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x518D;&#x904D;&#x5386; &#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06; s[i] - &#x2018;a&#x2019; &#x6240;&#x5728;&#x7684;&#x5143;&#x7D20;&#x505A;+1 &#x64CD;&#x4F5C;&#x5373;&#x53EF;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x8BB0;&#x4F4F;&#x5B57;&#x7B26;a&#x7684;ASCII&#xFF0C;&#x53EA;&#x8981;&#x6C42;&#x51FA;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x6570;&#x503C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002; &#x8FD9;&#x6837;&#x5C31;&#x5C06;&#x5B57;&#x7B26;&#x4E32;s&#x4E2D;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x7EDF;&#x8BA1;&#x51FA;&#x6765;&#x4E86;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x90A3;&#x770B;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;t&#x4E2D;&#x662F;&#x5426;&#x51FA;&#x73B0;&#x4E86;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#xFF0C;&#x540C;&#x6837;&#x5728;&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;t&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;t&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;&#x6620;&#x5C04;&#x54C8;&#x5E0C;&#x8868;&#x7D22;&#x5F15;&#x4E0A;&#x7684;&#x6570;&#x503C;&#x518D;&#x505A;-1&#x7684;&#x64CD;&#x4F5C;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x90A3;&#x4E48;&#x6700;&#x540E;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#xFF0C;record&#x6570;&#x7EC4;&#x5982;&#x679C;&#x6709;&#x7684;&#x5143;&#x7D20;&#x4E0D;&#x4E3A;&#x96F6;0&#xFF0C;&#x8BF4;&#x660E;&#x5B57;&#x7B26;&#x4E32;s&#x548C;t&#x4E00;&#x5B9A;&#x662F;&#x8C01;&#x591A;&#x4E86;&#x5B57;&#x7B26;&#x6216;&#x8005;&#x8C01;&#x5C11;&#x4E86;&#x5B57;&#x7B26;&#xFF0C;return false&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x6700;&#x540E;&#x5982;&#x679C;record&#x6570;&#x7EC4;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x4E3A;&#x96F6;0&#xFF0C;&#x8BF4;&#x660E;&#x5B57;&#x7B26;&#x4E32;s&#x548C;t&#x662F;&#x5B57;&#x6BCD;&#x5F02;&#x4F4D;&#x8BCD;&#xFF0C;return true&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#xFF0C;&#x7A7A;&#x95F4;&#x4E0A;&#x56E0;&#x4E3A;&#x5B9A;&#x4E49;&#x662F;&#x7684;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;&#x5927;&#x5C0F;&#x7684;&#x8F85;&#x52A9;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x4EE5;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(1)&#x3002;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isAnagram</span><span class="hljs-params">(String s, String t)</span> {<br><br>        <span class="hljs-type">int</span>[] record = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">26</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> c : s.toCharArray()) {<br>            record[c - <span class="hljs-string">&apos;a&apos;</span>] += <span class="hljs-number">1</span>;<br>        }<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> c : t.toCharArray()) {<br>            record[c - <span class="hljs-string">&apos;a&apos;</span>] -= <span class="hljs-number">1</span>;<br>        }<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i : record) {<br>            <span class="hljs-keyword">if</span> (i != <span class="hljs-number">0</span>) {<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -791,71 +568,29 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="142-环形链表Ⅱ"><a href="#142-环形链表Ⅱ" class="headerlink" title="142.环形链表Ⅱ"></a>142.环形链表Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="142">
-<li>环形链表 II</li>
+        <h1 id="142-&#x73AF;&#x5F62;&#x94FE;&#x8868;&#x2161;"><a href="#142-&#x73AF;&#x5F62;&#x94FE;&#x8868;&#x2161;" class="headerlink" title="142.&#x73AF;&#x5F62;&#x94FE;&#x8868;&#x2161;"></a>142.&#x73AF;&#x5F62;&#x94FE;&#x8868;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="142">
+<li>&#x73AF;&#x5F62;&#x94FE;&#x8868; II</li>
 </ol>
-<p>给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>
-<p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（<strong>索引从 0 开始</strong>）。如果 <code>pos</code> 是 <code>-1</code>，则在该链表中没有环。<strong>注意：<code>pos</code> 不作为参数进行传递</strong>，仅仅是为了标识链表的实际情况。</p>
-<p><strong>不允许修改</strong> 链表。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1
-输出：返回索引为 1 的链表节点
-解释：链表中有一个环，其尾部连接到第二个节点。</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x8282;&#x70B9;  <code>head</code> &#xFF0C;&#x8FD4;&#x56DE;&#x94FE;&#x8868;&#x5F00;&#x59CB;&#x5165;&#x73AF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002; <em>&#x5982;&#x679C;&#x94FE;&#x8868;&#x65E0;&#x73AF;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>null</code>&#x3002;</em></p>
+<p>&#x5982;&#x679C;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FDE;&#x7EED;&#x8DDF;&#x8E2A; <code>next</code> &#x6307;&#x9488;&#x518D;&#x6B21;&#x5230;&#x8FBE;&#xFF0C;&#x5219;&#x94FE;&#x8868;&#x4E2D;&#x5B58;&#x5728;&#x73AF;&#x3002; &#x4E3A;&#x4E86;&#x8868;&#x793A;&#x7ED9;&#x5B9A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x73AF;&#xFF0C;&#x8BC4;&#x6D4B;&#x7CFB;&#x7EDF;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x6574;&#x6570; <code>pos</code> &#x6765;&#x8868;&#x793A;&#x94FE;&#x8868;&#x5C3E;&#x8FDE;&#x63A5;&#x5230;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;<strong>&#x7D22;&#x5F15;&#x4ECE; 0 &#x5F00;&#x59CB;</strong>&#xFF09;&#x3002;&#x5982;&#x679C; <code>pos</code> &#x662F; <code>-1</code>&#xFF0C;&#x5219;&#x5728;&#x8BE5;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x73AF;&#x3002;<strong>&#x6CE8;&#x610F;&#xFF1A;<code>pos</code> &#x4E0D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;</strong>&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x4E3A;&#x4E86;&#x6807;&#x8BC6;&#x94FE;&#x8868;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x3002;</p>
+<p><strong>&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;</strong> &#x94FE;&#x8868;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,-<span class="hljs-number">4</span>], pos = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;&#x8FD4;&#x56DE;&#x7D22;&#x5F15;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x94FE;&#x8868;&#x8282;&#x70B9;<br>&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x5176;&#x5C3E;&#x90E8;&#x8FDE;&#x63A5;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1,2], pos &#x3D; 0
-输出：返回索引为 0 的链表节点
-解释：链表中有一个环，其尾部连接到第一个节点。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], pos = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;&#xFF1A;&#x8FD4;&#x56DE;&#x7D22;&#x5F15;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x94FE;&#x8868;&#x8282;&#x70B9;<br>&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x5176;&#x5C3E;&#x90E8;&#x8FDE;&#x63A5;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1], pos &#x3D; -1
-输出：返回 null
-解释：链表中没有环。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>], pos = -<span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;&#x8FD4;&#x56DE; <span class="hljs-literal">null</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x73AF;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>链表中节点的数目范围在范围 <code>[0, 104]</code> 内</li>
+<li>&#x94FE;&#x8868;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x5728;&#x8303;&#x56F4; <code>[0, 104]</code> &#x5185;</li>
 <li><code>-105 &lt;= Node.val &lt;= 105</code></li>
-<li><code>pos</code> 的值为 <code>-1</code> 或者链表中的一个有效索引</li>
+<li><code>pos</code> &#x7684;&#x503C;&#x4E3A; <code>-1</code> &#x6216;&#x8005;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7D22;&#x5F15;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/submissions/">https://leetcode.cn/problems/linked-list-cycle-ii/submissions/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-判断是否有环：可以使用快慢指针法，分别定义 fast 和 slow 指针，从头结点出发，fast指针每次移动两个节点，slow指针每次移动一个节点，如果 fast 和 slow指针在途中相遇 ，说明这个链表有环。
-此时已经可以判断链表是否有环了，那么接下来要找这个环的入口了。
-首先判断是否有环，如果有环，则记录相遇节点，然后下一步寻找环的入口节点：从头结点出发一个指针，从相遇节点 也出发一个指针，这两个指针每次只走一个节点， 那么当这两个指针相遇的时候就是 环形入口的节点。
-*&#x2F;
-&#x2F;**
- * Definition for singly-linked list.
- * class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode(int x) &#123;
- *         val &#x3D; x;
- *         next &#x3D; null;
- *     &#125;
- * &#125;
- *&#x2F;
-public class Solution &#123;
-    public ListNode detectCycle(ListNode head) &#123;
-        ListNode slow &#x3D; head;
-        ListNode fast &#x3D; head;
-        while (fast !&#x3D; null &amp;&amp; fast.next !&#x3D; null) &#123;
-            slow &#x3D; slow.next;
-            fast &#x3D; fast.next.next;
-            if (slow &#x3D;&#x3D; fast) &#123;&#x2F;&#x2F; 有环
-                ListNode index1 &#x3D; fast;
-                ListNode index2 &#x3D; head;
-                &#x2F;&#x2F; 两个指针，从头结点和相遇结点，各走一步，直到相遇，相遇点即为环入口
-                while (index1 !&#x3D; index2) &#123;
-                    index1 &#x3D; index1.next;
-                    index2 &#x3D; index2.next;
-                &#125;
-                return index1;
-            &#125;
-        &#125;
-        return null;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/submissions/">https://leetcode.cn/problems/linked-list-cycle-ii/submissions/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x6CD5;&#xFF0C;&#x5206;&#x522B;&#x5B9A;&#x4E49; fast &#x548C; slow &#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x5934;&#x7ED3;&#x70B9;&#x51FA;&#x53D1;&#xFF0C;fast&#x6307;&#x9488;&#x6BCF;&#x6B21;&#x79FB;&#x52A8;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;slow&#x6307;&#x9488;&#x6BCF;&#x6B21;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C; fast &#x548C; slow&#x6307;&#x9488;&#x5728;&#x9014;&#x4E2D;&#x76F8;&#x9047; &#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;&#x6709;&#x73AF;&#x3002;</span><br><span class="hljs-comment">&#x6B64;&#x65F6;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x94FE;&#x8868;&#x662F;&#x5426;&#x6709;&#x73AF;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x63A5;&#x4E0B;&#x6765;&#x8981;&#x627E;&#x8FD9;&#x4E2A;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x4E86;&#x3002;</span><br><span class="hljs-comment">&#x9996;&#x5148;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x73AF;&#xFF0C;&#x5219;&#x8BB0;&#x5F55;&#x76F8;&#x9047;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x4E00;&#x6B65;&#x5BFB;&#x627E;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x8282;&#x70B9;&#xFF1A;&#x4ECE;&#x5934;&#x7ED3;&#x70B9;&#x51FA;&#x53D1;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x76F8;&#x9047;&#x8282;&#x70B9; &#x4E5F;&#x51FA;&#x53D1;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x6BCF;&#x6B21;&#x53EA;&#x8D70;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C; &#x90A3;&#x4E48;&#x5F53;&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x76F8;&#x9047;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x662F; &#x73AF;&#x5F62;&#x5165;&#x53E3;&#x7684;&#x8282;&#x70B9;&#x3002;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * class ListNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode(int x) {</span><br><span class="hljs-comment"> *         val = x;</span><br><span class="hljs-comment"> *         next = null;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">detectCycle</span><span class="hljs-params">(ListNode head)</span> {<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">slow</span> <span class="hljs-operator">=</span> head;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">fast</span> <span class="hljs-operator">=</span> head;<br>        <span class="hljs-keyword">while</span> (fast != <span class="hljs-literal">null</span> &amp;&amp; fast.next != <span class="hljs-literal">null</span>) {<br>            slow = slow.next;<br>            fast = fast.next.next;<br>            <span class="hljs-keyword">if</span> (slow == fast) {<span class="hljs-comment">// &#x6709;&#x73AF;</span><br>                <span class="hljs-type">ListNode</span> <span class="hljs-variable">index1</span> <span class="hljs-operator">=</span> fast;<br>                <span class="hljs-type">ListNode</span> <span class="hljs-variable">index2</span> <span class="hljs-operator">=</span> head;<br>                <span class="hljs-comment">// &#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x5934;&#x7ED3;&#x70B9;&#x548C;&#x76F8;&#x9047;&#x7ED3;&#x70B9;&#xFF0C;&#x5404;&#x8D70;&#x4E00;&#x6B65;&#xFF0C;&#x76F4;&#x5230;&#x76F8;&#x9047;&#xFF0C;&#x76F8;&#x9047;&#x70B9;&#x5373;&#x4E3A;&#x73AF;&#x5165;&#x53E3;</span><br>                <span class="hljs-keyword">while</span> (index1 != index2) {<br>                    index1 = index1.next;<br>                    index2 = index2.next;<br>                }<br>                <span class="hljs-keyword">return</span> index1;<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -896,64 +631,27 @@ public class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24.两两交换链表中的节点"></a>24.两两交换链表中的节点</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="24">
-<li>两两交换链表中的节点</li>
+        <h1 id="24-&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;"><a href="#24-&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;" class="headerlink" title="24.&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;"></a>24.&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="24">
+<li>&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;</li>
 </ol>
-<p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x4E24;&#x4E24;&#x4EA4;&#x6362;&#x5176;&#x4E2D;&#x76F8;&#x90BB;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4EA4;&#x6362;&#x540E;&#x94FE;&#x8868;&#x7684;&#x5934;&#x8282;&#x70B9;&#x3002;&#x4F60;&#x5FC5;&#x987B;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x8282;&#x70B9;&#x5185;&#x90E8;&#x7684;&#x503C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B8C;&#x6210;&#x672C;&#x9898;&#xFF08;&#x5373;&#xFF0C;&#x53EA;&#x80FD;&#x8FDB;&#x884C;&#x8282;&#x70B9;&#x4EA4;&#x6362;&#xFF09;&#x3002;</p>
 <p>example1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1,2,3,4]
-输出：[2,1,4,3]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; []
-输出：[]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = []<br>&#x8F93;&#x51FA;&#xFF1A;[]<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1]
-输出：[1]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>链表中节点的数目在范围 <code>[0, 100]</code> 内</li>
+<li>&#x94FE;&#x8868;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; <code>[0, 100]</code> &#x5185;</li>
 <li><code>0 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">https://leetcode.cn/problems/swap-nodes-in-pairs/</a></p>
-<p>题解：<a target="_blank" rel="noopener" href="https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF">https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode() &#123;&#125;
- *     ListNode(int val) &#123; this.val &#x3D; val; &#125;
- *     ListNode(int val, ListNode next) &#123; this.val &#x3D; val; this.next &#x3D; next; &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public ListNode swapPairs(ListNode head) &#123;
-        ListNode head_node&#x3D;new ListNode();
-        head_node.next&#x3D;head;
-        &#x2F;&#x2F;活动指针，指向的是当前需要交换的节点的前一个节点，方便交换，这里之所以采用虚拟头节点，是为了统一化处理
-        ListNode p&#x3D;head_node;
-        while(p.next!&#x3D;null&amp;&amp;p.next.next!&#x3D;null)&#123;
-            &#x2F;&#x2F;指向需要交换的第一个节点
-            ListNode temp&#x3D;p.next;
-            &#x2F;&#x2F;指向需要交换的第二个节点
-            ListNode temp_next&#x3D;p.next.next;
-            &#x2F;&#x2F;首先将p指向第二个节点
-            p.next&#x3D;temp_next;
-            &#x2F;&#x2F;第一个节点指向第二个节点原本指向的后续链表
-            temp.next&#x3D;temp_next.next;
-            &#x2F;&#x2F;第二个节点指向一个节点
-            temp_next.next&#x3D;temp;
-            &#x2F;&#x2F;将活动节点后移，指向下一对需要交换的节点的前一个节点，
-            p&#x3D;p.next.next;
-
-        &#125;
-        &#x2F;&#x2F;返回调整后的链表
-        return head_node.next;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">https://leetcode.cn/problems/swap-nodes-in-pairs/</a></p>
+<p>&#x9898;&#x89E3;&#xFF1A;<a target="_blank" rel="noopener" href="https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF">https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() {}</span><br><span class="hljs-comment"> *     ListNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">swapPairs</span><span class="hljs-params">(ListNode head)</span> {<br>        ListNode head_node=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>();<br>        head_node.next=head;<br>        <span class="hljs-comment">//&#x6D3B;&#x52A8;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x7684;&#x662F;&#x5F53;&#x524D;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x8282;&#x70B9;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x65B9;&#x4FBF;&#x4EA4;&#x6362;&#xFF0C;&#x8FD9;&#x91CC;&#x4E4B;&#x6240;&#x4EE5;&#x91C7;&#x7528;&#x865A;&#x62DF;&#x5934;&#x8282;&#x70B9;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x7EDF;&#x4E00;&#x5316;&#x5904;&#x7406;</span><br>        ListNode p=head_node;<br>        <span class="hljs-keyword">while</span>(p.next!=<span class="hljs-literal">null</span>&amp;&amp;p.next.next!=<span class="hljs-literal">null</span>){<br>            <span class="hljs-comment">//&#x6307;&#x5411;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span><br>            ListNode temp=p.next;<br>            <span class="hljs-comment">//&#x6307;&#x5411;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;</span><br>            ListNode temp_next=p.next.next;<br>            <span class="hljs-comment">//&#x9996;&#x5148;&#x5C06;p&#x6307;&#x5411;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;</span><br>            p.next=temp_next;<br>            <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x6307;&#x5411;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x539F;&#x672C;&#x6307;&#x5411;&#x7684;&#x540E;&#x7EED;&#x94FE;&#x8868;</span><br>            temp.next=temp_next.next;<br>            <span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span><br>            temp_next.next=temp;<br>            <span class="hljs-comment">//&#x5C06;&#x6D3B;&#x52A8;&#x8282;&#x70B9;&#x540E;&#x79FB;&#xFF0C;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x5BF9;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x8282;&#x70B9;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;</span><br>            p=p.next.next;<br><br>        }<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x8C03;&#x6574;&#x540E;&#x7684;&#x94FE;&#x8868;</span><br>        <span class="hljs-keyword">return</span> head_node.next;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -996,51 +694,26 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="206">
-<li>反转链表</li>
+        <h1 id="206-&#x53CD;&#x8F6C;&#x94FE;&#x8868;"><a href="#206-&#x53CD;&#x8F6C;&#x94FE;&#x8868;" class="headerlink" title="206.&#x53CD;&#x8F6C;&#x94FE;&#x8868;"></a>206.&#x53CD;&#x8F6C;&#x94FE;&#x8868;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="206">
+<li>&#x53CD;&#x8F6C;&#x94FE;&#x8868;</li>
 </ol>
-<p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<p>&#x7ED9;&#x4F60;&#x5355;&#x94FE;&#x8868;&#x7684;&#x5934;&#x8282;&#x70B9; <code>head</code> &#xFF0C;&#x8BF7;&#x4F60;&#x53CD;&#x8F6C;&#x94FE;&#x8868;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1,2,3,4,5]
-输出：[5,4,3,2,1]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; [1,2]
-输出：[2,1]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：head &#x3D; []
-输出：[]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;head = []<br>&#x8F93;&#x51FA;&#xFF1A;[]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>链表中节点的数目范围是 <code>[0, 5000]</code></li>
+<li>&#x94FE;&#x8868;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x662F; <code>[0, 5000]</code></li>
 <li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode() &#123;&#125;
- *     ListNode(int val) &#123; this.val &#x3D; val; &#125;
- *     ListNode(int val, ListNode next) &#123; this.val &#x3D; val; this.next &#x3D; next; &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public ListNode reverseList(ListNode head) &#123;
-        ListNode head_node&#x3D;new ListNode();
-        ListNode p&#x3D;head;
-        while(p!&#x3D;null)&#123;
-            ListNode q&#x3D;p.next;
-            p.next&#x3D;head_node.next;
-            head_node.next&#x3D;p;
-            p&#x3D;q;
-        &#125;
-        return head_node.next;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() {}</span><br><span class="hljs-comment"> *     ListNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">reverseList</span><span class="hljs-params">(ListNode head)</span> {<br>        ListNode head_node=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>();<br>        ListNode p=head;<br>        <span class="hljs-keyword">while</span>(p!=<span class="hljs-literal">null</span>){<br>            ListNode q=p.next;<br>            p.next=head_node.next;<br>            head_node.next=p;<br>            p=q;<br>        }<br>        <span class="hljs-keyword">return</span> head_node.next;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1165,6 +838,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

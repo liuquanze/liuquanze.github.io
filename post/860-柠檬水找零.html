@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="860.柠檬水找零题目描述： 柠檬水找零  在柠檬水摊上，每一杯柠檬水的售价为 5 美元。顾客排队购买你的产品，（按账单 bills 支付的顺序）一次购买一杯。 每位顾客只买一杯柠檬水，然后向你付 5 美元、10 美元或 20 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 5 美元。 注意，一开始你手头没有任何零钱。 给你一个整数数组 bills ，其中 bills[i] 是第">
+    <meta name="description" content="860.&amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x627E;&amp;#x96F6;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x627E;&amp;#x96F6;  &amp;#x5728;&amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x644A;&amp;#x4E0A;&amp;#xFF0C;&amp;#x6BCF;&amp;#x4E00;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="860.柠檬水找零">
 <meta property="og:url" content="http://example.com/post/860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="860.柠檬水找零题目描述： 柠檬水找零  在柠檬水摊上，每一杯柠檬水的售价为 5 美元。顾客排队购买你的产品，（按账单 bills 支付的顺序）一次购买一杯。 每位顾客只买一杯柠檬水，然后向你付 5 美元、10 美元或 20 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 5 美元。 注意，一开始你手头没有任何零钱。 给你一个整数数组 bills ，其中 bills[i] 是第">
+<meta property="og:description" content="860.&amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x627E;&amp;#x96F6;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x627E;&amp;#x96F6;  &amp;#x5728;&amp;#x67E0;&amp;#x6AAC;&amp;#x6C34;&amp;#x644A;&amp;#x4E0A;&amp;#xFF0C;&amp;#x6BCF;&amp;#x4E00;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-18T12:40:17.000Z">
 <meta property="article:modified_time" content="2022-12-18T12:44:14.170Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,70 +152,26 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="860-柠檬水找零"><a href="#860-柠檬水找零" class="headerlink" title="860.柠檬水找零"></a>860.柠檬水找零</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="860">
-<li>柠檬水找零</li>
+        <h1 id="860-&#x67E0;&#x6AAC;&#x6C34;&#x627E;&#x96F6;"><a href="#860-&#x67E0;&#x6AAC;&#x6C34;&#x627E;&#x96F6;" class="headerlink" title="860.&#x67E0;&#x6AAC;&#x6C34;&#x627E;&#x96F6;"></a>860.&#x67E0;&#x6AAC;&#x6C34;&#x627E;&#x96F6;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="860">
+<li>&#x67E0;&#x6AAC;&#x6C34;&#x627E;&#x96F6;</li>
 </ol>
-<p>在柠檬水摊上，每一杯柠檬水的售价为 <code>5</code> 美元。顾客排队购买你的产品，（按账单 <code>bills</code> 支付的顺序）一次购买一杯。</p>
-<p>每位顾客只买一杯柠檬水，然后向你付 <code>5</code> 美元、<code>10</code> 美元或 <code>20</code> 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 <code>5</code> 美元。</p>
-<p>注意，一开始你手头没有任何零钱。</p>
-<p>给你一个整数数组 <code>bills</code> ，其中 <code>bills[i]</code> 是第 <code>i</code> 位顾客付的账。如果你能给每位顾客正确找零，返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：bills &#x3D; [5,5,5,10,20]
-输出：true
-解释：
-前 3 位顾客那里，我们按顺序收取 3 张 5 美元的钞票。
-第 4 位顾客那里，我们收取一张 10 美元的钞票，并返还 5 美元。
-第 5 位顾客那里，我们找还一张 10 美元的钞票和一张 5 美元的钞票。
-由于所有客户都得到了正确的找零，所以我们输出 true。</code></pre>
+<p>&#x5728;&#x67E0;&#x6AAC;&#x6C34;&#x644A;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E00;&#x676F;&#x67E0;&#x6AAC;&#x6C34;&#x7684;&#x552E;&#x4EF7;&#x4E3A; <code>5</code> &#x7F8E;&#x5143;&#x3002;&#x987E;&#x5BA2;&#x6392;&#x961F;&#x8D2D;&#x4E70;&#x4F60;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#xFF08;&#x6309;&#x8D26;&#x5355; <code>bills</code> &#x652F;&#x4ED8;&#x7684;&#x987A;&#x5E8F;&#xFF09;&#x4E00;&#x6B21;&#x8D2D;&#x4E70;&#x4E00;&#x676F;&#x3002;</p>
+<p>&#x6BCF;&#x4F4D;&#x987E;&#x5BA2;&#x53EA;&#x4E70;&#x4E00;&#x676F;&#x67E0;&#x6AAC;&#x6C34;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x4F60;&#x4ED8; <code>5</code> &#x7F8E;&#x5143;&#x3001;<code>10</code> &#x7F8E;&#x5143;&#x6216; <code>20</code> &#x7F8E;&#x5143;&#x3002;&#x4F60;&#x5FC5;&#x987B;&#x7ED9;&#x6BCF;&#x4E2A;&#x987E;&#x5BA2;&#x6B63;&#x786E;&#x627E;&#x96F6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x51C0;&#x4EA4;&#x6613;&#x662F;&#x6BCF;&#x4F4D;&#x987E;&#x5BA2;&#x5411;&#x4F60;&#x652F;&#x4ED8; <code>5</code> &#x7F8E;&#x5143;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#x4F60;&#x624B;&#x5934;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x96F6;&#x94B1;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>bills</code> &#xFF0C;&#x5176;&#x4E2D; <code>bills[i]</code> &#x662F;&#x7B2C; <code>i</code> &#x4F4D;&#x987E;&#x5BA2;&#x4ED8;&#x7684;&#x8D26;&#x3002;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x7ED9;&#x6BCF;&#x4F4D;&#x987E;&#x5BA2;&#x6B63;&#x786E;&#x627E;&#x96F6;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>false</code> &#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;bills = [<span class="hljs-number">5</span>,<span class="hljs-number">5</span>,<span class="hljs-number">5</span>,<span class="hljs-number">10</span>,<span class="hljs-number">20</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x524D; <span class="hljs-number">3</span> &#x4F4D;&#x987E;&#x5BA2;&#x90A3;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x6309;&#x987A;&#x5E8F;&#x6536;&#x53D6; <span class="hljs-number">3</span> &#x5F20; <span class="hljs-number">5</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#x3002;<br>&#x7B2C; <span class="hljs-number">4</span> &#x4F4D;&#x987E;&#x5BA2;&#x90A3;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x6536;&#x53D6;&#x4E00;&#x5F20; <span class="hljs-number">10</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#xFF0C;&#x5E76;&#x8FD4;&#x8FD8; <span class="hljs-number">5</span> &#x7F8E;&#x5143;&#x3002;<br>&#x7B2C; <span class="hljs-number">5</span> &#x4F4D;&#x987E;&#x5BA2;&#x90A3;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x627E;&#x8FD8;&#x4E00;&#x5F20; <span class="hljs-number">10</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#x548C;&#x4E00;&#x5F20; <span class="hljs-number">5</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#x3002;<br>&#x7531;&#x4E8E;&#x6240;&#x6709;&#x5BA2;&#x6237;&#x90FD;&#x5F97;&#x5230;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x627E;&#x96F6;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8F93;&#x51FA; <span class="hljs-literal">true</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：bills &#x3D; [5,5,10,10,20]
-输出：false
-解释：
-前 2 位顾客那里，我们按顺序收取 2 张 5 美元的钞票。
-对于接下来的 2 位顾客，我们收取一张 10 美元的钞票，然后返还 5 美元。
-对于最后一位顾客，我们无法退回 15 美元，因为我们现在只有两张 10 美元的钞票。
-由于不是每位顾客都得到了正确的找零，所以答案是 false。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;bills = [<span class="hljs-number">5</span>,<span class="hljs-number">5</span>,<span class="hljs-number">10</span>,<span class="hljs-number">10</span>,<span class="hljs-number">20</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x524D; <span class="hljs-number">2</span> &#x4F4D;&#x987E;&#x5BA2;&#x90A3;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x6309;&#x987A;&#x5E8F;&#x6536;&#x53D6; <span class="hljs-number">2</span> &#x5F20; <span class="hljs-number">5</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#x3002;<br>&#x5BF9;&#x4E8E;&#x63A5;&#x4E0B;&#x6765;&#x7684; <span class="hljs-number">2</span> &#x4F4D;&#x987E;&#x5BA2;&#xFF0C;&#x6211;&#x4EEC;&#x6536;&#x53D6;&#x4E00;&#x5F20; <span class="hljs-number">10</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x8FD8; <span class="hljs-number">5</span> &#x7F8E;&#x5143;&#x3002;<br>&#x5BF9;&#x4E8E;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x987E;&#x5BA2;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x9000;&#x56DE; <span class="hljs-number">15</span> &#x7F8E;&#x5143;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x53EA;&#x6709;&#x4E24;&#x5F20; <span class="hljs-number">10</span> &#x7F8E;&#x5143;&#x7684;&#x949E;&#x7968;&#x3002;<br>&#x7531;&#x4E8E;&#x4E0D;&#x662F;&#x6BCF;&#x4F4D;&#x987E;&#x5BA2;&#x90FD;&#x5F97;&#x5230;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x627E;&#x96F6;&#xFF0C;&#x6240;&#x4EE5;&#x7B54;&#x6848;&#x662F; <span class="hljs-literal">false</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= bills.length &lt;= 105</code></li>
-<li><code>bills[i]</code> 不是 <code>5</code> 就是 <code>10</code> 或是 <code>20</code></li>
+<li><code>bills[i]</code> &#x4E0D;&#x662F; <code>5</code> &#x5C31;&#x662F; <code>10</code> &#x6216;&#x662F; <code>20</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lemonade-change/description/">https://leetcode.cn/problems/lemonade-change/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean lemonadeChange(int[] bills) &#123;
-        &#x2F;&#x2F;初始三类纸币数量都为0
-        int[] restChange&#x3D;new int[3];
-        &#x2F;&#x2F;当5元和10元的纸币数量为负数时，返回false，否则为true
-        for(int i&#x3D;0;i&lt;bills.length;i++)&#123;
-            &#x2F;&#x2F;先找钱
-            &#x2F;&#x2F;计算需要找的钱
-            int change&#x3D;bills[i]-5;
-            
-            if(change&#x3D;&#x3D;5) restChange[0]--;
-            if(change&#x3D;&#x3D;15)&#123;
-                &#x2F;&#x2F;注意当我需要找15元的时候，有十块时，找钱的组合是10+5，没10块时，找钱的组合是5+5+5
-                if(restChange[1]&gt;0)&#123;
-                    restChange[1]--;
-                    restChange[0]--;
-                &#125;else&#123;
-                    restChange[0]-&#x3D;3;
-                &#125;
-            &#125;
-            &#x2F;&#x2F;后收钱
-            if(bills[i]&#x3D;&#x3D;5) restChange[0]++;
-            if(bills[i]&#x3D;&#x3D;10) restChange[1]++;
-            if(bills[i]&#x3D;&#x3D;20) restChange[2]++;
-            
-            if(restChange[0]&lt;0||restChange[1]&lt;0)&#123;
-                return false;
-            &#125;
-        &#125;
-        return true;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lemonade-change/description/">https://leetcode.cn/problems/lemonade-change/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">lemonadeChange</span><span class="hljs-params">(<span class="hljs-type">int</span>[] bills)</span> {<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x4E09;&#x7C7B;&#x7EB8;&#x5E01;&#x6570;&#x91CF;&#x90FD;&#x4E3A;0</span><br>        <span class="hljs-type">int</span>[] restChange=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">3</span>];<br>        <span class="hljs-comment">//&#x5F53;5&#x5143;&#x548C;10&#x5143;&#x7684;&#x7EB8;&#x5E01;&#x6570;&#x91CF;&#x4E3A;&#x8D1F;&#x6570;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;false&#xFF0C;&#x5426;&#x5219;&#x4E3A;true</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;bills.length;i++){<br>            <span class="hljs-comment">//&#x5148;&#x627E;&#x94B1;</span><br>            <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x9700;&#x8981;&#x627E;&#x7684;&#x94B1;</span><br>            <span class="hljs-type">int</span> change=bills[i]-<span class="hljs-number">5</span>;<br>            <br>            <span class="hljs-keyword">if</span>(change==<span class="hljs-number">5</span>) restChange[<span class="hljs-number">0</span>]--;<br>            <span class="hljs-keyword">if</span>(change==<span class="hljs-number">15</span>){<br>                <span class="hljs-comment">//&#x6CE8;&#x610F;&#x5F53;&#x6211;&#x9700;&#x8981;&#x627E;15&#x5143;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x5341;&#x5757;&#x65F6;&#xFF0C;&#x627E;&#x94B1;&#x7684;&#x7EC4;&#x5408;&#x662F;10+5&#xFF0C;&#x6CA1;10&#x5757;&#x65F6;&#xFF0C;&#x627E;&#x94B1;&#x7684;&#x7EC4;&#x5408;&#x662F;5+5+5</span><br>                <span class="hljs-keyword">if</span>(restChange[<span class="hljs-number">1</span>]&gt;<span class="hljs-number">0</span>){<br>                    restChange[<span class="hljs-number">1</span>]--;<br>                    restChange[<span class="hljs-number">0</span>]--;<br>                }<span class="hljs-keyword">else</span>{<br>                    restChange[<span class="hljs-number">0</span>]-=<span class="hljs-number">3</span>;<br>                }<br>            }<br>            <span class="hljs-comment">//&#x540E;&#x6536;&#x94B1;</span><br>            <span class="hljs-keyword">if</span>(bills[i]==<span class="hljs-number">5</span>) restChange[<span class="hljs-number">0</span>]++;<br>            <span class="hljs-keyword">if</span>(bills[i]==<span class="hljs-number">10</span>) restChange[<span class="hljs-number">1</span>]++;<br>            <span class="hljs-keyword">if</span>(bills[i]==<span class="hljs-number">20</span>) restChange[<span class="hljs-number">2</span>]++;<br>            <br>            <span class="hljs-keyword">if</span>(restChange[<span class="hljs-number">0</span>]&lt;<span class="hljs-number">0</span>||restChange[<span class="hljs-number">1</span>]&lt;<span class="hljs-number">0</span>){<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -250,9 +206,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -261,14 +216,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -355,6 +321,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

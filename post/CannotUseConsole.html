@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="console.log()失效问题描述：当使用console.log()想要打印到控制台时，发现idea出现下滑红线，并且num run serve也通不过。 错误信息：ESLint: Unexpected console statement.(no-console)    解决办法：进行简单的配置即可： 在package.json的eslintConfig:{}中的”rules”:{}，增加一行">
+    <meta name="description" content="console.log()&amp;#x5931;&amp;#x6548;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5F53;&amp;#x4F7F;&amp;#x7528;console.log()&amp;#x60F3;&amp;#x8981;&amp;#x6253;&amp;#x5370;&amp;#x5230;&amp;#x63A7;&amp;#x5236;&amp;#x53F0;&amp;#x65F6;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Console失效">
 <meta property="og:url" content="http://example.com/post/CannotUseConsole.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="console.log()失效问题描述：当使用console.log()想要打印到控制台时，发现idea出现下滑红线，并且num run serve也通不过。 错误信息：ESLint: Unexpected console statement.(no-console)    解决办法：进行简单的配置即可： 在package.json的eslintConfig:{}中的”rules”:{}，增加一行">
+<meta property="og:description" content="console.log()&amp;#x5931;&amp;#x6548;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5F53;&amp;#x4F7F;&amp;#x7528;console.log()&amp;#x60F3;&amp;#x8981;&amp;#x6253;&amp;#x5370;&amp;#x5230;&amp;#x63A7;&amp;#x5236;&amp;#x53F0;&amp;#x65F6;&amp;#xFF0C;&amp;#x53D1;&amp;#x73B">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-19T08:02:42.000Z">
 <meta property="article:modified_time" content="2022-07-19T08:17:35.303Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,16 +151,14 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="console-log-失效"><a href="#console-log-失效" class="headerlink" title="console.log()失效"></a>console.log()失效</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>当使用console.log()想要打印到控制台时，发现idea出现下滑红线，并且num run serve也通不过。</p>
-<h2 id="错误信息："><a href="#错误信息：" class="headerlink" title="错误信息："></a>错误信息：</h2><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">ESLint: Unexpected console statement.(no-console)</code></pre>
+        <h1 id="console-log-&#x5931;&#x6548;"><a href="#console-log-&#x5931;&#x6548;" class="headerlink" title="console.log()&#x5931;&#x6548;"></a>console.log()&#x5931;&#x6548;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5F53;&#x4F7F;&#x7528;console.log()&#x60F3;&#x8981;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;idea&#x51FA;&#x73B0;&#x4E0B;&#x6ED1;&#x7EA2;&#x7EBF;&#xFF0C;&#x5E76;&#x4E14;num run serve&#x4E5F;&#x901A;&#x4E0D;&#x8FC7;&#x3002;</p>
+<h2 id="&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;"><a href="#&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;" class="headerlink" title="&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;"></a>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;</h2><figure class="highlight txt hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">ESLint: Unexpected console statement.(no-console)<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><p>进行简单的配置即可：</p>
-<p>在package.json的eslintConfig:{}中的”rules”:{}，增加一行代码【”no-console”: “off”】</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">&quot;rules&quot;: &#123;
-  &quot;no-console&quot;:&quot;off&quot;
-&#125;,</code></pre>
+<h2 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;"><a href="#&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;" class="headerlink" title="&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;"></a>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</h2><p>&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;&#x5373;&#x53EF;&#xFF1A;</p>
+<p>&#x5728;package.json&#x7684;eslintConfig:{}&#x4E2D;&#x7684;&#x201D;rules&#x201D;:{}&#xFF0C;&#x589E;&#x52A0;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x3010;&#x201D;no-console&#x201D;: &#x201C;off&#x201D;&#x3011;</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">&quot;rules&quot;</span>: {<br>  <span class="hljs-string">&quot;no-console&quot;</span>:<span class="hljs-string">&quot;off&quot;</span><br>},<br></code></pre></td></tr></table></figure>
 
 
     
@@ -193,9 +191,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -204,14 +201,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -298,6 +306,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

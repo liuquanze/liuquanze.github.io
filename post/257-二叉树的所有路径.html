@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="257.二叉树的所有路径题目描述： 二叉树的所有路径  给你一个二叉树的根节点 root ，按 任意顺序 ，返回所有从根节点到叶子节点的路径。 叶子节点 是指没有子节点的节点。 example 1: 输入：root &#x3D; [1,2,3,null,5] 输出：[&quot;1-&gt;2-&gt;5&quot;,&quot;1-&gt;3&quot;]  example 2: 输入：root">
+    <meta name="description" content="257.&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x8DEF;&amp;#x5F84;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x8DEF;&amp;#x5F84;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="257.二叉树的所有路径">
 <meta property="og:url" content="http://example.com/post/257-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="257.二叉树的所有路径题目描述： 二叉树的所有路径  给你一个二叉树的根节点 root ，按 任意顺序 ，返回所有从根节点到叶子节点的路径。 叶子节点 是指没有子节点的节点。 example 1: 输入：root &#x3D; [1,2,3,null,5] 输出：[&quot;1-&gt;2-&gt;5&quot;,&quot;1-&gt;3&quot;]  example 2: 输入：root">
+<meta property="og:description" content="257.&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x8DEF;&amp;#x5F84;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x8DEF;&amp;#x5F84;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-29T13:48:25.000Z">
 <meta property="article:modified_time" content="2022-09-29T13:50:28.151Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,83 +152,24 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="257-二叉树的所有路径"><a href="#257-二叉树的所有路径" class="headerlink" title="257.二叉树的所有路径"></a>257.二叉树的所有路径</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="257">
-<li>二叉树的所有路径</li>
+        <h1 id="257-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;"><a href="#257-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;" class="headerlink" title="257.&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;"></a>257.&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="257">
+<li>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6240;&#x6709;&#x8DEF;&#x5F84;</li>
 </ol>
-<p>给你一个二叉树的根节点 <code>root</code> ，按 <strong>任意顺序</strong> ，返回所有从根节点到叶子节点的路径。</p>
-<p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x6309; <strong>&#x4EFB;&#x610F;&#x987A;&#x5E8F;</strong> &#xFF0C;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p><strong>&#x53F6;&#x5B50;&#x8282;&#x70B9;</strong> &#x662F;&#x6307;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,2,3,null,5]
-输出：[&quot;1-&gt;2-&gt;5&quot;,&quot;1-&gt;3&quot;]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-string">&quot;1-&gt;2-&gt;5&quot;</span>,<span class="hljs-string">&quot;1-&gt;3&quot;</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1]
-输出：[&quot;1&quot;]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-string">&quot;1&quot;</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点的数目在范围 <code>[1, 100]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; <code>[1, 100]</code> &#x5185;</li>
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-paths/">https://leetcode.cn/problems/binary-tree-paths/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-
-    &#x2F;&#x2F;递归+回溯的方法
-    public List&lt;String&gt; binaryTreePaths(TreeNode root) &#123;
-        &#x2F;&#x2F;创建结果列表，列表元素是字符串，字符串表示的是路径
-        List&lt;String&gt; result&#x3D;new ArrayList&lt;&gt;();
-        if(root&#x3D;&#x3D;null)
-            return result;
-        &#x2F;&#x2F;用于存储路径，列表元素是整型变量，变量表示的是每一个节点的值
-        List&lt;Integer&gt; paths&#x3D;new ArrayList&lt;&gt;();
-        &#x2F;&#x2F;进行递归和回溯
-        traverse(root,paths,result);
-        &#x2F;&#x2F;返回搜索的路径结果
-        return result;
-    &#125;
-
-    public void traverse(TreeNode node,List&lt;Integer&gt; paths,List&lt;String&gt; result)&#123;
-        &#x2F;&#x2F;将该节点加入路径
-        paths.add(node.val);
-
-        &#x2F;&#x2F;判断是否为叶子节点，如果是叶子节点，则将paths列表转化为路径字符串，并加入到result中，并返回
-        if(node.left&#x3D;&#x3D;null&amp;&amp;node.right&#x3D;&#x3D;null)&#123;
-            StringBuffer temp&#x3D;new StringBuffer();
-            for(int i&#x3D;0;i&lt;paths.size()-1;i++)&#123;
-                temp.append(paths.get(i)).append(&quot;-&gt;&quot;);
-            &#125;
-            temp.append(paths.get(paths.size()-1));
-            result.add(temp.toString());
-            return;
-        &#125;
-        &#x2F;&#x2F;如果该节点存在左孩子，则将左孩子进行递归
-        &#x2F;&#x2F;注意，这里需要将paths列表的最后一个元素弹出，
-        &#x2F;&#x2F;若该元素的左孩子就是叶子节点，则paths最后一个元素就是左孩子节点，因为后续要继续寻找路径，所以这里的叶节点需要弹出。
-        if(node.left!&#x3D;null)&#123;
-            traverse(node.left,paths,result);
-            paths.remove(paths.size()-1);
-        &#125;
-        if(node.right!&#x3D;null)&#123;
-            traverse(node.right,paths,result);
-            paths.remove(paths.size()-1);
-        &#125;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-paths/">https://leetcode.cn/problems/binary-tree-paths/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br><br>    <span class="hljs-comment">//&#x9012;&#x5F52;+&#x56DE;&#x6EAF;&#x7684;&#x65B9;&#x6CD5;</span><br>    <span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title function_">binaryTreePaths</span><span class="hljs-params">(TreeNode root)</span> {<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x7ED3;&#x679C;&#x5217;&#x8868;&#xFF0C;&#x5217;&#x8868;&#x5143;&#x7D20;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x793A;&#x7684;&#x662F;&#x8DEF;&#x5F84;</span><br>        List&lt;String&gt; result=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> result;<br>        <span class="hljs-comment">//&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#xFF0C;&#x5217;&#x8868;&#x5143;&#x7D20;&#x662F;&#x6574;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x53D8;&#x91CF;&#x8868;&#x793A;&#x7684;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;</span><br>        List&lt;Integer&gt; paths=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x548C;&#x56DE;&#x6EAF;</span><br>        traverse(root,paths,result);<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x641C;&#x7D22;&#x7684;&#x8DEF;&#x5F84;&#x7ED3;&#x679C;</span><br>        <span class="hljs-keyword">return</span> result;<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">traverse</span><span class="hljs-params">(TreeNode node,List&lt;Integer&gt; paths,List&lt;String&gt; result)</span>{<br>        <span class="hljs-comment">//&#x5C06;&#x8BE5;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x8DEF;&#x5F84;</span><br>        paths.add(node.val);<br><br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x5C06;paths&#x5217;&#x8868;&#x8F6C;&#x5316;&#x4E3A;&#x8DEF;&#x5F84;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x52A0;&#x5165;&#x5230;result&#x4E2D;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(node.left==<span class="hljs-literal">null</span>&amp;&amp;node.right==<span class="hljs-literal">null</span>){<br>            StringBuffer temp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>();<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;paths.size()-<span class="hljs-number">1</span>;i++){<br>                temp.append(paths.get(i)).append(<span class="hljs-string">&quot;-&gt;&quot;</span>);<br>            }<br>            temp.append(paths.get(paths.size()-<span class="hljs-number">1</span>));<br>            result.add(temp.toString());<br>            <span class="hljs-keyword">return</span>;<br>        }<br>        <span class="hljs-comment">//&#x5982;&#x679C;&#x8BE5;&#x8282;&#x70B9;&#x5B58;&#x5728;&#x5DE6;&#x5B69;&#x5B50;&#xFF0C;&#x5219;&#x5C06;&#x5DE6;&#x5B69;&#x5B50;&#x8FDB;&#x884C;&#x9012;&#x5F52;</span><br>        <span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x5C06;paths&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F39;&#x51FA;&#xFF0C;</span><br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x5DE6;&#x5B69;&#x5B50;&#x5C31;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;paths&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x5DE6;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x7EED;&#x8981;&#x7EE7;&#x7EED;&#x5BFB;&#x627E;&#x8DEF;&#x5F84;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x53F6;&#x8282;&#x70B9;&#x9700;&#x8981;&#x5F39;&#x51FA;&#x3002;</span><br>        <span class="hljs-keyword">if</span>(node.left!=<span class="hljs-literal">null</span>){<br>            traverse(node.left,paths,result);<br>            paths.remove(paths.size()-<span class="hljs-number">1</span>);<br>        }<br>        <span class="hljs-keyword">if</span>(node.right!=<span class="hljs-literal">null</span>){<br>            traverse(node.right,paths,result);<br>            paths.remove(paths.size()-<span class="hljs-number">1</span>);<br>        }<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -263,9 +204,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -274,14 +214,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -368,6 +319,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

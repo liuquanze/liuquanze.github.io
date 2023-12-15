@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="110.平衡二叉树题目描述： 平衡二叉树  给定一个二叉树，判断它是否是高度平衡的二叉树。 本题中，一棵高度平衡二叉树定义为：          一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1 。 example 1: 输入：root &#x3D; [3,9,20,null,null,15,7] 输出：true  example 2: 输入：root &#x3D; [1,2,2,3,">
+    <meta name="description" content="110.&amp;#x5E73;&amp;#x8861;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5E73;&amp;#x8861;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#xFF0C;&amp;#x5224;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="110.平衡二叉树">
 <meta property="og:url" content="http://example.com/post/110-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="110.平衡二叉树题目描述： 平衡二叉树  给定一个二叉树，判断它是否是高度平衡的二叉树。 本题中，一棵高度平衡二叉树定义为：          一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1 。 example 1: 输入：root &#x3D; [3,9,20,null,null,15,7] 输出：true  example 2: 输入：root &#x3D; [1,2,2,3,">
+<meta property="og:description" content="110.&amp;#x5E73;&amp;#x8861;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5E73;&amp;#x8861;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4E8C;&amp;#x53C9;&amp;#x6811;&amp;#xFF0C;&amp;#x5224;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-27T14:53:38.000Z">
 <meta property="article:modified_time" content="2022-09-27T14:56:16.541Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,73 +152,30 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="110-平衡二叉树"><a href="#110-平衡二叉树" class="headerlink" title="110.平衡二叉树"></a>110.平衡二叉树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="110">
-<li>平衡二叉树</li>
+        <h1 id="110-&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;"><a href="#110-&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;" class="headerlink" title="110.&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;"></a>110.&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="110">
+<li>&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;</li>
 </ol>
-<p>给定一个二叉树，判断它是否是高度平衡的二叉树。</p>
-<p>本题中，一棵高度平衡二叉树定义为：</p>
-<blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
-<path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
-<path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
-<path fill="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z" undefined="1"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M17 8.5C15.23 8.97 14.07 10.84 14.01 13.27C14 13.33 14 13.4 14 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M9 8.5C7.23 8.97 6.07 10.84 6.01 13.27C6 13.33 6 13.4 6 13.47V13.5"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="" d="M7.97 11.5H8.04C9.12 11.5 10 12.38 10 13.47V13.53C10 14.62 9.12 15.5 8.03 15.5H7.97C6.88 15.5 6 14.62 6 13.53V13.46C6 12.38 6.88 11.5 7.97 11.5Z"></path>
-</svg>
-</span><p>一个二叉树<em>每个节点</em> 的左右两个子树的高度差的绝对值不超过 1 。</p></blockquote>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5224;&#x65AD;&#x5B83;&#x662F;&#x5426;&#x662F;&#x9AD8;&#x5EA6;&#x5E73;&#x8861;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<p>&#x672C;&#x9898;&#x4E2D;&#xFF0C;&#x4E00;&#x68F5;&#x9AD8;&#x5EA6;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;<em>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;</em> &#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7; 1 &#x3002;</p>
+</blockquote>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [3,9,20,null,null,15,7]
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">9</span>,<span class="hljs-number">20</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">15</span>,<span class="hljs-number">7</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,2,2,3,3,null,null,4,4]
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">4</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; []
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = []<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中的节点数在范围 <code>[0, 5000]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;&#x5728;&#x8303;&#x56F4; <code>[0, 5000]</code> &#x5185;</li>
 <li><code>-104 &lt;= Node.val &lt;= 104</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/balanced-binary-tree/">https://leetcode.cn/problems/balanced-binary-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public int is_balanced(TreeNode node)&#123;
-        &#x2F;&#x2F;若节点为空，则返回高度为0
-        if(node&#x3D;&#x3D;null)
-            return 0;
-        &#x2F;&#x2F;左子树高度，并检查是否左子树是否平衡
-        int left_depth&#x3D;is_balanced(node.left);
-        if(left_depth&#x3D;&#x3D;-1)  return -1;
-        &#x2F;&#x2F;右子树高度，并检查是否右子树是否平衡
-        int right_depth&#x3D;is_balanced(node.right);
-        if(right_depth&#x3D;&#x3D;-1) return -1;
-        &#x2F;&#x2F;如果左子树和右子树高度差大于1，则不平衡，若平衡，则返回当前节点为根节点的树高度
-        return Math.abs(left_depth-right_depth)&gt;1?-1:1+Math.max(right_depth,left_depth);
-    &#125;
-
-    public boolean isBalanced(TreeNode root) &#123;
-        return is_balanced(root)&#x3D;&#x3D;-1?false:true;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/balanced-binary-tree/">https://leetcode.cn/problems/balanced-binary-tree/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">is_balanced</span><span class="hljs-params">(TreeNode node)</span>{<br>        <span class="hljs-comment">//&#x82E5;&#x8282;&#x70B9;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x9AD8;&#x5EA6;&#x4E3A;0</span><br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x5DE6;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DE6;&#x5B50;&#x6811;&#x662F;&#x5426;&#x5E73;&#x8861;</span><br>        <span class="hljs-type">int</span> left_depth=is_balanced(node.left);<br>        <span class="hljs-keyword">if</span>(left_depth==-<span class="hljs-number">1</span>)  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x53F3;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x53F3;&#x5B50;&#x6811;&#x662F;&#x5426;&#x5E73;&#x8861;</span><br>        <span class="hljs-type">int</span> right_depth=is_balanced(node.right);<br>        <span class="hljs-keyword">if</span>(right_depth==-<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x5982;&#x679C;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;&#x5DEE;&#x5927;&#x4E8E;1&#xFF0C;&#x5219;&#x4E0D;&#x5E73;&#x8861;&#xFF0C;&#x82E5;&#x5E73;&#x8861;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E3A;&#x6839;&#x8282;&#x70B9;&#x7684;&#x6811;&#x9AD8;&#x5EA6;</span><br>        <span class="hljs-keyword">return</span> Math.abs(left_depth-right_depth)&gt;<span class="hljs-number">1</span>?-<span class="hljs-number">1</span>:<span class="hljs-number">1</span>+Math.max(right_depth,left_depth);<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isBalanced</span><span class="hljs-params">(TreeNode root)</span> {<br>        <span class="hljs-keyword">return</span> is_balanced(root)==-<span class="hljs-number">1</span>?<span class="hljs-literal">false</span>:<span class="hljs-literal">true</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -253,9 +210,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -264,14 +220,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -358,6 +325,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

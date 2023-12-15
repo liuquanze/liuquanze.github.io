@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="513.找树左下角的值题目描述： 找树左下角的值  给定一个二叉树的 根节点 root，请找出该二叉树的 最底层 最左边 节点的值。 假设二叉树中至少有一个节点。 example 1： 输入: root &#x3D; [2,1,3] 输出: 1  example 2: 输入: [1,2,3,4,null,5,6,null,null,7] 输出: 7  提示：  二叉树的节点个数的范围是 [1,10">
+    <meta name="description" content="513.&amp;#x627E;&amp;#x6811;&amp;#x5DE6;&amp;#x4E0B;&amp;#x89D2;&amp;#x7684;&amp;#x503C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x627E;&amp;#x6811;&amp;#x5DE6;&amp;#x4E0B;&amp;#x89D2;&amp;#x7684;&amp;#x503C;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4E8C;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="513.找树左下角的值">
 <meta property="og:url" content="http://example.com/post/513-%E6%89%BE%E6%A0%91%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%9A%84%E5%80%BC.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="513.找树左下角的值题目描述： 找树左下角的值  给定一个二叉树的 根节点 root，请找出该二叉树的 最底层 最左边 节点的值。 假设二叉树中至少有一个节点。 example 1： 输入: root &#x3D; [2,1,3] 输出: 1  example 2: 输入: [1,2,3,4,null,5,6,null,null,7] 输出: 7  提示：  二叉树的节点个数的范围是 [1,10">
+<meta property="og:description" content="513.&amp;#x627E;&amp;#x6811;&amp;#x5DE6;&amp;#x4E0B;&amp;#x89D2;&amp;#x7684;&amp;#x503C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x627E;&amp;#x6811;&amp;#x5DE6;&amp;#x4E0B;&amp;#x89D2;&amp;#x7684;&amp;#x503C;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x4E8C;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-30T15:03:56.000Z">
 <meta property="article:modified_time" content="2022-09-30T15:05:53.916Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,71 +152,25 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="513-找树左下角的值"><a href="#513-找树左下角的值" class="headerlink" title="513.找树左下角的值"></a>513.找树左下角的值</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="513">
-<li>找树左下角的值</li>
+        <h1 id="513-&#x627E;&#x6811;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x503C;"><a href="#513-&#x627E;&#x6811;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x503C;" class="headerlink" title="513.&#x627E;&#x6811;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x503C;"></a>513.&#x627E;&#x6811;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x503C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="513">
+<li>&#x627E;&#x6811;&#x5DE6;&#x4E0B;&#x89D2;&#x7684;&#x503C;</li>
 </ol>
-<p>给定一个二叉树的 <strong>根节点</strong> <code>root</code>，请找出该二叉树的 <strong>最底层 最左边</strong> 节点的值。</p>
-<p>假设二叉树中至少有一个节点。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [2,1,3]
-输出: 1</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x7684; <strong>&#x6839;&#x8282;&#x70B9;</strong> <code>root</code>&#xFF0C;&#x8BF7;&#x627E;&#x51FA;&#x8BE5;&#x4E8C;&#x53C9;&#x6811;&#x7684; <strong>&#x6700;&#x5E95;&#x5C42; &#x6700;&#x5DE6;&#x8FB9;</strong> &#x8282;&#x70B9;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: [1,2,3,4,null,5,6,null,null,7]
-输出: 7</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-number">7</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>二叉树的节点个数的范围是 <code>[1,104]</code></li>
+<li>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x8282;&#x70B9;&#x4E2A;&#x6570;&#x7684;&#x8303;&#x56F4;&#x662F; <code>[1,104]</code></li>
 <li><code>-231 &lt;= Node.val &lt;= 231 - 1</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-bottom-left-tree-value/">https://leetcode.cn/problems/find-bottom-left-tree-value/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public int findBottomLeftValue(TreeNode root) &#123;
-        if(root.left&#x3D;&#x3D;null&amp;&amp;root.right&#x3D;&#x3D;null)&#123;
-            return root.val;
-        &#125;
-        int[] deepest&#x3D;new int[2];
-        
-        deepest[0]&#x3D;0;
-        deepest[1]&#x3D;0;
-        findAllLeftLeaf(root,deepest,1);
-        return deepest[1];
-    &#125;
-    public void findAllLeftLeaf(TreeNode root,int[] deepest,int depth)&#123;
-        if(root&#x3D;&#x3D;null)
-            return ;
-        if(root.left&#x3D;&#x3D;null&amp;&amp;root.right&#x3D;&#x3D;null)
-            return ;
-        if(root.left!&#x3D;null&amp;&amp;root.left.left&#x3D;&#x3D;null&amp;&amp;root.left.right&#x3D;&#x3D;null)&#123;
-            &#x2F;&#x2F;若深度更深
-            if(depth+1&gt;deepest[0])&#123;
-                deepest[0]&#x3D;depth+1;
-                deepest[1]&#x3D;root.left.val;
-            &#125;
-        &#125;
-        findAllLeftLeaf(root.left,deepest,depth+1);
-        findAllLeftLeaf(root.right,deepest,depth+1);
-
-            
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findBottomLeftValue</span><span class="hljs-params">(TreeNode root)</span> {<br>        <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> root.val;<br>        }<br>        <span class="hljs-type">int</span>[] deepest=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br>        <br>        deepest[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        deepest[<span class="hljs-number">1</span>]=<span class="hljs-number">0</span>;<br>        findAllLeftLeaf(root,deepest,<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">return</span> deepest[<span class="hljs-number">1</span>];<br>    }<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">findAllLeftLeaf</span><span class="hljs-params">(TreeNode root,<span class="hljs-type">int</span>[] deepest,<span class="hljs-type">int</span> depth)</span>{<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> ;<br>        <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> ;<br>        <span class="hljs-keyword">if</span>(root.left!=<span class="hljs-literal">null</span>&amp;&amp;root.left.left==<span class="hljs-literal">null</span>&amp;&amp;root.left.right==<span class="hljs-literal">null</span>){<br>            <span class="hljs-comment">//&#x82E5;&#x6DF1;&#x5EA6;&#x66F4;&#x6DF1;</span><br>            <span class="hljs-keyword">if</span>(depth+<span class="hljs-number">1</span>&gt;deepest[<span class="hljs-number">0</span>]){<br>                deepest[<span class="hljs-number">0</span>]=depth+<span class="hljs-number">1</span>;<br>                deepest[<span class="hljs-number">1</span>]=root.left.val;<br>            }<br>        }<br>        findAllLeftLeaf(root.left,deepest,depth+<span class="hljs-number">1</span>);<br>        findAllLeftLeaf(root.right,deepest,depth+<span class="hljs-number">1</span>);<br><br>            <br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -251,9 +205,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -262,14 +215,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -356,6 +320,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

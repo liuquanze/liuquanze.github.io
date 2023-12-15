@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,58 +153,26 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="108-将有序数组转换为二叉搜索树"><a href="#108-将有序数组转换为二叉搜索树" class="headerlink" title="108.将有序数组转换为二叉搜索树"></a>108.将有序数组转换为二叉搜索树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="108">
-<li>将有序数组转换为二叉搜索树</li>
+        <h1 id="108-&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#108-&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="108.&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>108.&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="108">
+<li>&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ol>
-<p>给你一个整数数组 <code>nums</code> ，其中元素已经按 <strong>升序</strong> 排列，请你将其转换为一棵 <strong>高度平衡</strong> 二叉搜索树。</p>
-<p><strong>高度平衡</strong> 二叉树是一棵满足「每个节点的左右两个子树的高度差的绝对值不超过 1 」的二叉树。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x5176;&#x4E2D;&#x5143;&#x7D20;&#x5DF2;&#x7ECF;&#x6309; <strong>&#x5347;&#x5E8F;</strong> &#x6392;&#x5217;&#xFF0C;&#x8BF7;&#x4F60;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x68F5; <strong>&#x9AD8;&#x5EA6;&#x5E73;&#x8861;</strong> &#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</p>
+<p><strong>&#x9AD8;&#x5EA6;&#x5E73;&#x8861;</strong> &#x4E8C;&#x53C9;&#x6811;&#x662F;&#x4E00;&#x68F5;&#x6EE1;&#x8DB3;&#x300C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7; 1 &#x300D;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [-10,-3,0,5,9]
-输出：[0,-3,9,-10,null,5]
-解释：[0,-10,5,null,-3,null,9] 也将被视为正确答案：</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [-<span class="hljs-number">10</span>,-<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">0</span>,-<span class="hljs-number">3</span>,<span class="hljs-number">9</span>,-<span class="hljs-number">10</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">5</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">0</span>,-<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-literal">null</span>,-<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">9</span>] &#x4E5F;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x6B63;&#x786E;&#x7B54;&#x6848;&#xFF1A;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [1,3]
-输出：[3,1]
-解释：[1,null,3] 和 [3,1] 都是高度平衡二叉搜索树。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>] &#x548C; [<span class="hljs-number">3</span>,<span class="hljs-number">1</span>] &#x90FD;&#x662F;&#x9AD8;&#x5EA6;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 104</code></li>
 <li><code>-104 &lt;= nums[i] &lt;= 104</code></li>
-<li><code>nums</code> 按 <strong>严格递增</strong> 顺序排列</li>
+<li><code>nums</code> &#x6309; <strong>&#x4E25;&#x683C;&#x9012;&#x589E;</strong> &#x987A;&#x5E8F;&#x6392;&#x5217;</li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/">https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode build(int[] nums,int left,int right)&#123;
-        if(left&gt;right)
-            return null;
-        int mid&#x3D;left+((right-left)&#x2F;2);
-        TreeNode node&#x3D;new TreeNode(nums[mid]);
-        node.left&#x3D;build(nums,left,mid-1);
-        node.right&#x3D;build(nums,mid+1,right);
-        return node;
-    &#125;
-    public TreeNode sortedArrayToBST(int[] nums) &#123;
-        return build(nums,0,nums.length-1);
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">build</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-keyword">if</span>(left&gt;right)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">int</span> mid=left+((right-left)/<span class="hljs-number">2</span>);<br>        TreeNode node=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(nums[mid]);<br>        node.left=build(nums,left,mid-<span class="hljs-number">1</span>);<br>        node.right=build(nums,mid+<span class="hljs-number">1</span>,right);<br>        <span class="hljs-keyword">return</span> node;<br>    }<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">sortedArrayToBST</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">return</span> build(nums,<span class="hljs-number">0</span>,nums.length-<span class="hljs-number">1</span>);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -245,65 +213,28 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="669-修剪二叉搜索树"><a href="#669-修剪二叉搜索树" class="headerlink" title="669.修剪二叉搜索树"></a>669.修剪二叉搜索树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="669">
-<li>修剪二叉搜索树</li>
+        <h1 id="669-&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#669-&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="669.&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>669.&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="669">
+<li>&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ol>
-<p>给你二叉搜索树的根节点 <code>root</code> ，同时给定最小边界<code>low</code> 和最大边界 <code>high</code>。通过修剪二叉搜索树，使得所有节点的值在<code>[low, high]</code>中。修剪树 <strong>不应该</strong> 改变保留在树中的元素的相对结构 (即，如果没有被移除，原有的父代子代关系都应当保留)。 可以证明，存在 <strong>唯一的答案</strong> 。</p>
-<p>所以结果应当返回修剪好的二叉搜索树的新的根节点。注意，根节点可能会根据给定的边界发生改变。</p>
+<p>&#x7ED9;&#x4F60;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x540C;&#x65F6;&#x7ED9;&#x5B9A;&#x6700;&#x5C0F;&#x8FB9;&#x754C;<code>low</code> &#x548C;&#x6700;&#x5927;&#x8FB9;&#x754C; <code>high</code>&#x3002;&#x901A;&#x8FC7;&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5728;<code>[low, high]</code>&#x4E2D;&#x3002;&#x4FEE;&#x526A;&#x6811; <strong>&#x4E0D;&#x5E94;&#x8BE5;</strong> &#x6539;&#x53D8;&#x4FDD;&#x7559;&#x5728;&#x6811;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5BF9;&#x7ED3;&#x6784; (&#x5373;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x539F;&#x6709;&#x7684;&#x7236;&#x4EE3;&#x5B50;&#x4EE3;&#x5173;&#x7CFB;&#x90FD;&#x5E94;&#x5F53;&#x4FDD;&#x7559;)&#x3002; &#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF0C;&#x5B58;&#x5728; <strong>&#x552F;&#x4E00;&#x7684;&#x7B54;&#x6848;</strong> &#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x5E94;&#x5F53;&#x8FD4;&#x56DE;&#x4FEE;&#x526A;&#x597D;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x65B0;&#x7684;&#x6839;&#x8282;&#x70B9;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x53EF;&#x80FD;&#x4F1A;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x8FB9;&#x754C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,0,2], low &#x3D; 1, high &#x3D; 2
-输出：[1,null,2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>], low = <span class="hljs-number">1</span>, high = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [3,0,4,null,2,null,null,1], low &#x3D; 1, high &#x3D; 3
-输出：[3,2,null,1]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>], low = <span class="hljs-number">1</span>, high = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点数在范围 <code>[1, 104]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x5728;&#x8303;&#x56F4; <code>[1, 104]</code> &#x5185;</li>
 <li><code>0 &lt;= Node.val &lt;= 104</code></li>
-<li>树中每个节点的值都是 <strong>唯一</strong> 的</li>
-<li>题目数据保证输入是一棵有效的二叉搜索树</li>
+<li>&#x6811;&#x4E2D;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x662F; <strong>&#x552F;&#x4E00;</strong> &#x7684;</li>
+<li>&#x9898;&#x76EE;&#x6570;&#x636E;&#x4FDD;&#x8BC1;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x68F5;&#x6709;&#x6548;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 <li><code>0 &lt;= low &lt;= high &lt;= 104</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trim-a-binary-search-tree/description/">https://leetcode.cn/problems/trim-a-binary-search-tree/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode trimBST(TreeNode root, int low, int high) &#123;
-        &#x2F;&#x2F;若当前节点为空，则返回null
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若当前节点值小于下界，则表示该节点的左子树均小于下界（二叉搜索树），需要对该节点的右子树再次剪枝
-        if(root.val&lt;low)&#123;
-            TreeNode right&#x3D;trimBST(root.right,low,high);
-            return right;
-        &#125;
-        &#x2F;&#x2F;若当前节点值大于下界，则表示该节点的右子树均大于下界（二叉搜索树），需要对该节点的左子树再次剪枝
-        if(root.val&gt;high)&#123;
-            TreeNode left&#x3D;trimBST(root.left,low,high);
-            return left;
-        &#125;
-        &#x2F;&#x2F;若该节点的val符合要求，则对其左右子树再次剪枝
-        root.left&#x3D;trimBST(root.left,low,high);
-        root.right&#x3D;trimBST(root.right,low,high);
-        return root;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">trimBST</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;null</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x503C;&#x5C0F;&#x4E8E;&#x4E0B;&#x754C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x5747;&#x5C0F;&#x4E8E;&#x4E0B;&#x754C;&#xFF08;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        <span class="hljs-keyword">if</span>(root.val&lt;low){<br>            TreeNode right=trimBST(root.right,low,high);<br>            <span class="hljs-keyword">return</span> right;<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x503C;&#x5927;&#x4E8E;&#x4E0B;&#x754C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x5747;&#x5927;&#x4E8E;&#x4E0B;&#x754C;&#xFF08;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;high){<br>            TreeNode left=trimBST(root.left,low,high);<br>            <span class="hljs-keyword">return</span> left;<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x7684;val&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF0C;&#x5219;&#x5BF9;&#x5176;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        root.left=trimBST(root.left,low,high);<br>        root.right=trimBST(root.right,low,high);<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -344,95 +275,36 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="450-删除二叉搜索树中的节点"><a href="#450-删除二叉搜索树中的节点" class="headerlink" title="450.删除二叉搜索树中的节点"></a>450.删除二叉搜索树中的节点</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="450">
-<li>删除二叉搜索树中的节点</li>
+        <h1 id="450-&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;"><a href="#450-&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;" class="headerlink" title="450.&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;"></a>450.&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="450">
+<li>&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;</li>
 </ol>
-<p>给定一个二叉搜索树的根节点 <strong>root</strong> 和一个值 <strong>key</strong>，删除二叉搜索树中的 <strong>key</strong> 对应的节点，并保证二叉搜索树的性质不变。返回二叉搜索树（有可能被更新）的根节点的引用。</p>
-<p>一般来说，删除节点可分为两个步骤：</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <strong>root</strong> &#x548C;&#x4E00;&#x4E2A;&#x503C; <strong>key</strong>&#xFF0C;&#x5220;&#x9664;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684; <strong>key</strong> &#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6027;&#x8D28;&#x4E0D;&#x53D8;&#x3002;&#x8FD4;&#x56DE;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x66F4;&#x65B0;&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5220;&#x9664;&#x8282;&#x70B9;&#x53EF;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
 <ol>
-<li>首先找到需要删除的节点；</li>
-<li>如果找到了，删除它。</li>
+<li>&#x9996;&#x5148;&#x627E;&#x5230;&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x5230;&#x4E86;&#xFF0C;&#x5220;&#x9664;&#x5B83;&#x3002;</li>
 </ol>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 3
-输出：[5,4,6,2,null,null,7]
-解释：给定需要删除的节点值是 3，所以我们首先找到 3 这个节点，然后删除它。
-一个正确的答案是 [5,4,6,2,null,null,7], 如下图所示。
-另一个正确答案是 [5,2,6,null,4,null,7]。</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], key = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]<br>&#x89E3;&#x91CA;&#xFF1A;&#x7ED9;&#x5B9A;&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x503C;&#x662F; <span class="hljs-number">3</span>&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x627E;&#x5230; <span class="hljs-number">3</span> &#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5220;&#x9664;&#x5B83;&#x3002;<br>&#x4E00;&#x4E2A;&#x6B63;&#x786E;&#x7684;&#x7B54;&#x6848;&#x662F; [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], &#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;<br>&#x53E6;&#x4E00;&#x4E2A;&#x6B63;&#x786E;&#x7B54;&#x6848;&#x662F; [<span class="hljs-number">5</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [5,3,6,2,4,null,7], key &#x3D; 0
-输出: [5,3,6,2,4,null,7]
-解释: 二叉树不包含值为 0 的节点</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>], key = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;: [<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>]<br>&#x89E3;&#x91CA;: &#x4E8C;&#x53C9;&#x6811;&#x4E0D;&#x5305;&#x542B;&#x503C;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x8282;&#x70B9;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [], key &#x3D; 0
-输出: []</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [], key = <span class="hljs-number">0</span><br>&#x8F93;&#x51FA;: []<br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>节点数的范围 <code>[0, 104]</code>.</li>
+<li>&#x8282;&#x70B9;&#x6570;&#x7684;&#x8303;&#x56F4; <code>[0, 104]</code>.</li>
 <li><code>-105 &lt;= Node.val &lt;= 105</code></li>
-<li>节点值唯一</li>
-<li><code>root</code> 是合法的二叉搜索树</li>
+<li>&#x8282;&#x70B9;&#x503C;&#x552F;&#x4E00;</li>
+<li><code>root</code> &#x662F;&#x5408;&#x6CD5;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 <li><code>-105 &lt;= key &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-bst/description/">https://leetcode.cn/problems/delete-node-in-a-bst/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode deleteNode(TreeNode root, int key) &#123;
-        &#x2F;&#x2F;节点为空
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若节点大于待删除节点，则更新左子树
-        if(root.val&gt;key)
-            root.left&#x3D;deleteNode(root.left,key);
-        &#x2F;&#x2F;若节点小于待删除节点，则更新右子树
-        else if(root.val&lt;key)
-            root.right&#x3D;deleteNode(root.right,key);
-        &#x2F;&#x2F;当前节点就是待删除节点
-        else&#123;
-            &#x2F;&#x2F;待删除节点为叶子节点，则直接返回null
-            if(root.left&#x3D;&#x3D;null&amp;&amp;root.right&#x3D;&#x3D;null)
-                return null;
-            &#x2F;&#x2F;左孩子为空，右孩子不空，则右孩子覆盖待删除节点
-            else if(root.left&#x3D;&#x3D;null&amp;&amp;root.right!&#x3D;null)&#123;
-                root&#x3D;root.right;
-            &#x2F;&#x2F;右孩子为空，左孩子不空，则左孩子覆盖待删除节点
-            &#125;else if(root.right&#x3D;&#x3D;null&amp;&amp;root.left!&#x3D;null)&#123;
-                root&#x3D;root.left;
-            &#x2F;&#x2F;左孩子不空，右孩子不空，则将左孩子放到右子树的最左下位置，然后将待删除节点替换为右孩子
-            &#125;else&#123;
-                TreeNode temp&#x3D;root.right;
-                while(temp.left!&#x3D;null)&#123;
-                    temp&#x3D;temp.left;
-                &#125;
-                temp.left&#x3D;root.left;
-                root&#x3D;root.right;
-            &#125;
-
-        &#125;
-        return root;
-    &#125;
-
-
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-bst/description/">https://leetcode.cn/problems/delete-node-in-a-bst/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">deleteNode</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> key)</span> {<br>        <span class="hljs-comment">//&#x8282;&#x70B9;&#x4E3A;&#x7A7A;</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x8282;&#x70B9;&#x5927;&#x4E8E;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x5DE6;&#x5B50;&#x6811;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;key)<br>            root.left=deleteNode(root.left,key);<br>        <span class="hljs-comment">//&#x82E5;&#x8282;&#x70B9;&#x5C0F;&#x4E8E;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x53F3;&#x5B50;&#x6811;</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.val&lt;key)<br>            root.right=deleteNode(root.right,key);<br>        <span class="hljs-comment">//&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>        <span class="hljs-keyword">else</span>{<br>            <span class="hljs-comment">//&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#x4E3A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;null</span><br>            <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right==<span class="hljs-literal">null</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>            <span class="hljs-comment">//&#x5DE6;&#x5B69;&#x5B50;&#x4E3A;&#x7A7A;&#xFF0C;&#x53F3;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x53F3;&#x5B69;&#x5B50;&#x8986;&#x76D6;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.left==<span class="hljs-literal">null</span>&amp;&amp;root.right!=<span class="hljs-literal">null</span>){<br>                root=root.right;<br>            <span class="hljs-comment">//&#x53F3;&#x5B69;&#x5B50;&#x4E3A;&#x7A7A;&#xFF0C;&#x5DE6;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x5DE6;&#x5B69;&#x5B50;&#x8986;&#x76D6;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span><br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(root.right==<span class="hljs-literal">null</span>&amp;&amp;root.left!=<span class="hljs-literal">null</span>){<br>                root=root.left;<br>            <span class="hljs-comment">//&#x5DE6;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x53F3;&#x5B69;&#x5B50;&#x4E0D;&#x7A7A;&#xFF0C;&#x5219;&#x5C06;&#x5DE6;&#x5B69;&#x5B50;&#x653E;&#x5230;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x6700;&#x5DE6;&#x4E0B;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;&#x66FF;&#x6362;&#x4E3A;&#x53F3;&#x5B69;&#x5B50;</span><br>            }<span class="hljs-keyword">else</span>{<br>                TreeNode temp=root.right;<br>                <span class="hljs-keyword">while</span>(temp.left!=<span class="hljs-literal">null</span>){<br>                    temp=temp.left;<br>                }<br>                temp.left=root.left;<br>                root=root.right;<br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> root;<br>    }<br><br><br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -473,76 +345,31 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="701-二叉搜索树中的插入操作"><a href="#701-二叉搜索树中的插入操作" class="headerlink" title="701.二叉搜索树中的插入操作"></a>701.二叉搜索树中的插入操作</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="701">
-<li>二叉搜索树中的插入操作</li>
+        <h1 id="701-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"><a href="#701-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;" class="headerlink" title="701.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"></a>701.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="701">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</li>
 </ol>
-<p>给定二叉搜索树（BST）的根节点 <code>root</code> 和要插入树中的值 <code>value</code> ，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据 <strong>保证</strong> ，新值和原始二叉搜索树中的任意节点值都不同。</p>
-<p><strong>注意</strong>，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 <strong>任意有效的结果</strong> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;BST&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#x548C;&#x8981;&#x63D2;&#x5165;&#x6811;&#x4E2D;&#x7684;&#x503C; <code>value</code> &#xFF0C;&#x5C06;&#x503C;&#x63D2;&#x5165;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002; &#x8FD4;&#x56DE;&#x63D2;&#x5165;&#x540E;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#x3002; &#x8F93;&#x5165;&#x6570;&#x636E; <strong>&#x4FDD;&#x8BC1;</strong> &#xFF0C;&#x65B0;&#x503C;&#x548C;&#x539F;&#x59CB;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x503C;&#x90FD;&#x4E0D;&#x540C;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x591A;&#x79CD;&#x6709;&#x6548;&#x7684;&#x63D2;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x8981;&#x6811;&#x5728;&#x63D2;&#x5165;&#x540E;&#x4ECD;&#x4FDD;&#x6301;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x5373;&#x53EF;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE; <strong>&#x4EFB;&#x610F;&#x6709;&#x6548;&#x7684;&#x7ED3;&#x679C;</strong> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3], val &#x3D; 5
-输出：[4,2,7,1,3,5]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>], val = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [40,20,60,10,30,50,70], val &#x3D; 25
-输出：[40,20,60,10,30,50,70,null,null,25]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">40</span>,<span class="hljs-number">20</span>,<span class="hljs-number">60</span>,<span class="hljs-number">10</span>,<span class="hljs-number">30</span>,<span class="hljs-number">50</span>,<span class="hljs-number">70</span>], val = <span class="hljs-number">25</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">40</span>,<span class="hljs-number">20</span>,<span class="hljs-number">60</span>,<span class="hljs-number">10</span>,<span class="hljs-number">30</span>,<span class="hljs-number">50</span>,<span class="hljs-number">70</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">25</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3,null,null,null,null,null,null], val &#x3D; 5
-输出：[4,2,7,1,3,5]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>], val = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中的节点数将在 <code>[0, 104]</code>的范围内。</li>
+<li>&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;&#x5C06;&#x5728; <code>[0, 104]</code>&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;</li>
 <li><code>-108 &lt;= Node.val &lt;= 108</code></li>
-<li>所有值 <code>Node.val</code> 是 <strong>独一无二</strong> 的。</li>
+<li>&#x6240;&#x6709;&#x503C; <code>Node.val</code> &#x662F; <strong>&#x72EC;&#x4E00;&#x65E0;&#x4E8C;</strong> &#x7684;&#x3002;</li>
 <li><code>-108 &lt;= val &lt;= 108</code></li>
-<li><strong>保证</strong> <code>val</code> 在原始BST中不存在</li>
+<li><strong>&#x4FDD;&#x8BC1;</strong> <code>val</code> &#x5728;&#x539F;&#x59CB;BST&#x4E2D;&#x4E0D;&#x5B58;&#x5728;</li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/">https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode insertIntoBST(TreeNode root, int val) &#123;
-        &#x2F;&#x2F;若当前二叉搜索树为空，则创建新节点，并返回
-        if(root&#x3D;&#x3D;null)
-            return new TreeNode(val);
-        &#x2F;&#x2F;记录树的根节点，创建前驱节点
-        TreeNode newRoot&#x3D;root;
-        TreeNode pre&#x3D;null;
-        &#x2F;&#x2F;当活动节点不为null时进行循环遍历
-        while(root!&#x3D;null)&#123;
-            &#x2F;&#x2F;记录当前位置
-            pre&#x3D;root;
-            &#x2F;&#x2F;若当前节点val大于val则表示插入元素应该在当前节点的左子树
-            if(root.val&gt;val)&#123;
-                root&#x3D;root.left;
-            &#125;else&#123;
-                root&#x3D;root.right;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;当root&#x3D;null时跳出循环，此时pre指向的是叶子节点，若叶子节点的val大于插入元素，则作为左孩子，否则作为右孩子
-        if(pre.val&gt;val)&#123;
-            pre.left&#x3D;new TreeNode(val);
-        &#125;else&#123;
-            pre.right&#x3D;new TreeNode(val);
-        &#125;
-        return newRoot;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">insertIntoBST</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> val)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x65B0;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x521B;&#x5EFA;&#x524D;&#x9A71;&#x8282;&#x70B9;</span><br>        TreeNode newRoot=root;<br>        TreeNode pre=<span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x6D3B;&#x52A8;&#x8282;&#x70B9;&#x4E0D;&#x4E3A;null&#x65F6;&#x8FDB;&#x884C;&#x5FAA;&#x73AF;&#x904D;&#x5386;</span><br>        <span class="hljs-keyword">while</span>(root!=<span class="hljs-literal">null</span>){<br>            <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</span><br>            pre=root;<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;val&#x5927;&#x4E8E;val&#x5219;&#x8868;&#x793A;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x5728;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;</span><br>            <span class="hljs-keyword">if</span>(root.val&gt;val){<br>                root=root.left;<br>            }<span class="hljs-keyword">else</span>{<br>                root=root.right;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5F53;root=null&#x65F6;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#xFF0C;&#x6B64;&#x65F6;pre&#x6307;&#x5411;&#x7684;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x82E5;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;val&#x5927;&#x4E8E;&#x63D2;&#x5165;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x4F5C;&#x4E3A;&#x5DE6;&#x5B69;&#x5B50;&#xFF0C;&#x5426;&#x5219;&#x4F5C;&#x4E3A;&#x53F3;&#x5B69;&#x5B50;</span><br>        <span class="hljs-keyword">if</span>(pre.val&gt;val){<br>            pre.left=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        }<span class="hljs-keyword">else</span>{<br>            pre.right=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        }<br>        <span class="hljs-keyword">return</span> newRoot;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -583,67 +410,27 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="236-二叉搜索树的最近公共祖先"><a href="#236-二叉搜索树的最近公共祖先" class="headerlink" title="236.二叉搜索树的最近公共祖先"></a>236.二叉搜索树的最近公共祖先</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="235">
-<li>二叉搜索树的最近公共祖先</li>
+        <h1 id="236-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"><a href="#236-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;" class="headerlink" title="236.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"></a>236.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="235">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</li>
 </ol>
-<p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。</p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p>
-<p>例如，给定如下二叉搜索树: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5]</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;, &#x627E;&#x5230;&#x8BE5;&#x6811;&#x4E2D;&#x4E24;&#x4E2A;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">&#x767E;&#x5EA6;&#x767E;&#x79D1;</a>&#x4E2D;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x7684;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;&#x201C;&#x5BF9;&#x4E8E;&#x6709;&#x6839;&#x6811; T &#x7684;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9; p&#x3001;q&#xFF0C;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9; x&#xFF0C;&#x6EE1;&#x8DB3; x &#x662F; p&#x3001;q &#x7684;&#x7956;&#x5148;&#x4E14; x &#x7684;&#x6DF1;&#x5EA6;&#x5C3D;&#x53EF;&#x80FD;&#x5927;&#xFF08;<strong>&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x7956;&#x5148;</strong>&#xFF09;&#x3002;&#x201D;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x7ED9;&#x5B9A;&#x5982;&#x4E0B;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;: root = [6,2,8,0,4,7,9,null,null,3,5]</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5], p &#x3D; 2, q &#x3D; 8
-输出: 6 
-解释: 节点 2 和节点 8 的最近公共祖先是 6</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>], p = <span class="hljs-number">2</span>, q = <span class="hljs-number">8</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">6</span> <br>&#x89E3;&#x91CA;: &#x8282;&#x70B9; <span class="hljs-number">2</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">8</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F; <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5], p &#x3D; 2, q &#x3D; 4
-输出: 2
-解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>], p = <span class="hljs-number">2</span>, q = <span class="hljs-number">4</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">2</span><br>&#x89E3;&#x91CA;: &#x8282;&#x70B9; <span class="hljs-number">2</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">4</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F; <span class="hljs-number">2</span>, &#x56E0;&#x4E3A;&#x6839;&#x636E;&#x5B9A;&#x4E49;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x4E3A;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>所有节点的值都是唯一的。</li>
-<li>p、q 为不同节点且均存在于给定的二叉搜索树中。</li>
+<li>&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</li>
+<li>p&#x3001;q &#x4E3A;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E14;&#x5747;&#x5B58;&#x5728;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x3002;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) &#123; val &#x3D; x; &#125;
- * &#125;
- *&#x2F;
-
-class Solution &#123;
-
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) &#123;
-        return findNode(root,p,q);
-    &#125;
-    &#x2F;&#x2F;因为是二叉搜索树，所以和普通二叉树的递归有所不同，之后还需要对比看，还没理解透
-    public TreeNode findNode(TreeNode root,TreeNode p,TreeNode q)&#123;
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若该节点值大于pq，搜索左边，
-        if(root.val&gt;p.val&amp;&amp;root.val&gt;q.val)&#123;
-            TreeNode left&#x3D;lowestCommonAncestor(root.left,p,q);
-            if(left!&#x3D;null)&#123;
-                return left;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若该节点值小于pq，则搜索右边
-        if(root.val&lt;p.val&amp;&amp;root.val&lt;q.val)&#123;
-            TreeNode right&#x3D;lowestCommonAncestor(root.right,p,q);
-            if(right!&#x3D;null)&#123;
-                return right;
-            &#125;
-        &#125;
-        return root;
-    &#125;
-    
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode(int x) { val = x; }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">lowestCommonAncestor</span><span class="hljs-params">(TreeNode root, TreeNode p, TreeNode q)</span> {<br>        <span class="hljs-keyword">return</span> findNode(root,p,q);<br>    }<br>    <span class="hljs-comment">//&#x56E0;&#x4E3A;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x6240;&#x4EE5;&#x548C;&#x666E;&#x901A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x9012;&#x5F52;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x4E4B;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x6BD4;&#x770B;&#xFF0C;&#x8FD8;&#x6CA1;&#x7406;&#x89E3;&#x900F;</span><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">findNode</span><span class="hljs-params">(TreeNode root,TreeNode p,TreeNode q)</span>{<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x503C;&#x5927;&#x4E8E;pq&#xFF0C;&#x641C;&#x7D22;&#x5DE6;&#x8FB9;&#xFF0C;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;p.val&amp;&amp;root.val&gt;q.val){<br>            TreeNode left=lowestCommonAncestor(root.left,p,q);<br>            <span class="hljs-keyword">if</span>(left!=<span class="hljs-literal">null</span>){<br>                <span class="hljs-keyword">return</span> left;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x503C;&#x5C0F;&#x4E8E;pq&#xFF0C;&#x5219;&#x641C;&#x7D22;&#x53F3;&#x8FB9;</span><br>        <span class="hljs-keyword">if</span>(root.val&lt;p.val&amp;&amp;root.val&lt;q.val){<br>            TreeNode right=lowestCommonAncestor(root.right,p,q);<br>            <span class="hljs-keyword">if</span>(right!=<span class="hljs-literal">null</span>){<br>                <span class="hljs-keyword">return</span> right;<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>    <br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -686,58 +473,24 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="236-二叉树的最近公共祖先"><a href="#236-二叉树的最近公共祖先" class="headerlink" title="236.二叉树的最近公共祖先"></a>236.二叉树的最近公共祖先</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="236">
-<li>二叉树的最近公共祖先</li>
+        <h1 id="236-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"><a href="#236-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;" class="headerlink" title="236.&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"></a>236.&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="236">
+<li>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</li>
 </ol>
-<p>给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。</p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表示为一个节点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [3,5,1,6,2,0,8,null,null,7,4], p &#x3D; 5, q &#x3D; 1
-输出：3
-解释：节点 5 和节点 1 的最近公共祖先是节点 3 。</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;, &#x627E;&#x5230;&#x8BE5;&#x6811;&#x4E2D;&#x4E24;&#x4E2A;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">&#x767E;&#x5EA6;&#x767E;&#x79D1;</a>&#x4E2D;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x7684;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;&#x201C;&#x5BF9;&#x4E8E;&#x6709;&#x6839;&#x6811; T &#x7684;&#x4E24;&#x4E2A;&#x8282;&#x70B9; p&#x3001;q&#xFF0C;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x8282;&#x70B9; x&#xFF0C;&#x6EE1;&#x8DB3; x &#x662F; p&#x3001;q &#x7684;&#x7956;&#x5148;&#x4E14; x &#x7684;&#x6DF1;&#x5EA6;&#x5C3D;&#x53EF;&#x80FD;&#x5927;&#xFF08;<strong>&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x7956;&#x5148;</strong>&#xFF09;&#x3002;&#x201D;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">8</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>,<span class="hljs-number">4</span>], p = <span class="hljs-number">5</span>, q = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">3</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8282;&#x70B9; <span class="hljs-number">5</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">1</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F;&#x8282;&#x70B9; <span class="hljs-number">3</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [3,5,1,6,2,0,8,null,null,7,4], p &#x3D; 5, q &#x3D; 4
-输出：5
-解释：节点 5 和节点 4 的最近公共祖先是节点 5 。因为根据定义最近公共祖先节点可以为节点本身。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">8</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">7</span>,<span class="hljs-number">4</span>], p = <span class="hljs-number">5</span>, q = <span class="hljs-number">4</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">5</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8282;&#x70B9; <span class="hljs-number">5</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">4</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F;&#x8282;&#x70B9; <span class="hljs-number">5</span> &#x3002;&#x56E0;&#x4E3A;&#x6839;&#x636E;&#x5B9A;&#x4E49;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x4E3A;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,2], p &#x3D; 1, q &#x3D; 2
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], p = <span class="hljs-number">1</span>, q = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>树中节点数目在范围 [2, 105] 内。<br>-109 &lt;&#x3D; Node.val &lt;&#x3D; 109<br>所有 Node.val 互不相同 。<br>p !&#x3D; q<br>p 和 q 均存在于给定的二叉树中。</p>
-<p>题目来源:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) &#123; val &#x3D; x; &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;递归，回溯，使用后序遍历
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) &#123;
-        &#x2F;&#x2F;若当前节点为其中一个指定节点，或者当前节点为null，则返回
-        if(root&#x3D;&#x3D;p||root&#x3D;&#x3D;q||root&#x3D;&#x3D;null)&#123;
-            return root;
-        &#125;
-        &#x2F;&#x2F;左子树是否存在公共祖先
-        TreeNode left&#x3D;lowestCommonAncestor(root.left,p,q);
-        TreeNode right&#x3D;lowestCommonAncestor(root.right,p,q);
-        if(left&#x3D;&#x3D;null&amp;&amp;right&#x3D;&#x3D;null)&#123;
-            return null;
-        &#125;else if(left!&#x3D;null&amp;&amp;right&#x3D;&#x3D;null)&#123;
-            return left;
-        &#125;else if(left&#x3D;&#x3D;null&amp;&amp;right!&#x3D;null)&#123;
-            return right;
-        &#125;
-        return root;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; [2, 105] &#x5185;&#x3002;<br>-109 &lt;= Node.val &lt;= 109<br>&#x6240;&#x6709; Node.val &#x4E92;&#x4E0D;&#x76F8;&#x540C; &#x3002;<br>p != q<br>p &#x548C; q &#x5747;&#x5B58;&#x5728;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x3002;</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode(int x) { val = x; }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x9012;&#x5F52;&#xFF0C;&#x56DE;&#x6EAF;&#xFF0C;&#x4F7F;&#x7528;&#x540E;&#x5E8F;&#x904D;&#x5386;</span><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">lowestCommonAncestor</span><span class="hljs-params">(TreeNode root, TreeNode p, TreeNode q)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E3A;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E3A;null&#xFF0C;&#x5219;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(root==p||root==q||root==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> root;<br>        }<br>        <span class="hljs-comment">//&#x5DE6;&#x5B50;&#x6811;&#x662F;&#x5426;&#x5B58;&#x5728;&#x516C;&#x5171;&#x7956;&#x5148;</span><br>        TreeNode left=lowestCommonAncestor(root.left,p,q);<br>        TreeNode right=lowestCommonAncestor(root.right,p,q);<br>        <span class="hljs-keyword">if</span>(left==<span class="hljs-literal">null</span>&amp;&amp;right==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(left!=<span class="hljs-literal">null</span>&amp;&amp;right==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> left;<br>        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(left==<span class="hljs-literal">null</span>&amp;&amp;right!=<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> right;<br>        }<br>        <span class="hljs-keyword">return</span> root;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -778,87 +531,30 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="501-二叉搜索树中的众数"><a href="#501-二叉搜索树中的众数" class="headerlink" title="501.二叉搜索树中的众数"></a>501.二叉搜索树中的众数</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="501">
-<li>二叉搜索树中的众数</li>
+        <h1 id="501-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4F17;&#x6570;"><a href="#501-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4F17;&#x6570;" class="headerlink" title="501.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4F17;&#x6570;"></a>501.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4F17;&#x6570;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="501">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4F17;&#x6570;</li>
 </ol>
-<p>给你一个含重复值的二叉搜索树（BST）的根节点 <code>root</code> ，找出并返回 BST 中的所有 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BC%97%E6%95%B0/44796">众数</a>（即，出现频率最高的元素）。</p>
-<p>如果树中有不止一个众数，可以按 <strong>任意顺序</strong> 返回。</p>
-<p>假定 BST 满足如下定义：</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x542B;&#x91CD;&#x590D;&#x503C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;BST&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x627E;&#x51FA;&#x5E76;&#x8FD4;&#x56DE; BST &#x4E2D;&#x7684;&#x6240;&#x6709; <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BC%97%E6%95%B0/44796">&#x4F17;&#x6570;</a>&#xFF08;&#x5373;&#xFF0C;&#x51FA;&#x73B0;&#x9891;&#x7387;&#x6700;&#x9AD8;&#x7684;&#x5143;&#x7D20;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6811;&#x4E2D;&#x6709;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x4F17;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6309; <strong>&#x4EFB;&#x610F;&#x987A;&#x5E8F;</strong> &#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x5047;&#x5B9A; BST &#x6EE1;&#x8DB3;&#x5982;&#x4E0B;&#x5B9A;&#x4E49;&#xFF1A;</p>
 <ul>
-<li>结点左子树中所含节点的值 <strong>小于等于</strong> 当前节点的值</li>
-<li>结点右子树中所含节点的值 <strong>大于等于</strong> 当前节点的值</li>
-<li>左子树和右子树都是二叉搜索树</li>
+<li>&#x7ED3;&#x70B9;&#x5DE6;&#x5B50;&#x6811;&#x4E2D;&#x6240;&#x542B;&#x8282;&#x70B9;&#x7684;&#x503C; <strong>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</strong> &#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x503C;</li>
+<li>&#x7ED3;&#x70B9;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x6240;&#x542B;&#x8282;&#x70B9;&#x7684;&#x503C; <strong>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</strong> &#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x503C;</li>
+<li>&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x90FD;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ul>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,null,2,2]
-输出：[2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [0]
-输出：[0]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点的数目在范围 <code>[1, 104]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; <code>[1, 104]</code> &#x5185;</li>
 <li><code>-105 &lt;= Node.val &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-mode-in-binary-search-tree/">https://leetcode.cn/problems/find-mode-in-binary-search-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;存储出现最大次数的元素有哪些
-    public List&lt;Integer&gt; list&#x3D;new ArrayList&lt;&gt;();
-    &#x2F;&#x2F;记录当前出现次数最多的元素的个数
-    public int maxCount&#x3D;0;
-    &#x2F;&#x2F;记录当前节点元素出现的次数
-    public int count&#x3D;0;
-    &#x2F;&#x2F;记录上一个节点
-    public TreeNode pre&#x3D;null;
-
-    public int[] findMode(TreeNode root) &#123;
-        findMode_1(root);
-        int[] res&#x3D;new int[list.size()];
-        for(int i&#x3D;0;i&lt;list.size();i++)&#123;
-            res[i]&#x3D;list.get(i);
-        &#125;
-        return res;
-    &#125;
-
-    &#x2F;&#x2F;进行中序遍历，并在遍历到该节点时更新当前元素的count，并检查是否需要更新maxCount，如果需要更新maxCount（当前元素Count大于maxCount）则将返回值列表中元素全部清除，若小于maxCount，则不进行更新，若等于maxCount，则将元素加入到resList，即返回列表中。
-    public void findMode_1(TreeNode node)&#123;
-        if(node&#x3D;&#x3D;null)
-            return ;
-        findMode_1(node.left);
-        if(pre&#x3D;&#x3D;null||pre.val!&#x3D;node.val)&#123;
-            count&#x3D;1;
-        &#125;else&#123;
-            count++;
-        &#125;
-        if(count&gt;maxCount)&#123;
-            maxCount&#x3D;count;
-            list.clear();
-            list.add(node.val);
-        &#125;else if(count&#x3D;&#x3D;maxCount)&#123;
-            list.add(node.val);
-        &#125;
-        pre&#x3D;node;
-        findMode_1(node.right);
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-mode-in-binary-search-tree/">https://leetcode.cn/problems/find-mode-in-binary-search-tree/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x5B58;&#x50A8;&#x51FA;&#x73B0;&#x6700;&#x5927;&#x6B21;&#x6570;&#x7684;&#x5143;&#x7D20;&#x6709;&#x54EA;&#x4E9B;</span><br>    <span class="hljs-keyword">public</span> List&lt;Integer&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> maxCount=<span class="hljs-number">0</span>;<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> count=<span class="hljs-number">0</span>;<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span><br>    <span class="hljs-keyword">public</span> TreeNode pre=<span class="hljs-literal">null</span>;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[] findMode(TreeNode root) {<br>        findMode_1(root);<br>        <span class="hljs-type">int</span>[] res=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[list.size()];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;list.size();i++){<br>            res[i]=list.get(i);<br>        }<br>        <span class="hljs-keyword">return</span> res;<br>    }<br><br>    <span class="hljs-comment">//&#x8FDB;&#x884C;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x5E76;&#x5728;&#x904D;&#x5386;&#x5230;&#x8BE5;&#x8282;&#x70B9;&#x65F6;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;count&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x9700;&#x8981;&#x66F4;&#x65B0;maxCount&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x66F4;&#x65B0;maxCount&#xFF08;&#x5F53;&#x524D;&#x5143;&#x7D20;Count&#x5927;&#x4E8E;maxCount&#xFF09;&#x5219;&#x5C06;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x6E05;&#x9664;&#xFF0C;&#x82E5;&#x5C0F;&#x4E8E;maxCount&#xFF0C;&#x5219;&#x4E0D;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF0C;&#x82E5;&#x7B49;&#x4E8E;maxCount&#xFF0C;&#x5219;&#x5C06;&#x5143;&#x7D20;&#x52A0;&#x5165;&#x5230;resList&#xFF0C;&#x5373;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x4E2D;&#x3002;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">findMode_1</span><span class="hljs-params">(TreeNode node)</span>{<br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> ;<br>        findMode_1(node.left);<br>        <span class="hljs-keyword">if</span>(pre==<span class="hljs-literal">null</span>||pre.val!=node.val){<br>            count=<span class="hljs-number">1</span>;<br>        }<span class="hljs-keyword">else</span>{<br>            count++;<br>        }<br>        <span class="hljs-keyword">if</span>(count&gt;maxCount){<br>            maxCount=count;<br>            list.clear();<br>            list.add(node.val);<br>        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(count==maxCount){<br>            list.add(node.val);<br>        }<br>        pre=node;<br>        findMode_1(node.right);<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -899,63 +595,24 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="530-二叉搜索树的最小绝对值差"><a href="#530-二叉搜索树的最小绝对值差" class="headerlink" title="530.二叉搜索树的最小绝对值差"></a>530.二叉搜索树的最小绝对值差</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="530">
-<li>二叉搜索树的最小绝对差</li>
+        <h1 id="530-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;"><a href="#530-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;" class="headerlink" title="530.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;"></a>530.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="530">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x5DEE;</li>
 </ol>
-<p>给你一个二叉搜索树的根节点 <code>root</code> ，返回 <strong>树中任意两不同节点值之间的最小差值</strong> 。</p>
-<p>差值是一个正数，其数值等于两值之差的绝对值。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,6,1,3]
-输出：1</code></pre>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x8FD4;&#x56DE; <strong>&#x6811;&#x4E2D;&#x4EFB;&#x610F;&#x4E24;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x5C0F;&#x5DEE;&#x503C;</strong> &#x3002;</p>
+<p>&#x5DEE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x6570;&#xFF0C;&#x5176;&#x6570;&#x503C;&#x7B49;&#x4E8E;&#x4E24;&#x503C;&#x4E4B;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,0,48,null,null,12,49]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">48</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">12</span>,<span class="hljs-number">49</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点的数目范围是 <code>[2, 104]</code></li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x662F; <code>[2, 104]</code></li>
 <li><code>0 &lt;= Node.val &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">https://leetcode.cn/problems/minimum-absolute-difference-in-bst/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;记录当前的最小绝对值之差
-    public int result&#x3D;Integer.MAX_VALUE;
-    &#x2F;&#x2F;记录前一个节点的值
-    public TreeNode pre&#x3D;null;
-    public void findMin(TreeNode node)&#123;
-        if(node&#x3D;&#x3D;null)
-            return;
-        findMin(node.left);
-        if(pre!&#x3D;null)&#123;
-            result&#x3D;Math.min(result,node.val-pre.val);
-        &#125;
-        pre&#x3D;node;
-        findMin(node.right);
-        
-    &#125;
-
-    public int getMinimumDifference(TreeNode root) &#123;
-        findMin(root);
-        return result;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">https://leetcode.cn/problems/minimum-absolute-difference-in-bst/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x4E4B;&#x5DEE;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> result=Integer.MAX_VALUE;<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x524D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;</span><br>    <span class="hljs-keyword">public</span> TreeNode pre=<span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">findMin</span><span class="hljs-params">(TreeNode node)</span>{<br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span>;<br>        findMin(node.left);<br>        <span class="hljs-keyword">if</span>(pre!=<span class="hljs-literal">null</span>){<br>            result=Math.min(result,node.val-pre.val);<br>        }<br>        pre=node;<br>        findMin(node.right);<br>        <br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getMinimumDifference</span><span class="hljs-params">(TreeNode root)</span> {<br>        findMin(root);<br>        <span class="hljs-keyword">return</span> result;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -996,71 +653,29 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="98-验证二叉搜索树"><a href="#98-验证二叉搜索树" class="headerlink" title="98.验证二叉搜索树"></a>98.验证二叉搜索树</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ol start="98">
-<li>验证二叉搜索树</li>
+        <h1 id="98-&#x9A8C;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#98-&#x9A8C;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="98.&#x9A8C;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>98.&#x9A8C;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="98">
+<li>&#x9A8C;&#x8BC1;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ol>
-<p>给你一个二叉树的根节点 <code>root</code> ，判断其是否是一个有效的二叉搜索树。</p>
-<p><strong>有效</strong> 二叉搜索树定义如下：</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x5224;&#x65AD;&#x5176;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</p>
+<p><strong>&#x6709;&#x6548;</strong> &#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>节点的左子树只包含 <strong>小于</strong> 当前节点的数。</li>
-<li>节点的右子树只包含 <strong>大于</strong> 当前节点的数。</li>
-<li>所有左子树和右子树自身必须也是二叉搜索树。</li>
+<li>&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x53EA;&#x5305;&#x542B; <strong>&#x5C0F;&#x4E8E;</strong> &#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x3002;</li>
+<li>&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x53EA;&#x5305;&#x542B; <strong>&#x5927;&#x4E8E;</strong> &#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x81EA;&#x8EAB;&#x5FC5;&#x987B;&#x4E5F;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</li>
 </ul>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [2,1,3]
-输出：true</code></pre>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [5,1,4,null,null,3,6]
-输出：false
-解释：根节点的值是 5 ，但是右子节点的值是 4 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6839;&#x8282;&#x70B9;&#x7684;&#x503C;&#x662F; <span class="hljs-number">5</span> &#xFF0C;&#x4F46;&#x662F;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x503C;&#x662F; <span class="hljs-number">4</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点数目范围在<code>[1, 104]</code> 内</li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x5728;<code>[1, 104]</code> &#x5185;</li>
 <li><code>-231 &lt;= Node.val &lt;= 231 - 1</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/validate-binary-search-tree/">https://leetcode.cn/problems/validate-binary-search-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;进行中序遍历，并将遍历的节点值存入到list集合中
-    public void valid(TreeNode node,List&lt;Integer&gt; list)&#123;
-        if(node&#x3D;&#x3D;null)
-            return ;
-        valid(node.left,list);
-        list.add(node.val);
-        valid(node.right,list);
-    &#125;
-
-    
-    public boolean isValidBST(TreeNode root) &#123;
-
-        List&lt;Integer&gt; list&#x3D;new ArrayList&lt;&gt;();
-        valid(root,list);
-        &#x2F;&#x2F;将集合转化为数组
-        Integer[] arr&#x3D;list.toArray(new Integer[list.size()]);
-        &#x2F;&#x2F;判断数组是否为升序，如果不是升序，则不是二叉搜索树，否则是二叉搜索树
-        for(int i&#x3D;1;i&lt;arr.length;i++)&#123;
-            if(arr[i]&lt;&#x3D;arr[i-1])
-                return false;
-        &#125;
-        return true;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/validate-binary-search-tree/">https://leetcode.cn/problems/validate-binary-search-tree/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x8FDB;&#x884C;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x5E76;&#x5C06;&#x904D;&#x5386;&#x7684;&#x8282;&#x70B9;&#x503C;&#x5B58;&#x5165;&#x5230;list&#x96C6;&#x5408;&#x4E2D;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">valid</span><span class="hljs-params">(TreeNode node,List&lt;Integer&gt; list)</span>{<br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> ;<br>        valid(node.left,list);<br>        list.add(node.val);<br>        valid(node.right,list);<br>    }<br><br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isValidBST</span><span class="hljs-params">(TreeNode root)</span> {<br><br>        List&lt;Integer&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        valid(root,list);<br>        <span class="hljs-comment">//&#x5C06;&#x96C6;&#x5408;&#x8F6C;&#x5316;&#x4E3A;&#x6570;&#x7EC4;</span><br>        Integer[] arr=list.toArray(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Integer</span>[list.size()]);<br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x4E3A;&#x5347;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5347;&#x5E8F;&#xFF0C;&#x5219;&#x4E0D;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x5426;&#x5219;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;arr.length;i++){<br>            <span class="hljs-keyword">if</span>(arr[i]&lt;=arr[i-<span class="hljs-number">1</span>])<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1101,58 +716,26 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="700-二叉搜索树中的搜索"><a href="#700-二叉搜索树中的搜索" class="headerlink" title="700.二叉搜索树中的搜索"></a>700.二叉搜索树中的搜索</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="700">
-<li>二叉搜索树中的搜索</li>
+        <h1 id="700-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x641C;&#x7D22;"><a href="#700-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x641C;&#x7D22;" class="headerlink" title="700.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x641C;&#x7D22;"></a>700.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x641C;&#x7D22;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="700">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x641C;&#x7D22;</li>
 </ol>
-<p>给定二叉搜索树（BST）的根节点 <code>root</code> 和一个整数值 <code>val</code>。</p>
-<p>你需要在 BST 中找到节点值等于 <code>val</code> 的节点。 返回以该节点为根的子树。 如果节点不存在，则返回 <code>null</code> 。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3], val &#x3D; 2
-输出：[2,1,3]</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;BST&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x503C; <code>val</code>&#x3002;</p>
+<p>&#x4F60;&#x9700;&#x8981;&#x5728; BST &#x4E2D;&#x627E;&#x5230;&#x8282;&#x70B9;&#x503C;&#x7B49;&#x4E8E; <code>val</code> &#x7684;&#x8282;&#x70B9;&#x3002; &#x8FD4;&#x56DE;&#x4EE5;&#x8BE5;&#x8282;&#x70B9;&#x4E3A;&#x6839;&#x7684;&#x5B50;&#x6811;&#x3002; &#x5982;&#x679C;&#x8282;&#x70B9;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>null</code> &#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>], val = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3], val &#x3D; 5
-输出：[]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>], val = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;[]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>数中节点数在 <code>[1, 5000]</code> 范围内</li>
+<li>&#x6570;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x5728; <code>[1, 5000]</code> &#x8303;&#x56F4;&#x5185;</li>
 <li><code>1 &lt;= Node.val &lt;= 107</code></li>
-<li><code>root</code> 是二叉搜索树</li>
+<li><code>root</code> &#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 <li><code>1 &lt;= val &lt;= 107</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-a-binary-search-tree/">https://leetcode.cn/problems/search-in-a-binary-search-tree/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode findTree(TreeNode node,int val)&#123;
-        if(node&#x3D;&#x3D;null)
-            return null;
-        if(node.val&#x3D;&#x3D;val)
-            return node;
-        if(node.val&lt;val)&#123;
-            return findTree(node.right,val);
-        &#125;
-        return findTree(node.left,val);
-    &#125;
-
-    public TreeNode searchBST(TreeNode root, int val) &#123;
-        return findTree(root,val);
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-a-binary-search-tree/">https://leetcode.cn/problems/search-in-a-binary-search-tree/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">findTree</span><span class="hljs-params">(TreeNode node,<span class="hljs-type">int</span> val)</span>{<br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-keyword">if</span>(node.val==val)<br>            <span class="hljs-keyword">return</span> node;<br>        <span class="hljs-keyword">if</span>(node.val&lt;val){<br>            <span class="hljs-keyword">return</span> findTree(node.right,val);<br>        }<br>        <span class="hljs-keyword">return</span> findTree(node.left,val);<br>    }<br><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">searchBST</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> val)</span> {<br>        <span class="hljs-keyword">return</span> findTree(root,val);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1277,6 +860,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

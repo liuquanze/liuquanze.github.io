@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="216.组合总和Ⅲ题目描述： 组合总和 III  找出所有相加之和为 n 的 k 个数的组合，且满足下列条件：  只使用数字1到9 每个数字 最多使用一次  返回 所有可能的有效组合的列表 。该列表不能包含相同的组合两次，组合可以以任何顺序返回。 example 1: 输入: k &#x3D; 3, n &#x3D; 7 输出: [[1,2,4]] 解释: 1 + 2 + 4 &#x3D; 7 没">
+    <meta name="description" content="216.&amp;#x7EC4;&amp;#x5408;&amp;#x603B;&amp;#x548C;&amp;#x2162;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7EC4;&amp;#x5408;&amp;#x603B;&amp;#x548C; III  &amp;#x627E;&amp;#x51FA;&amp;#x6240;&amp;#x6709;&amp;#x76F8;&amp;#x52A0;&amp;#x4E4B;&amp;#x548C;&amp;#x4E3A; n &amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="216.组合总和Ⅲ">
 <meta property="og:url" content="http://example.com/post/216-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%E2%85%A2.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="216.组合总和Ⅲ题目描述： 组合总和 III  找出所有相加之和为 n 的 k 个数的组合，且满足下列条件：  只使用数字1到9 每个数字 最多使用一次  返回 所有可能的有效组合的列表 。该列表不能包含相同的组合两次，组合可以以任何顺序返回。 example 1: 输入: k &#x3D; 3, n &#x3D; 7 输出: [[1,2,4]] 解释: 1 + 2 + 4 &#x3D; 7 没">
+<meta property="og:description" content="216.&amp;#x7EC4;&amp;#x5408;&amp;#x603B;&amp;#x548C;&amp;#x2162;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7EC4;&amp;#x5408;&amp;#x603B;&amp;#x548C; III  &amp;#x627E;&amp;#x51FA;&amp;#x6240;&amp;#x6709;&amp;#x76F8;&amp;#x52A0;&amp;#x4E4B;&amp;#x548C;&amp;#x4E3A; n &amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-27T15:01:56.000Z">
 <meta property="article:modified_time" content="2022-10-27T15:04:35.192Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,77 +152,31 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="216-组合总和Ⅲ"><a href="#216-组合总和Ⅲ" class="headerlink" title="216.组合总和Ⅲ"></a>216.组合总和Ⅲ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="216">
-<li>组合总和 III</li>
+        <h1 id="216-&#x7EC4;&#x5408;&#x603B;&#x548C;&#x2162;"><a href="#216-&#x7EC4;&#x5408;&#x603B;&#x548C;&#x2162;" class="headerlink" title="216.&#x7EC4;&#x5408;&#x603B;&#x548C;&#x2162;"></a>216.&#x7EC4;&#x5408;&#x603B;&#x548C;&#x2162;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="216">
+<li>&#x7EC4;&#x5408;&#x603B;&#x548C; III</li>
 </ol>
-<p>找出所有相加之和为 <code>n</code> 的 <code>k</code> 个数的组合，且满足下列条件：</p>
+<p>&#x627E;&#x51FA;&#x6240;&#x6709;&#x76F8;&#x52A0;&#x4E4B;&#x548C;&#x4E3A; <code>n</code> &#x7684; <code>k</code> &#x4E2A;&#x6570;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x4E14;&#x6EE1;&#x8DB3;&#x4E0B;&#x5217;&#x6761;&#x4EF6;&#xFF1A;</p>
 <ul>
-<li>只使用数字1到9</li>
-<li>每个数字 <strong>最多使用一次</strong></li>
+<li>&#x53EA;&#x4F7F;&#x7528;&#x6570;&#x5B57;1&#x5230;9</li>
+<li>&#x6BCF;&#x4E2A;&#x6570;&#x5B57; <strong>&#x6700;&#x591A;&#x4F7F;&#x7528;&#x4E00;&#x6B21;</strong></li>
 </ul>
-<p>返回 <em>所有可能的有效组合的列表</em> 。该列表不能包含相同的组合两次，组合可以以任何顺序返回。</p>
+<p>&#x8FD4;&#x56DE; <em>&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x6709;&#x6548;&#x7EC4;&#x5408;&#x7684;&#x5217;&#x8868;</em> &#x3002;&#x8BE5;&#x5217;&#x8868;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x76F8;&#x540C;&#x7684;&#x7EC4;&#x5408;&#x4E24;&#x6B21;&#xFF0C;&#x7EC4;&#x5408;&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x4F55;&#x987A;&#x5E8F;&#x8FD4;&#x56DE;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: k &#x3D; 3, n &#x3D; 7
-输出: [[1,2,4]]
-解释:
-1 + 2 + 4 &#x3D; 7
-没有其他符合的组合了。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: k = <span class="hljs-number">3</span>, n = <span class="hljs-number">7</span><br>&#x8F93;&#x51FA;: [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]]<br>&#x89E3;&#x91CA;:<br><span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">4</span> = <span class="hljs-number">7</span><br>&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7B26;&#x5408;&#x7684;&#x7EC4;&#x5408;&#x4E86;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: k &#x3D; 3, n &#x3D; 9
-输出: [[1,2,6], [1,3,5], [2,3,4]]
-解释:
-1 + 2 + 6 &#x3D; 9
-1 + 3 + 5 &#x3D; 9
-2 + 3 + 4 &#x3D; 9
-没有其他符合的组合了。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: k = <span class="hljs-number">3</span>, n = <span class="hljs-number">9</span><br>&#x8F93;&#x51FA;: [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>], [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]]<br>&#x89E3;&#x91CA;:<br><span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">6</span> = <span class="hljs-number">9</span><br><span class="hljs-number">1</span> + <span class="hljs-number">3</span> + <span class="hljs-number">5</span> = <span class="hljs-number">9</span><br><span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span> = <span class="hljs-number">9</span><br>&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7B26;&#x5408;&#x7684;&#x7EC4;&#x5408;&#x4E86;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: k &#x3D; 4, n &#x3D; 1
-输出: []
-解释: 不存在有效的组合。
-在[1,9]范围内使用4个不同的数字，我们可以得到的最小和是1+2+3+4 &#x3D; 10，因为10 &gt; 1，没有有效的组合。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: k = <span class="hljs-number">4</span>, n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;: []<br>&#x89E3;&#x91CA;: &#x4E0D;&#x5B58;&#x5728;&#x6709;&#x6548;&#x7684;&#x7EC4;&#x5408;&#x3002;<br>&#x5728;[<span class="hljs-number">1</span>,<span class="hljs-number">9</span>]&#x8303;&#x56F4;&#x5185;&#x4F7F;&#x7528;<span class="hljs-number">4</span>&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x7684;&#x6700;&#x5C0F;&#x548C;&#x662F;<span class="hljs-number">1</span>+<span class="hljs-number">2</span>+<span class="hljs-number">3</span>+<span class="hljs-number">4</span> = <span class="hljs-number">10</span>&#xFF0C;&#x56E0;&#x4E3A;<span class="hljs-number">10</span> &gt; <span class="hljs-number">1</span>&#xFF0C;&#x6CA1;&#x6709;&#x6709;&#x6548;&#x7684;&#x7EC4;&#x5408;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>2 &lt;= k &lt;= 9</code></li>
 <li><code>1 &lt;= n &lt;= 60</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum-iii/description/">https://leetcode.cn/problems/combination-sum-iii/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    List&lt;List&lt;Integer&gt;&gt; result&#x3D;new ArrayList&lt;&gt;();
-    LinkedList&lt;Integer&gt; path&#x3D;new LinkedList&lt;&gt;();
-    int sum&#x3D;0;
-    public List&lt;List&lt;Integer&gt;&gt; combinationSum3(int k, int n) &#123;
-        getPathes(k,n,1);
-        return result;
-    &#125;
-
-    public void getPathes(int k,int n,int index)&#123;
-        &#x2F;&#x2F;若当前的元素之和已经超过了目标sum，则直接跳出本次递归，就是剪枝操作
-        if(sum&gt;n)&#123;
-            return;
-        &#125;
-        if(path.size()&#x3D;&#x3D;k)&#123;
-            if(sum&#x3D;&#x3D;n)&#123;
-                result.add(new ArrayList(path));
-            &#125;
-            return;
-        &#125;
-
-        &#x2F;&#x2F;遍历该层所有可能的元素情况
-        for(int i&#x3D;index;i&lt;&#x3D;9-(k-path.size())+1;i++)&#123;
-            &#x2F;&#x2F;该层元素进入path，更新sum
-            sum+&#x3D;i;
-            path.add(i);
-            &#x2F;&#x2F;对下层进行递归，判断下一个元素
-            getPathes(k,n,i+1);
-            &#x2F;&#x2F;回溯操作，弹出当前元素，并恢复sum值
-            sum-&#x3D;i;
-            path.removeLast();
-        &#125;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum-iii/description/">https://leetcode.cn/problems/combination-sum-iii/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    List&lt;List&lt;Integer&gt;&gt; result=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    LinkedList&lt;Integer&gt; path=<span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();<br>    <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="hljs-title function_">combinationSum3</span><span class="hljs-params">(<span class="hljs-type">int</span> k, <span class="hljs-type">int</span> n)</span> {<br>        getPathes(k,n,<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">getPathes</span><span class="hljs-params">(<span class="hljs-type">int</span> k,<span class="hljs-type">int</span> n,<span class="hljs-type">int</span> index)</span>{<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x7684;&#x5143;&#x7D20;&#x4E4B;&#x548C;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x4E86;&#x76EE;&#x6807;sum&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8DF3;&#x51FA;&#x672C;&#x6B21;&#x9012;&#x5F52;&#xFF0C;&#x5C31;&#x662F;&#x526A;&#x679D;&#x64CD;&#x4F5C;</span><br>        <span class="hljs-keyword">if</span>(sum&gt;n){<br>            <span class="hljs-keyword">return</span>;<br>        }<br>        <span class="hljs-keyword">if</span>(path.size()==k){<br>            <span class="hljs-keyword">if</span>(sum==n){<br>                result.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>(path));<br>            }<br>            <span class="hljs-keyword">return</span>;<br>        }<br><br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x8BE5;&#x5C42;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x5143;&#x7D20;&#x60C5;&#x51B5;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=index;i&lt;=<span class="hljs-number">9</span>-(k-path.size())+<span class="hljs-number">1</span>;i++){<br>            <span class="hljs-comment">//&#x8BE5;&#x5C42;&#x5143;&#x7D20;&#x8FDB;&#x5165;path&#xFF0C;&#x66F4;&#x65B0;sum</span><br>            sum+=i;<br>            path.add(i);<br>            <span class="hljs-comment">//&#x5BF9;&#x4E0B;&#x5C42;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#xFF0C;&#x5224;&#x65AD;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span><br>            getPathes(k,n,i+<span class="hljs-number">1</span>);<br>            <span class="hljs-comment">//&#x56DE;&#x6EAF;&#x64CD;&#x4F5C;&#xFF0C;&#x5F39;&#x51FA;&#x5F53;&#x524D;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x6062;&#x590D;sum&#x503C;</span><br>            sum-=i;<br>            path.removeLast();<br>        }<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -257,9 +211,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -268,14 +221,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -362,6 +326,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

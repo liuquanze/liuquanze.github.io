@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="96.不同的二叉搜索树题目描述： 不同的二叉搜索树  给你一个整数 n ，求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？返回满足题意的二叉搜索树的种数。 example 1: 输入：n &#x3D; 3 输出：5  example 2: 输入：n &#x3D; 1 输出：1    提示：  1 &lt;&#x3D; n &lt;&#x3D; 19  题目来源：https:&#x2F;&#x2F;leet">
+    <meta name="description" content="96.&amp;#x4E0D;&amp;#x540C;&amp;#x7684;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E0D;&amp;#x540C;&amp;#x7684;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="96.不同的二叉搜索树">
 <meta property="og:url" content="http://example.com/post/96-%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="96.不同的二叉搜索树题目描述： 不同的二叉搜索树  给你一个整数 n ，求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？返回满足题意的二叉搜索树的种数。 example 1: 输入：n &#x3D; 3 输出：5  example 2: 输入：n &#x3D; 1 输出：1    提示：  1 &lt;&#x3D; n &lt;&#x3D; 19  题目来源：https:&#x2F;&#x2F;leet">
+<meta property="og:description" content="96.&amp;#x4E0D;&amp;#x540C;&amp;#x7684;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E0D;&amp;#x540C;&amp;#x7684;&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-16T03:04:40.000Z">
 <meta property="article:modified_time" content="2023-01-25T03:28:15.759Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,69 +152,29 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="96-不同的二叉搜索树"><a href="#96-不同的二叉搜索树" class="headerlink" title="96.不同的二叉搜索树"></a>96.不同的二叉搜索树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="96">
-<li>不同的二叉搜索树</li>
+        <h1 id="96-&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#96-&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="96.&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>96.&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="96">
+<li>&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ol>
-<p>给你一个整数 <code>n</code> ，求恰由 <code>n</code> 个节点组成且节点值从 <code>1</code> 到 <code>n</code> 互不相同的 <strong>二叉搜索树</strong> 有多少种？返回满足题意的二叉搜索树的种数。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570; <code>n</code> &#xFF0C;&#x6C42;&#x6070;&#x7531; <code>n</code> &#x4E2A;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x4E14;&#x8282;&#x70B9;&#x503C;&#x4ECE; <code>1</code> &#x5230; <code>n</code> &#x4E92;&#x4E0D;&#x76F8;&#x540C;&#x7684; <strong>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</strong> &#x6709;&#x591A;&#x5C11;&#x79CD;&#xFF1F;&#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x9898;&#x610F;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x79CD;&#x6570;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 3
-输出：5</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 1
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= n &lt;= 19</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-binary-search-trees/">https://leetcode.cn/problems/unique-binary-search-trees/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><ul>
-<li>2023&#x2F;1&#x2F;25</li>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-binary-search-trees/">https://leetcode.cn/problems/unique-binary-search-trees/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><ul>
+<li>2023/1/25</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int numTrees(int n) &#123;
-        if(n&lt;&#x3D;1)&#123;
-            return n;
-        &#125;
-        &#x2F;&#x2F;dp数组，dp[i]表示由i个节点可能组成的二叉树个数
-        int[] dp&#x3D;new int[n+1];
-        dp[0]&#x3D;1;
-        dp[1]&#x3D;1;
-        dp[2]&#x3D;2;
-        &#x2F;&#x2F;当前二叉树结构个数&#x3D;左子树结构数量*右子树结构数量
-        for(int i&#x3D;3;i&lt;&#x3D;n;i++)&#123;
-            for(int j&#x3D;0;j&lt;&#x3D;i-1;j++)&#123;
-                dp[i]+&#x3D;dp[j]*dp[i-j-1];
-            &#125;
-        &#125;
-        return dp[n];
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">numTrees</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> n;<br>        }<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#xFF0C;dp[i]&#x8868;&#x793A;&#x7531;i&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x80FD;&#x7EC4;&#x6210;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x4E2A;&#x6570;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">2</span>]=<span class="hljs-number">2</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x6811;&#x7ED3;&#x6784;&#x4E2A;&#x6570;=&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x6784;&#x6570;&#x91CF;*&#x53F3;&#x5B50;&#x6811;&#x7ED3;&#x6784;&#x6570;&#x91CF;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">3</span>;i&lt;=n;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=i-<span class="hljs-number">1</span>;j++){<br>                dp[i]+=dp[j]*dp[i-j-<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
-    &#125;
-&#125;</code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int numTrees(int n) &#123;
-        &#x2F;&#x2F;定义dp数组
-        int[] dp&#x3D;new int[n+1];
-        &#x2F;&#x2F;dp的初始值：当有0个节点时，看作一个空的二叉树，dp[0]&#x3D;1；当有一个节点时，dp[1]&#x3D;1;
-        dp[0]&#x3D;1;
-        dp[1]&#x3D;1;
-        &#x2F;&#x2F;状态公式：dp[i]+&#x3D;dp[j-1]*dp[i-j];
-        &#x2F;&#x2F;j表示当前二叉搜索树的头节点，dp[j-1]和dp[i-j]分别表示其左右子树的二叉搜索树个数
-        &#x2F;&#x2F;详情见https:&#x2F;&#x2F;gitee.com&#x2F;programmercarl&#x2F;leetcode-master&#x2F;blob&#x2F;master&#x2F;problems&#x2F;0096.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md
-        for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
-            for(int j&#x3D;1;j&lt;&#x3D;i;j++)&#123;
-                dp[i]+&#x3D;dp[j-1]*dp[i-j];
-            &#125;
-        &#125;
-        return dp[n];
-
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">numTrees</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//dp&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1A;&#x5F53;&#x6709;0&#x4E2A;&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;dp[0]=1&#xFF1B;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x65F6;&#xFF0C;dp[1]=1;</span><br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x72B6;&#x6001;&#x516C;&#x5F0F;&#xFF1A;dp[i]+=dp[j-1]*dp[i-j];</span><br>        <span class="hljs-comment">//j&#x8868;&#x793A;&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x5934;&#x8282;&#x70B9;&#xFF0C;dp[j-1]&#x548C;dp[i-j]&#x5206;&#x522B;&#x8868;&#x793A;&#x5176;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2A;&#x6570;</span><br>        <span class="hljs-comment">//&#x8BE6;&#x60C5;&#x89C1;https://gitee.com/programmercarl/leetcode-master/blob/master/problems/0096.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=i;j++){<br>                dp[i]+=dp[j-<span class="hljs-number">1</span>]*dp[i-j];<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -249,9 +209,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -260,14 +219,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -354,6 +324,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

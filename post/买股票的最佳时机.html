@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="121. 买股票的最佳时机题目描述：给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。 example 1: 输入：[7,1,5,3,6,4] 输出">
+    <meta name="description" content="121. &amp;#x4E70;&amp;#x80A1;&amp;#x7968;&amp;#x7684;&amp;#x6700;&amp;#x4F73;&amp;#x65F6;&amp;#x673A;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4; prices &amp;#xFF0C;&amp;#x5B83;&amp;#x7684;&amp;#x7B2C; i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="买股票的最佳时机">
 <meta property="og:url" content="http://example.com/post/%E4%B9%B0%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="121. 买股票的最佳时机题目描述：给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。 example 1: 输入：[7,1,5,3,6,4] 输出">
+<meta property="og:description" content="121. &amp;#x4E70;&amp;#x80A1;&amp;#x7968;&amp;#x7684;&amp;#x6700;&amp;#x4F73;&amp;#x65F6;&amp;#x673A;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4; prices &amp;#xFF0C;&amp;#x5B83;&amp;#x7684;&amp;#x7B2C; i">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-29T01:41:19.000Z">
 <meta property="article:modified_time" content="2022-07-29T01:45:17.659Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,44 +151,19 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="121-买股票的最佳时机"><a href="#121-买股票的最佳时机" class="headerlink" title="121. 买股票的最佳时机"></a>121. 买股票的最佳时机</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。</p>
-<p>你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p>
-<p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。</p>
+        <h1 id="121-&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;"><a href="#121-&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;" class="headerlink" title="121. &#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;"></a>121. &#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; prices &#xFF0C;&#x5B83;&#x7684;&#x7B2C; i &#x4E2A;&#x5143;&#x7D20; prices[i] &#x8868;&#x793A;&#x4E00;&#x652F;&#x7ED9;&#x5B9A;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x4F60;&#x53EA;&#x80FD;&#x9009;&#x62E9; &#x67D0;&#x4E00;&#x5929; &#x4E70;&#x5165;&#x8FD9;&#x53EA;&#x80A1;&#x7968;&#xFF0C;&#x5E76;&#x9009;&#x62E9;&#x5728; &#x672A;&#x6765;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x5B50; &#x5356;&#x51FA;&#x8BE5;&#x80A1;&#x7968;&#x3002;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x4F60;&#x6240;&#x80FD;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x80FD;&#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x5229;&#x6DA6;&#xFF0C;&#x8FD4;&#x56DE; 0 &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：[7,1,5,3,6,4]
-输出：5
-解释：在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出，最大利润 &#x3D; 6-1 &#x3D; 5 。
-     注意利润不能是 7-1 &#x3D; 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">5</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; <span class="hljs-number">2</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">1</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">5</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">6</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;&#xFF0C;&#x6700;&#x5927;&#x5229;&#x6DA6; = <span class="hljs-number">6</span>-<span class="hljs-number">1</span> = <span class="hljs-number">5</span> &#x3002;<br>     &#x6CE8;&#x610F;&#x5229;&#x6DA6;&#x4E0D;&#x80FD;&#x662F; <span class="hljs-number">7</span>-<span class="hljs-number">1</span> = <span class="hljs-number">6</span>, &#x56E0;&#x4E3A;&#x5356;&#x51FA;&#x4EF7;&#x683C;&#x9700;&#x8981;&#x5927;&#x4E8E;&#x4E70;&#x5165;&#x4EF7;&#x683C;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x4E70;&#x5165;&#x524D;&#x5356;&#x51FA;&#x80A1;&#x7968;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [7,6,4,3,1]
-输出：0
-解释：在这种情况下, 没有交易完成, 所以最大利润为 0。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;prices = [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">0</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;, &#x6CA1;&#x6709;&#x4EA4;&#x6613;&#x5B8C;&#x6210;, &#x6240;&#x4EE5;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x4E3A; <span class="hljs-number">0</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-贪心：最大收益一定是在历史最低点买入
-
-*&#x2F;
-public class Solution &#123;
-    public int maxProfit(int[] prices) &#123;
-        
-        &#x2F;&#x2F;最大收益，初始化为0
-        int maxprofit &#x3D; 0;
-        &#x2F;&#x2F;最低买入点，初始化为最大值
-        int min_time&#x3D;Integer.MAX_VALUE;
-        &#x2F;&#x2F;遍历每天价格
-        for(int price:prices)&#123;
-            &#x2F;&#x2F;若出现了更低的买入点，则更新买入点
-            min_time&#x3D;Math.min(min_time,price);
-            &#x2F;&#x2F;若当前价格高于最低买入点，则计算收益，并更新最大收集
-            maxprofit&#x3D;Math.max(maxprofit,price-min_time);
-        &#125;
-        return maxprofit;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">&#x8D2A;&#x5FC3;&#xFF1A;&#x6700;&#x5927;&#x6536;&#x76CA;&#x4E00;&#x5B9A;&#x662F;&#x5728;&#x5386;&#x53F2;&#x6700;&#x4F4E;&#x70B9;&#x4E70;&#x5165;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxProfit</span><span class="hljs-params">(<span class="hljs-type">int</span>[] prices)</span> {<br>        <br>        <span class="hljs-comment">//&#x6700;&#x5927;&#x6536;&#x76CA;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A;0</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">maxprofit</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x6700;&#x4F4E;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x6700;&#x5927;&#x503C;</span><br>        <span class="hljs-type">int</span> min_time=Integer.MAX_VALUE;<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6BCF;&#x5929;&#x4EF7;&#x683C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> price:prices){<br>            <span class="hljs-comment">//&#x82E5;&#x51FA;&#x73B0;&#x4E86;&#x66F4;&#x4F4E;&#x7684;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x4E70;&#x5165;&#x70B9;</span><br>            min_time=Math.min(min_time,price);<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E;&#x6700;&#x4F4E;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x5219;&#x8BA1;&#x7B97;&#x6536;&#x76CA;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x6700;&#x5927;&#x6536;&#x96C6;</span><br>            maxprofit=Math.max(maxprofit,price-min_time);<br>        }<br>        <span class="hljs-keyword">return</span> maxprofit;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -221,9 +196,8 @@ public class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -232,14 +206,25 @@ public class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -326,6 +311,19 @@ public class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

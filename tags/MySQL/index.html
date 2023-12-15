@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,16 +153,16 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="ERROR-2003-HY000-Can’t-connect-to-MySQL-server-on-‘localhost-3306’-10061"><a href="#ERROR-2003-HY000-Can’t-connect-to-MySQL-server-on-‘localhost-3306’-10061" class="headerlink" title="ERROR 2003 (HY000): Can’t connect to MySQL server on ‘localhost:3306’ (10061)"></a>ERROR 2003 (HY000): Can’t connect to MySQL server on ‘localhost:3306’ (10061)</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mysql -uroot -p</code></pre>
+        <h1 id="ERROR-2003-HY000-Can&#x2019;t-connect-to-MySQL-server-on-&#x2018;localhost-3306&#x2019;-10061"><a href="#ERROR-2003-HY000-Can&#x2019;t-connect-to-MySQL-server-on-&#x2018;localhost-3306&#x2019;-10061" class="headerlink" title="ERROR 2003 (HY000): Can&#x2019;t connect to MySQL server on &#x2018;localhost:3306&#x2019; (10061)"></a>ERROR 2003 (HY000): Can&#x2019;t connect to MySQL server on &#x2018;localhost:3306&#x2019; (10061)</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -uroot -p<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>输入上传命令之后，出现标题上的错误。</li>
-<li>数据库无法成功连接</li>
+<li>&#x8F93;&#x5165;&#x4E0A;&#x4F20;&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x51FA;&#x73B0;&#x6807;&#x9898;&#x4E0A;&#x7684;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x65E0;&#x6CD5;&#x6210;&#x529F;&#x8FDE;&#x63A5;</li>
 </ul>
-<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><ul>
-<li>打开win搜索栏，输入“计算机管理”</li>
-<li>选择服务</li>
-<li>找到mysql，并启动即可</li>
+<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</h2><ul>
+<li>&#x6253;&#x5F00;win&#x641C;&#x7D22;&#x680F;&#xFF0C;&#x8F93;&#x5165;&#x201C;&#x8BA1;&#x7B97;&#x673A;&#x7BA1;&#x7406;&#x201D;</li>
+<li>&#x9009;&#x62E9;&#x670D;&#x52A1;</li>
+<li>&#x627E;&#x5230;mysql&#xFF0C;&#x5E76;&#x542F;&#x52A8;&#x5373;&#x53EF;</li>
 </ul>
 
     
@@ -260,6 +260,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

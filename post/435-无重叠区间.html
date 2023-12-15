@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="435.无重叠区间题目描述： 无重叠区间  给定一个区间的集合 intervals ，其中 intervals[i] &#x3D; [starti, endi] 。返回 需要移除区间的最小数量，使剩余区间互不重叠 。 example 1： 输入: intervals &#x3D; [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，剩下的区间没有重叠。  examp">
+    <meta name="description" content="435.&amp;#x65E0;&amp;#x91CD;&amp;#x53E0;&amp;#x533A;&amp;#x95F4;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x65E0;&amp;#x91CD;&amp;#x53E0;&amp;#x533A;&amp;#x95F4;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x533A;&amp;#x95F4;&amp;#x7684;&amp;#x96C6;&amp;#x5408;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="435.无重叠区间">
 <meta property="og:url" content="http://example.com/post/435-%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="435.无重叠区间题目描述： 无重叠区间  给定一个区间的集合 intervals ，其中 intervals[i] &#x3D; [starti, endi] 。返回 需要移除区间的最小数量，使剩余区间互不重叠 。 example 1： 输入: intervals &#x3D; [[1,2],[2,3],[3,4],[1,3]] 输出: 1 解释: 移除 [1,3] 后，剩下的区间没有重叠。  examp">
+<meta property="og:description" content="435.&amp;#x65E0;&amp;#x91CD;&amp;#x53E0;&amp;#x533A;&amp;#x95F4;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x65E0;&amp;#x91CD;&amp;#x53E0;&amp;#x533A;&amp;#x95F4;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x533A;&amp;#x95F4;&amp;#x7684;&amp;#x96C6;&amp;#x5408;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-21T14:23:54.000Z">
 <meta property="article:modified_time" content="2022-12-21T14:26:37.687Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,50 +152,28 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="435-无重叠区间"><a href="#435-无重叠区间" class="headerlink" title="435.无重叠区间"></a>435.无重叠区间</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="435">
-<li>无重叠区间</li>
+        <h1 id="435-&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;"><a href="#435-&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;" class="headerlink" title="435.&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;"></a>435.&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="435">
+<li>&#x65E0;&#x91CD;&#x53E0;&#x533A;&#x95F4;</li>
 </ol>
-<p>给定一个区间的集合 <code>intervals</code> ，其中 <code>intervals[i] = [starti, endi]</code> 。返回 <em>需要移除区间的最小数量，使剩余区间互不重叠</em> 。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [[1,2],[2,3],[3,4],[1,3]]
-输出: 1
-解释: 移除 [1,3] 后，剩下的区间没有重叠。</code></pre>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x96C6;&#x5408; <code>intervals</code> &#xFF0C;&#x5176;&#x4E2D; <code>intervals[i] = [starti, endi]</code> &#x3002;&#x8FD4;&#x56DE; <em>&#x9700;&#x8981;&#x79FB;&#x9664;&#x533A;&#x95F4;&#x7684;&#x6700;&#x5C0F;&#x6570;&#x91CF;&#xFF0C;&#x4F7F;&#x5269;&#x4F59;&#x533A;&#x95F4;&#x4E92;&#x4E0D;&#x91CD;&#x53E0;</em> &#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: intervals = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]]<br>&#x8F93;&#x51FA;: <span class="hljs-number">1</span><br>&#x89E3;&#x91CA;: &#x79FB;&#x9664; [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>] &#x540E;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x533A;&#x95F4;&#x6CA1;&#x6709;&#x91CD;&#x53E0;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [ [1,2], [1,2], [1,2] ]
-输出: 2
-解释: 你需要移除两个 [1,2] 来使剩下的区间没有重叠。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: intervals = [ [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>] ]<br>&#x8F93;&#x51FA;: <span class="hljs-number">2</span><br>&#x89E3;&#x91CA;: &#x4F60;&#x9700;&#x8981;&#x79FB;&#x9664;&#x4E24;&#x4E2A; [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>] &#x6765;&#x4F7F;&#x5269;&#x4E0B;&#x7684;&#x533A;&#x95F4;&#x6CA1;&#x6709;&#x91CD;&#x53E0;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: intervals &#x3D; [ [1,2], [2,3] ]
-输出: 0
-解释: 你不需要移除任何区间，因为它们已经是无重叠的了。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: intervals = [ [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>] ]<br>&#x8F93;&#x51FA;: <span class="hljs-number">0</span><br>&#x89E3;&#x91CA;: &#x4F60;&#x4E0D;&#x9700;&#x8981;&#x79FB;&#x9664;&#x4EFB;&#x4F55;&#x533A;&#x95F4;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5DF2;&#x7ECF;&#x662F;&#x65E0;&#x91CD;&#x53E0;&#x7684;&#x4E86;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= intervals.length &lt;= 105</code></li>
 <li><code>intervals[i].length == 2</code></li>
 <li><code>-5 * 104 &lt;= starti &lt; endi &lt;= 5 * 104</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-overlapping-intervals/">https://leetcode.cn/problems/non-overlapping-intervals/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int eraseOverlapIntervals(int[][] intervals) &#123;
-        &#x2F;&#x2F;对数组元素按照下标一号元素进行升序排序
-        Arrays.sort(intervals,(a,b)-&gt;&#123;
-            return Integer.compare(a[0],b[0]);
-        &#125;);
-        int num&#x3D;1;
-        for(int i&#x3D;1;i&lt;intervals.length;i++)&#123;
-            if(intervals[i-1][1]&lt;&#x3D;intervals[i][0])&#123;
-                num++;
-            &#125;else&#123;
-                intervals[i][1]&#x3D;Math.min(intervals[i-1][1],intervals[i][1]);
-            &#125;
-        &#125;
-        return intervals.length-num;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">eraseOverlapIntervals</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] intervals)</span> {<br>        <span class="hljs-comment">//&#x5BF9;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x6309;&#x7167;&#x4E0B;&#x6807;&#x4E00;&#x53F7;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</span><br>        Arrays.sort(intervals,(a,b)-&gt;{<br>            <span class="hljs-keyword">return</span> Integer.compare(a[<span class="hljs-number">0</span>],b[<span class="hljs-number">0</span>]);<br>        });<br>        <span class="hljs-type">int</span> num=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;intervals.length;i++){<br>            <span class="hljs-keyword">if</span>(intervals[i-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]&lt;=intervals[i][<span class="hljs-number">0</span>]){<br>                num++;<br>            }<span class="hljs-keyword">else</span>{<br>                intervals[i][<span class="hljs-number">1</span>]=Math.min(intervals[i-<span class="hljs-number">1</span>][<span class="hljs-number">1</span>],intervals[i][<span class="hljs-number">1</span>]);<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> intervals.length-num;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -230,9 +208,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -241,14 +218,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -335,6 +323,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

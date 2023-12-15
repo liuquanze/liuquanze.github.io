@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,107 +153,60 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="平台开发中所使用到的Vue工具和组件"><a href="#平台开发中所使用到的Vue工具和组件" class="headerlink" title="平台开发中所使用到的Vue工具和组件"></a>平台开发中所使用到的Vue工具和组件</h1><h1 id="vue-prism-editor"><a href="#vue-prism-editor" class="headerlink" title="vue-prism-editor"></a>vue-prism-editor</h1><h2 id="1-实现效果"><a href="#1-实现效果" class="headerlink" title="1. 实现效果"></a>1. 实现效果</h2><ul>
-<li>可输入代码，并且代码语法高亮</li>
-<li>支持编辑模式与不可编辑模式</li>
+        <h1 id="&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x4E2D;&#x6240;&#x4F7F;&#x7528;&#x5230;&#x7684;Vue&#x5DE5;&#x5177;&#x548C;&#x7EC4;&#x4EF6;"><a href="#&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x4E2D;&#x6240;&#x4F7F;&#x7528;&#x5230;&#x7684;Vue&#x5DE5;&#x5177;&#x548C;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x4E2D;&#x6240;&#x4F7F;&#x7528;&#x5230;&#x7684;Vue&#x5DE5;&#x5177;&#x548C;&#x7EC4;&#x4EF6;"></a>&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x4E2D;&#x6240;&#x4F7F;&#x7528;&#x5230;&#x7684;Vue&#x5DE5;&#x5177;&#x548C;&#x7EC4;&#x4EF6;</h1><h1 id="vue-prism-editor"><a href="#vue-prism-editor" class="headerlink" title="vue-prism-editor"></a>vue-prism-editor</h1><h2 id="1-&#x5B9E;&#x73B0;&#x6548;&#x679C;"><a href="#1-&#x5B9E;&#x73B0;&#x6548;&#x679C;" class="headerlink" title="1. &#x5B9E;&#x73B0;&#x6548;&#x679C;"></a>1. &#x5B9E;&#x73B0;&#x6548;&#x679C;</h2><ul>
+<li>&#x53EF;&#x8F93;&#x5165;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x4EE3;&#x7801;&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;</li>
+<li>&#x652F;&#x6301;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#x4E0E;&#x4E0D;&#x53EF;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</li>
 </ul>
-<h2 id="2-使用步骤"><a href="#2-使用步骤" class="headerlink" title="2. 使用步骤"></a>2. 使用步骤</h2><ul>
-<li>安装依赖</li>
+<h2 id="2-&#x4F7F;&#x7528;&#x6B65;&#x9AA4;"><a href="#2-&#x4F7F;&#x7528;&#x6B65;&#x9AA4;" class="headerlink" title="2. &#x4F7F;&#x7528;&#x6B65;&#x9AA4;"></a>2. &#x4F7F;&#x7528;&#x6B65;&#x9AA4;</h2><ul>
+<li>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install vue-prism-editor</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install vue-prism-editor<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>由于vue-prism-editor需要prismjs依赖，所以需要导入prismjs依赖</li>
+<li>&#x7531;&#x4E8E;vue-prism-editor&#x9700;&#x8981;prismjs&#x4F9D;&#x8D56;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5BFC;&#x5165;prismjs&#x4F9D;&#x8D56;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install prismjs</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install prismjs<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>在需要使用的页面导入组件</li>
+<li>&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x9875;&#x9762;&#x5BFC;&#x5165;&#x7EC4;&#x4EF6;</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">import &#123; PrismEditor &#125; from &quot;vue-prism-editor&quot;;
-import &quot;vue-prism-editor&#x2F;dist&#x2F;prismeditor.min.css&quot;;
-import &#123; highlight, languages &#125; from &quot;prismjs&#x2F;components&#x2F;prism-core&quot;;
-import &quot;prismjs&#x2F;components&#x2F;prism-clike&quot;;
-import &quot;prismjs&#x2F;components&#x2F;prism-javascript&quot;;
-import &quot;prismjs&#x2F;themes&#x2F;prism-tomorrow.css&quot;; </code></pre>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">PrismEditor</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue-prism-editor&quot;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;vue-prism-editor/dist/prismeditor.min.css&quot;</span>;<br><span class="hljs-keyword">import</span> { highlight, languages } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;prismjs/components/prism-core&quot;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;prismjs/components/prism-clike&quot;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;prismjs/components/prism-javascript&quot;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;prismjs/themes/prism-tomorrow.css&quot;</span>; <br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>html</li>
 </ul>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">&lt;prism-editor
-   class&#x3D;&quot;my-editor height-300&quot;
-    v-model&#x3D;&quot;code&quot;
-    aria-disabled
-    :highlight&#x3D;&quot;highlighter&quot;
-    line-numbers
-    :readonly&#x3D;&quot;false&quot;
-    :tabSize&#x3D;&quot;4&quot;
-    &gt;&lt;&#x2F;prism-editor&gt;</code></pre>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">prism-editor</span></span><br><span class="hljs-tag">   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-editor height-300&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;code&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">aria-disabled</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:highlight</span>=<span class="hljs-string">&quot;highlighter&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">line-numbers</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:readonly</span>=<span class="hljs-string">&quot;false&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">:tabSize</span>=<span class="hljs-string">&quot;4&quot;</span></span><br><span class="hljs-tag">    &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">prism-editor</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>javascript</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">export default &#123;
-	 components: &#123;
-	 		PrismEditor
-	 &#125;,
-	 data: () &#x3D;&gt; (&#123;
-	 		code: &#39; &#39;,
-	 &#125;),
-	 methods: &#123;
-		 	highlighter(code) &#123;
-		 		return highlight(code, languages.js); &#x2F;&#x2F;returns html
-		 	&#125;
-	 &#125;
-&#125;;</code></pre>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {<br>	 <span class="hljs-attr">components</span>: {<br>	 		<span class="hljs-title class_">PrismEditor</span><br>	 },<br>	 <span class="hljs-attr">data</span>: <span class="hljs-function">() =&gt;</span> ({<br>	 		<span class="hljs-attr">code</span>: <span class="hljs-string">&apos; &apos;</span>,<br>	 }),<br>	 <span class="hljs-attr">methods</span>: {<br>		 	<span class="hljs-title function_">highlighter</span>(<span class="hljs-params">code</span>) {<br>		 		<span class="hljs-keyword">return</span> <span class="hljs-title function_">highlight</span>(code, languages.<span class="hljs-property">js</span>); <span class="hljs-comment">//returns html</span><br>		 	}<br>	 }<br>};<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>CSS</li>
 </ul>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;style lang&#x3D;&quot;scss&quot;&gt;
-	.my-editor &#123;
-	 background: #2d2d2d;
-	 color: #ccc;
-	 font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
-	 font-size: 14px;
-	 line-height: 1.5;
-	 padding: 5px;
-	&#125;
-	
-	.prism-editor__textarea:focus &#123;
-	 outline: none;
-	&#125;
-	
-	&#x2F;* 非必须 *&#x2F;
-	.height-300 &#123;
-	 	height: 300px;
-	&#125;
-&lt;&#x2F;style&gt;</code></pre>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs css">&lt;style lang=&quot;scss&quot;&gt;<br>	<span class="hljs-selector-class">.my-editor</span> {<br>	 <span class="hljs-attribute">background</span>: <span class="hljs-number">#2d2d2d</span>;<br>	 <span class="hljs-attribute">color</span>: <span class="hljs-number">#ccc</span>;<br>	 <span class="hljs-attribute">font-family</span>: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;<br>	 <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;<br>	 <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;<br>	 <span class="hljs-attribute">padding</span>: <span class="hljs-number">5px</span>;<br>	}<br>	<br>	<span class="hljs-selector-class">.prism-editor__textarea</span><span class="hljs-selector-pseudo">:focus</span> {<br>	 <span class="hljs-attribute">outline</span>: none;<br>	}<br>	<br>	<span class="hljs-comment">/* &#x975E;&#x5FC5;&#x987B; */</span><br>	<span class="hljs-selector-class">.height-300</span> {<br>	 	<span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;<br>	}<br>&lt;/style&gt;<br></code></pre></td></tr></table></figure>
 
-<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/c_qianxia5040/article/details/124008768">https://blog.csdn.net/c_qianxia5040/article/details/124008768</a></p>
-<h1 id="file-saver"><a href="#file-saver" class="headerlink" title="file-saver"></a>file-saver</h1><h2 id="1-实现效果-1"><a href="#1-实现效果-1" class="headerlink" title="1. 实现效果"></a>1. 实现效果</h2><ul>
-<li>可以将一段字符串保存为一个文件</li>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;<a target="_blank" rel="noopener" href="https://blog.csdn.net/c_qianxia5040/article/details/124008768">https://blog.csdn.net/c_qianxia5040/article/details/124008768</a></p>
+<h1 id="file-saver"><a href="#file-saver" class="headerlink" title="file-saver"></a>file-saver</h1><h2 id="1-&#x5B9E;&#x73B0;&#x6548;&#x679C;-1"><a href="#1-&#x5B9E;&#x73B0;&#x6548;&#x679C;-1" class="headerlink" title="1. &#x5B9E;&#x73B0;&#x6548;&#x679C;"></a>1. &#x5B9E;&#x73B0;&#x6548;&#x679C;</h2><ul>
+<li>&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x6BB5;&#x5B57;&#x7B26;&#x4E32;&#x4FDD;&#x5B58;&#x4E3A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
 </ul>
-<h2 id="2-使用步骤-1"><a href="#2-使用步骤-1" class="headerlink" title="2. 使用步骤"></a>2. 使用步骤</h2><ul>
-<li>安装依赖</li>
+<h2 id="2-&#x4F7F;&#x7528;&#x6B65;&#x9AA4;-1"><a href="#2-&#x4F7F;&#x7528;&#x6B65;&#x9AA4;-1" class="headerlink" title="2. &#x4F7F;&#x7528;&#x6B65;&#x9AA4;"></a>2. &#x4F7F;&#x7528;&#x6B65;&#x9AA4;</h2><ul>
+<li>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install file-saver --save</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install file-saver --save<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>在需要使用文件保存的页面导入依赖</li>
+<li>&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x7684;&#x9875;&#x9762;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">import &#123; saveAs &#125; from &#39;file-saver&#39;;</code></pre>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">import</span> { saveAs } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;file-saver&apos;</span>;<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>保存文件demo</li>
+<li>&#x4FDD;&#x5B58;&#x6587;&#x4EF6;demo</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">downloadTxt() &#123;
-    let str_file &#x3D; &#39;文件内的字符串内容&#39;
-    let strData &#x3D; new Blob([str_file], &#123; type: &#39;text&#x2F;plain;charset&#x3D;utf-8&#39; &#125;);
-    saveAs(strData, &quot;文件.py&quot;);
-&#125;,</code></pre>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">downloadTxt</span>(<span class="hljs-params"></span>) {<br>    <span class="hljs-keyword">let</span> str_file = <span class="hljs-string">&apos;&#x6587;&#x4EF6;&#x5185;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5185;&#x5BB9;&apos;</span><br>    <span class="hljs-keyword">let</span> strData = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Blob</span>([str_file], { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;text/plain;charset=utf-8&apos;</span> });<br>    <span class="hljs-title function_">saveAs</span>(strData, <span class="hljs-string">&quot;&#x6587;&#x4EF6;.py&quot;</span>);<br>},<br></code></pre></td></tr></table></figure>
 
-<p>参考资料：<a target="_blank" rel="noopener" href="https://wjw1014.blog.csdn.net/article/details/124320511">https://wjw1014.blog.csdn.net/article/details/124320511</a></p>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;<a target="_blank" rel="noopener" href="https://wjw1014.blog.csdn.net/article/details/124320511">https://wjw1014.blog.csdn.net/article/details/124320511</a></p>
 
     
     </div>
@@ -350,6 +303,19 @@ import &quot;prismjs&#x2F;themes&#x2F;prism-tomorrow.css&quot;; </code></pre>
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

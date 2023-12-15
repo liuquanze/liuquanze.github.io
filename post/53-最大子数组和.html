@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="53.最大子数组和题目描述： 最大子数组和  给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 子数组 是数组中的一个连续部分。 example 1: 输入：nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4] 输出：6 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。  example 2: 输入：nums">
+    <meta name="description" content="53.&amp;#x6700;&amp;#x5927;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x548C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x6700;&amp;#x5927;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x548C;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;#x4E2A;&amp;#x6574;&amp;#x6570;&amp;#x6570;&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="53.最大子数组和">
 <meta property="og:url" content="http://example.com/post/53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="53.最大子数组和题目描述： 最大子数组和  给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 子数组 是数组中的一个连续部分。 example 1: 输入：nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4] 输出：6 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。  example 2: 输入：nums">
+<meta property="og:description" content="53.&amp;#x6700;&amp;#x5927;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x548C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x6700;&amp;#x5927;&amp;#x5B50;&amp;#x6570;&amp;#x7EC4;&amp;#x548C;  &amp;#x7ED9;&amp;#x4F60;&amp;#x4E00;&amp;#x4E2A;&amp;#x6574;&amp;#x6570;&amp;#x6570;&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-03T14:21:26.000Z">
 <meta property="article:modified_time" content="2022-12-03T14:24:22.249Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,50 +152,27 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="53-最大子数组和"><a href="#53-最大子数组和" class="headerlink" title="53.最大子数组和"></a>53.最大子数组和</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="53">
-<li>最大子数组和</li>
+        <h1 id="53-&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;"><a href="#53-&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;" class="headerlink" title="53.&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;"></a>53.&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="53">
+<li>&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;</li>
 </ol>
-<p>给你一个整数数组 <code>nums</code> ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
-<p><strong>子数组</strong> 是数组中的一个连续部分。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x8BF7;&#x4F60;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6700;&#x5927;&#x548C;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#xFF08;&#x5B50;&#x6570;&#x7EC4;&#x6700;&#x5C11;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6700;&#x5927;&#x548C;&#x3002;</p>
+<p><strong>&#x5B50;&#x6570;&#x7EC4;</strong> &#x662F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x90E8;&#x5206;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4]
-输出：6
-解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [-<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,-<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,-<span class="hljs-number">5</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4; [<span class="hljs-number">4</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>] &#x7684;&#x548C;&#x6700;&#x5927;&#xFF0C;&#x4E3A; <span class="hljs-number">6</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [1]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [5,4,-1,7,8]
-输出：23</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">23</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 105</code></li>
 <li><code>-104 &lt;= nums[i] &lt;= 104</code></li>
 </ul>
-<p>题目来源:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-subarray/description/">https://leetcode.cn/problems/maximum-subarray/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int maxSubArray(int[] nums) &#123;
-        &#x2F;&#x2F;每次都更新局部的sum，并且每次都会更新全局的sum，贪心算法就体现在：当局部sum小于等于0时，就重置局部sum，这也是贪心算法的体现【略显牵强】
-        int max_sum&#x3D;Integer.MIN_VALUE;
-        int sum_temp&#x3D;0;
-        for(int i&#x3D;0;i&lt;nums.length;i++)&#123;
-            &#x2F;&#x2F;每次都更新sum
-            sum_temp+&#x3D;nums[i];
-            &#x2F;&#x2F;并且每次更新完sum都需要判断当前sum是否是全局最大sum
-            if(sum_temp&gt;max_sum)&#123;
-                max_sum&#x3D;sum_temp;
-            &#125;
-            &#x2F;&#x2F;如果当前的局部sum已经小于等于0了，那么就重新统计局部sum，
-            if(sum_temp&lt;&#x3D;0) sum_temp&#x3D;0;
-        &#125;
-
-        return max_sum;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;:<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-subarray/description/">https://leetcode.cn/problems/maximum-subarray/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxSubArray</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-comment">//&#x6BCF;&#x6B21;&#x90FD;&#x66F4;&#x65B0;&#x5C40;&#x90E8;&#x7684;sum&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;&#x5168;&#x5C40;&#x7684;sum&#xFF0C;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x5C31;&#x4F53;&#x73B0;&#x5728;&#xFF1A;&#x5F53;&#x5C40;&#x90E8;sum&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;0&#x65F6;&#xFF0C;&#x5C31;&#x91CD;&#x7F6E;&#x5C40;&#x90E8;sum&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#x7684;&#x4F53;&#x73B0;&#x3010;&#x7565;&#x663E;&#x7275;&#x5F3A;&#x3011;</span><br>        <span class="hljs-type">int</span> max_sum=Integer.MIN_VALUE;<br>        <span class="hljs-type">int</span> sum_temp=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){<br>            <span class="hljs-comment">//&#x6BCF;&#x6B21;&#x90FD;&#x66F4;&#x65B0;sum</span><br>            sum_temp+=nums[i];<br>            <span class="hljs-comment">//&#x5E76;&#x4E14;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x5B8C;sum&#x90FD;&#x9700;&#x8981;&#x5224;&#x65AD;&#x5F53;&#x524D;sum&#x662F;&#x5426;&#x662F;&#x5168;&#x5C40;&#x6700;&#x5927;sum</span><br>            <span class="hljs-keyword">if</span>(sum_temp&gt;max_sum){<br>                max_sum=sum_temp;<br>            }<br>            <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x7684;&#x5C40;&#x90E8;sum&#x5DF2;&#x7ECF;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;0&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x91CD;&#x65B0;&#x7EDF;&#x8BA1;&#x5C40;&#x90E8;sum&#xFF0C;</span><br>            <span class="hljs-keyword">if</span>(sum_temp&lt;=<span class="hljs-number">0</span>) sum_temp=<span class="hljs-number">0</span>;<br>        }<br><br>        <span class="hljs-keyword">return</span> max_sum;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -230,9 +207,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -241,14 +217,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -335,6 +322,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

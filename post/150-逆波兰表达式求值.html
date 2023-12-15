@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="150.逆波兰表达式求值题目描述： 逆波兰表达式求值  根据 逆波兰表示法，求表达式的值。 有效的算符包括 +、-、*、&#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。 注意 两个整数之间的除法只保留整数部分。 可以保证给定的逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。 example 1: 输入：tokens &#x3D; [&quot;2&amp;qu">
+    <meta name="description" content="150.&amp;#x9006;&amp;#x6CE2;&amp;#x5170;&amp;#x8868;&amp;#x8FBE;&amp;#x5F0F;&amp;#x6C42;&amp;#x503C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x9006;&amp;#x6CE2;&amp;#x5170;&amp;#x8868;&amp;#x8FBE;&amp;#x5F0F;&amp;#x6C42;&amp;#x503C;  &amp;#x6839;&amp;#x636E; &amp;#x9006;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="150. 逆波兰表达式求值">
 <meta property="og:url" content="http://example.com/post/150-%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="150.逆波兰表达式求值题目描述： 逆波兰表达式求值  根据 逆波兰表示法，求表达式的值。 有效的算符包括 +、-、*、&#x2F; 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。 注意 两个整数之间的除法只保留整数部分。 可以保证给定的逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。 example 1: 输入：tokens &#x3D; [&quot;2&amp;qu">
+<meta property="og:description" content="150.&amp;#x9006;&amp;#x6CE2;&amp;#x5170;&amp;#x8868;&amp;#x8FBE;&amp;#x5F0F;&amp;#x6C42;&amp;#x503C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x9006;&amp;#x6CE2;&amp;#x5170;&amp;#x8868;&amp;#x8FBE;&amp;#x5F0F;&amp;#x6C42;&amp;#x503C;  &amp;#x6839;&amp;#x636E; &amp;#x9006;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-17T00:27:04.000Z">
 <meta property="article:modified_time" content="2022-09-17T00:29:56.625Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,65 +152,29 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="150-逆波兰表达式求值"><a href="#150-逆波兰表达式求值" class="headerlink" title="150.逆波兰表达式求值"></a>150.逆波兰表达式求值</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="150">
-<li>逆波兰表达式求值</li>
+        <h1 id="150-&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;"><a href="#150-&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;" class="headerlink" title="150.&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;"></a>150.&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="150">
+<li>&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x6C42;&#x503C;</li>
 </ol>
-<p>根据<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437"> 逆波兰表示法</a>，求表达式的值。</p>
-<p>有效的算符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。</p>
-<p><strong>注意</strong> 两个整数之间的除法只保留整数部分。</p>
-<p>可以保证给定的逆波兰表达式总是有效的。换句话说，表达式总会得出有效数值且不存在除数为 0 的情况。</p>
+<p>&#x6839;&#x636E;<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%80%86%E6%B3%A2%E5%85%B0%E5%BC%8F/128437"> &#x9006;&#x6CE2;&#x5170;&#x8868;&#x793A;&#x6CD5;</a>&#xFF0C;&#x6C42;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x6709;&#x6548;&#x7684;&#x7B97;&#x7B26;&#x5305;&#x62EC; <code>+</code>&#x3001;<code>-</code>&#x3001;<code>*</code>&#x3001;<code>/</code> &#x3002;&#x6BCF;&#x4E2A;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x6570;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong> &#x4E24;&#x4E2A;&#x6574;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x9664;&#x6CD5;&#x53EA;&#x4FDD;&#x7559;&#x6574;&#x6570;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7ED9;&#x5B9A;&#x7684;&#x9006;&#x6CE2;&#x5170;&#x8868;&#x8FBE;&#x5F0F;&#x603B;&#x662F;&#x6709;&#x6548;&#x7684;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x603B;&#x4F1A;&#x5F97;&#x51FA;&#x6709;&#x6548;&#x6570;&#x503C;&#x4E14;&#x4E0D;&#x5B58;&#x5728;&#x9664;&#x6570;&#x4E3A; 0 &#x7684;&#x60C5;&#x51B5;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]
-输出：9
-解释：该算式转化为常见的中缀算术表达式为：((2 + 1) * 3) &#x3D; 9</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">9</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;((<span class="hljs-number">2</span> + <span class="hljs-number">1</span>) * <span class="hljs-number">3</span>) = <span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;4&quot;,&quot;13&quot;,&quot;5&quot;,&quot;&#x2F;&quot;,&quot;+&quot;]
-输出：6
-解释：该算式转化为常见的中缀算术表达式为：(4 + (13 &#x2F; 5)) &#x3D; 6</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;4&quot;</span>,<span class="hljs-string">&quot;13&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;(<span class="hljs-number">4</span> + (<span class="hljs-number">13</span> / <span class="hljs-number">5</span>)) = <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：tokens &#x3D; [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;&#x2F;&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]
-输出：22
-解释：该算式转化为常见的中缀算术表达式为：
-  ((10 * (6 &#x2F; ((9 + 3) * -11))) + 17) + 5
-&#x3D; ((10 * (6 &#x2F; (12 * -11))) + 17) + 5
-&#x3D; ((10 * (6 &#x2F; -132)) + 17) + 5
-&#x3D; ((10 * 0) + 17) + 5
-&#x3D; (0 + 17) + 5
-&#x3D; 17 + 5
-&#x3D; 22</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;tokens = [<span class="hljs-string">&quot;10&quot;</span>,<span class="hljs-string">&quot;6&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;-11&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;/&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;17&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;5&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">22</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x8BE5;&#x7B97;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x4E2D;&#x7F00;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;<br>  ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / ((<span class="hljs-number">9</span> + <span class="hljs-number">3</span>) * -<span class="hljs-number">11</span>))) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / (<span class="hljs-number">12</span> * -<span class="hljs-number">11</span>))) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * (<span class="hljs-number">6</span> / -<span class="hljs-number">132</span>)) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= ((<span class="hljs-number">10</span> * <span class="hljs-number">0</span>) + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= (<span class="hljs-number">0</span> + <span class="hljs-number">17</span>) + <span class="hljs-number">5</span><br>= <span class="hljs-number">17</span> + <span class="hljs-number">5</span><br>= <span class="hljs-number">22</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>1 &lt;&#x3D; tokens.length &lt;&#x3D; 104</li>
-<li>tokens[i] 是一个算符（”+”、”-“、”*” 或 “&#x2F;“），或是在范围 [-200, 200] 内的一个整数</li>
+<li>1 &lt;= tokens.length &lt;= 104</li>
+<li>tokens[i] &#x662F;&#x4E00;&#x4E2A;&#x7B97;&#x7B26;&#xFF08;&#x201D;+&#x201D;&#x3001;&#x201D;-&#x201C;&#x3001;&#x201D;*&#x201D; &#x6216; &#x201C;/&#x201C;&#xFF09;&#xFF0C;&#x6216;&#x662F;&#x5728;&#x8303;&#x56F4; [-200, 200] &#x5185;&#x7684;&#x4E00;&#x4E2A;&#x6574;&#x6570;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">https://leetcode.cn/problems/evaluate-reverse-polish-notation</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    &#x2F;**
-    如果是遍历到数字，则进站，如果遍历到运算符，则将栈顶的两个元素出栈，然后经过该运算符运算，将运算结果入栈。遍历完成后将栈顶元素出栈，该元素就是最终的运算结果
-     *&#x2F;
-    public int evalRPN(String[] tokens) &#123;
-        Deque&lt;Integer&gt; stack &#x3D; new LinkedList();
-        for (String s : tokens) &#123;
-            if (&quot;+&quot;.equals(s)) &#123;        &#x2F;&#x2F; leetcode 内置jdk的问题，不能使用&#x3D;&#x3D;判断字符串是否相等
-                stack.push(stack.pop() + stack.pop());      &#x2F;&#x2F; 注意 - 和&#x2F; 需要特殊处理
-            &#125; else if (&quot;-&quot;.equals(s)) &#123;
-                stack.push(-stack.pop() + stack.pop());
-            &#125; else if (&quot;*&quot;.equals(s)) &#123;
-                stack.push(stack.pop() * stack.pop());
-            &#125; else if (&quot;&#x2F;&quot;.equals(s)) &#123;
-                int temp1 &#x3D; stack.pop();
-                int temp2 &#x3D; stack.pop();
-                stack.push(temp2 &#x2F; temp1);
-            &#125; else &#123;
-                stack.push(Integer.valueOf(s));
-            &#125;
-        &#125;
-        return stack.pop();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">https://leetcode.cn/problems/evaluate-reverse-polish-notation</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">    &#x5982;&#x679C;&#x662F;&#x904D;&#x5386;&#x5230;&#x6570;&#x5B57;&#xFF0C;&#x5219;&#x8FDB;&#x7AD9;&#xFF0C;&#x5982;&#x679C;&#x904D;&#x5386;&#x5230;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5219;&#x5C06;&#x6808;&#x9876;&#x7684;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x7ECF;&#x8FC7;&#x8BE5;&#x8FD0;&#x7B97;&#x7B26;&#x8FD0;&#x7B97;&#xFF0C;&#x5C06;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x5165;&#x6808;&#x3002;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x540E;&#x5C06;&#x6808;&#x9876;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x8BE5;&#x5143;&#x7D20;&#x5C31;&#x662F;&#x6700;&#x7EC8;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">evalRPN</span><span class="hljs-params">(String[] tokens)</span> {<br>        Deque&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>();<br>        <span class="hljs-keyword">for</span> (String s : tokens) {<br>            <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;+&quot;</span>.equals(s)) {        <span class="hljs-comment">// leetcode &#x5185;&#x7F6E;jdk&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;==&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x7B49;</span><br>                stack.push(stack.pop() + stack.pop());      <span class="hljs-comment">// &#x6CE8;&#x610F; - &#x548C;/ &#x9700;&#x8981;&#x7279;&#x6B8A;&#x5904;&#x7406;</span><br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;-&quot;</span>.equals(s)) {<br>                stack.push(-stack.pop() + stack.pop());<br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;*&quot;</span>.equals(s)) {<br>                stack.push(stack.pop() * stack.pop());<br>            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;/&quot;</span>.equals(s)) {<br>                <span class="hljs-type">int</span> <span class="hljs-variable">temp1</span> <span class="hljs-operator">=</span> stack.pop();<br>                <span class="hljs-type">int</span> <span class="hljs-variable">temp2</span> <span class="hljs-operator">=</span> stack.pop();<br>                stack.push(temp2 / temp1);<br>            } <span class="hljs-keyword">else</span> {<br>                stack.push(Integer.valueOf(s));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> stack.pop();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -245,9 +209,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -256,14 +219,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -350,6 +324,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

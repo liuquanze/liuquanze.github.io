@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="605.种花问题题目描述：假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。 给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false。 example 1: 输">
+    <meta name="description" content="605.&amp;#x79CD;&amp;#x82B1;&amp;#x95EE;&amp;#x9898;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5047;&amp;#x8BBE;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x5F88;&amp;#x957F;&amp;#x7684;&amp;#x82B1;&amp;#x575B;&amp;#xFF0C;&amp;#x4E00;&amp;#x90E8;&amp;#x5206;&amp;#x5730;&amp;#x5">
 <meta property="og:type" content="article">
 <meta property="og:title" content="种花问题">
 <meta property="og:url" content="http://example.com/post/%E7%A7%8D%E8%8A%B1%E9%97%AE%E9%A2%98.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="605.种花问题题目描述：假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。 给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false。 example 1: 输">
+<meta property="og:description" content="605.&amp;#x79CD;&amp;#x82B1;&amp;#x95EE;&amp;#x9898;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5047;&amp;#x8BBE;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x5F88;&amp;#x957F;&amp;#x7684;&amp;#x82B1;&amp;#x575B;&amp;#xFF0C;&amp;#x4E00;&amp;#x90E8;&amp;#x5206;&amp;#x5730;&amp;#x5">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-30T01:41:20.000Z">
 <meta property="article:modified_time" content="2022-07-30T01:44:14.639Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,42 +151,18 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="605-种花问题"><a href="#605-种花问题" class="headerlink" title="605.种花问题"></a>605.种花问题</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。</p>
-<p>给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false。</p>
+        <h1 id="605-&#x79CD;&#x82B1;&#x95EE;&#x9898;"><a href="#605-&#x79CD;&#x82B1;&#x95EE;&#x9898;" class="headerlink" title="605.&#x79CD;&#x82B1;&#x95EE;&#x9898;"></a>605.&#x79CD;&#x82B1;&#x95EE;&#x9898;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x957F;&#x7684;&#x82B1;&#x575B;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x5730;&#x5757;&#x79CD;&#x690D;&#x4E86;&#x82B1;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x5374;&#x6CA1;&#x6709;&#x3002;&#x53EF;&#x662F;&#xFF0C;&#x82B1;&#x4E0D;&#x80FD;&#x79CD;&#x690D;&#x5728;&#x76F8;&#x90BB;&#x7684;&#x5730;&#x5757;&#x4E0A;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x4E89;&#x593A;&#x6C34;&#x6E90;&#xFF0C;&#x4E24;&#x8005;&#x90FD;&#x4F1A;&#x6B7B;&#x53BB;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;  flowerbed &#x8868;&#x793A;&#x82B1;&#x575B;&#xFF0C;&#x7531;&#x82E5;&#x5E72; 0 &#x548C; 1 &#x7EC4;&#x6210;&#xFF0C;&#x5176;&#x4E2D; 0 &#x8868;&#x793A;&#x6CA1;&#x79CD;&#x690D;&#x82B1;&#xFF0C;1 &#x8868;&#x793A;&#x79CD;&#x690D;&#x4E86;&#x82B1;&#x3002;&#x53E6;&#x6709;&#x4E00;&#x4E2A;&#x6570; n &#xFF0C;&#x80FD;&#x5426;&#x5728;&#x4E0D;&#x6253;&#x7834;&#x79CD;&#x690D;&#x89C4;&#x5219;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x79CD;&#x5165; n &#x6735;&#x82B1;&#xFF1F;&#x80FD;&#x5219;&#x8FD4;&#x56DE; true &#xFF0C;&#x4E0D;&#x80FD;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 1
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;flowerbed = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 2
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;flowerbed = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/can-place-flowers/">https://leetcode.cn/problems/can-place-flowers/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean canPlaceFlowers(int[] flowerbed, int n) &#123;
-        if(flowerbed.length&#x3D;&#x3D;0)&#123;
-            return false;
-        &#125;
-        for(int i&#x3D;0;i&lt;flowerbed.length;i++)&#123;
-            &#x2F;&#x2F;遇到的情况
-            &#x2F;&#x2F;1.当前元素为0，并且后续也为0，则插入花，并减少剩余数量，i++，向后跳两格
-            &#x2F;&#x2F;2.当前元素为0，且为最后一个元素，则插入花，向后跳两格子
-            &#x2F;&#x2F;3.当前元素为1，则继续向后跳两格，因为后一个位子必定没法插入
-            &#x2F;&#x2F;4.若当前元素为0，后续为1，则跳一格，进入第三种情况
-            &#x2F;&#x2F;每次只需要判断当前元素和后一个元素，无需考虑前一个元素，并且从第一个元素开始判断
-            if(flowerbed[i]&#x3D;&#x3D;0&amp;&amp;(i+1&#x3D;&#x3D;flowerbed.length||flowerbed[i+1]&#x3D;&#x3D;0))&#123;
-                i++;
-                n--;
-            &#125;else if(flowerbed[i]&#x3D;&#x3D;1)&#123;
-                i++;
-            &#125;
-
-        &#125;
-        return n&lt;&#x3D;0? true:false;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/can-place-flowers/">https://leetcode.cn/problems/can-place-flowers/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPlaceFlowers</span><span class="hljs-params">(<span class="hljs-type">int</span>[] flowerbed, <span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(flowerbed.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;flowerbed.length;i++){<br>            <span class="hljs-comment">//&#x9047;&#x5230;&#x7684;&#x60C5;&#x51B5;</span><br>            <span class="hljs-comment">//1.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x5E76;&#x4E14;&#x540E;&#x7EED;&#x4E5F;&#x4E3A;0&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x82B1;&#xFF0C;&#x5E76;&#x51CF;&#x5C11;&#x5269;&#x4F59;&#x6570;&#x91CF;&#xFF0C;i++&#xFF0C;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;</span><br>            <span class="hljs-comment">//2.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x4E14;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x82B1;&#xFF0C;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;&#x5B50;</span><br>            <span class="hljs-comment">//3.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;1&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x5B50;&#x5FC5;&#x5B9A;&#x6CA1;&#x6CD5;&#x63D2;&#x5165;</span><br>            <span class="hljs-comment">//4.&#x82E5;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x540E;&#x7EED;&#x4E3A;1&#xFF0C;&#x5219;&#x8DF3;&#x4E00;&#x683C;&#xFF0C;&#x8FDB;&#x5165;&#x7B2C;&#x4E09;&#x79CD;&#x60C5;&#x51B5;</span><br>            <span class="hljs-comment">//&#x6BCF;&#x6B21;&#x53EA;&#x9700;&#x8981;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x548C;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x65E0;&#x9700;&#x8003;&#x8651;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#x5224;&#x65AD;</span><br>            <span class="hljs-keyword">if</span>(flowerbed[i]==<span class="hljs-number">0</span>&amp;&amp;(i+<span class="hljs-number">1</span>==flowerbed.length||flowerbed[i+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)){<br>                i++;<br>                n--;<br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(flowerbed[i]==<span class="hljs-number">1</span>){<br>                i++;<br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> n&lt;=<span class="hljs-number">0</span>? <span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -219,9 +195,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -230,14 +205,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -324,6 +310,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

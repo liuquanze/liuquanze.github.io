@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="05.替换空格题目描述：剑指 Offer 05. 替换空格 请实现一个函数，把字符串 s 中的每个空格替换成”%20”。 example 1: 输入：s &#x3D; &quot;We are happy.&quot; 输出：&quot;We%20are%20happy.&quot;  提示： 0 &lt;&#x3D; s 的长度 &lt;&#x3D; 10000 题目来源：https:&#x2F;&#x2F;lee">
+    <meta name="description" content="05.&amp;#x66FF;&amp;#x6362;&amp;#x7A7A;&amp;#x683C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5251;&amp;#x6307; Offer 05. &amp;#x66FF;&amp;#x6362;&amp;#x7A7A;&amp;#x683C; &amp;#x8BF7;&amp;#x5B9E;&amp;#x73B0;&amp;#x4E00;&amp;#x4E2A;&amp;#x51FD;&amp;#x6570;&amp;#xFF0C;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="05.替换空格">
 <meta property="og:url" content="http://example.com/post/05-%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="05.替换空格题目描述：剑指 Offer 05. 替换空格 请实现一个函数，把字符串 s 中的每个空格替换成”%20”。 example 1: 输入：s &#x3D; &quot;We are happy.&quot; 输出：&quot;We%20are%20happy.&quot;  提示： 0 &lt;&#x3D; s 的长度 &lt;&#x3D; 10000 题目来源：https:&#x2F;&#x2F;lee">
+<meta property="og:description" content="05.&amp;#x66FF;&amp;#x6362;&amp;#x7A7A;&amp;#x683C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5251;&amp;#x6307; Offer 05. &amp;#x66FF;&amp;#x6362;&amp;#x7A7A;&amp;#x683C; &amp;#x8BF7;&amp;#x5B9E;&amp;#x73B0;&amp;#x4E00;&amp;#x4E2A;&amp;#x51FD;&amp;#x6570;&amp;#xFF0C;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-05T14:29:42.000Z">
 <meta property="article:modified_time" content="2022-09-05T14:35:56.634Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,75 +152,15 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="05-替换空格"><a href="#05-替换空格" class="headerlink" title="05.替换空格"></a>05.替换空格</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>剑指 Offer 05. 替换空格</p>
-<p>请实现一个函数，把字符串 <code>s</code> 中的每个空格替换成”%20”。</p>
+        <h1 id="05-&#x66FF;&#x6362;&#x7A7A;&#x683C;"><a href="#05-&#x66FF;&#x6362;&#x7A7A;&#x683C;" class="headerlink" title="05.&#x66FF;&#x6362;&#x7A7A;&#x683C;"></a>05.&#x66FF;&#x6362;&#x7A7A;&#x683C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5251;&#x6307; Offer 05. &#x66FF;&#x6362;&#x7A7A;&#x683C;</p>
+<p>&#x8BF7;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x628A;&#x5B57;&#x7B26;&#x4E32; <code>s</code> &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x7A7A;&#x683C;&#x66FF;&#x6362;&#x6210;&#x201D;%20&#x201D;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;We are happy.&quot;
-输出：&quot;We%20are%20happy.&quot;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;We are happy.&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;We%20are%20happy.&quot;</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>0 &lt;&#x3D; s 的长度 &lt;&#x3D; 10000</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">https://leetcode.cn/problems/ti-huan-kong-ge-lcof/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;常规方法：从前向后遍历，遇到空格则替换为&quot;02%&quot;，可以使用StringBuilder实现，但是每次替换，后面的字符串需要向后移动
-&#x2F;&#x2F;使用一个新的对象，复制 str，复制的过程对其判断，是空格则替换，否则直接复制，类似于数组复制
-public static String replaceSpace(StringBuffer str) &#123;
-        if (str &#x3D;&#x3D; null) &#123;
-            return null;
-        &#125;
-		&#x2F;&#x2F;选用 StringBuilder 单线程使用，比较快，选不选都行
-        StringBuilder sb &#x3D; new StringBuilder();
-		&#x2F;&#x2F;使用 sb 逐个复制 str ，碰到空格则替换，否则直接复制
-        for (int i &#x3D; 0; i &lt; str.length(); i++) &#123;
-		&#x2F;&#x2F;str.charAt(i) 为 char 类型，为了比较需要将其转为和 &quot; &quot; 相同的字符串类型
-        &#x2F;&#x2F;if (&quot; &quot;.equals(String.valueOf(str.charAt(i))))&#123;
-            if (s.charAt(i) &#x3D;&#x3D; &#39; &#39;) &#123;
-                sb.append(&quot;%20&quot;);
-            &#125; else &#123;
-                sb.append(str.charAt(i));
-            &#125;
-        &#125;
-        return sb.toString();
-    &#125;
-&#x2F;&#x2F;从后向前遍历，使用双指针的方法进行实现，速度更快beat 100%
-class Solution &#123;
-    public String replaceSpace(String s) &#123;
-        &#x2F;&#x2F;判断参数是否合法
-        if(s.length()&#x3D;&#x3D;0||s&#x3D;&#x3D;null)&#123;
-            return s;
-        &#125;
-        &#x2F;&#x2F;拼接字符串
-        StringBuilder tail&#x3D;new StringBuilder();
-        &#x2F;&#x2F;每遍历到一个空格，拼接字符串扩大两个空格大小
-        for(int i&#x3D;0;i&lt;s.length();i++)&#123;
-            if(s.charAt(i)&#x3D;&#x3D;&#39; &#39;)&#123;
-                tail.append(&quot;  &quot;);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若不存在空格，则直接返回
-        if(tail.length()&#x3D;&#x3D;0)&#123;
-            return s;
-        &#125;
-        &#x2F;&#x2F;记录左右指针
-        int left&#x3D;s.length()-1;
-        s+&#x3D;tail;
-        int right&#x3D;s.length()-1;
-        char[] chars&#x3D;s.toCharArray();
-        &#x2F;&#x2F;左指针i从后向前遍历
-        while(left&gt;&#x3D;0)&#123;
-            if(chars[left]&#x3D;&#x3D;&#39; &#39;)&#123;
-                chars[right--]&#x3D;&#39;0&#39;;
-                chars[right--]&#x3D;&#39;2&#39;;
-                chars[right]&#x3D;&#39;%&#39;;
-            &#125;else&#123;
-                chars[right]&#x3D;chars[left];
-            &#125;
-            left--;
-            right--;
-        &#125;
-        return new String(chars);
-    &#125;
-&#125;
-</code></pre>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>0 &lt;= s &#x7684;&#x957F;&#x5EA6; &lt;= 10000</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/">https://leetcode.cn/problems/ti-huan-kong-ge-lcof/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x5E38;&#x89C4;&#x65B9;&#x6CD5;&#xFF1A;&#x4ECE;&#x524D;&#x5411;&#x540E;&#x904D;&#x5386;&#xFF0C;&#x9047;&#x5230;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#x4E3A;&quot;02%&quot;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;StringBuilder&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x66FF;&#x6362;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x9700;&#x8981;&#x5411;&#x540E;&#x79FB;&#x52A8;</span><br><span class="hljs-comment">//&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x590D;&#x5236; str&#xFF0C;&#x590D;&#x5236;&#x7684;&#x8FC7;&#x7A0B;&#x5BF9;&#x5176;&#x5224;&#x65AD;&#xFF0C;&#x662F;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x590D;&#x5236;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x6570;&#x7EC4;&#x590D;&#x5236;</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title function_">replaceSpace</span><span class="hljs-params">(StringBuffer str)</span> {<br>        <span class="hljs-keyword">if</span> (str == <span class="hljs-literal">null</span>) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        }<br>		<span class="hljs-comment">//&#x9009;&#x7528; StringBuilder &#x5355;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#xFF0C;&#x6BD4;&#x8F83;&#x5FEB;&#xFF0C;&#x9009;&#x4E0D;&#x9009;&#x90FD;&#x884C;</span><br>        <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>		<span class="hljs-comment">//&#x4F7F;&#x7528; sb &#x9010;&#x4E2A;&#x590D;&#x5236; str &#xFF0C;&#x78B0;&#x5230;&#x7A7A;&#x683C;&#x5219;&#x66FF;&#x6362;&#xFF0C;&#x5426;&#x5219;&#x76F4;&#x63A5;&#x590D;&#x5236;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; str.length(); i++) {<br>		<span class="hljs-comment">//str.charAt(i) &#x4E3A; char &#x7C7B;&#x578B;&#xFF0C;&#x4E3A;&#x4E86;&#x6BD4;&#x8F83;&#x9700;&#x8981;&#x5C06;&#x5176;&#x8F6C;&#x4E3A;&#x548C; &quot; &quot; &#x76F8;&#x540C;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span><br>        <span class="hljs-comment">//if (&quot; &quot;.equals(String.valueOf(str.charAt(i)))){</span><br>            <span class="hljs-keyword">if</span> (s.charAt(i) == <span class="hljs-string">&apos; &apos;</span>) {<br>                sb.append(<span class="hljs-string">&quot;%20&quot;</span>);<br>            } <span class="hljs-keyword">else</span> {<br>                sb.append(str.charAt(i));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> sb.toString();<br>    }<br><span class="hljs-comment">//&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;&#xFF0C;&#x4F7F;&#x7528;&#x53CC;&#x6307;&#x9488;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;beat 100%</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">replaceSpace</span><span class="hljs-params">(String s)</span> {<br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(s.length()==<span class="hljs-number">0</span>||s==<span class="hljs-literal">null</span>){<br>            <span class="hljs-keyword">return</span> s;<br>        }<br>        <span class="hljs-comment">//&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;</span><br>        StringBuilder tail=<span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>        <span class="hljs-comment">//&#x6BCF;&#x904D;&#x5386;&#x5230;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x6269;&#x5927;&#x4E24;&#x4E2A;&#x7A7A;&#x683C;&#x5927;&#x5C0F;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.length();i++){<br>            <span class="hljs-keyword">if</span>(s.charAt(i)==<span class="hljs-string">&apos; &apos;</span>){<br>                tail.append(<span class="hljs-string">&quot;  &quot;</span>);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#x7A7A;&#x683C;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(tail.length()==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> s;<br>        }<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5DE6;&#x53F3;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> left=s.length()-<span class="hljs-number">1</span>;<br>        s+=tail;<br>        <span class="hljs-type">int</span> right=s.length()-<span class="hljs-number">1</span>;<br>        <span class="hljs-type">char</span>[] chars=s.toCharArray();<br>        <span class="hljs-comment">//&#x5DE6;&#x6307;&#x9488;i&#x4ECE;&#x540E;&#x5411;&#x524D;&#x904D;&#x5386;</span><br>        <span class="hljs-keyword">while</span>(left&gt;=<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">if</span>(chars[left]==<span class="hljs-string">&apos; &apos;</span>){<br>                chars[right--]=<span class="hljs-string">&apos;0&apos;</span>;<br>                chars[right--]=<span class="hljs-string">&apos;2&apos;</span>;<br>                chars[right]=<span class="hljs-string">&apos;%&apos;</span>;<br>            }<span class="hljs-keyword">else</span>{<br>                chars[right]=chars[left];<br>            }<br>            left--;<br>            right--;<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chars);<br>    }<br>}<br><br></code></pre></td></tr></table></figure>
 
 
 
@@ -259,9 +199,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -270,14 +209,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -364,6 +314,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

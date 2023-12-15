@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,19 +153,17 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Pycharm模块不存在"><a href="#Pycharm模块不存在" class="headerlink" title="Pycharm模块不存在"></a>Pycharm模块不存在</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>当运行Python文件时，出现以下报错：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python中已经用pip安装了某模块，但pycharm中为什么仍然显示没有该模块</code></pre>
+        <h1 id="Pycharm&#x6A21;&#x5757;&#x4E0D;&#x5B58;&#x5728;"><a href="#Pycharm&#x6A21;&#x5757;&#x4E0D;&#x5B58;&#x5728;" class="headerlink" title="Pycharm&#x6A21;&#x5757;&#x4E0D;&#x5B58;&#x5728;"></a>Pycharm&#x6A21;&#x5757;&#x4E0D;&#x5B58;&#x5728;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5F53;&#x8FD0;&#x884C;Python&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x51FA;&#x73B0;&#x4EE5;&#x4E0B;&#x62A5;&#x9519;&#xFF1A;</p>
+<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">python&#x4E2D;&#x5DF2;&#x7ECF;&#x7528;pip&#x5B89;&#x88C5;&#x4E86;&#x67D0;&#x6A21;&#x5757;&#xFF0C;&#x4F46;pycharm&#x4E2D;&#x4E3A;&#x4EC0;&#x4E48;&#x4ECD;&#x7136;&#x663E;&#x793A;&#x6CA1;&#x6709;&#x8BE5;&#x6A21;&#x5757;<br></code></pre></td></tr></table></figure>
 
-<h2 id="出现原因："><a href="#出现原因：" class="headerlink" title="出现原因："></a>出现原因：</h2><p>pycharm里面自带一个Python解释器，而这个里面是没有几个模块的。因为咱们在DOS<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&spm=1001.2101.3001.7020">命令行</a>里面下载的模块是下载到Python的解释器里而不是pycharm里面的那个。</p>
-<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><p>打开pycharm依次点击file-&gt;Settings-&gt;Project Interpreter；</p>
-<p>可以看到当前项目正在使用的Python解释器，即Project Interpreter那一栏。</p>
-<p>可以将其替换为本机上安装的Python解释器，即cmd中可以查看到的python解释器：</p>
-<p>1.查找本机Python的安装地址：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">C:\Users\26485&gt;where python
-C:\Users\26485\AppData\Local\Programs\Python\Python39\python.exe
-C:\Users\26485\AppData\Local\Microsoft\WindowsApps\python.exe</code></pre>
+<h2 id="&#x51FA;&#x73B0;&#x539F;&#x56E0;&#xFF1A;"><a href="#&#x51FA;&#x73B0;&#x539F;&#x56E0;&#xFF1A;" class="headerlink" title="&#x51FA;&#x73B0;&#x539F;&#x56E0;&#xFF1A;"></a>&#x51FA;&#x73B0;&#x539F;&#x56E0;&#xFF1A;</h2><p>pycharm&#x91CC;&#x9762;&#x81EA;&#x5E26;&#x4E00;&#x4E2A;Python&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x91CC;&#x9762;&#x662F;&#x6CA1;&#x6709;&#x51E0;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x54B1;&#x4EEC;&#x5728;DOS<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E8%A1%8C&amp;spm=1001.2101.3001.7020">&#x547D;&#x4EE4;&#x884C;</a>&#x91CC;&#x9762;&#x4E0B;&#x8F7D;&#x7684;&#x6A21;&#x5757;&#x662F;&#x4E0B;&#x8F7D;&#x5230;Python&#x7684;&#x89E3;&#x91CA;&#x5668;&#x91CC;&#x800C;&#x4E0D;&#x662F;pycharm&#x91CC;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x3002;</p>
+<h2 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</h2><p>&#x6253;&#x5F00;pycharm&#x4F9D;&#x6B21;&#x70B9;&#x51FB;file-&gt;Settings-&gt;Project Interpreter&#xFF1B;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;Python&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x5373;Project Interpreter&#x90A3;&#x4E00;&#x680F;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x66FF;&#x6362;&#x4E3A;&#x672C;&#x673A;&#x4E0A;&#x5B89;&#x88C5;&#x7684;Python&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x5373;cmd&#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x7684;python&#x89E3;&#x91CA;&#x5668;&#xFF1A;</p>
+<p>1.&#x67E5;&#x627E;&#x672C;&#x673A;Python&#x7684;&#x5B89;&#x88C5;&#x5730;&#x5740;&#xFF1A;</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">C:\Users\26485&gt;where python<br>C:\Users\26485\AppData\Local\Programs\Python\Python39\python.exe<br>C:\Users\26485\AppData\Local\Microsoft\WindowsApps\python.exe<br></code></pre></td></tr></table></figure>
 
-<p>2.在Project Interpreter添加对应地址中新的解释器，添加完成后，可以看到我们在本机环境下已经安装的模块和工具包。</p>
+<p>2.&#x5728;Project Interpreter&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x5730;&#x5740;&#x4E2D;&#x65B0;&#x7684;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x5728;&#x672C;&#x673A;&#x73AF;&#x5883;&#x4E0B;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x7684;&#x6A21;&#x5757;&#x548C;&#x5DE5;&#x5177;&#x5305;&#x3002;</p>
 
     
     </div>
@@ -262,6 +260,19 @@ C:\Users\26485\AppData\Local\Microsoft\WindowsApps\python.exe</code></pre>
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

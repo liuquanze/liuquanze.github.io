@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="Java并发编程实战——第一章【简介】1.并发简史 早期的计算机仅仅包含一个操作系统，从头到尾仅执行一个程序，并且该程序可访问计算机中所有资源 操作系统的出现使得计算机每次可以运行多个程序 不同的程序在不同的进程中运行 操作系统为每个独立运行的进程分配各种资源：内存、文件句柄、安全证书等 不同进程间可进行通信，通信机制包括：套接字、信号处理器、共享内存、信号量以及文件等   为什么在计算机中加入操">
+    <meta name="description" content="Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x2014;&amp;#x2014;&amp;#x7B2C;&amp;#x4E00;&amp;#x7AE0;&amp;#x3010;&amp;#x7B80;&amp;#x4ECB;&amp;#x3011;1.&amp;#x5E76;&amp;#x53D1;&amp;#x7B80;&amp;#x53F2; &amp;#x65E9;&amp;#x671F;&amp;#x7684;&amp;#x8BA1;&amp;#x7B97;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java并发编程实战_第一章">
 <meta property="og:url" content="http://example.com/post/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98-%E7%AC%AC%E4%B8%80%E7%AB%A0.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Java并发编程实战——第一章【简介】1.并发简史 早期的计算机仅仅包含一个操作系统，从头到尾仅执行一个程序，并且该程序可访问计算机中所有资源 操作系统的出现使得计算机每次可以运行多个程序 不同的程序在不同的进程中运行 操作系统为每个独立运行的进程分配各种资源：内存、文件句柄、安全证书等 不同进程间可进行通信，通信机制包括：套接字、信号处理器、共享内存、信号量以及文件等   为什么在计算机中加入操">
+<meta property="og:description" content="Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x2014;&amp;#x2014;&amp;#x7B2C;&amp;#x4E00;&amp;#x7AE0;&amp;#x3010;&amp;#x7B80;&amp;#x4ECB;&amp;#x3011;1.&amp;#x5E76;&amp;#x53D1;&amp;#x7B80;&amp;#x53F2; &amp;#x65E9;&amp;#x671F;&amp;#x7684;&amp;#x8BA1;&amp;#x7B97;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-09T15:25:33.000Z">
 <meta property="article:modified_time" content="2022-11-16T13:06:17.293Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,68 +151,68 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Java并发编程实战——第一章【简介】"><a href="#Java并发编程实战——第一章【简介】" class="headerlink" title="Java并发编程实战——第一章【简介】"></a>Java并发编程实战——第一章【简介】</h1><h2 id="1-并发简史"><a href="#1-并发简史" class="headerlink" title="1.并发简史"></a>1.并发简史</h2><ul>
-<li>早期的计算机仅仅包含一个操作系统，从头到尾仅执行一个程序，并且该程序可访问计算机中所有资源</li>
-<li>操作系统的出现使得计算机每次可以运行多个程序<ul>
-<li>不同的程序在不同的进程中运行</li>
-<li>操作系统为每个独立运行的进程分配各种资源：内存、文件句柄、安全证书等</li>
-<li>不同进程间可进行通信，通信机制包括：套接字、信号处理器、共享内存、信号量以及文件等</li>
+        <h1 id="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;"><a href="#Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;" class="headerlink" title="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;"></a>Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;</h1><h2 id="1-&#x5E76;&#x53D1;&#x7B80;&#x53F2;"><a href="#1-&#x5E76;&#x53D1;&#x7B80;&#x53F2;" class="headerlink" title="1.&#x5E76;&#x53D1;&#x7B80;&#x53F2;"></a>1.&#x5E76;&#x53D1;&#x7B80;&#x53F2;</h2><ul>
+<li>&#x65E9;&#x671F;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x4EC5;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x4EC5;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x8BBF;&#x95EE;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6240;&#x6709;&#x8D44;&#x6E90;</li>
+<li>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x51FA;&#x73B0;&#x4F7F;&#x5F97;&#x8BA1;&#x7B97;&#x673A;&#x6BCF;&#x6B21;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x7A0B;&#x5E8F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;</li>
+<li>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E3A;&#x6BCF;&#x4E2A;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x5206;&#x914D;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#xFF1A;&#x5185;&#x5B58;&#x3001;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3001;&#x5B89;&#x5168;&#x8BC1;&#x4E66;&#x7B49;</li>
+<li>&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x53EF;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x5305;&#x62EC;&#xFF1A;&#x5957;&#x63A5;&#x5B57;&#x3001;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x5668;&#x3001;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7B49;</li>
 </ul>
 </li>
-<li>为什么在计算机中加入操作系统以实现多个程序的同时执行？<ul>
-<li>资源利用率：单个程序等待外部操作时，无法进行其他操作，造成计算资源的浪费</li>
-<li>公平性：不同的用户和程序对计算机资源具有相同的使用权</li>
-<li>便利性：编写多个程序，并且在必要时进行程序间通信相比于编写单个程序而言更易于实现</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x52A0;&#x5165;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x540C;&#x65F6;&#x6267;&#x884C;&#xFF1F;<ul>
+<li>&#x8D44;&#x6E90;&#x5229;&#x7528;&#x7387;&#xFF1A;&#x5355;&#x4E2A;&#x7A0B;&#x5E8F;&#x7B49;&#x5F85;&#x5916;&#x90E8;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#xFF0C;&#x9020;&#x6210;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x7684;&#x6D6A;&#x8D39;</li>
+<li>&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x548C;&#x7A0B;&#x5E8F;&#x5BF9;&#x8BA1;&#x7B97;&#x673A;&#x8D44;&#x6E90;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x4F7F;&#x7528;&#x6743;</li>
+<li>&#x4FBF;&#x5229;&#x6027;&#xFF1A;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5FC5;&#x8981;&#x65F6;&#x8FDB;&#x884C;&#x7A0B;&#x5E8F;&#x95F4;&#x901A;&#x4FE1;&#x76F8;&#x6BD4;&#x4E8E;&#x7F16;&#x5199;&#x5355;&#x4E2A;&#x7A0B;&#x5E8F;&#x800C;&#x8A00;&#x66F4;&#x6613;&#x4E8E;&#x5B9E;&#x73B0;</li>
 </ul>
 </li>
-<li>这些促使进程出现的因素，同样促使线程的出现：<ul>
-<li>线程允许同一个进程中存在多个程序控制流。</li>
-<li>线程共享进程范围内的资源，例如内存句柄和文件句柄</li>
-<li>每个线程都有自己的程序计数器、栈、变量等</li>
-<li>在同一个程序中的多个线程可以被调度到多个CPU上运行</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-线程的优势"><a href="#2-线程的优势" class="headerlink" title="2.线程的优势"></a>2.线程的优势</h2><ul>
-<li>发挥多处理器的强大能力<ul>
-<li>在双处理器系统上，单线程的程序只能使用一半的CPU资源，在100个处理器的系统上，将有99%的资源无法使用，而多线程可以同时在多个处理器上执行，若设计正确，多线程程序可以通过提高处理器资源的利用率来提升系统吞吐率</li>
-<li>使用多线程同样可以有助于在单处理器上获得更高的吞吐率</li>
-</ul>
-</li>
-<li>建模的简单性<ul>
-<li>若程序中只包含一种类型的任务，那么比包含多个不同类型的任务的程序要更加易于编写，错误更少，也更加易于测试</li>
-<li>通过线程，可以将复杂且异步的工作流进一步分解为一组简单且同步的工作流，每个工作流在一个线程中运行，并且在特定同步位置进行交互。</li>
-</ul>
-</li>
-<li>异步事件的简化处理<ul>
-<li>服务器应用程序在接收来自多个远程客户端的套接字连接请求时，为每一个请求连接都分配其各自的一个线程并且使用同步IO将会降低该类程序的开发难度</li>
-<li>若使用单线程，则每一次只可以处理一个请求，其他的请求必须阻塞，这大大降低了请求的处理速度，为了解决这个问题，可以使用<strong>非阻塞IO</strong>来实现请求阻塞的问题，但是<strong>非阻塞IO</strong>的复杂度远远高于<strong>同步IO</strong><ul>
-<li>非阻塞IO不太了解</li>
+<li>&#x8FD9;&#x4E9B;&#x4FC3;&#x4F7F;&#x8FDB;&#x7A0B;&#x51FA;&#x73B0;&#x7684;&#x56E0;&#x7D20;&#xFF0C;&#x540C;&#x6837;&#x4FC3;&#x4F7F;&#x7EBF;&#x7A0B;&#x7684;&#x51FA;&#x73B0;&#xFF1A;<ul>
+<li>&#x7EBF;&#x7A0B;&#x5141;&#x8BB8;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#x63A7;&#x5236;&#x6D41;&#x3002;</li>
+<li>&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x8FDB;&#x7A0B;&#x8303;&#x56F4;&#x5185;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#x5185;&#x5B58;&#x53E5;&#x67C4;&#x548C;&#x6587;&#x4EF6;&#x53E5;&#x67C4;</li>
+<li>&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#x3001;&#x6808;&#x3001;&#x53D8;&#x91CF;&#x7B49;</li>
+<li>&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x88AB;&#x8C03;&#x5EA6;&#x5230;&#x591A;&#x4E2A;CPU&#x4E0A;&#x8FD0;&#x884C;</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="3-线程带来的风险"><a href="#3-线程带来的风险" class="headerlink" title="3.线程带来的风险"></a>3.线程带来的风险</h2><ul>
-<li>安全性问题：【永远不发生糟糕的事情】<ul>
-<li>线程安全性可能是非常复杂的，在没有充分同步的情况下，多个线程中的操作顺序是不可预测的，甚至会产生奇怪的结果</li>
-<li>当多个线程要共享相同的内存地址空间，并且是并发运行时，可能会存在一个线程访问或修改其他线程正在使用的变量，这是一个极大的便利，同时也带来了巨大风险：线程会因为无法预料的数据变化而发生错误。</li>
-<li>当多个线程同时访问和修改相同变量时，将会在串行编程模型中引入非串行因素，并且这种非串行性是很难分析的。</li>
-<li>要使得多线程程序的行为是可以预测的，必须对共享便利的访问操作进行协同，防止线程之间相互干扰。</li>
-<li>Java也提供了各种同步机制来协同这种访问</li>
+<h2 id="2-&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;"><a href="#2-&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;" class="headerlink" title="2.&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;"></a>2.&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;</h2><ul>
+<li>&#x53D1;&#x6325;&#x591A;&#x5904;&#x7406;&#x5668;&#x7684;&#x5F3A;&#x5927;&#x80FD;&#x529B;<ul>
+<li>&#x5728;&#x53CC;&#x5904;&#x7406;&#x5668;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x5355;&#x7EBF;&#x7A0B;&#x7684;&#x7A0B;&#x5E8F;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x534A;&#x7684;CPU&#x8D44;&#x6E90;&#xFF0C;&#x5728;100&#x4E2A;&#x5904;&#x7406;&#x5668;&#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x5C06;&#x6709;99%&#x7684;&#x8D44;&#x6E90;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x591A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5728;&#x591A;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x82E5;&#x8BBE;&#x8BA1;&#x6B63;&#x786E;&#xFF0C;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63D0;&#x9AD8;&#x5904;&#x7406;&#x5668;&#x8D44;&#x6E90;&#x7684;&#x5229;&#x7528;&#x7387;&#x6765;&#x63D0;&#x5347;&#x7CFB;&#x7EDF;&#x541E;&#x5410;&#x7387;</li>
+<li>&#x4F7F;&#x7528;&#x591A;&#x7EBF;&#x7A0B;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x5355;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x7684;&#x541E;&#x5410;&#x7387;</li>
 </ul>
 </li>
-<li>活跃性问题：【活跃性：某件事情终将会发生】<ul>
-<li>形式之一：无意中造成的无限循环，从而使得循环体之后的代码得不到执行</li>
+<li>&#x5EFA;&#x6A21;&#x7684;&#x7B80;&#x5355;&#x6027;<ul>
+<li>&#x82E5;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x6BD4;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x7A0B;&#x5E8F;&#x8981;&#x66F4;&#x52A0;&#x6613;&#x4E8E;&#x7F16;&#x5199;&#xFF0C;&#x9519;&#x8BEF;&#x66F4;&#x5C11;&#xFF0C;&#x4E5F;&#x66F4;&#x52A0;&#x6613;&#x4E8E;&#x6D4B;&#x8BD5;</li>
+<li>&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x4E14;&#x5F02;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x8FDB;&#x4E00;&#x6B65;&#x5206;&#x89E3;&#x4E3A;&#x4E00;&#x7EC4;&#x7B80;&#x5355;&#x4E14;&#x540C;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x6D41;&#x5728;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7279;&#x5B9A;&#x540C;&#x6B65;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</li>
 </ul>
 </li>
-<li>性能问题：<ul>
-<li>在多线程程序种，频繁的进行线程切换不仅会造成资源开销，同时会压缩线程执行的时间，因此，应该尽量分析和减少此类开销</li>
+<li>&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x7684;&#x7B80;&#x5316;&#x5904;&#x7406;<ul>
+<li>&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x591A;&#x4E2A;&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x8FDE;&#x63A5;&#x90FD;&#x5206;&#x914D;&#x5176;&#x5404;&#x81EA;&#x7684;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x540C;&#x6B65;IO&#x5C06;&#x4F1A;&#x964D;&#x4F4E;&#x8BE5;&#x7C7B;&#x7A0B;&#x5E8F;&#x7684;&#x5F00;&#x53D1;&#x96BE;&#x5EA6;</li>
+<li>&#x82E5;&#x4F7F;&#x7528;&#x5355;&#x7EBF;&#x7A0B;&#xFF0C;&#x5219;&#x6BCF;&#x4E00;&#x6B21;&#x53EA;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x8BF7;&#x6C42;&#x5FC5;&#x987B;&#x963B;&#x585E;&#xFF0C;&#x8FD9;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x4E86;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#x901F;&#x5EA6;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x975E;&#x963B;&#x585E;IO</strong>&#x6765;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x963B;&#x585E;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;<strong>&#x975E;&#x963B;&#x585E;IO</strong>&#x7684;&#x590D;&#x6742;&#x5EA6;&#x8FDC;&#x8FDC;&#x9AD8;&#x4E8E;<strong>&#x540C;&#x6B65;IO</strong><ul>
+<li>&#x975E;&#x963B;&#x585E;IO&#x4E0D;&#x592A;&#x4E86;&#x89E3;</li>
 </ul>
 </li>
 </ul>
-<h2 id="4-线程无处不在"><a href="#4-线程无处不在" class="headerlink" title="4.线程无处不在"></a>4.线程无处不在</h2><ul>
-<li>即使程序中没有显式的创建线程，但在框架种仍然可能会创建线程，因此在这些线程中调用的代码必须是线程安全的</li>
+</li>
+</ul>
+<h2 id="3-&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;"><a href="#3-&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;" class="headerlink" title="3.&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;"></a>3.&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;</h2><ul>
+<li>&#x5B89;&#x5168;&#x6027;&#x95EE;&#x9898;&#xFF1A;&#x3010;&#x6C38;&#x8FDC;&#x4E0D;&#x53D1;&#x751F;&#x7CDF;&#x7CD5;&#x7684;&#x4E8B;&#x60C5;&#x3011;<ul>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x53EF;&#x80FD;&#x662F;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x5145;&#x5206;&#x540C;&#x6B65;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;&#x64CD;&#x4F5C;&#x987A;&#x5E8F;&#x662F;&#x4E0D;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#xFF0C;&#x751A;&#x81F3;&#x4F1A;&#x4EA7;&#x751F;&#x5947;&#x602A;&#x7684;&#x7ED3;&#x679C;</li>
+<li>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8981;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x5E76;&#x53D1;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x6216;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6781;&#x5927;&#x7684;&#x4FBF;&#x5229;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x5E26;&#x6765;&#x4E86;&#x5DE8;&#x5927;&#x98CE;&#x9669;&#xFF1A;&#x7EBF;&#x7A0B;&#x4F1A;&#x56E0;&#x4E3A;&#x65E0;&#x6CD5;&#x9884;&#x6599;&#x7684;&#x6570;&#x636E;&#x53D8;&#x5316;&#x800C;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#x76F8;&#x540C;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x5728;&#x4E32;&#x884C;&#x7F16;&#x7A0B;&#x6A21;&#x578B;&#x4E2D;&#x5F15;&#x5165;&#x975E;&#x4E32;&#x884C;&#x56E0;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x79CD;&#x975E;&#x4E32;&#x884C;&#x6027;&#x662F;&#x5F88;&#x96BE;&#x5206;&#x6790;&#x7684;&#x3002;</li>
+<li>&#x8981;&#x4F7F;&#x5F97;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x7684;&#x884C;&#x4E3A;&#x662F;&#x53EF;&#x4EE5;&#x9884;&#x6D4B;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x5BF9;&#x5171;&#x4EAB;&#x4FBF;&#x5229;&#x7684;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x534F;&#x540C;&#xFF0C;&#x9632;&#x6B62;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x5E72;&#x6270;&#x3002;</li>
+<li>Java&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5404;&#x79CD;&#x540C;&#x6B65;&#x673A;&#x5236;&#x6765;&#x534F;&#x540C;&#x8FD9;&#x79CD;&#x8BBF;&#x95EE;</li>
+</ul>
+</li>
+<li>&#x6D3B;&#x8DC3;&#x6027;&#x95EE;&#x9898;&#xFF1A;&#x3010;&#x6D3B;&#x8DC3;&#x6027;&#xFF1A;&#x67D0;&#x4EF6;&#x4E8B;&#x60C5;&#x7EC8;&#x5C06;&#x4F1A;&#x53D1;&#x751F;&#x3011;<ul>
+<li>&#x5F62;&#x5F0F;&#x4E4B;&#x4E00;&#xFF1A;&#x65E0;&#x610F;&#x4E2D;&#x9020;&#x6210;&#x7684;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x5FAA;&#x73AF;&#x4F53;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5F97;&#x4E0D;&#x5230;&#x6267;&#x884C;</li>
+</ul>
+</li>
+<li>&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF1A;<ul>
+<li>&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x79CD;&#xFF0C;&#x9891;&#x7E41;&#x7684;&#x8FDB;&#x884C;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#x4E0D;&#x4EC5;&#x4F1A;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x5F00;&#x9500;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x538B;&#x7F29;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x5206;&#x6790;&#x548C;&#x51CF;&#x5C11;&#x6B64;&#x7C7B;&#x5F00;&#x9500;</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;"><a href="#4-&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;" class="headerlink" title="4.&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;"></a>4.&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;</h2><ul>
+<li>&#x5373;&#x4F7F;&#x7A0B;&#x5E8F;&#x4E2D;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x7684;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x5728;&#x6846;&#x67B6;&#x79CD;&#x4ECD;&#x7136;&#x53EF;&#x80FD;&#x4F1A;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x5FC5;&#x987B;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;</li>
 </ul>
 
     
@@ -245,9 +245,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -256,14 +255,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -350,6 +360,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

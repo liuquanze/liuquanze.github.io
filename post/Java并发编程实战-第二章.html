@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="Java并发编程实战——第二章【线程安全性】 判断一个对象是否是线程安全的，取决于它是否被多个线程访问 要使得对象是线程安全的，需要采用同步机制来协同对对象的可变状态的访问。   当多个线程访问同一个可变的状态变量时，若没有使用合适的同步，程序可能出现错误，可使用以下三种方式修复这个问题： 不在线程之间共享该状态变量 将状态变量修改为不可变的变量 在访问状态变量时使用同步   线程安全的程序是否完">
+    <meta name="description" content="Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x2014;&amp;#x2014;&amp;#x7B2C;&amp;#x4E8C;&amp;#x7AE0;&amp;#x3010;&amp;#x7EBF;&amp;#x7A0B;&amp;#x5B89;&amp;#x5168;&amp;#x6027;&amp;#x3011; &amp;#x5224;&amp;#x65AD;&amp;#x4E00;&amp;#x4E2A;&amp;#x5BF9;&amp;#x8C61;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java并发编程实战-第二章">
 <meta property="og:url" content="http://example.com/post/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98-%E7%AC%AC%E4%BA%8C%E7%AB%A0.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Java并发编程实战——第二章【线程安全性】 判断一个对象是否是线程安全的，取决于它是否被多个线程访问 要使得对象是线程安全的，需要采用同步机制来协同对对象的可变状态的访问。   当多个线程访问同一个可变的状态变量时，若没有使用合适的同步，程序可能出现错误，可使用以下三种方式修复这个问题： 不在线程之间共享该状态变量 将状态变量修改为不可变的变量 在访问状态变量时使用同步   线程安全的程序是否完">
+<meta property="og:description" content="Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x2014;&amp;#x2014;&amp;#x7B2C;&amp;#x4E8C;&amp;#x7AE0;&amp;#x3010;&amp;#x7EBF;&amp;#x7A0B;&amp;#x5B89;&amp;#x5168;&amp;#x6027;&amp;#x3011; &amp;#x5224;&amp;#x65AD;&amp;#x4E00;&amp;#x4E2A;&amp;#x5BF9;&amp;#x8C61;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-16T13:04:07.000Z">
 <meta property="article:modified_time" content="2022-11-16T13:31:45.963Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,95 +151,58 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Java并发编程实战——第二章【线程安全性】"><a href="#Java并发编程实战——第二章【线程安全性】" class="headerlink" title="Java并发编程实战——第二章【线程安全性】"></a>Java并发编程实战——第二章【线程安全性】</h1><ul>
-<li>判断一个对象是否是线程安全的，取决于它是否被多个线程访问<ul>
-<li>要使得对象是线程安全的，需要采用同步机制来协同对对象的可变状态的访问。</li>
+        <h1 id="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E8C;&#x7AE0;&#x3010;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3011;"><a href="#Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E8C;&#x7AE0;&#x3010;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3011;" class="headerlink" title="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E8C;&#x7AE0;&#x3010;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3011;"></a>Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E8C;&#x7AE0;&#x3010;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x3011;</h1><ul>
+<li>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x5B83;&#x662F;&#x5426;&#x88AB;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;<ul>
+<li>&#x8981;&#x4F7F;&#x5F97;&#x5BF9;&#x8C61;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x91C7;&#x7528;&#x540C;&#x6B65;&#x673A;&#x5236;&#x6765;&#x534F;&#x540C;&#x5BF9;&#x5BF9;&#x8C61;&#x7684;&#x53EF;&#x53D8;&#x72B6;&#x6001;&#x7684;&#x8BBF;&#x95EE;&#x3002;</li>
 </ul>
 </li>
-<li>当多个线程访问同一个可变的状态变量时，若没有使用合适的同步，程序可能出现错误，可使用以下三种方式修复这个问题：<ul>
-<li>不在线程之间共享该状态变量</li>
-<li>将状态变量修改为不可变的变量</li>
-<li>在访问状态变量时使用同步</li>
+<li>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5408;&#x9002;&#x7684;&#x540C;&#x6B65;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4FEE;&#x590D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;<ul>
+<li>&#x4E0D;&#x5728;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x8BE5;&#x72B6;&#x6001;&#x53D8;&#x91CF;</li>
+<li>&#x5C06;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#x4FEE;&#x6539;&#x4E3A;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x53D8;&#x91CF;</li>
+<li>&#x5728;&#x8BBF;&#x95EE;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#x65F6;&#x4F7F;&#x7528;&#x540C;&#x6B65;</li>
 </ul>
 </li>
-<li>线程安全的程序是否完全由线程安全类构成？<ul>
-<li>答案是否定的，完全由线程安全类构成的程序并不一定是线程安全的，并且在线程安全的类中也同样可以包含非线程安全的类。</li>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x7A0B;&#x5E8F;&#x662F;&#x5426;&#x5B8C;&#x5168;&#x7531;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7C7B;&#x6784;&#x6210;&#xFF1F;<ul>
+<li>&#x7B54;&#x6848;&#x662F;&#x5426;&#x5B9A;&#x7684;&#xFF0C;&#x5B8C;&#x5168;&#x7531;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7C7B;&#x6784;&#x6210;&#x7684;&#x7A0B;&#x5E8F;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x7C7B;&#x4E2D;&#x4E5F;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x975E;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x7C7B;&#x3002;</li>
 </ul>
 </li>
 </ul>
-<h2 id="1-什么是线程安全性？"><a href="#1-什么是线程安全性？" class="headerlink" title="1.什么是线程安全性？"></a>1.什么是线程安全性？</h2><ul>
-<li>定义：<ul>
-<li>当有多个线程访问某个类时，不管运行时环境采用何种调度方式或者这些线程将如何交替执行，并且在主调代码中不需要额外的同步或协同，这个类始终都能表现出正确的行为，那么称这个类是线程安全的。</li>
+<h2 id="1-&#x4EC0;&#x4E48;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF1F;"><a href="#1-&#x4EC0;&#x4E48;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF1F;" class="headerlink" title="1.&#x4EC0;&#x4E48;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF1F;"></a>1.&#x4EC0;&#x4E48;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF1F;</h2><ul>
+<li>&#x5B9A;&#x4E49;&#xFF1A;<ul>
+<li>&#x5F53;&#x6709;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x7C7B;&#x65F6;&#xFF0C;&#x4E0D;&#x7BA1;&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;&#x91C7;&#x7528;&#x4F55;&#x79CD;&#x8C03;&#x5EA6;&#x65B9;&#x5F0F;&#x6216;&#x8005;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x5C06;&#x5982;&#x4F55;&#x4EA4;&#x66FF;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x4E3B;&#x8C03;&#x4EE3;&#x7801;&#x4E2D;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x540C;&#x6B65;&#x6216;&#x534F;&#x540C;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x59CB;&#x7EC8;&#x90FD;&#x80FD;&#x8868;&#x73B0;&#x51FA;&#x6B63;&#x786E;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x90A3;&#x4E48;&#x79F0;&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;</li>
 </ul>
 </li>
-<li>线程安全类中封装了必要的同步机制，因此客户端无须进一步采用同步机制</li>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7C7B;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x5FC5;&#x8981;&#x7684;&#x540C;&#x6B65;&#x673A;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x5BA2;&#x6237;&#x7AEF;&#x65E0;&#x987B;&#x8FDB;&#x4E00;&#x6B65;&#x91C7;&#x7528;&#x540C;&#x6B65;&#x673A;&#x5236;</li>
 </ul>
-<h3 id="example-1："><a href="#example-1：" class="headerlink" title="example 1："></a>example 1：</h3><ul>
-<li>一个无状态的servlet</li>
+<h3 id="example-1&#xFF1A;"><a href="#example-1&#xFF1A;" class="headerlink" title="example 1&#xFF1A;"></a>example 1&#xFF1A;</h3><ul>
+<li>&#x4E00;&#x4E2A;&#x65E0;&#x72B6;&#x6001;&#x7684;servlet</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">@ThreadSafe
-public class StatelessFactorizer implements Servlet&#123;
-    public void service(ServletRequest req,ServletResponse resp)&#123;
-        BigInteger i&#x3D;extractFromRequest(req);
-        BigInteger[] factors&#x3D;factor(i);
-        encodeIntoResponse(resp,factors);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@ThreadSafe</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StatelessFactorizer</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Servlet</span>{<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">service</span><span class="hljs-params">(ServletRequest req,ServletResponse resp)</span>{<br>        BigInteger i=extractFromRequest(req);<br>        BigInteger[] factors=factor(i);<br>        encodeIntoResponse(resp,factors);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li><p>上面代码块中的StatelessFactorizer是无状态的，既不包含任何域，也不包含任何对其他类中域的引用。计算过程中的临时状态仅仅存在于线程栈上的局部变量中，并且只能由正在执行的线程访问。访问StatelessFactorizer的线程不会影响另一个访问同一个StatelessFactorizer的线程的计算结果，<strong>因为这两个线程并没有共享状态</strong>。就像他们在访问不同的实例。</p>
+<li><p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x7684;StatelessFactorizer&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x65E2;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x57DF;&#xFF0C;&#x4E5F;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5BF9;&#x5176;&#x4ED6;&#x7C7B;&#x4E2D;&#x57DF;&#x7684;&#x5F15;&#x7528;&#x3002;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4E34;&#x65F6;&#x72B6;&#x6001;&#x4EC5;&#x4EC5;&#x5B58;&#x5728;&#x4E8E;&#x7EBF;&#x7A0B;&#x6808;&#x4E0A;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x7531;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x3002;&#x8BBF;&#x95EE;StatelessFactorizer&#x7684;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x53E6;&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;StatelessFactorizer&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;<strong>&#x56E0;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x5E76;&#x6CA1;&#x6709;&#x5171;&#x4EAB;&#x72B6;&#x6001;</strong>&#x3002;&#x5C31;&#x50CF;&#x4ED6;&#x4EEC;&#x5728;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
 </li>
-<li><pre><code class="java">无状态的对象一定是线程安全的
-<pre class="line-numbers language-none"><code class="language-none">
-
-
-## 2.原子性
-
-### example 2：
-
-+ 在没有同步的情况下统计已处理请求数量的Servlet
-
-&#96;&#96;&#96;java
-@NotThreadSafe
-public class UnsafeCountingFactorizer implements Servlet&#123;
-    private long count&#x3D;0;
-    public long getCount()&#123;return count;&#125;
-    public void service(ServletRequest req,ServletResponse resp)&#123;
-        BigInteger i&#x3D;extractFromRequest(req);
-        BigInteger[] factors&#x3D;factor(i);
-        ++count;
-        encodeIntoResponse(resp,factors);
-    &#125;
-&#125;</code></pre>
+<li><pre><code class="java">&#x65E0;&#x72B6;&#x6001;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x5B9A;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;
+<figure class="highlight axapta hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><br><br><br><span class="hljs-meta">## 2.&#x539F;&#x5B50;&#x6027;</span><br><br><span class="hljs-meta">### example 2&#xFF1A;</span><br><br>+ &#x5728;&#x6CA1;&#x6709;&#x540C;&#x6B65;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7EDF;&#x8BA1;&#x5DF2;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x6570;&#x91CF;&#x7684;Servlet<br><br>```java<br>@NotThreadSafe<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UnsafeCountingFactorizer</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_ inherited__">Servlet</span>{<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">long</span> <span class="hljs-keyword">count</span>=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">long</span> getCount(){<span class="hljs-keyword">return</span> <span class="hljs-keyword">count</span>;}<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> service(ServletRequest req,ServletResponse resp){<br>        BigInteger i=extractFromRequest(req);<br>        BigInteger[] factors=factor(i);<br>        ++<span class="hljs-keyword">count</span>;<br>        encodeIntoResponse(resp,factors);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 </code></pre>
 </li>
-<li><p>上面代码块中的代码是线程不安全的，在单线程环境中可以正确运行，但在多线程环境中可能会丢失更新，该错误是<strong>由于不恰当的执行时序而出现的不正确结果</strong>【也叫做：<strong>竞态条件（Race Condition）</strong>】。</p>
+<li><p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x66F4;&#x65B0;&#xFF0C;&#x8BE5;&#x9519;&#x8BEF;&#x662F;<strong>&#x7531;&#x4E8E;&#x4E0D;&#x6070;&#x5F53;&#x7684;&#x6267;&#x884C;&#x65F6;&#x5E8F;&#x800C;&#x51FA;&#x73B0;&#x7684;&#x4E0D;&#x6B63;&#x786E;&#x7ED3;&#x679C;</strong>&#x3010;&#x4E5F;&#x53EB;&#x505A;&#xFF1A;<strong>&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#xFF08;Race Condition&#xFF09;</strong>&#x3011;&#x3002;</p>
 </li>
-<li><p>当某个计算结果的正确性取决于多个线程的交替执行时序时，那么就会发生竞态条件。【结果正确与否取决运气】</p>
+<li><p>&#x5F53;&#x67D0;&#x4E2A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x6027;&#x53D6;&#x51B3;&#x4E8E;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x4EA4;&#x66FF;&#x6267;&#x884C;&#x65F6;&#x5E8F;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x3002;&#x3010;&#x7ED3;&#x679C;&#x6B63;&#x786E;&#x4E0E;&#x5426;&#x53D6;&#x51B3;&#x8FD0;&#x6C14;&#x3011;</p>
 <ul>
-<li>竞态条件的本质&#x3D;&#x3D;&gt;【观察到的结果失效】</li>
+<li>&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x7684;&#x672C;&#x8D28;==&gt;&#x3010;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5931;&#x6548;&#x3011;</li>
 </ul>
 </li>
 </ul>
-<h3 id="example-3："><a href="#example-3：" class="headerlink" title="example 3："></a>example 3：</h3><ul>
-<li>延迟初始化中的竞态条件</li>
+<h3 id="example-3&#xFF1A;"><a href="#example-3&#xFF1A;" class="headerlink" title="example 3&#xFF1A;"></a>example 3&#xFF1A;</h3><ul>
+<li>&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;&#x4E2D;&#x7684;&#x7ADE;&#x6001;&#x6761;&#x4EF6;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">@NotThreadSafe
-public class LazyInitRace&#123;
-    private ExpensiveObject instance&#x3D;null;
-    public ExpensiveObject getInstance()&#123;
-        if(instance&#x3D;&#x3D;null)&#123;
-			instance&#x3D;new ExpensiveObject();
-            
-        &#125;
-        return instance;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@NotThreadSafe</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LazyInitRace</span>{<br>    <span class="hljs-keyword">private</span> ExpensiveObject instance=<span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">public</span> ExpensiveObject <span class="hljs-title function_">getInstance</span><span class="hljs-params">()</span>{<br>        <span class="hljs-keyword">if</span>(instance==<span class="hljs-literal">null</span>){<br>			instance=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ExpensiveObject</span>();<br>            <br>        }<br>        <span class="hljs-keyword">return</span> instance;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>和大多数的并发错误一样，竞态条件并不总是会产生错误，<strong>还需要某种不恰当的执行时序</strong>。</li>
+<li>&#x548C;&#x5927;&#x591A;&#x6570;&#x7684;&#x5E76;&#x53D1;&#x9519;&#x8BEF;&#x4E00;&#x6837;&#xFF0C;&#x7ADE;&#x6001;&#x6761;&#x4EF6;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x4F1A;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#xFF0C;<strong>&#x8FD8;&#x9700;&#x8981;&#x67D0;&#x79CD;&#x4E0D;&#x6070;&#x5F53;&#x7684;&#x6267;&#x884C;&#x65F6;&#x5E8F;</strong>&#x3002;</li>
 </ul>
-<h3 id="example-4："><a href="#example-4：" class="headerlink" title="example 4："></a>example 4：</h3>
+<h3 id="example-4&#xFF1A;"><a href="#example-4&#xFF1A;" class="headerlink" title="example 4&#xFF1A;"></a>example 4&#xFF1A;</h3>
     
     </div>
     
@@ -270,9 +233,8 @@ public class LazyInitRace&#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -281,14 +243,25 @@ public class LazyInitRace&#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -375,6 +348,19 @@ public class LazyInitRace&#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

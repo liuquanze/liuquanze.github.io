@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="01背包问题题目描述：有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能用一次，求解将哪些物品装入背包里物品价值总和最大。 这样其实是没有从底向上去思考，而是习惯性想到了背包，那么暴力的解法应该是怎么样的呢？ 每一件物品其实只有两个状态，取或者不取，所以可以使用回溯法搜索出所有的情况，那么时间复杂度就是$o(2^n)$，这里">
+    <meta name="description" content="01&amp;#x80CC;&amp;#x5305;&amp;#x95EE;&amp;#x9898;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x6709;n&amp;#x4EF6;&amp;#x7269;&amp;#x54C1;&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x6700;&amp;#x591A;&amp;#x80FD;&amp;#x80CC;&amp;#x91CD;&amp;#x91CF;&amp;#x4E3A;w &amp;#x7684;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01 bag">
 <meta property="og:url" content="http://example.com/post/01-bag.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="01背包问题题目描述：有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能用一次，求解将哪些物品装入背包里物品价值总和最大。 这样其实是没有从底向上去思考，而是习惯性想到了背包，那么暴力的解法应该是怎么样的呢？ 每一件物品其实只有两个状态，取或者不取，所以可以使用回溯法搜索出所有的情况，那么时间复杂度就是$o(2^n)$，这里">
+<meta property="og:description" content="01&amp;#x80CC;&amp;#x5305;&amp;#x95EE;&amp;#x9898;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x6709;n&amp;#x4EF6;&amp;#x7269;&amp;#x54C1;&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x6700;&amp;#x591A;&amp;#x80FD;&amp;#x80CC;&amp;#x91CD;&amp;#x91CF;&amp;#x4E3A;w &amp;#x7684;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-17T03:09:15.000Z">
 <meta property="article:modified_time" content="2022-08-17T03:11:51.217Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,74 +151,11 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
-<p>这样其实是没有从底向上去思考，而是习惯性想到了背包，那么暴力的解法应该是怎么样的呢？</p>
-<p>每一件物品其实只有两个状态，取或者不取，所以可以使用回溯法搜索出所有的情况，那么时间复杂度就是$o(2^n)$，这里的n表示物品数量。</p>
-<p><strong>所以暴力的解法是指数级别的时间复杂度。进而才需要动态规划的解法来进行优化！</strong></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public class bag01 &#123;
-
-    public static void main(String[] args) &#123;
-        &#x2F;&#x2F;物品重量
-        int[] weight &#x3D; &#123;1, 3, 4&#125;;
-        &#x2F;&#x2F;物品价值
-        int[] value &#x3D; &#123;15, 20, 30&#125;;
-        &#x2F;&#x2F;背包大小
-        int bagsize &#x3D; 4;
-        testweightbagproblem(weight, value, bagsize);
-    &#125;
-
-    public static void testweightbagproblem(int[] weight, int[] value, int bagsize)&#123;
-        &#x2F;&#x2F;创建dp数组
-        int[][] dp&#x3D;new int[weight.length][bagsize+1];
-        &#x2F;&#x2F;对dp数组进行初始化
-        &#x2F;*
-        * 对dp数组的第一行进行初始化，dp[i][j]表示的是容量为j的背包，前i个物品能获得的最大价值
-        * 第一行是指将第0个物品放入不同的容量0~bagsize的背包的最大价值，其实也就是看第0个物品可不可以放入背包中，如果可以则将dp[0][j]设置为value[0]即可
-        * ，若j&lt;weight[0]则表示第0个物品放不进容量为j的背包，则容量为j的背包的价值只能是0，所以下方的j从weight[0]开始遍历，因为j&lt;weight[0]时，dp[0][j]&#x3D;0
-        * *&#x2F;
-        for(int j&#x3D;weight[0];j&lt;&#x3D;bagsize;j++)&#123;
-            dp[0][j]&#x3D;value[0];
-        &#125;
-
-        &#x2F;&#x2F;状态转换公式
-        &#x2F;*
-        * 先遍历物品i&#x3D;1;i&lt;&#x3D;weight.length，再遍历背包容量j&#x3D;1;j&lt;&#x3D;bagsize
-        * 1.当背包容量小于当前的物品的重量j&lt;weight[i]时,表示物品i无法放进此时容量为j的背包，所以dp[i][j]：容量为j的背包在i个物品中所能获得的最大价值等于容量为j的背包
-        * 在i-1个物品中所能获得的最大价值；也就是不放入第i个物品的最大价值（因为背包容量不够嘛）
-        * 2.当背包容量大于等于当前物品的重量j&gt;&#x3D;weight[i]时，表示物品可以放进此时容量为j的背包，因此出现两种选择：
-        *   （1）将物品i放进背包
-        *   （2）不将物品i放进背包，
-        * 至于选择放还是不放，就需要分别计算放入物品i和不放入物品i的背包的价值并选择能使背包价值最大化的方式（通俗的说，放入i和不放入i，谁能使背包的价值大，就选谁）
-        * 所以dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i]+value[i]])
-        * 注：这里的dp[i-1][j-weight[i]表示的是容量为j-weight[j]的背包在0~i-1所能获得最大价值，之所以j-weight[j]就是要预留出物品i的空间，所以p[i-1][j-weight[i]也可以说是为物品i
-        * 预留出背包空间后的最大可以获得的价值，再然后加上value[i]就可以得到放入物品i后，容量为j的背包所能获得的最大价值。
-        *
-        * 重新梳理：
-        * （1）如果物品i可以放入背包（背包容量允许），则分别比较物品放入前后的背包价值，选取最大值
-        * （2）若物品i不可以放入背包（背包容量不允许），则选择不放入i时的最大价值。
-        * *&#x2F;
-        for(int i&#x3D;1;i&lt;weight.length;i++)&#123;
-            for(int j&#x3D;1;j&lt;&#x3D;bagsize;j++)&#123;
-                if(j&lt;weight[i-1])&#123;
-                    dp[i][j]&#x3D;dp[i-1][j];
-                &#125;else&#123;
-                    dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i-1]]+value[i-1]);
-                &#125;
-            &#125;
-        &#125;
-
-        &#x2F;&#x2F;输出dp数组查看运行结果
-        for (int i&#x3D;0;i&lt;weight.length;i++)&#123;
-            for(int j&#x3D;0;j&lt;&#x3D;bagsize;j++)&#123;
-                System.out.printf(dp[i][j]+&quot; &quot;);
-            &#125;
-            System.out.printf(&quot;\n&quot;);
-        &#125;
-
-
-    &#125;
-&#125;
-</code></pre>
+        <h1 id="01&#x80CC;&#x5305;&#x95EE;&#x9898;"><a href="#01&#x80CC;&#x5305;&#x95EE;&#x9898;" class="headerlink" title="01&#x80CC;&#x5305;&#x95EE;&#x9898;"></a>01&#x80CC;&#x5305;&#x95EE;&#x9898;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x6709;n&#x4EF6;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x591A;&#x80FD;&#x80CC;&#x91CD;&#x91CF;&#x4E3A;w &#x7684;&#x80CC;&#x5305;&#x3002;&#x7B2C;i&#x4EF6;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;&#x662F;weight[i]&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x4EF7;&#x503C;&#x662F;value[i] &#x3002;<strong>&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;</strong>&#xFF0C;&#x6C42;&#x89E3;&#x5C06;&#x54EA;&#x4E9B;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x91CC;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x5176;&#x5B9E;&#x662F;&#x6CA1;&#x6709;&#x4ECE;&#x5E95;&#x5411;&#x4E0A;&#x53BB;&#x601D;&#x8003;&#xFF0C;&#x800C;&#x662F;&#x4E60;&#x60EF;&#x6027;&#x60F3;&#x5230;&#x4E86;&#x80CC;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x66B4;&#x529B;&#x7684;&#x89E3;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#x600E;&#x4E48;&#x6837;&#x7684;&#x5462;&#xFF1F;</p>
+<p>&#x6BCF;&#x4E00;&#x4EF6;&#x7269;&#x54C1;&#x5176;&#x5B9E;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x72B6;&#x6001;&#xFF0C;&#x53D6;&#x6216;&#x8005;&#x4E0D;&#x53D6;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x56DE;&#x6EAF;&#x6CD5;&#x641C;&#x7D22;&#x51FA;&#x6240;&#x6709;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x90A3;&#x4E48;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;$o(2^n)$&#xFF0C;&#x8FD9;&#x91CC;&#x7684;n&#x8868;&#x793A;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
+<p><strong>&#x6240;&#x4EE5;&#x66B4;&#x529B;&#x7684;&#x89E3;&#x6CD5;&#x662F;&#x6307;&#x6570;&#x7EA7;&#x522B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;&#x8FDB;&#x800C;&#x624D;&#x9700;&#x8981;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x89E3;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF01;</strong></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">bag01</span> {<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {<br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x91CD;&#x91CF;</span><br>        <span class="hljs-type">int</span>[] weight = {<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>};<br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x4EF7;&#x503C;</span><br>        <span class="hljs-type">int</span>[] value = {<span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>};<br>        <span class="hljs-comment">//&#x80CC;&#x5305;&#x5927;&#x5C0F;</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">bagsize</span> <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br>        testweightbagproblem(weight, value, bagsize);<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testweightbagproblem</span><span class="hljs-params">(<span class="hljs-type">int</span>[] weight, <span class="hljs-type">int</span>[] value, <span class="hljs-type">int</span> bagsize)</span>{<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;dp&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[weight.length][bagsize+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x5BF9;dp&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * &#x5BF9;dp&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;dp[i][j]&#x8868;&#x793A;&#x7684;&#x662F;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x524D;i&#x4E2A;&#x7269;&#x54C1;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</span><br><span class="hljs-comment">        * &#x7B2C;&#x4E00;&#x884C;&#x662F;&#x6307;&#x5C06;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x653E;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x5BB9;&#x91CF;0~bagsize&#x7684;&#x80CC;&#x5305;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x5C31;&#x662F;&#x770B;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x5219;&#x5C06;dp[0][j]&#x8BBE;&#x7F6E;&#x4E3A;value[0]&#x5373;&#x53EF;</span><br><span class="hljs-comment">        * &#xFF0C;&#x82E5;j&lt;weight[0]&#x5219;&#x8868;&#x793A;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x653E;&#x4E0D;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x5219;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x53EA;&#x80FD;&#x662F;0&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x65B9;&#x7684;j&#x4ECE;weight[0]&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x56E0;&#x4E3A;j&lt;weight[0]&#x65F6;&#xFF0C;dp[0][j]=0</span><br><span class="hljs-comment">        * */</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=weight[<span class="hljs-number">0</span>];j&lt;=bagsize;j++){<br>            dp[<span class="hljs-number">0</span>][j]=value[<span class="hljs-number">0</span>];<br>        }<br><br>        <span class="hljs-comment">//&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x516C;&#x5F0F;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * &#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;i=1;i&lt;=weight.length&#xFF0C;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#x5BB9;&#x91CF;j=1;j&lt;=bagsize</span><br><span class="hljs-comment">        * 1.&#x5F53;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x7684;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;j&lt;weight[i]&#x65F6;,&#x8868;&#x793A;&#x7269;&#x54C1;i&#x65E0;&#x6CD5;&#x653E;&#x8FDB;&#x6B64;&#x65F6;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x6240;&#x4EE5;dp[i][j]&#xFF1A;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x5728;i&#x4E2A;&#x7269;&#x54C1;&#x4E2D;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x7B49;&#x4E8E;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;</span><br><span class="hljs-comment">        * &#x5728;i-1&#x4E2A;&#x7269;&#x54C1;&#x4E2D;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF1B;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x653E;&#x5165;&#x7B2C;i&#x4E2A;&#x7269;&#x54C1;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF08;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E0D;&#x591F;&#x561B;&#xFF09;</span><br><span class="hljs-comment">        * 2.&#x5F53;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;j&gt;=weight[i]&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x7269;&#x54C1;&#x53EF;&#x4EE5;&#x653E;&#x8FDB;&#x6B64;&#x65F6;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x56E0;&#x6B64;&#x51FA;&#x73B0;&#x4E24;&#x79CD;&#x9009;&#x62E9;&#xFF1A;</span><br><span class="hljs-comment">        *   &#xFF08;1&#xFF09;&#x5C06;&#x7269;&#x54C1;i&#x653E;&#x8FDB;&#x80CC;&#x5305;</span><br><span class="hljs-comment">        *   &#xFF08;2&#xFF09;&#x4E0D;&#x5C06;&#x7269;&#x54C1;i&#x653E;&#x8FDB;&#x80CC;&#x5305;&#xFF0C;</span><br><span class="hljs-comment">        * &#x81F3;&#x4E8E;&#x9009;&#x62E9;&#x653E;&#x8FD8;&#x662F;&#x4E0D;&#x653E;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x548C;&#x4E0D;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x7684;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x5E76;&#x9009;&#x62E9;&#x80FD;&#x4F7F;&#x80CC;&#x5305;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x901A;&#x4FD7;&#x7684;&#x8BF4;&#xFF0C;&#x653E;&#x5165;i&#x548C;&#x4E0D;&#x653E;&#x5165;i&#xFF0C;&#x8C01;&#x80FD;&#x4F7F;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x5927;&#xFF0C;&#x5C31;&#x9009;&#x8C01;&#xFF09;</span><br><span class="hljs-comment">        * &#x6240;&#x4EE5;dp[i][j]=Math.max(dp[i-1][j],dp[i-1][j-weight[i]+value[i]])</span><br><span class="hljs-comment">        * &#x6CE8;&#xFF1A;&#x8FD9;&#x91CC;&#x7684;dp[i-1][j-weight[i]&#x8868;&#x793A;&#x7684;&#x662F;&#x5BB9;&#x91CF;&#x4E3A;j-weight[j]&#x7684;&#x80CC;&#x5305;&#x5728;0~i-1&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;j-weight[j]&#x5C31;&#x662F;&#x8981;&#x9884;&#x7559;&#x51FA;&#x7269;&#x54C1;i&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;p[i-1][j-weight[i]&#x4E5F;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E3A;&#x7269;&#x54C1;i</span><br><span class="hljs-comment">        * &#x9884;&#x7559;&#x51FA;&#x80CC;&#x5305;&#x7A7A;&#x95F4;&#x540E;&#x7684;&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x7684;&#x4EF7;&#x503C;&#xFF0C;&#x518D;&#x7136;&#x540E;&#x52A0;&#x4E0A;value[i]&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x540E;&#xFF0C;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</span><br><span class="hljs-comment">        *</span><br><span class="hljs-comment">        * &#x91CD;&#x65B0;&#x68B3;&#x7406;&#xFF1A;</span><br><span class="hljs-comment">        * &#xFF08;1&#xFF09;&#x5982;&#x679C;&#x7269;&#x54C1;i&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#xFF08;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5141;&#x8BB8;&#xFF09;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x6BD4;&#x8F83;&#x7269;&#x54C1;&#x653E;&#x5165;&#x524D;&#x540E;&#x7684;&#x80CC;&#x5305;&#x4EF7;&#x503C;&#xFF0C;&#x9009;&#x53D6;&#x6700;&#x5927;&#x503C;</span><br><span class="hljs-comment">        * &#xFF08;2&#xFF09;&#x82E5;&#x7269;&#x54C1;i&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#xFF08;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E0D;&#x5141;&#x8BB8;&#xFF09;&#xFF0C;&#x5219;&#x9009;&#x62E9;&#x4E0D;&#x653E;&#x5165;i&#x65F6;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</span><br><span class="hljs-comment">        * */</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;weight.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=bagsize;j++){<br>                <span class="hljs-keyword">if</span>(j&lt;weight[i-<span class="hljs-number">1</span>]){<br>                    dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>                }<span class="hljs-keyword">else</span>{<br>                    dp[i][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-weight[i-<span class="hljs-number">1</span>]]+value[i-<span class="hljs-number">1</span>]);<br>                }<br>            }<br>        }<br><br>        <span class="hljs-comment">//&#x8F93;&#x51FA;dp&#x6570;&#x7EC4;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=bagsize;j++){<br>                System.out.printf(dp[i][j]+<span class="hljs-string">&quot; &quot;</span>);<br>            }<br>            System.out.printf(<span class="hljs-string">&quot;\n&quot;</span>);<br>        }<br><br><br>    }<br>}<br><br></code></pre></td></tr></table></figure>
 
 
     
@@ -251,9 +188,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -262,14 +198,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -356,6 +303,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

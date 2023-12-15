@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="343.整数拆分题目描述： 整数拆分  给定一个正整数 n ，将其拆分为 k 个 正整数 的和（ k &gt;&#x3D; 2 ），并使这些整数的乘积最大化。 返回 你可以获得的最大乘积 。 example 1: 输入: n &#x3D; 2 输出: 1 解释: 2 &#x3D; 1 + 1, 1 × 1 &#x3D; 1。  example 2: 输入: n &#x3D; 10 输出: 36 解释: 10">
+    <meta name="description" content="343.&amp;#x6574;&amp;#x6570;&amp;#x62C6;&amp;#x5206;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x6574;&amp;#x6570;&amp;#x62C6;&amp;#x5206;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x6B63;&amp;#x6574;&amp;#x6570; n &amp;#xFF0C;&amp;#x5C06;&amp;#x5176;&amp;#x62C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="343.整数拆分">
 <meta property="og:url" content="http://example.com/post/343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="343.整数拆分题目描述： 整数拆分  给定一个正整数 n ，将其拆分为 k 个 正整数 的和（ k &gt;&#x3D; 2 ），并使这些整数的乘积最大化。 返回 你可以获得的最大乘积 。 example 1: 输入: n &#x3D; 2 输出: 1 解释: 2 &#x3D; 1 + 1, 1 × 1 &#x3D; 1。  example 2: 输入: n &#x3D; 10 输出: 36 解释: 10">
+<meta property="og:description" content="343.&amp;#x6574;&amp;#x6570;&amp;#x62C6;&amp;#x5206;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x6574;&amp;#x6570;&amp;#x62C6;&amp;#x5206;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x6B63;&amp;#x6574;&amp;#x6570; n &amp;#xFF0C;&amp;#x5C06;&amp;#x5176;&amp;#x62C">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-15T02:23:02.000Z">
 <meta property="article:modified_time" content="2023-01-23T03:27:09.547Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,82 +151,31 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h2 id="343-整数拆分"><a href="#343-整数拆分" class="headerlink" title="343.整数拆分"></a>343.整数拆分</h2><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="343">
-<li>整数拆分</li>
+        <h2 id="343-&#x6574;&#x6570;&#x62C6;&#x5206;"><a href="#343-&#x6574;&#x6570;&#x62C6;&#x5206;" class="headerlink" title="343.&#x6574;&#x6570;&#x62C6;&#x5206;"></a>343.&#x6574;&#x6570;&#x62C6;&#x5206;</h2><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="343">
+<li>&#x6574;&#x6570;&#x62C6;&#x5206;</li>
 </ol>
-<p>给定一个正整数 <code>n</code> ，将其拆分为 <code>k</code> 个 <strong>正整数</strong> 的和（ <code>k &gt;= 2</code> ），并使这些整数的乘积最大化。</p>
-<p>返回 <em>你可以获得的最大乘积</em> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570; <code>n</code> &#xFF0C;&#x5C06;&#x5176;&#x62C6;&#x5206;&#x4E3A; <code>k</code> &#x4E2A; <strong>&#x6B63;&#x6574;&#x6570;</strong> &#x7684;&#x548C;&#xFF08; <code>k &gt;= 2</code> &#xFF09;&#xFF0C;&#x5E76;&#x4F7F;&#x8FD9;&#x4E9B;&#x6574;&#x6570;&#x7684;&#x4E58;&#x79EF;&#x6700;&#x5927;&#x5316;&#x3002;</p>
+<p>&#x8FD4;&#x56DE; <em>&#x4F60;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4E58;&#x79EF;</em> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: n &#x3D; 2
-输出: 1
-解释: 2 &#x3D; 1 + 1, 1 × 1 &#x3D; 1。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">1</span><br>&#x89E3;&#x91CA;: <span class="hljs-number">2</span> = <span class="hljs-number">1</span> + <span class="hljs-number">1</span>, <span class="hljs-number">1</span> &#xD7; <span class="hljs-number">1</span> = <span class="hljs-number">1</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: n &#x3D; 10
-输出: 36
-解释: 10 &#x3D; 3 + 3 + 4, 3 × 3 × 4 &#x3D; 36。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: n = <span class="hljs-number">10</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">36</span><br>&#x89E3;&#x91CA;: <span class="hljs-number">10</span> = <span class="hljs-number">3</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span>, <span class="hljs-number">3</span> &#xD7; <span class="hljs-number">3</span> &#xD7; <span class="hljs-number">4</span> = <span class="hljs-number">36</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>2 &lt;= n &lt;= 58</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/integer-break/">https://leetcode.cn/problems/integer-break/</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解:"></a>题解:</h2><ul>
-<li>2023&#x2F;1&#x2F;23</li>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/integer-break/">https://leetcode.cn/problems/integer-break/</a></p>
+<h2 id="&#x9898;&#x89E3;"><a href="#&#x9898;&#x89E3;" class="headerlink" title="&#x9898;&#x89E3;:"></a>&#x9898;&#x89E3;:</h2><ul>
+<li>2023/1/23</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int integerBreak(int n) &#123;
-        &#x2F;&#x2F;dp数组表示每个元素拆分后的乘积最大值
-        int[] dp&#x3D;new int[n+1];
-        &#x2F;&#x2F;由于拆分元素个数必须大于2，所以从2开始，拆分为1+1，乘积为1
-        dp[2]&#x3D;1;
-        &#x2F;&#x2F;求出3-n之间的每一个数拆分后的乘积最大值
-        for(int i&#x3D;3;i&lt;&#x3D;n;i++)&#123;
-            &#x2F;&#x2F;从1开始拆分，1+(i-1);2+(i-2);....;(i&#x2F;2)*(i&#x2F;2)
-            for(int j&#x3D;1;j&lt;&#x3D;i&#x2F;2;j++)&#123;
-                &#x2F;&#x2F;取乘积的最大值，有三种情况，(i-j)*j;dp[i-j]*j;j取其他值时的乘积最大值，三者取最大值作为当前的乘积最大值
-                dp[i]&#x3D;Math.max(dp[i],Math.max(dp[i-j]*j,(i-j)*j));
-            &#125;
-        &#125;
-        return dp[n];
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">integerBreak</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x62C6;&#x5206;&#x540E;&#x7684;&#x4E58;&#x79EF;&#x6700;&#x5927;&#x503C;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x7531;&#x4E8E;&#x62C6;&#x5206;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x5FC5;&#x987B;&#x5927;&#x4E8E;2&#xFF0C;&#x6240;&#x4EE5;&#x4ECE;2&#x5F00;&#x59CB;&#xFF0C;&#x62C6;&#x5206;&#x4E3A;1+1&#xFF0C;&#x4E58;&#x79EF;&#x4E3A;1</span><br>        dp[<span class="hljs-number">2</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x6C42;&#x51FA;3-n&#x4E4B;&#x95F4;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x62C6;&#x5206;&#x540E;&#x7684;&#x4E58;&#x79EF;&#x6700;&#x5927;&#x503C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">3</span>;i&lt;=n;i++){<br>            <span class="hljs-comment">//&#x4ECE;1&#x5F00;&#x59CB;&#x62C6;&#x5206;&#xFF0C;1+(i-1);2+(i-2);....;(i/2)*(i/2)</span><br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=i/<span class="hljs-number">2</span>;j++){<br>                <span class="hljs-comment">//&#x53D6;&#x4E58;&#x79EF;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;(i-j)*j;dp[i-j]*j;j&#x53D6;&#x5176;&#x4ED6;&#x503C;&#x65F6;&#x7684;&#x4E58;&#x79EF;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x4E09;&#x8005;&#x53D6;&#x6700;&#x5927;&#x503C;&#x4F5C;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x4E58;&#x79EF;&#x6700;&#x5927;&#x503C;</span><br>                dp[i]=Math.max(dp[i],Math.max(dp[i-j]*j,(i-j)*j));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>之前</li>
+<li>&#x4E4B;&#x524D;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int integerBreak(int n) &#123;
-        &#x2F;&#x2F;参数是否合法，当n&#x3D;0 or 1的时候无法进行拆分
-        if(n&#x3D;&#x3D;0||n&#x3D;&#x3D;1)&#123;
-           return 0;
-        &#125;
-        &#x2F;&#x2F;定义dp数组，dp[i]表示的是给定i时可以获得的最大化乘积
-        int[] dp&#x3D;new int[n+1];
-        &#x2F;&#x2F;dp数组初始化，直接从dp[2]开始初始化，因为i&#x3D;1和0是没有意义的
-        dp[2]&#x3D;1;
-        &#x2F;&#x2F;对dp数组进行遍历，确定状态转换公式：
-        &#x2F;*
-            dp[i]可以通过两个公式得到，其中j从1到i-1
-                1.j*(i-j)
-                2.j*dp[i-j]
-                j * (i - j) 是单纯的把整数拆分为两个数相乘，而j * dp[i - j]是拆分成两个以及两个以上的个数相乘。
-                如果定义dp[i - j] * dp[j] 也是默认将一个数强制拆成4份以及4份以上了。
-                所以递推公式：dp[i] &#x3D; max(&#123;dp[i], (i - j) * j, dp[i - j] * j&#125;);
-            那么在取最大值的时候，为什么还要比较dp[i]呢？
-                因为在递推公式推导的过程中，每次计算dp[i]，取最大的而已。
-        *&#x2F;
-        for(int i&#x3D;3;i&lt;&#x3D;n;i++)&#123;
-            for(int j&#x3D;1;j&lt;i-1;j++)&#123;
-                dp[i]&#x3D;Math.max(dp[i],Math.max((j*(i-j)),j*dp[i-j]));
-            &#125;
-        &#125;
-        return dp[n];
-
-
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">integerBreak</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;&#xFF0C;&#x5F53;n=0 or 1&#x7684;&#x65F6;&#x5019;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x62C6;&#x5206;</span><br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>||n==<span class="hljs-number">1</span>){<br>           <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;&#xFF0C;dp[i]&#x8868;&#x793A;&#x7684;&#x662F;&#x7ED9;&#x5B9A;i&#x65F6;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x5316;&#x4E58;&#x79EF;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x76F4;&#x63A5;&#x4ECE;dp[2]&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;i=1&#x548C;0&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;</span><br>        dp[<span class="hljs-number">2</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x5BF9;dp&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x786E;&#x5B9A;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x516C;&#x5F0F;&#xFF1A;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">            dp[i]&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x516C;&#x5F0F;&#x5F97;&#x5230;&#xFF0C;&#x5176;&#x4E2D;j&#x4ECE;1&#x5230;i-1</span><br><span class="hljs-comment">                1.j*(i-j)</span><br><span class="hljs-comment">                2.j*dp[i-j]</span><br><span class="hljs-comment">                j * (i - j) &#x662F;&#x5355;&#x7EAF;&#x7684;&#x628A;&#x6574;&#x6570;&#x62C6;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x4E58;&#xFF0C;&#x800C;j * dp[i - j]&#x662F;&#x62C6;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x4EE5;&#x53CA;&#x4E24;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x4E2A;&#x6570;&#x76F8;&#x4E58;&#x3002;</span><br><span class="hljs-comment">                &#x5982;&#x679C;&#x5B9A;&#x4E49;dp[i - j] * dp[j] &#x4E5F;&#x662F;&#x9ED8;&#x8BA4;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x5F3A;&#x5236;&#x62C6;&#x6210;4&#x4EFD;&#x4EE5;&#x53CA;4&#x4EFD;&#x4EE5;&#x4E0A;&#x4E86;&#x3002;</span><br><span class="hljs-comment">                &#x6240;&#x4EE5;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF1A;dp[i] = max({dp[i], (i - j) * j, dp[i - j] * j});</span><br><span class="hljs-comment">            &#x90A3;&#x4E48;&#x5728;&#x53D6;&#x6700;&#x5927;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x8981;&#x6BD4;&#x8F83;dp[i]&#x5462;&#xFF1F;</span><br><span class="hljs-comment">                &#x56E0;&#x4E3A;&#x5728;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#x63A8;&#x5BFC;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6BCF;&#x6B21;&#x8BA1;&#x7B97;dp[i]&#xFF0C;&#x53D6;&#x6700;&#x5927;&#x7684;&#x800C;&#x5DF2;&#x3002;</span><br><span class="hljs-comment">        */</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">3</span>;i&lt;=n;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;i-<span class="hljs-number">1</span>;j++){<br>                dp[i]=Math.max(dp[i],Math.max((j*(i-j)),j*dp[i-j]));<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br><br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -259,9 +208,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -270,14 +218,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -364,6 +323,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

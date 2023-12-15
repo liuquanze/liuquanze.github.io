@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="134.加油站题目描述： 加油站  在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。 给定两个整数数组 gas 和 cost ，如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1 。如果存在解，则 保证 它">
+    <meta name="description" content="134.&amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;  &amp;#x5728;&amp;#x4E00;&amp;#x6761;&amp;#x73AF;&amp;#x8DEF;&amp;#x4E0A;&amp;#x6709; n &amp;#x4E2A;&amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;&amp;#xFF0C;&amp;#x517">
 <meta property="og:type" content="article">
 <meta property="og:title" content="134.加油站">
 <meta property="og:url" content="http://example.com/post/134-%E5%8A%A0%E6%B2%B9%E7%AB%99.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="134.加油站题目描述： 加油站  在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。 给定两个整数数组 gas 和 cost ，如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1 。如果存在解，则 保证 它">
+<meta property="og:description" content="134.&amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;  &amp;#x5728;&amp;#x4E00;&amp;#x6761;&amp;#x73AF;&amp;#x8DEF;&amp;#x4E0A;&amp;#x6709; n &amp;#x4E2A;&amp;#x52A0;&amp;#x6CB9;&amp;#x7AD9;&amp;#xFF0C;&amp;#x517">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-16T14:02:43.000Z">
 <meta property="article:modified_time" content="2022-12-16T14:05:41.723Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,72 +152,27 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="134-加油站"><a href="#134-加油站" class="headerlink" title="134.加油站"></a>134.加油站</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="134">
-<li>加油站</li>
+        <h1 id="134-&#x52A0;&#x6CB9;&#x7AD9;"><a href="#134-&#x52A0;&#x6CB9;&#x7AD9;" class="headerlink" title="134.&#x52A0;&#x6CB9;&#x7AD9;"></a>134.&#x52A0;&#x6CB9;&#x7AD9;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="134">
+<li>&#x52A0;&#x6CB9;&#x7AD9;</li>
 </ol>
-<p>在一条环路上有 <code>n</code> 个加油站，其中第 <code>i</code> 个加油站有汽油 <code>gas[i]</code> 升。</p>
-<p>你有一辆油箱容量无限的的汽车，从第 <code>i</code> 个加油站开往第 <code>i+1</code> 个加油站需要消耗汽油 <code>cost[i]</code> 升。你从其中的一个加油站出发，开始时油箱为空。</p>
-<p>给定两个整数数组 <code>gas</code> 和 <code>cost</code> ，如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 <code>-1</code> 。如果存在解，则 <strong>保证</strong> 它是 <strong>唯一</strong> 的。</p>
+<p>&#x5728;&#x4E00;&#x6761;&#x73AF;&#x8DEF;&#x4E0A;&#x6709; <code>n</code> &#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C; <code>i</code> &#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#x6709;&#x6C7D;&#x6CB9; <code>gas[i]</code> &#x5347;&#x3002;</p>
+<p>&#x4F60;&#x6709;&#x4E00;&#x8F86;&#x6CB9;&#x7BB1;&#x5BB9;&#x91CF;&#x65E0;&#x9650;&#x7684;&#x7684;&#x6C7D;&#x8F66;&#xFF0C;&#x4ECE;&#x7B2C; <code>i</code> &#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#x5F00;&#x5F80;&#x7B2C; <code>i+1</code> &#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#x9700;&#x8981;&#x6D88;&#x8017;&#x6C7D;&#x6CB9; <code>cost[i]</code> &#x5347;&#x3002;&#x4F60;&#x4ECE;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#x51FA;&#x53D1;&#xFF0C;&#x5F00;&#x59CB;&#x65F6;&#x6CB9;&#x7BB1;&#x4E3A;&#x7A7A;&#x3002;</p>
+<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>gas</code> &#x548C; <code>cost</code> &#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EF;&#x4EE5;&#x7ED5;&#x73AF;&#x8DEF;&#x884C;&#x9A76;&#x4E00;&#x5468;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x51FA;&#x53D1;&#x65F6;&#x52A0;&#x6CB9;&#x7AD9;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>-1</code> &#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#x89E3;&#xFF0C;&#x5219; <strong>&#x4FDD;&#x8BC1;</strong> &#x5B83;&#x662F; <strong>&#x552F;&#x4E00;</strong> &#x7684;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: gas &#x3D; [1,2,3,4,5], cost &#x3D; [3,4,5,1,2]
-输出: 3
-解释:
-从 3 号加油站(索引为 3 处)出发，可获得 4 升汽油。此时油箱有 &#x3D; 0 + 4 &#x3D; 4 升汽油
-开往 4 号加油站，此时油箱有 4 - 1 + 5 &#x3D; 8 升汽油
-开往 0 号加油站，此时油箱有 8 - 2 + 1 &#x3D; 7 升汽油
-开往 1 号加油站，此时油箱有 7 - 3 + 2 &#x3D; 6 升汽油
-开往 2 号加油站，此时油箱有 6 - 4 + 3 &#x3D; 5 升汽油
-开往 3 号加油站，你需要消耗 5 升汽油，正好足够你返回到 3 号加油站。
-因此，3 可为起始索引。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: gas = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>], cost = [<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-number">3</span><br>&#x89E3;&#x91CA;:<br>&#x4ECE; <span class="hljs-number">3</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;(&#x7D22;&#x5F15;&#x4E3A; <span class="hljs-number">3</span> &#x5904;)&#x51FA;&#x53D1;&#xFF0C;&#x53EF;&#x83B7;&#x5F97; <span class="hljs-number">4</span> &#x5347;&#x6C7D;&#x6CB9;&#x3002;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; = <span class="hljs-number">0</span> + <span class="hljs-number">4</span> = <span class="hljs-number">4</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">4</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">4</span> - <span class="hljs-number">1</span> + <span class="hljs-number">5</span> = <span class="hljs-number">8</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">0</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">8</span> - <span class="hljs-number">2</span> + <span class="hljs-number">1</span> = <span class="hljs-number">7</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">1</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">7</span> - <span class="hljs-number">3</span> + <span class="hljs-number">2</span> = <span class="hljs-number">6</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">2</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">6</span> - <span class="hljs-number">4</span> + <span class="hljs-number">3</span> = <span class="hljs-number">5</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">3</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6D88;&#x8017; <span class="hljs-number">5</span> &#x5347;&#x6C7D;&#x6CB9;&#xFF0C;&#x6B63;&#x597D;&#x8DB3;&#x591F;&#x4F60;&#x8FD4;&#x56DE;&#x5230; <span class="hljs-number">3</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#x3002;<br>&#x56E0;&#x6B64;&#xFF0C;<span class="hljs-number">3</span> &#x53EF;&#x4E3A;&#x8D77;&#x59CB;&#x7D22;&#x5F15;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: gas &#x3D; [2,3,4], cost &#x3D; [3,4,3]
-输出: -1
-解释:
-你不能从 0 号或 1 号加油站出发，因为没有足够的汽油可以让你行驶到下一个加油站。
-我们从 2 号加油站出发，可以获得 4 升汽油。 此时油箱有 &#x3D; 0 + 4 &#x3D; 4 升汽油
-开往 0 号加油站，此时油箱有 4 - 3 + 2 &#x3D; 3 升汽油
-开往 1 号加油站，此时油箱有 3 - 3 + 3 &#x3D; 3 升汽油
-你无法返回 2 号加油站，因为返程需要消耗 4 升汽油，但是你的油箱只有 3 升汽油。
-因此，无论怎样，你都不可能绕环路行驶一周。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: gas = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>], cost = [<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;: -<span class="hljs-number">1</span><br>&#x89E3;&#x91CA;:<br>&#x4F60;&#x4E0D;&#x80FD;&#x4ECE; <span class="hljs-number">0</span> &#x53F7;&#x6216; <span class="hljs-number">1</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#x51FA;&#x53D1;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x6C7D;&#x6CB9;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x884C;&#x9A76;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x52A0;&#x6CB9;&#x7AD9;&#x3002;<br>&#x6211;&#x4EEC;&#x4ECE; <span class="hljs-number">2</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#x51FA;&#x53D1;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x5F97; <span class="hljs-number">4</span> &#x5347;&#x6C7D;&#x6CB9;&#x3002; &#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; = <span class="hljs-number">0</span> + <span class="hljs-number">4</span> = <span class="hljs-number">4</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">0</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">4</span> - <span class="hljs-number">3</span> + <span class="hljs-number">2</span> = <span class="hljs-number">3</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x5F00;&#x5F80; <span class="hljs-number">1</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x6B64;&#x65F6;&#x6CB9;&#x7BB1;&#x6709; <span class="hljs-number">3</span> - <span class="hljs-number">3</span> + <span class="hljs-number">3</span> = <span class="hljs-number">3</span> &#x5347;&#x6C7D;&#x6CB9;<br>&#x4F60;&#x65E0;&#x6CD5;&#x8FD4;&#x56DE; <span class="hljs-number">2</span> &#x53F7;&#x52A0;&#x6CB9;&#x7AD9;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD4;&#x7A0B;&#x9700;&#x8981;&#x6D88;&#x8017; <span class="hljs-number">4</span> &#x5347;&#x6C7D;&#x6CB9;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x7684;&#x6CB9;&#x7BB1;&#x53EA;&#x6709; <span class="hljs-number">3</span> &#x5347;&#x6C7D;&#x6CB9;&#x3002;<br>&#x56E0;&#x6B64;&#xFF0C;&#x65E0;&#x8BBA;&#x600E;&#x6837;&#xFF0C;&#x4F60;&#x90FD;&#x4E0D;&#x53EF;&#x80FD;&#x7ED5;&#x73AF;&#x8DEF;&#x884C;&#x9A76;&#x4E00;&#x5468;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>gas.length == n</code></li>
 <li><code>cost.length == n</code></li>
 <li><code>1 &lt;= n &lt;= 105</code></li>
 <li><code>0 &lt;= gas[i], cost[i] &lt;= 104</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gas-station/">https://leetcode.cn/problems/gas-station/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;** 
-    若cost之和大于gas之和，则必定没有起点可以完成绕圈任务。
-    这里使用的是贪心算法，我们从0开始行驶，并在行驶途中计算剩余汽油量，若在位置i处出现没有油的情况，则直接忽略0到当前位置i之间0-i的所有位置，因为他们都不可能成为起点，直接将当前位置的后一个位子i+1作为起点。别问为什么0-i之间就不存在起点了，这就是贪心，举不出反例就是真理。
-*&#x2F;
-
-class Solution &#123;
-    public int canCompleteCircuit(int[] gas, int[] cost) &#123;
-        &#x2F;&#x2F;行驶途中的汽油剩余量
-        int curSum&#x3D;0;
-        &#x2F;&#x2F;总加油量与总耗油量的差值
-        int totalSum&#x3D;0;
-        &#x2F;&#x2F;当前汽车的起始位置
-        int start&#x3D;0;
-        for(int i&#x3D;0;i&lt;cost.length;i++)&#123;
-            &#x2F;&#x2F;计算此时的汽油剩余量
-            curSum+&#x3D;gas[i]-cost[i];
-            &#x2F;&#x2F;继续更新总的汽油剩余量
-            totalSum+&#x3D;gas[i]-cost[i];
-            &#x2F;&#x2F;若当前的汽车的汽油剩余量已经小于0，则更新起始位置为下一个位置，并将当前汽油量置为0
-            if(curSum&lt;0)&#123;
-                start&#x3D;i+1;
-                curSum&#x3D;0;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若cost之和大于gas之和，则必定没有起点可以完成绕圈任务。
-        if(totalSum&gt;&#x3D;0) return start;
-        return -1;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gas-station/">https://leetcode.cn/problems/gas-station/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/** </span><br><span class="hljs-comment">    &#x82E5;cost&#x4E4B;&#x548C;&#x5927;&#x4E8E;gas&#x4E4B;&#x548C;&#xFF0C;&#x5219;&#x5FC5;&#x5B9A;&#x6CA1;&#x6709;&#x8D77;&#x70B9;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x7ED5;&#x5708;&#x4EFB;&#x52A1;&#x3002;</span><br><span class="hljs-comment">    &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x4ECE;0&#x5F00;&#x59CB;&#x884C;&#x9A76;&#xFF0C;&#x5E76;&#x5728;&#x884C;&#x9A76;&#x9014;&#x4E2D;&#x8BA1;&#x7B97;&#x5269;&#x4F59;&#x6C7D;&#x6CB9;&#x91CF;&#xFF0C;&#x82E5;&#x5728;&#x4F4D;&#x7F6E;i&#x5904;&#x51FA;&#x73B0;&#x6CA1;&#x6709;&#x6CB9;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5FFD;&#x7565;0&#x5230;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;i&#x4E4B;&#x95F4;0-i&#x7684;&#x6240;&#x6709;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x90FD;&#x4E0D;&#x53EF;&#x80FD;&#x6210;&#x4E3A;&#x8D77;&#x70B9;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x5B50;i+1&#x4F5C;&#x4E3A;&#x8D77;&#x70B9;&#x3002;&#x522B;&#x95EE;&#x4E3A;&#x4EC0;&#x4E48;0-i&#x4E4B;&#x95F4;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x8D77;&#x70B9;&#x4E86;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8D2A;&#x5FC3;&#xFF0C;&#x4E3E;&#x4E0D;&#x51FA;&#x53CD;&#x4F8B;&#x5C31;&#x662F;&#x771F;&#x7406;&#x3002;</span><br><span class="hljs-comment">*/</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">canCompleteCircuit</span><span class="hljs-params">(<span class="hljs-type">int</span>[] gas, <span class="hljs-type">int</span>[] cost)</span> {<br>        <span class="hljs-comment">//&#x884C;&#x9A76;&#x9014;&#x4E2D;&#x7684;&#x6C7D;&#x6CB9;&#x5269;&#x4F59;&#x91CF;</span><br>        <span class="hljs-type">int</span> curSum=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x603B;&#x52A0;&#x6CB9;&#x91CF;&#x4E0E;&#x603B;&#x8017;&#x6CB9;&#x91CF;&#x7684;&#x5DEE;&#x503C;</span><br>        <span class="hljs-type">int</span> totalSum=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x524D;&#x6C7D;&#x8F66;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-type">int</span> start=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;cost.length;i++){<br>            <span class="hljs-comment">//&#x8BA1;&#x7B97;&#x6B64;&#x65F6;&#x7684;&#x6C7D;&#x6CB9;&#x5269;&#x4F59;&#x91CF;</span><br>            curSum+=gas[i]-cost[i];<br>            <span class="hljs-comment">//&#x7EE7;&#x7EED;&#x66F4;&#x65B0;&#x603B;&#x7684;&#x6C7D;&#x6CB9;&#x5269;&#x4F59;&#x91CF;</span><br>            totalSum+=gas[i]-cost[i];<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x7684;&#x6C7D;&#x8F66;&#x7684;&#x6C7D;&#x6CB9;&#x5269;&#x4F59;&#x91CF;&#x5DF2;&#x7ECF;&#x5C0F;&#x4E8E;0&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x5C06;&#x5F53;&#x524D;&#x6C7D;&#x6CB9;&#x91CF;&#x7F6E;&#x4E3A;0</span><br>            <span class="hljs-keyword">if</span>(curSum&lt;<span class="hljs-number">0</span>){<br>                start=i+<span class="hljs-number">1</span>;<br>                curSum=<span class="hljs-number">0</span>;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;cost&#x4E4B;&#x548C;&#x5927;&#x4E8E;gas&#x4E4B;&#x548C;&#xFF0C;&#x5219;&#x5FC5;&#x5B9A;&#x6CA1;&#x6709;&#x8D77;&#x70B9;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x7ED5;&#x5708;&#x4EFB;&#x52A1;&#x3002;</span><br>        <span class="hljs-keyword">if</span>(totalSum&gt;=<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> start;<br>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -252,9 +207,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -263,14 +217,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -357,6 +322,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

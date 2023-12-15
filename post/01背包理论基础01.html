@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="01背包理论基础01题目描述：有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能用一次，求解将哪些物品装入背包里物品价值总和最大。  确定dp数组以及下标的含义  对于背包问题，有一种写法， 是使用二维数组，即dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。  确定递推公式">
+    <meta name="description" content="01&amp;#x80CC;&amp;#x5305;&amp;#x7406;&amp;#x8BBA;&amp;#x57FA;&amp;#x7840;01&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x6709;n&amp;#x4EF6;&amp;#x7269;&amp;#x54C1;&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x6700;&amp;#x591A;&amp;#x80FD;&amp;#x80CC;&amp;#x91CD;&amp;#x91CF;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01背包理论基础01">
 <meta property="og:url" content="http://example.com/post/01%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="01背包理论基础01题目描述：有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。每件物品只能用一次，求解将哪些物品装入背包里物品价值总和最大。  确定dp数组以及下标的含义  对于背包问题，有一种写法， 是使用二维数组，即dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。  确定递推公式">
+<meta property="og:description" content="01&amp;#x80CC;&amp;#x5305;&amp;#x7406;&amp;#x8BBA;&amp;#x57FA;&amp;#x7840;01&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x6709;n&amp;#x4EF6;&amp;#x7269;&amp;#x54C1;&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x6700;&amp;#x591A;&amp;#x80FD;&amp;#x80CC;&amp;#x91CD;&amp;#x91CF;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-30T04:38:37.000Z">
 <meta property="article:modified_time" content="2023-01-31T06:31:40.023Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,57 +151,35 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="01背包理论基础01"><a href="#01背包理论基础01" class="headerlink" title="01背包理论基础01"></a>01背包理论基础01</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
+        <h1 id="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01"><a href="#01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01" class="headerlink" title="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01"></a>01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x6709;n&#x4EF6;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x591A;&#x80FD;&#x80CC;&#x91CD;&#x91CF;&#x4E3A;w &#x7684;&#x80CC;&#x5305;&#x3002;&#x7B2C;i&#x4EF6;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;&#x662F;weight[i]&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x4EF7;&#x503C;&#x662F;value[i] &#x3002;<strong>&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;</strong>&#xFF0C;&#x6C42;&#x89E3;&#x5C06;&#x54EA;&#x4E9B;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x91CC;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x3002;</p>
 <ol>
-<li>确定dp数组以及下标的含义</li>
+<li>&#x786E;&#x5B9A;dp&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x4E0B;&#x6807;&#x7684;&#x542B;&#x4E49;</li>
 </ol>
-<p>对于背包问题，有一种写法， 是使用二维数组，即<strong>dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少</strong>。</p>
+<p>&#x5BF9;&#x4E8E;&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF0C;&#x6709;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C; &#x662F;&#x4F7F;&#x7528;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x5373;<strong>dp[i][j] &#x8868;&#x793A;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A;[0-i]&#x7684;&#x7269;&#x54C1;&#x91CC;&#x4EFB;&#x610F;&#x53D6;&#xFF0C;&#x653E;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x662F;&#x591A;&#x5C11;</strong>&#x3002;</p>
 <ol start="2">
-<li>确定递推公式</li>
+<li>&#x786E;&#x5B9A;&#x9012;&#x63A8;&#x516C;&#x5F0F;</li>
 </ol>
-<p>再回顾一下dp[i][j]的含义：从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。</p>
-<p>那么可以有两个方向推出来dp[i][j]，</p>
+<p>&#x518D;&#x56DE;&#x987E;&#x4E00;&#x4E0B;dp[i][j]&#x7684;&#x542B;&#x4E49;&#xFF1A;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A;[0-i]&#x7684;&#x7269;&#x54C1;&#x91CC;&#x4EFB;&#x610F;&#x53D6;&#xFF0C;&#x653E;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x662F;&#x591A;&#x5C11;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x5411;&#x63A8;&#x51FA;&#x6765;dp[i][j]&#xFF0C;</p>
 <ul>
-<li><strong>不放物品i</strong>：由dp[i - 1][j]推出，即背包容量为j，里面不放物品i的最大价值，此时dp[i][j]就是dp[i - 1][j]。(其实就是当物品i的重量大于背包j的重量时，物品i无法放进背包中，所以被背包内的价值依然和前面相同。)</li>
-<li><strong>放物品i</strong>：由dp[i - 1][j - weight[i]]推出，dp[i - 1][j - weight[i]] 为背包容量为j - weight[i]的时候不放物品i的最大价值，那么dp[i - 1][j - weight[i]] + value[i] （物品i的价值），就是背包放物品i得到的最大价值</li>
+<li><strong>&#x4E0D;&#x653E;&#x7269;&#x54C1;i</strong>&#xFF1A;&#x7531;dp[i - 1][j]&#x63A8;&#x51FA;&#xFF0C;&#x5373;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;j&#xFF0C;&#x91CC;&#x9762;&#x4E0D;&#x653E;&#x7269;&#x54C1;i&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x6B64;&#x65F6;dp[i][j]&#x5C31;&#x662F;dp[i - 1][j]&#x3002;(&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5F53;&#x7269;&#x54C1;i&#x7684;&#x91CD;&#x91CF;&#x5927;&#x4E8E;&#x80CC;&#x5305;j&#x7684;&#x91CD;&#x91CF;&#x65F6;&#xFF0C;&#x7269;&#x54C1;i&#x65E0;&#x6CD5;&#x653E;&#x8FDB;&#x80CC;&#x5305;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x80CC;&#x5305;&#x5185;&#x7684;&#x4EF7;&#x503C;&#x4F9D;&#x7136;&#x548C;&#x524D;&#x9762;&#x76F8;&#x540C;&#x3002;)</li>
+<li><strong>&#x653E;&#x7269;&#x54C1;i</strong>&#xFF1A;&#x7531;dp[i - 1][j - weight[i]]&#x63A8;&#x51FA;&#xFF0C;dp[i - 1][j - weight[i]] &#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;j - weight[i]&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x653E;&#x7269;&#x54C1;i&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x90A3;&#x4E48;dp[i - 1][j - weight[i]] + value[i] &#xFF08;&#x7269;&#x54C1;i&#x7684;&#x4EF7;&#x503C;&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x80CC;&#x5305;&#x653E;&#x7269;&#x54C1;i&#x5F97;&#x5230;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</li>
 </ul>
-<p>所以递归公式： dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
+<p>&#x6240;&#x4EE5;&#x9012;&#x5F52;&#x516C;&#x5F0F;&#xFF1A; dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
 <ol start="3">
-<li>dp数组如何初始化</li>
+<li>dp&#x6570;&#x7EC4;&#x5982;&#x4F55;&#x521D;&#x59CB;&#x5316;</li>
 </ol>
-<p>状态转移方程 dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]); 可以看出i 是由 i-1 推导出来，那么i为0的时候就一定要初始化。</p>
-<p>dp[0][j]，即：i为0，存放编号0的物品的时候，各个容量的背包所能存放的最大价值。</p>
-<p>那么很明显当 j &lt; weight[0]的时候，dp[0][j] 应该是 0，因为背包容量比编号0的物品重量还小。</p>
-<p>当j &gt;&#x3D; weight[0]时，dp[0][j] 应该是value[0]，因为背包容量放足够放编号0物品。</p>
+<p>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B; dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]); &#x53EF;&#x4EE5;&#x770B;&#x51FA;i &#x662F;&#x7531; i-1 &#x63A8;&#x5BFC;&#x51FA;&#x6765;&#xFF0C;&#x90A3;&#x4E48;i&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E00;&#x5B9A;&#x8981;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p>dp[0][j]&#xFF0C;&#x5373;&#xFF1A;i&#x4E3A;0&#xFF0C;&#x5B58;&#x653E;&#x7F16;&#x53F7;0&#x7684;&#x7269;&#x54C1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5404;&#x4E2A;&#x5BB9;&#x91CF;&#x7684;&#x80CC;&#x5305;&#x6240;&#x80FD;&#x5B58;&#x653E;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x5F88;&#x660E;&#x663E;&#x5F53; j &lt; weight[0]&#x7684;&#x65F6;&#x5019;&#xFF0C;dp[0][j] &#x5E94;&#x8BE5;&#x662F; 0&#xFF0C;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x6BD4;&#x7F16;&#x53F7;0&#x7684;&#x7269;&#x54C1;&#x91CD;&#x91CF;&#x8FD8;&#x5C0F;&#x3002;</p>
+<p>&#x5F53;j &gt;= weight[0]&#x65F6;&#xFF0C;dp[0][j] &#x5E94;&#x8BE5;&#x662F;value[0]&#xFF0C;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x653E;&#x8DB3;&#x591F;&#x653E;&#x7F16;&#x53F7;0&#x7269;&#x54C1;&#x3002;</p>
 <ol start="4">
-<li>确定遍历顺序</li>
+<li>&#x786E;&#x5B9A;&#x904D;&#x5386;&#x987A;&#x5E8F;</li>
 </ol>
-<p>那么问题来了，<strong>先遍历 物品还是先遍历背包重量呢？</strong></p>
-<p><strong>其实都可以！！ 但是先遍历物品更好理解</strong>。</p>
-<p>那么我先给出先遍历物品，然后遍历背包重量的代码。</p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public int 01bag(int[] weight,int[] value,int bagsize)&#123;
-    &#x2F;&#x2F;创建dp数组
-    int goods&#x3D;weight.length;&#x2F;&#x2F;获取物品的数量
-    int[][] dp&#x3D;new int[goods][bagSize+1];
-    &#x2F;&#x2F;初始化dp数组
-    &#x2F;&#x2F;创建数组后，初始值均为0，dp[0][j]&#x3D;value[0],其中j&gt;&#x3D;weight[0]
-    for(int j&#x3D;weight[0];j&lt;&#x3D;bagSize;j++)&#123;
-        dp[0][j]&#x3D;value[0];
-    &#125;
-    &#x2F;&#x2F;填充dp数组,先遍历物品再遍历背包容量
-    for(int i&#x3D;0;i&lt;weight.length;i++)&#123;
-        for(int j&#x3D;1;j&lt;&#x3D;bagSize;j++)&#123;
-            &#x2F;&#x2F;如果当前遍历的背包容量小于当前物品重量，表示根本放不下物品i，则前i-1个物品能放下的最大价值就是当前情况下的最大价值
-            if(j&lt;weight[i])&#123;
-                dp[i][j]&#x3D;dp[i-1][j];
-            &#125;else&#123;
-                &#x2F;&#x2F;如果可以放下，则在两种情况下取最大值
-                dp[j][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i]]+value[i]);
-            &#125;
-        &#125;
-    &#125;
-    return dp[goods-1][bagSize];
-&#125;</code></pre>
+<p>&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;<strong>&#x5148;&#x904D;&#x5386; &#x7269;&#x54C1;&#x8FD8;&#x662F;&#x5148;&#x904D;&#x5386;&#x80CC;&#x5305;&#x91CD;&#x91CF;&#x5462;&#xFF1F;</strong></p>
+<p><strong>&#x5176;&#x5B9E;&#x90FD;&#x53EF;&#x4EE5;&#xFF01;&#xFF01; &#x4F46;&#x662F;&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x66F4;&#x597D;&#x7406;&#x89E3;</strong>&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x5148;&#x7ED9;&#x51FA;&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x80CC;&#x5305;&#x91CD;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> 01bag(<span class="hljs-type">int</span>[] weight,<span class="hljs-type">int</span>[] value,<span class="hljs-type">int</span> bagsize){<br>    <span class="hljs-comment">//&#x521B;&#x5EFA;dp&#x6570;&#x7EC4;</span><br>    <span class="hljs-type">int</span> goods=weight.length;<span class="hljs-comment">//&#x83B7;&#x53D6;&#x7269;&#x54C1;&#x7684;&#x6570;&#x91CF;</span><br>    <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[goods][bagSize+<span class="hljs-number">1</span>];<br>    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;dp&#x6570;&#x7EC4;</span><br>    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#x540E;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x5747;&#x4E3A;0&#xFF0C;dp[0][j]=value[0],&#x5176;&#x4E2D;j&gt;=weight[0]</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=weight[<span class="hljs-number">0</span>];j&lt;=bagSize;j++){<br>        dp[<span class="hljs-number">0</span>][j]=value[<span class="hljs-number">0</span>];<br>    }<br>    <span class="hljs-comment">//&#x586B;&#x5145;dp&#x6570;&#x7EC4;,&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#x5BB9;&#x91CF;</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.length;i++){<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=bagSize;j++){<br>            <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x904D;&#x5386;&#x7684;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x91CD;&#x91CF;&#xFF0C;&#x8868;&#x793A;&#x6839;&#x672C;&#x653E;&#x4E0D;&#x4E0B;&#x7269;&#x54C1;i&#xFF0C;&#x5219;&#x524D;i-1&#x4E2A;&#x7269;&#x54C1;&#x80FD;&#x653E;&#x4E0B;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</span><br>            <span class="hljs-keyword">if</span>(j&lt;weight[i]){<br>                dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>            }<span class="hljs-keyword">else</span>{<br>                <span class="hljs-comment">//&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x653E;&#x4E0B;&#xFF0C;&#x5219;&#x5728;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x53D6;&#x6700;&#x5927;&#x503C;</span><br>                dp[j][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-weight[i]]+value[i]);<br>            }<br>        }<br>    }<br>    <span class="hljs-keyword">return</span> dp[goods-<span class="hljs-number">1</span>][bagSize];<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -234,9 +212,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -245,14 +222,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -339,6 +327,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

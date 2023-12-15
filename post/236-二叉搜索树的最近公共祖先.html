@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="236.二叉搜索树的最近公共祖先题目描述： 二叉搜索树的最近公共祖先  给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。” 例如，给定如下二叉搜索树: root &#x3D; [6,2,8,0,4,7">
+    <meta name="description" content="236.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x8FD1;&amp;#x516C;&amp;#x5171;&amp;#x7956;&amp;#x5148;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="236.二叉搜索树的最近公共祖先">
 <meta property="og:url" content="http://example.com/post/236-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="236.二叉搜索树的最近公共祖先题目描述： 二叉搜索树的最近公共祖先  给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。” 例如，给定如下二叉搜索树: root &#x3D; [6,2,8,0,4,7">
+<meta property="og:description" content="236.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x8FD1;&amp;#x516C;&amp;#x5171;&amp;#x7956;&amp;#x5148;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-11T03:12:26.000Z">
 <meta property="article:modified_time" content="2022-10-11T03:14:52.266Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,67 +152,27 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="236-二叉搜索树的最近公共祖先"><a href="#236-二叉搜索树的最近公共祖先" class="headerlink" title="236.二叉搜索树的最近公共祖先"></a>236.二叉搜索树的最近公共祖先</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="235">
-<li>二叉搜索树的最近公共祖先</li>
+        <h1 id="236-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"><a href="#236-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;" class="headerlink" title="236.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;"></a>236.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="235">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;</li>
 </ol>
-<p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。</p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">百度百科</a>中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p>
-<p>例如，给定如下二叉搜索树: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5]</p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;, &#x627E;&#x5230;&#x8BE5;&#x6811;&#x4E2D;&#x4E24;&#x4E2A;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x3002;</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin">&#x767E;&#x5EA6;&#x767E;&#x79D1;</a>&#x4E2D;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x7684;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;&#x201C;&#x5BF9;&#x4E8E;&#x6709;&#x6839;&#x6811; T &#x7684;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9; p&#x3001;q&#xFF0C;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9; x&#xFF0C;&#x6EE1;&#x8DB3; x &#x662F; p&#x3001;q &#x7684;&#x7956;&#x5148;&#x4E14; x &#x7684;&#x6DF1;&#x5EA6;&#x5C3D;&#x53EF;&#x80FD;&#x5927;&#xFF08;<strong>&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x7956;&#x5148;</strong>&#xFF09;&#x3002;&#x201D;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x7ED9;&#x5B9A;&#x5982;&#x4E0B;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;: root = [6,2,8,0,4,7,9,null,null,3,5]</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5], p &#x3D; 2, q &#x3D; 8
-输出: 6 
-解释: 节点 2 和节点 8 的最近公共祖先是 6</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>], p = <span class="hljs-number">2</span>, q = <span class="hljs-number">8</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">6</span> <br>&#x89E3;&#x91CA;: &#x8282;&#x70B9; <span class="hljs-number">2</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">8</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F; <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: root &#x3D; [6,2,8,0,4,7,9,null,null,3,5], p &#x3D; 2, q &#x3D; 4
-输出: 2
-解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: root = [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>], p = <span class="hljs-number">2</span>, q = <span class="hljs-number">4</span><br>&#x8F93;&#x51FA;: <span class="hljs-number">2</span><br>&#x89E3;&#x91CA;: &#x8282;&#x70B9; <span class="hljs-number">2</span> &#x548C;&#x8282;&#x70B9; <span class="hljs-number">4</span> &#x7684;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x662F; <span class="hljs-number">2</span>, &#x56E0;&#x4E3A;&#x6839;&#x636E;&#x5B9A;&#x4E49;&#x6700;&#x8FD1;&#x516C;&#x5171;&#x7956;&#x5148;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x4E3A;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>所有节点的值都是唯一的。</li>
-<li>p、q 为不同节点且均存在于给定的二叉搜索树中。</li>
+<li>&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</li>
+<li>p&#x3001;q &#x4E3A;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x4E14;&#x5747;&#x5B58;&#x5728;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x3002;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) &#123; val &#x3D; x; &#125;
- * &#125;
- *&#x2F;
-
-class Solution &#123;
-
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) &#123;
-        return findNode(root,p,q);
-    &#125;
-    &#x2F;&#x2F;因为是二叉搜索树，所以和普通二叉树的递归有所不同，之后还需要对比看，还没理解透
-    public TreeNode findNode(TreeNode root,TreeNode p,TreeNode q)&#123;
-        if(root&#x3D;&#x3D;null)
-            return null;
-        &#x2F;&#x2F;若该节点值大于pq，搜索左边，
-        if(root.val&gt;p.val&amp;&amp;root.val&gt;q.val)&#123;
-            TreeNode left&#x3D;lowestCommonAncestor(root.left,p,q);
-            if(left!&#x3D;null)&#123;
-                return left;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;若该节点值小于pq，则搜索右边
-        if(root.val&lt;p.val&amp;&amp;root.val&lt;q.val)&#123;
-            TreeNode right&#x3D;lowestCommonAncestor(root.right,p,q);
-            if(right!&#x3D;null)&#123;
-                return right;
-            &#125;
-        &#125;
-        return root;
-    &#125;
-    
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree">https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode(int x) { val = x; }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">lowestCommonAncestor</span><span class="hljs-params">(TreeNode root, TreeNode p, TreeNode q)</span> {<br>        <span class="hljs-keyword">return</span> findNode(root,p,q);<br>    }<br>    <span class="hljs-comment">//&#x56E0;&#x4E3A;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x6240;&#x4EE5;&#x548C;&#x666E;&#x901A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x9012;&#x5F52;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x4E4B;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x6BD4;&#x770B;&#xFF0C;&#x8FD8;&#x6CA1;&#x7406;&#x89E3;&#x900F;</span><br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">findNode</span><span class="hljs-params">(TreeNode root,TreeNode p,TreeNode q)</span>{<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x503C;&#x5927;&#x4E8E;pq&#xFF0C;&#x641C;&#x7D22;&#x5DE6;&#x8FB9;&#xFF0C;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;p.val&amp;&amp;root.val&gt;q.val){<br>            TreeNode left=lowestCommonAncestor(root.left,p,q);<br>            <span class="hljs-keyword">if</span>(left!=<span class="hljs-literal">null</span>){<br>                <span class="hljs-keyword">return</span> left;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x503C;&#x5C0F;&#x4E8E;pq&#xFF0C;&#x5219;&#x641C;&#x7D22;&#x53F3;&#x8FB9;</span><br>        <span class="hljs-keyword">if</span>(root.val&lt;p.val&amp;&amp;root.val&lt;q.val){<br>            TreeNode right=lowestCommonAncestor(root.right,p,q);<br>            <span class="hljs-keyword">if</span>(right!=<span class="hljs-literal">null</span>){<br>                <span class="hljs-keyword">return</span> right;<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>    <br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -249,9 +209,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -260,14 +219,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -354,6 +324,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

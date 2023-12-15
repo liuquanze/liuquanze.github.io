@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="406.根据身高重建队列题目描述：假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] &#x3D; [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。 请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，其中 queue[j] &amp;">
+    <meta name="description" content="406.&amp;#x6839;&amp;#x636E;&amp;#x8EAB;&amp;#x9AD8;&amp;#x91CD;&amp;#x5EFA;&amp;#x961F;&amp;#x5217;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5047;&amp;#x8BBE;&amp;#x6709;&amp;#x6253;&amp;#x4E71;&amp;#x987A;&amp;#x5E8F;&amp;#x7684;&amp;#x4E00;&amp;#x7FA4;&amp;#x4EBA;&amp;#x7">
 <meta property="og:type" content="article">
 <meta property="og:title" content="根据身高重建队列">
 <meta property="og:url" content="http://example.com/post/%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="406.根据身高重建队列题目描述：假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] &#x3D; [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。 请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，其中 queue[j] &amp;">
+<meta property="og:description" content="406.&amp;#x6839;&amp;#x636E;&amp;#x8EAB;&amp;#x9AD8;&amp;#x91CD;&amp;#x5EFA;&amp;#x961F;&amp;#x5217;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A;&amp;#x5047;&amp;#x8BBE;&amp;#x6709;&amp;#x6253;&amp;#x4E71;&amp;#x987A;&amp;#x5E8F;&amp;#x7684;&amp;#x4E00;&amp;#x7FA4;&amp;#x4EBA;&amp;#x7">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-28T03:13:52.000Z">
 <meta property="article:modified_time" content="2022-07-28T03:16:54.318Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,64 +151,20 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="406-根据身高重建队列"><a href="#406-根据身高重建队列" class="headerlink" title="406.根据身高重建队列"></a>406.根据身高重建队列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] &#x3D; [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。</p>
-<p>请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，其中 queue[j] &#x3D; [hj, kj] 是队列中第 j 个人的属性（queue[0] 是排在队列前面的人）。</p>
+        <h1 id="406-&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;"><a href="#406-&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;" class="headerlink" title="406.&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;"></a>406.&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5047;&#x8BBE;&#x6709;&#x6253;&#x4E71;&#x987A;&#x5E8F;&#x7684;&#x4E00;&#x7FA4;&#x4EBA;&#x7AD9;&#x6210;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x6570;&#x7EC4; people &#x8868;&#x793A;&#x961F;&#x5217;&#x4E2D;&#x4E00;&#x4E9B;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x4E00;&#x5B9A;&#x6309;&#x987A;&#x5E8F;&#xFF09;&#x3002;&#x6BCF;&#x4E2A; people[i] = [hi, ki] &#x8868;&#x793A;&#x7B2C; i &#x4E2A;&#x4EBA;&#x7684;&#x8EAB;&#x9AD8;&#x4E3A; hi &#xFF0C;&#x524D;&#x9762; &#x6B63;&#x597D; &#x6709; ki &#x4E2A;&#x8EAB;&#x9AD8;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; hi &#x7684;&#x4EBA;&#x3002;</p>
+<p>&#x8BF7;&#x4F60;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x5E76;&#x8FD4;&#x56DE;&#x8F93;&#x5165;&#x6570;&#x7EC4; people &#x6240;&#x8868;&#x793A;&#x7684;&#x961F;&#x5217;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x961F;&#x5217;&#x5E94;&#x8BE5;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x6570;&#x7EC4; queue &#xFF0C;&#x5176;&#x4E2D; queue[j] = [hj, kj] &#x662F;&#x961F;&#x5217;&#x4E2D;&#x7B2C; j &#x4E2A;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;queue[0] &#x662F;&#x6392;&#x5728;&#x961F;&#x5217;&#x524D;&#x9762;&#x7684;&#x4EBA;&#xFF09;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：people &#x3D; [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
-输出：[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
-解释：
-编号为 0 的人身高为 5 ，没有身高更高或者相同的人排在他前面。
-编号为 1 的人身高为 7 ，没有身高更高或者相同的人排在他前面。
-编号为 2 的人身高为 5 ，有 2 个身高更高或者相同的人排在他前面，即编号为 0 和 1 的人。
-编号为 3 的人身高为 6 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。
-编号为 4 的人身高为 4 ，有 4 个身高更高或者相同的人排在他前面，即编号为 0、1、2、3 的人。
-编号为 5 的人身高为 7 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。
-因此 [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] 是重新构造后的队列。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;people = [[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>]]<br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">5</span> &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">7</span> &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">2</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">5</span> &#xFF0C;&#x6709; <span class="hljs-number">2</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span> &#x548C; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">3</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">6</span> &#xFF0C;&#x6709; <span class="hljs-number">1</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">4</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">4</span> &#xFF0C;&#x6709; <span class="hljs-number">4</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span>&#x3001;<span class="hljs-number">1</span>&#x3001;<span class="hljs-number">2</span>&#x3001;<span class="hljs-number">3</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">5</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">7</span> &#xFF0C;&#x6709; <span class="hljs-number">1</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x56E0;&#x6B64; [[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>]] &#x662F;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x540E;&#x7684;&#x961F;&#x5217;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：people &#x3D; [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]
-输出：[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;people = [[<span class="hljs-number">6</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">4</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">4</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">0</span>]]<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/queue-reconstruction-by-height/">https://leetcode.cn/problems/queue-reconstruction-by-height/</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int[][] reconstructQueue(int[][] people) &#123;
-        &#x2F;*
-        第一个元素进行降序排序，即元素越小，排的越靠后，
-        对于第一个元素相同的数组，针对第二个元素进行升序排序，即越小越靠前，之所以这样排序，是因为，最后是按照第二个元素
-        进行插入的，也就是说，被插入的时间比较早的元素比较容易被挤到后面，也是因为这个原因，第一个元素是降序，越小的插入的时间越迟，越大的越有可能后移，这样是不会出错的。
-        同理第二个元素，越大的越靠后，因为后面元素的插入不会影响前面的元素，而前面元素的插入是会影响后面的，所以先插小，后插大
-
-         *&#x2F;
-         &#x2F;&#x2F;对第一个元素进行降序排序，在第一个元素相同时对第二个元素进行降序
-        Arrays.sort(people,(m,n)-&gt;&#123;
-            &#x2F;&#x2F;第一个元素不相等时，使用降序
-            if(m[0]!&#x3D;n[0])&#123;
-                return n[0]-m[0];
-                &#x2F;&#x2F;第一个元素相等时，使用升序
-            &#125;else&#123;
-                return m[1]-n[1];
-            &#125;
-        &#125;);
-        &#x2F;&#x2F;创建返回值
-        List&lt;int[]&gt; list&#x3D;new ArrayList&lt;&gt;();
-        &#x2F;&#x2F;将排序后的数组插入到返回值中
-        for(int[] person:people)&#123;
-            &#x2F;&#x2F;若返回值列表大小大于要插入位置，则直接插入
-            if(list.size()&gt; person[1])&#123;
-                list.add(person[1],person);
-            &#125;else&#123;      &#x2F;&#x2F;若返回值列表大小小于要插入位置，则将person插入列表末尾位置
-                list.add(list.size(),person);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;将列表转化为二维数组进行返回
-        return list.toArray(new int[list.size()][]);
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/queue-reconstruction-by-height/">https://leetcode.cn/problems/queue-reconstruction-by-height/</a></p>
+<h2 id="&#x9898;&#x89E3;"><a href="#&#x9898;&#x89E3;" class="headerlink" title="&#x9898;&#x89E3;"></a>&#x9898;&#x89E3;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[][] reconstructQueue(<span class="hljs-type">int</span>[][] people) {<br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x5143;&#x7D20;&#x8D8A;&#x5C0F;&#xFF0C;&#x6392;&#x7684;&#x8D8A;&#x9760;&#x540E;&#xFF0C;</span><br><span class="hljs-comment">        &#x5BF9;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x9488;&#x5BF9;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x8D8A;&#x5C0F;&#x8D8A;&#x9760;&#x524D;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#x6392;&#x5E8F;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x6309;&#x7167;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;</span><br><span class="hljs-comment">        &#x8FDB;&#x884C;&#x63D2;&#x5165;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x88AB;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x65E9;&#x7684;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x88AB;&#x6324;&#x5230;&#x540E;&#x9762;&#xFF0C;&#x4E5F;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x964D;&#x5E8F;&#xFF0C;&#x8D8A;&#x5C0F;&#x7684;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x8D8A;&#x8FDF;&#xFF0C;&#x8D8A;&#x5927;&#x7684;&#x8D8A;&#x6709;&#x53EF;&#x80FD;&#x540E;&#x79FB;&#xFF0C;&#x8FD9;&#x6837;&#x662F;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x7684;&#x3002;</span><br><span class="hljs-comment">        &#x540C;&#x7406;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8D8A;&#x5927;&#x7684;&#x8D8A;&#x9760;&#x540E;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x9762;&#x5143;&#x7D20;&#x7684;&#x63D2;&#x5165;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x524D;&#x9762;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x524D;&#x9762;&#x5143;&#x7D20;&#x7684;&#x63D2;&#x5165;&#x662F;&#x4F1A;&#x5F71;&#x54CD;&#x540E;&#x9762;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x63D2;&#x5C0F;&#xFF0C;&#x540E;&#x63D2;&#x5927;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">         */</span><br>         <span class="hljs-comment">//&#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x65F6;&#x5BF9;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;</span><br>        Arrays.sort(people,(m,n)-&gt;{<br>            <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x964D;&#x5E8F;</span><br>            <span class="hljs-keyword">if</span>(m[<span class="hljs-number">0</span>]!=n[<span class="hljs-number">0</span>]){<br>                <span class="hljs-keyword">return</span> n[<span class="hljs-number">0</span>]-m[<span class="hljs-number">0</span>];<br>                <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x5347;&#x5E8F;</span><br>            }<span class="hljs-keyword">else</span>{<br>                <span class="hljs-keyword">return</span> m[<span class="hljs-number">1</span>]-n[<span class="hljs-number">1</span>];<br>            }<br>        });<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FD4;&#x56DE;&#x503C;</span><br>        List&lt;<span class="hljs-type">int</span>[]&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x5C06;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x63D2;&#x5165;&#x5230;&#x8FD4;&#x56DE;&#x503C;&#x4E2D;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span>[] person:people){<br>            <span class="hljs-comment">//&#x82E5;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x5927;&#x5C0F;&#x5927;&#x4E8E;&#x8981;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x63D2;&#x5165;</span><br>            <span class="hljs-keyword">if</span>(list.size()&gt; person[<span class="hljs-number">1</span>]){<br>                list.add(person[<span class="hljs-number">1</span>],person);<br>            }<span class="hljs-keyword">else</span>{      <span class="hljs-comment">//&#x82E5;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x5927;&#x5C0F;&#x5C0F;&#x4E8E;&#x8981;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x5C06;person&#x63D2;&#x5165;&#x5217;&#x8868;&#x672B;&#x5C3E;&#x4F4D;&#x7F6E;</span><br>                list.add(list.size(),person);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5C06;&#x5217;&#x8868;&#x8F6C;&#x5316;&#x4E3A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">return</span> list.toArray(<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[list.size()][]);<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -241,9 +197,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -252,14 +207,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -346,6 +312,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

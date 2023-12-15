@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,63 +153,22 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="非递减数列"><a href="#非递减数列" class="headerlink" title="非递减数列"></a>非递减数列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><h4 id="665-非递减数列"><a href="#665-非递减数列" class="headerlink" title="665. 非递减数列"></a>665. 非递减数列</h4><p>难度中等681收藏分享切换为英文接收动态反馈</p>
-<p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，请你判断在 <strong>最多</strong> 改变 <code>1</code> 个元素的情况下，该数组能否变成一个非递减数列。</p>
-<p>我们是这样定义一个非递减数列的： 对于数组中任意的 <code>i</code> <code>(0 &lt;= i &lt;= n-2)</code>，总满足 <code>nums[i] &lt;= nums[i + 1]</code></p>
+        <h1 id="&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;"><a href="#&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;" class="headerlink" title="&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;"></a>&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><h4 id="665-&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;"><a href="#665-&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;" class="headerlink" title="665. &#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;"></a>665. &#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;</h4><p>&#x96BE;&#x5EA6;&#x4E2D;&#x7B49;681&#x6536;&#x85CF;&#x5206;&#x4EAB;&#x5207;&#x6362;&#x4E3A;&#x82F1;&#x6587;&#x63A5;&#x6536;&#x52A8;&#x6001;&#x53CD;&#x9988;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; <code>n</code> &#x7684;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x8BF7;&#x4F60;&#x5224;&#x65AD;&#x5728; <strong>&#x6700;&#x591A;</strong> &#x6539;&#x53D8; <code>1</code> &#x4E2A;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BE5;&#x6570;&#x7EC4;&#x80FD;&#x5426;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x662F;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x7684;&#xFF1A; &#x5BF9;&#x4E8E;&#x6570;&#x7EC4;&#x4E2D;&#x4EFB;&#x610F;&#x7684; <code>i</code> <code>(0 &lt;= i &lt;= n-2)</code>&#xFF0C;&#x603B;&#x6EE1;&#x8DB3; <code>nums[i] &lt;= nums[i + 1]</code></p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: nums &#x3D; [4,2,3]
-输出: true
-解释: 你可以通过把第一个 4 变成 1 来使得它成为一个非递减数列。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: nums = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;: &#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x628A;&#x7B2C;&#x4E00;&#x4E2A; <span class="hljs-number">4</span> &#x53D8;&#x6210; <span class="hljs-number">1</span> &#x6765;&#x4F7F;&#x5F97;&#x5B83;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: nums &#x3D; [4,2,1]
-输出: false
-解释: 你不能在只改变一个元素的情况下将其变为非递减数列。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: nums = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;: &#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x53EA;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x5176;&#x53D8;&#x4E3A;&#x975E;&#x9012;&#x51CF;&#x6570;&#x5217;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">https://leetcode.cn/problems/non-decreasing-array/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean checkPossibility(int[] nums) &#123;
-        &#x2F;**
-        贪心算法：三种逆序情况
-        1.当i&#x3D;1时，与前一个元素发生逆序，则改变前一个元素的值，【4，2，5】，当遍历至2时发生逆序，将4改为2；
-        2.当i&gt;1,并且与i-1元素发生逆序时，需要查看i-2位置的元素，若i-2位置小于或者等于i位置元素，则依旧改变i-2位置元素，eg【1, 4, 2, 5】遍历至2时发生逆序，由于1&lt;2依旧是有序的，只需要改变4即可，将4改为2；
-        3.当i&gt;1,并且与i-1元素发生逆序时，需要查看i-2位置的元素，若i-2位置大于i位置元素，则此时仅改变i-1位置的元素依旧是无法实现递增的，此时只能将i位置的元素修改为i-1位置的元素。eg【3, 4, 2, 5】，此时2与4发生逆序，若仅仅修改4的值是无法实现递增的，因为3依旧是大于2的，所以只能将2修改为4实现递增。
-        总结：
-        当 nums[i] 破坏了数组的单调递增时，即 nums[i] &lt; nums[i - 1]  时，为了让数组有序，我们发现一个规律（在上面三个例子中， nums[i] 都为 2， nums[i -1] 都为 4）：
-
-如例①的情况，当 i &#x3D; 1 ，那么修改 num[i- 1] ，不要动 nums[i] ，因为nums[i]后面的元素是啥我们还不知道呢，少动它为妙。
-如例②的情况，当 i &gt; 1 时，我们应该优先考虑把 nums[i - 1] 调小到 &gt;&#x3D; nums[i - 2] 并且 &lt;&#x3D; nums[i]。同样尽量不去修改 nums[i] ，理由同上。
-如例③的情况，当 i &gt; 1 且 nums[i] &lt; nums[i - 2] 时，我们无法调整 nums[i - 1] ，我们只能调整 nums[i] 到 nums[i - 1] 。
-         *&#x2F;
-
-
-
-        &#x2F;&#x2F;用于记录改变元素的数量
-        int count&#x3D;0;
-        for(int i&#x3D;1;i&lt;nums.length;i++)&#123;
-            &#x2F;&#x2F;发生逆序，即不是递增
-            if(nums[i]&lt;nums[i-1])&#123;
-                &#x2F;&#x2F;当逆序发生在1位置,改变前一个元素的位置
-                if(i&#x3D;&#x3D;1)&#123;
-                    nums[i-1]&#x3D;nums[i];
-                &#125;else if(nums[i]&lt;nums[i-2])&#123;    &#x2F;&#x2F;i位置元素小于i-2位置，则改变i的值
-                    nums[i]&#x3D;nums[i-1];
-                &#125;else if(nums[i]&gt;&#x3D;nums[i-2])&#123;   &#x2F;&#x2F;i位置元素大于等于i-2位置，改变i-1位置
-                    nums[i-1]&#x3D;nums[i];
-                &#125;
-                if(++count&gt;1)&#123;
-                    return false;
-                &#125;
-            &#125;
-        &#125;
-        return true;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">https://leetcode.cn/problems/non-decreasing-array/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">checkPossibility</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-comment">/**</span><br><span class="hljs-comment">        &#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;&#xFF1A;&#x4E09;&#x79CD;&#x9006;&#x5E8F;&#x60C5;&#x51B5;</span><br><span class="hljs-comment">        1.&#x5F53;i=1&#x65F6;&#xFF0C;&#x4E0E;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53D1;&#x751F;&#x9006;&#x5E8F;&#xFF0C;&#x5219;&#x6539;&#x53D8;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#xFF0C;&#x3010;4&#xFF0C;2&#xFF0C;5&#x3011;&#xFF0C;&#x5F53;&#x904D;&#x5386;&#x81F3;2&#x65F6;&#x53D1;&#x751F;&#x9006;&#x5E8F;&#xFF0C;&#x5C06;4&#x6539;&#x4E3A;2&#xFF1B;</span><br><span class="hljs-comment">        2.&#x5F53;i&gt;1,&#x5E76;&#x4E14;&#x4E0E;i-1&#x5143;&#x7D20;&#x53D1;&#x751F;&#x9006;&#x5E8F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x770B;i-2&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x82E5;i-2&#x4F4D;&#x7F6E;&#x5C0F;&#x4E8E;&#x6216;&#x8005;&#x7B49;&#x4E8E;i&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x4F9D;&#x65E7;&#x6539;&#x53D8;i-2&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#xFF0C;eg&#x3010;1, 4, 2, 5&#x3011;&#x904D;&#x5386;&#x81F3;2&#x65F6;&#x53D1;&#x751F;&#x9006;&#x5E8F;&#xFF0C;&#x7531;&#x4E8E;1&lt;2&#x4F9D;&#x65E7;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6539;&#x53D8;4&#x5373;&#x53EF;&#xFF0C;&#x5C06;4&#x6539;&#x4E3A;2&#xFF1B;</span><br><span class="hljs-comment">        3.&#x5F53;i&gt;1,&#x5E76;&#x4E14;&#x4E0E;i-1&#x5143;&#x7D20;&#x53D1;&#x751F;&#x9006;&#x5E8F;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x67E5;&#x770B;i-2&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x82E5;i-2&#x4F4D;&#x7F6E;&#x5927;&#x4E8E;i&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x6B64;&#x65F6;&#x4EC5;&#x6539;&#x53D8;i-1&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#x4F9D;&#x65E7;&#x662F;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x9012;&#x589E;&#x7684;&#xFF0C;&#x6B64;&#x65F6;&#x53EA;&#x80FD;&#x5C06;i&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#x4FEE;&#x6539;&#x4E3A;i-1&#x4F4D;&#x7F6E;&#x7684;&#x5143;&#x7D20;&#x3002;eg&#x3010;3, 4, 2, 5&#x3011;&#xFF0C;&#x6B64;&#x65F6;2&#x4E0E;4&#x53D1;&#x751F;&#x9006;&#x5E8F;&#xFF0C;&#x82E5;&#x4EC5;&#x4EC5;&#x4FEE;&#x6539;4&#x7684;&#x503C;&#x662F;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x9012;&#x589E;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;3&#x4F9D;&#x65E7;&#x662F;&#x5927;&#x4E8E;2&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x5C06;2&#x4FEE;&#x6539;&#x4E3A;4&#x5B9E;&#x73B0;&#x9012;&#x589E;&#x3002;</span><br><span class="hljs-comment">        &#x603B;&#x7ED3;&#xFF1A;</span><br><span class="hljs-comment">        &#x5F53; nums[i] &#x7834;&#x574F;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5355;&#x8C03;&#x9012;&#x589E;&#x65F6;&#xFF0C;&#x5373; nums[i] &lt; nums[i - 1]&#xA0; &#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x8BA9;&#x6570;&#x7EC4;&#x6709;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x89C4;&#x5F8B;&#xFF08;&#x5728;&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; nums[i]&#xA0;&#x90FD;&#x4E3A; 2&#xFF0C; nums[i -1]&#xA0;&#x90FD;&#x4E3A; 4&#xFF09;&#xFF1A;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&#x5982;&#x4F8B;&#x2460;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5F53; i = 1&#xA0;&#xFF0C;&#x90A3;&#x4E48;&#x4FEE;&#x6539; num[i- 1]&#xA0;&#xFF0C;&#x4E0D;&#x8981;&#x52A8; nums[i]&#xA0;&#xFF0C;&#x56E0;&#x4E3A;nums[i]&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x662F;&#x5565;&#x6211;&#x4EEC;&#x8FD8;&#x4E0D;&#x77E5;&#x9053;&#x5462;&#xFF0C;&#x5C11;&#x52A8;&#x5B83;&#x4E3A;&#x5999;&#x3002;</span><br><span class="hljs-comment">&#x5982;&#x4F8B;&#x2461;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5F53; i &gt; 1&#xA0;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x4F18;&#x5148;&#x8003;&#x8651;&#x628A; nums[i - 1]&#xA0;&#x8C03;&#x5C0F;&#x5230; &gt;= nums[i - 2] &#x5E76;&#x4E14; &lt;= nums[i]&#x3002;&#x540C;&#x6837;&#x5C3D;&#x91CF;&#x4E0D;&#x53BB;&#x4FEE;&#x6539; nums[i]&#xA0;&#xFF0C;&#x7406;&#x7531;&#x540C;&#x4E0A;&#x3002;</span><br><span class="hljs-comment">&#x5982;&#x4F8B;&#x2462;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5F53; i &gt; 1 &#x4E14; nums[i] &lt; nums[i - 2]&#xA0;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x8C03;&#x6574; nums[i - 1]&#xA0;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x8C03;&#x6574; nums[i] &#x5230; nums[i - 1]&#xA0;&#x3002;</span><br><span class="hljs-comment">         */</span><br><br><br><br>        <span class="hljs-comment">//&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x6539;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;</span><br>        <span class="hljs-type">int</span> count=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.length;i++){<br>            <span class="hljs-comment">//&#x53D1;&#x751F;&#x9006;&#x5E8F;&#xFF0C;&#x5373;&#x4E0D;&#x662F;&#x9012;&#x589E;</span><br>            <span class="hljs-keyword">if</span>(nums[i]&lt;nums[i-<span class="hljs-number">1</span>]){<br>                <span class="hljs-comment">//&#x5F53;&#x9006;&#x5E8F;&#x53D1;&#x751F;&#x5728;1&#x4F4D;&#x7F6E;,&#x6539;&#x53D8;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;</span><br>                <span class="hljs-keyword">if</span>(i==<span class="hljs-number">1</span>){<br>                    nums[i-<span class="hljs-number">1</span>]=nums[i];<br>                }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[i]&lt;nums[i-<span class="hljs-number">2</span>]){    <span class="hljs-comment">//i&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x5C0F;&#x4E8E;i-2&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x6539;&#x53D8;i&#x7684;&#x503C;</span><br>                    nums[i]=nums[i-<span class="hljs-number">1</span>];<br>                }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[i]&gt;=nums[i-<span class="hljs-number">2</span>]){   <span class="hljs-comment">//i&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;i-2&#x4F4D;&#x7F6E;&#xFF0C;&#x6539;&#x53D8;i-1&#x4F4D;&#x7F6E;</span><br>                    nums[i-<span class="hljs-number">1</span>]=nums[i];<br>                }<br>                <span class="hljs-keyword">if</span>(++count&gt;<span class="hljs-number">1</span>){<br>                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>参考资料：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/solution/3-zhang-dong-tu-bang-zhu-ni-li-jie-zhe-d-06gi/">https://leetcode.cn/problems/non-decreasing-array/solution/3-zhang-dong-tu-bang-zhu-ni-li-jie-zhe-d-06gi/</a></li>
+<li>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/solution/3-zhang-dong-tu-bang-zhu-ni-li-jie-zhe-d-06gi/">https://leetcode.cn/problems/non-decreasing-array/solution/3-zhang-dong-tu-bang-zhu-ni-li-jie-zhe-d-06gi/</a></li>
 </ul>
 
     
@@ -250,37 +209,16 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="392-判断子序列"><a href="#392-判断子序列" class="headerlink" title="392.判断子序列"></a>392.判断子序列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给定字符串 s 和 t ，判断 s 是否为 t 的子序列。</p>
-<p>字符串的一个子序列是原始字符串删除一些（也可以不删除）字符而不改变剩余字符相对位置形成的新字符串。（例如，”ace”是”abcde”的一个子序列，而”aec”不是）。</p>
+        <h1 id="392-&#x5224;&#x65AD;&#x5B50;&#x5E8F;&#x5217;"><a href="#392-&#x5224;&#x65AD;&#x5B50;&#x5E8F;&#x5217;" class="headerlink" title="392.&#x5224;&#x65AD;&#x5B50;&#x5E8F;&#x5217;"></a>392.&#x5224;&#x65AD;&#x5B50;&#x5E8F;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32; s &#x548C; t &#xFF0C;&#x5224;&#x65AD; s &#x662F;&#x5426;&#x4E3A; t &#x7684;&#x5B50;&#x5E8F;&#x5217;&#x3002;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x662F;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5220;&#x9664;&#xFF09;&#x5B57;&#x7B26;&#x800C;&#x4E0D;&#x6539;&#x53D8;&#x5269;&#x4F59;&#x5B57;&#x7B26;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x5F62;&#x6210;&#x7684;&#x65B0;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x201D;ace&#x201D;&#x662F;&#x201D;abcde&#x201D;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#xFF0C;&#x800C;&#x201D;aec&#x201D;&#x4E0D;&#x662F;&#xFF09;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;abc&quot;, t &#x3D; &quot;ahbgdc&quot;
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;abc&quot;</span>, t = <span class="hljs-string">&quot;ahbgdc&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：s &#x3D; &quot;axc&quot;, t &#x3D; &quot;ahbgdc&quot;
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;s = <span class="hljs-string">&quot;axc&quot;</span>, t = <span class="hljs-string">&quot;ahbgdc&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/is-subsequence/">https://leetcode.cn/problems/is-subsequence/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean isSubsequence(String s, String t) &#123;
-        &#x2F;&#x2F;定义分别指向两个字符串序列的指针
-        int index_s&#x3D;0;
-        int index_t&#x3D;0;
-        &#x2F;&#x2F;当匹配成功，子序列后移，匹配失败，主序列后移&#x3D;&#x3D;贪心算法
-        while(index_s&lt;s.length()&amp;&amp;index_t&lt;t.length())&#123;
-            if(s.charAt(index_s)&#x3D;&#x3D;t.charAt(index_t))&#123;
-                index_s++;
-            &#125;
-            index_t++;
-        &#125;
-        &#x2F;&#x2F;当子序列达到末尾，表示子序列匹配成功，返回true
-        if(index_s&#x3D;&#x3D;s.length())&#123;
-            return true;
-        &#125;
-        &#x2F;&#x2F;否则表示匹配失败，返回false
-        return false;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/is-subsequence/">https://leetcode.cn/problems/is-subsequence/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isSubsequence</span><span class="hljs-params">(String s, String t)</span> {<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x5206;&#x522B;&#x6307;&#x5411;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#x7684;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> index_s=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> index_t=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x5B50;&#x5E8F;&#x5217;&#x540E;&#x79FB;&#xFF0C;&#x5339;&#x914D;&#x5931;&#x8D25;&#xFF0C;&#x4E3B;&#x5E8F;&#x5217;&#x540E;&#x79FB;==&#x8D2A;&#x5FC3;&#x7B97;&#x6CD5;</span><br>        <span class="hljs-keyword">while</span>(index_s&lt;s.length()&amp;&amp;index_t&lt;t.length()){<br>            <span class="hljs-keyword">if</span>(s.charAt(index_s)==t.charAt(index_t)){<br>                index_s++;<br>            }<br>            index_t++;<br>        }<br>        <span class="hljs-comment">//&#x5F53;&#x5B50;&#x5E8F;&#x5217;&#x8FBE;&#x5230;&#x672B;&#x5C3E;&#xFF0C;&#x8868;&#x793A;&#x5B50;&#x5E8F;&#x5217;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;true</span><br>        <span class="hljs-keyword">if</span>(index_s==s.length()){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        }<br>        <span class="hljs-comment">//&#x5426;&#x5219;&#x8868;&#x793A;&#x5339;&#x914D;&#x5931;&#x8D25;&#xFF0C;&#x8FD4;&#x56DE;false</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -321,42 +259,18 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="605-种花问题"><a href="#605-种花问题" class="headerlink" title="605.种花问题"></a>605.种花问题</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。</p>
-<p>给你一个整数数组  flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false。</p>
+        <h1 id="605-&#x79CD;&#x82B1;&#x95EE;&#x9898;"><a href="#605-&#x79CD;&#x82B1;&#x95EE;&#x9898;" class="headerlink" title="605.&#x79CD;&#x82B1;&#x95EE;&#x9898;"></a>605.&#x79CD;&#x82B1;&#x95EE;&#x9898;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x957F;&#x7684;&#x82B1;&#x575B;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x5730;&#x5757;&#x79CD;&#x690D;&#x4E86;&#x82B1;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x5374;&#x6CA1;&#x6709;&#x3002;&#x53EF;&#x662F;&#xFF0C;&#x82B1;&#x4E0D;&#x80FD;&#x79CD;&#x690D;&#x5728;&#x76F8;&#x90BB;&#x7684;&#x5730;&#x5757;&#x4E0A;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x4E89;&#x593A;&#x6C34;&#x6E90;&#xFF0C;&#x4E24;&#x8005;&#x90FD;&#x4F1A;&#x6B7B;&#x53BB;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;  flowerbed &#x8868;&#x793A;&#x82B1;&#x575B;&#xFF0C;&#x7531;&#x82E5;&#x5E72; 0 &#x548C; 1 &#x7EC4;&#x6210;&#xFF0C;&#x5176;&#x4E2D; 0 &#x8868;&#x793A;&#x6CA1;&#x79CD;&#x690D;&#x82B1;&#xFF0C;1 &#x8868;&#x793A;&#x79CD;&#x690D;&#x4E86;&#x82B1;&#x3002;&#x53E6;&#x6709;&#x4E00;&#x4E2A;&#x6570; n &#xFF0C;&#x80FD;&#x5426;&#x5728;&#x4E0D;&#x6253;&#x7834;&#x79CD;&#x690D;&#x89C4;&#x5219;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x79CD;&#x5165; n &#x6735;&#x82B1;&#xFF1F;&#x80FD;&#x5219;&#x8FD4;&#x56DE; true &#xFF0C;&#x4E0D;&#x80FD;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 1
-输出：true</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;flowerbed = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 2
-输出：false</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;flowerbed = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/can-place-flowers/">https://leetcode.cn/problems/can-place-flowers/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public boolean canPlaceFlowers(int[] flowerbed, int n) &#123;
-        if(flowerbed.length&#x3D;&#x3D;0)&#123;
-            return false;
-        &#125;
-        for(int i&#x3D;0;i&lt;flowerbed.length;i++)&#123;
-            &#x2F;&#x2F;遇到的情况
-            &#x2F;&#x2F;1.当前元素为0，并且后续也为0，则插入花，并减少剩余数量，i++，向后跳两格
-            &#x2F;&#x2F;2.当前元素为0，且为最后一个元素，则插入花，向后跳两格子
-            &#x2F;&#x2F;3.当前元素为1，则继续向后跳两格，因为后一个位子必定没法插入
-            &#x2F;&#x2F;4.若当前元素为0，后续为1，则跳一格，进入第三种情况
-            &#x2F;&#x2F;每次只需要判断当前元素和后一个元素，无需考虑前一个元素，并且从第一个元素开始判断
-            if(flowerbed[i]&#x3D;&#x3D;0&amp;&amp;(i+1&#x3D;&#x3D;flowerbed.length||flowerbed[i+1]&#x3D;&#x3D;0))&#123;
-                i++;
-                n--;
-            &#125;else if(flowerbed[i]&#x3D;&#x3D;1)&#123;
-                i++;
-            &#125;
-
-        &#125;
-        return n&lt;&#x3D;0? true:false;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/can-place-flowers/">https://leetcode.cn/problems/can-place-flowers/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPlaceFlowers</span><span class="hljs-params">(<span class="hljs-type">int</span>[] flowerbed, <span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(flowerbed.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;flowerbed.length;i++){<br>            <span class="hljs-comment">//&#x9047;&#x5230;&#x7684;&#x60C5;&#x51B5;</span><br>            <span class="hljs-comment">//1.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x5E76;&#x4E14;&#x540E;&#x7EED;&#x4E5F;&#x4E3A;0&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x82B1;&#xFF0C;&#x5E76;&#x51CF;&#x5C11;&#x5269;&#x4F59;&#x6570;&#x91CF;&#xFF0C;i++&#xFF0C;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;</span><br>            <span class="hljs-comment">//2.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x4E14;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x82B1;&#xFF0C;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;&#x5B50;</span><br>            <span class="hljs-comment">//3.&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;1&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x5411;&#x540E;&#x8DF3;&#x4E24;&#x683C;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x5B50;&#x5FC5;&#x5B9A;&#x6CA1;&#x6CD5;&#x63D2;&#x5165;</span><br>            <span class="hljs-comment">//4.&#x82E5;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E3A;0&#xFF0C;&#x540E;&#x7EED;&#x4E3A;1&#xFF0C;&#x5219;&#x8DF3;&#x4E00;&#x683C;&#xFF0C;&#x8FDB;&#x5165;&#x7B2C;&#x4E09;&#x79CD;&#x60C5;&#x51B5;</span><br>            <span class="hljs-comment">//&#x6BCF;&#x6B21;&#x53EA;&#x9700;&#x8981;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x548C;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x65E0;&#x9700;&#x8003;&#x8651;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#x5224;&#x65AD;</span><br>            <span class="hljs-keyword">if</span>(flowerbed[i]==<span class="hljs-number">0</span>&amp;&amp;(i+<span class="hljs-number">1</span>==flowerbed.length||flowerbed[i+<span class="hljs-number">1</span>]==<span class="hljs-number">0</span>)){<br>                i++;<br>                n--;<br>            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(flowerbed[i]==<span class="hljs-number">1</span>){<br>                i++;<br>            }<br><br>        }<br>        <span class="hljs-keyword">return</span> n&lt;=<span class="hljs-number">0</span>? <span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -397,38 +311,19 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="122-买卖股票的最佳时机2"><a href="#122-买卖股票的最佳时机2" class="headerlink" title="122. 买卖股票的最佳时机2"></a>122. 买卖股票的最佳时机2</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。</p>
-<p>在每一天，你可以决定是否购买和&#x2F;或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。</p>
-<p>返回 你能获得的 最大 利润 。</p>
+        <h1 id="122-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;2"><a href="#122-&#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;2" class="headerlink" title="122. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;2"></a>122. &#x4E70;&#x5356;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;2</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; prices &#xFF0C;&#x5176;&#x4E2D; prices[i] &#x8868;&#x793A;&#x67D0;&#x652F;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x5929;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8D2D;&#x4E70;&#x548C;/&#x6216;&#x51FA;&#x552E;&#x80A1;&#x7968;&#x3002;&#x4F60;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019; &#x6700;&#x591A; &#x53EA;&#x80FD;&#x6301;&#x6709; &#x4E00;&#x80A1; &#x80A1;&#x7968;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5148;&#x8D2D;&#x4E70;&#xFF0C;&#x7136;&#x540E;&#x5728; &#x540C;&#x4E00;&#x5929; &#x51FA;&#x552E;&#x3002;</p>
+<p>&#x8FD4;&#x56DE; &#x4F60;&#x80FD;&#x83B7;&#x5F97;&#x7684; &#x6700;&#x5927; &#x5229;&#x6DA6; &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [7,1,5,3,6,4]
-输出：7
-解释：在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 3 天（股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5 - 1 &#x3D; 4 。
-     随后，在第 4 天（股票价格 &#x3D; 3）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出, 这笔交易所能获得利润 &#x3D; 6 - 3 &#x3D; 3 。
-     总利润为 4 + 3 &#x3D; 7 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;prices = [<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">7</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; <span class="hljs-number">2</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">1</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">3</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">5</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = <span class="hljs-number">5</span> - <span class="hljs-number">1</span> = <span class="hljs-number">4</span> &#x3002;<br>&#xA0;    &#x968F;&#x540E;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">4</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">3</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">5</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">6</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = <span class="hljs-number">6</span> - <span class="hljs-number">3</span> = <span class="hljs-number">3</span> &#x3002;<br>     &#x603B;&#x5229;&#x6DA6;&#x4E3A; <span class="hljs-number">4</span> + <span class="hljs-number">3</span> = <span class="hljs-number">7</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [1,2,3,4,5]
-输出：4
-解释：在第 1 天（股票价格 &#x3D; 1）的时候买入，在第 5 天 （股票价格 &#x3D; 5）的时候卖出, 这笔交易所能获得利润 &#x3D; 5 - 1 &#x3D; 4 。
-     总利润为 4 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;prices = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">4</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; <span class="hljs-number">1</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">1</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">5</span> &#x5929; &#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">5</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;, &#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x5229;&#x6DA6; = <span class="hljs-number">5</span> - <span class="hljs-number">1</span> = <span class="hljs-number">4</span> &#x3002;<br>&#xA0;    &#x603B;&#x5229;&#x6DA6;&#x4E3A; <span class="hljs-number">4</span> &#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int maxProfit(int[] prices) &#123;
-        &#x2F;&#x2F;贪心，只要股票能涨，就卖，只要能赚到钱，就卖
-        int max_profit&#x3D;0;
-        &#x2F;&#x2F;从第二天开始遍历，只要比前一天价格高，就卖掉
-        for(int i&#x3D;1;i&lt;prices.length;i++)&#123;
-            if(prices[i]&gt;prices[i-1])&#123;
-                max_profit+&#x3D;prices[i]-prices[i-1];
-            &#125;
-        &#125;
-        return max_profit;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxProfit</span><span class="hljs-params">(<span class="hljs-type">int</span>[] prices)</span> {<br>        <span class="hljs-comment">//&#x8D2A;&#x5FC3;&#xFF0C;&#x53EA;&#x8981;&#x80A1;&#x7968;&#x80FD;&#x6DA8;&#xFF0C;&#x5C31;&#x5356;&#xFF0C;&#x53EA;&#x8981;&#x80FD;&#x8D5A;&#x5230;&#x94B1;&#xFF0C;&#x5C31;&#x5356;</span><br>        <span class="hljs-type">int</span> max_profit=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x4ECE;&#x7B2C;&#x4E8C;&#x5929;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x53EA;&#x8981;&#x6BD4;&#x524D;&#x4E00;&#x5929;&#x4EF7;&#x683C;&#x9AD8;&#xFF0C;&#x5C31;&#x5356;&#x6389;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;prices.length;i++){<br>            <span class="hljs-keyword">if</span>(prices[i]&gt;prices[i-<span class="hljs-number">1</span>]){<br>                max_profit+=prices[i]-prices[i-<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> max_profit;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -469,44 +364,19 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="121-买股票的最佳时机"><a href="#121-买股票的最佳时机" class="headerlink" title="121. 买股票的最佳时机"></a>121. 买股票的最佳时机</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。</p>
-<p>你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p>
-<p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。</p>
+        <h1 id="121-&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;"><a href="#121-&#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;" class="headerlink" title="121. &#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;"></a>121. &#x4E70;&#x80A1;&#x7968;&#x7684;&#x6700;&#x4F73;&#x65F6;&#x673A;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; prices &#xFF0C;&#x5B83;&#x7684;&#x7B2C; i &#x4E2A;&#x5143;&#x7D20; prices[i] &#x8868;&#x793A;&#x4E00;&#x652F;&#x7ED9;&#x5B9A;&#x80A1;&#x7968;&#x7B2C; i &#x5929;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x4F60;&#x53EA;&#x80FD;&#x9009;&#x62E9; &#x67D0;&#x4E00;&#x5929; &#x4E70;&#x5165;&#x8FD9;&#x53EA;&#x80A1;&#x7968;&#xFF0C;&#x5E76;&#x9009;&#x62E9;&#x5728; &#x672A;&#x6765;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x5B50; &#x5356;&#x51FA;&#x8BE5;&#x80A1;&#x7968;&#x3002;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x6765;&#x8BA1;&#x7B97;&#x4F60;&#x6240;&#x80FD;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x7B14;&#x4EA4;&#x6613;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x80FD;&#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x5229;&#x6DA6;&#xFF0C;&#x8FD4;&#x56DE; 0 &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：[7,1,5,3,6,4]
-输出：5
-解释：在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出，最大利润 &#x3D; 6-1 &#x3D; 5 。
-     注意利润不能是 7-1 &#x3D; 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">5</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x7B2C; <span class="hljs-number">2</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">1</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x4E70;&#x5165;&#xFF0C;&#x5728;&#x7B2C; <span class="hljs-number">5</span> &#x5929;&#xFF08;&#x80A1;&#x7968;&#x4EF7;&#x683C; = <span class="hljs-number">6</span>&#xFF09;&#x7684;&#x65F6;&#x5019;&#x5356;&#x51FA;&#xFF0C;&#x6700;&#x5927;&#x5229;&#x6DA6; = <span class="hljs-number">6</span>-<span class="hljs-number">1</span> = <span class="hljs-number">5</span> &#x3002;<br>     &#x6CE8;&#x610F;&#x5229;&#x6DA6;&#x4E0D;&#x80FD;&#x662F; <span class="hljs-number">7</span>-<span class="hljs-number">1</span> = <span class="hljs-number">6</span>, &#x56E0;&#x4E3A;&#x5356;&#x51FA;&#x4EF7;&#x683C;&#x9700;&#x8981;&#x5927;&#x4E8E;&#x4E70;&#x5165;&#x4EF7;&#x683C;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x5728;&#x4E70;&#x5165;&#x524D;&#x5356;&#x51FA;&#x80A1;&#x7968;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：prices &#x3D; [7,6,4,3,1]
-输出：0
-解释：在这种情况下, 没有交易完成, 所以最大利润为 0。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;prices = [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">0</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;, &#x6CA1;&#x6709;&#x4EA4;&#x6613;&#x5B8C;&#x6210;, &#x6240;&#x4EE5;&#x6700;&#x5927;&#x5229;&#x6DA6;&#x4E3A; <span class="hljs-number">0</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-贪心：最大收益一定是在历史最低点买入
-
-*&#x2F;
-public class Solution &#123;
-    public int maxProfit(int[] prices) &#123;
-        
-        &#x2F;&#x2F;最大收益，初始化为0
-        int maxprofit &#x3D; 0;
-        &#x2F;&#x2F;最低买入点，初始化为最大值
-        int min_time&#x3D;Integer.MAX_VALUE;
-        &#x2F;&#x2F;遍历每天价格
-        for(int price:prices)&#123;
-            &#x2F;&#x2F;若出现了更低的买入点，则更新买入点
-            min_time&#x3D;Math.min(min_time,price);
-            &#x2F;&#x2F;若当前价格高于最低买入点，则计算收益，并更新最大收集
-            maxprofit&#x3D;Math.max(maxprofit,price-min_time);
-        &#125;
-        return maxprofit;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">&#x8D2A;&#x5FC3;&#xFF1A;&#x6700;&#x5927;&#x6536;&#x76CA;&#x4E00;&#x5B9A;&#x662F;&#x5728;&#x5386;&#x53F2;&#x6700;&#x4F4E;&#x70B9;&#x4E70;&#x5165;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxProfit</span><span class="hljs-params">(<span class="hljs-type">int</span>[] prices)</span> {<br>        <br>        <span class="hljs-comment">//&#x6700;&#x5927;&#x6536;&#x76CA;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A;0</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">maxprofit</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x6700;&#x4F4E;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x6700;&#x5927;&#x503C;</span><br>        <span class="hljs-type">int</span> min_time=Integer.MAX_VALUE;<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6BCF;&#x5929;&#x4EF7;&#x683C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> price:prices){<br>            <span class="hljs-comment">//&#x82E5;&#x51FA;&#x73B0;&#x4E86;&#x66F4;&#x4F4E;&#x7684;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x4E70;&#x5165;&#x70B9;</span><br>            min_time=Math.min(min_time,price);<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x4EF7;&#x683C;&#x9AD8;&#x4E8E;&#x6700;&#x4F4E;&#x4E70;&#x5165;&#x70B9;&#xFF0C;&#x5219;&#x8BA1;&#x7B97;&#x6536;&#x76CA;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x6700;&#x5927;&#x6536;&#x96C6;</span><br>            maxprofit=Math.max(maxprofit,price-min_time);<br>        }<br>        <span class="hljs-keyword">return</span> maxprofit;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -547,64 +417,20 @@ public class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="406-根据身高重建队列"><a href="#406-根据身高重建队列" class="headerlink" title="406.根据身高重建队列"></a>406.根据身高重建队列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>假设有打乱顺序的一群人站成一个队列，数组 people 表示队列中一些人的属性（不一定按顺序）。每个 people[i] &#x3D; [hi, ki] 表示第 i 个人的身高为 hi ，前面 正好 有 ki 个身高大于或等于 hi 的人。</p>
-<p>请你重新构造并返回输入数组 people 所表示的队列。返回的队列应该格式化为数组 queue ，其中 queue[j] &#x3D; [hj, kj] 是队列中第 j 个人的属性（queue[0] 是排在队列前面的人）。</p>
+        <h1 id="406-&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;"><a href="#406-&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;" class="headerlink" title="406.&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;"></a>406.&#x6839;&#x636E;&#x8EAB;&#x9AD8;&#x91CD;&#x5EFA;&#x961F;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5047;&#x8BBE;&#x6709;&#x6253;&#x4E71;&#x987A;&#x5E8F;&#x7684;&#x4E00;&#x7FA4;&#x4EBA;&#x7AD9;&#x6210;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x6570;&#x7EC4; people &#x8868;&#x793A;&#x961F;&#x5217;&#x4E2D;&#x4E00;&#x4E9B;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x4E00;&#x5B9A;&#x6309;&#x987A;&#x5E8F;&#xFF09;&#x3002;&#x6BCF;&#x4E2A; people[i] = [hi, ki] &#x8868;&#x793A;&#x7B2C; i &#x4E2A;&#x4EBA;&#x7684;&#x8EAB;&#x9AD8;&#x4E3A; hi &#xFF0C;&#x524D;&#x9762; &#x6B63;&#x597D; &#x6709; ki &#x4E2A;&#x8EAB;&#x9AD8;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; hi &#x7684;&#x4EBA;&#x3002;</p>
+<p>&#x8BF7;&#x4F60;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x5E76;&#x8FD4;&#x56DE;&#x8F93;&#x5165;&#x6570;&#x7EC4; people &#x6240;&#x8868;&#x793A;&#x7684;&#x961F;&#x5217;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x961F;&#x5217;&#x5E94;&#x8BE5;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x6570;&#x7EC4; queue &#xFF0C;&#x5176;&#x4E2D; queue[j] = [hj, kj] &#x662F;&#x961F;&#x5217;&#x4E2D;&#x7B2C; j &#x4E2A;&#x4EBA;&#x7684;&#x5C5E;&#x6027;&#xFF08;queue[0] &#x662F;&#x6392;&#x5728;&#x961F;&#x5217;&#x524D;&#x9762;&#x7684;&#x4EBA;&#xFF09;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：people &#x3D; [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
-输出：[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
-解释：
-编号为 0 的人身高为 5 ，没有身高更高或者相同的人排在他前面。
-编号为 1 的人身高为 7 ，没有身高更高或者相同的人排在他前面。
-编号为 2 的人身高为 5 ，有 2 个身高更高或者相同的人排在他前面，即编号为 0 和 1 的人。
-编号为 3 的人身高为 6 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。
-编号为 4 的人身高为 4 ，有 4 个身高更高或者相同的人排在他前面，即编号为 0、1、2、3 的人。
-编号为 5 的人身高为 7 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。
-因此 [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] 是重新构造后的队列。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;people = [[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>]]<br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">5</span> &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">7</span> &#xFF0C;&#x6CA1;&#x6709;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">2</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">5</span> &#xFF0C;&#x6709; <span class="hljs-number">2</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span> &#x548C; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">3</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">6</span> &#xFF0C;&#x6709; <span class="hljs-number">1</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">4</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">4</span> &#xFF0C;&#x6709; <span class="hljs-number">4</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">0</span>&#x3001;<span class="hljs-number">1</span>&#x3001;<span class="hljs-number">2</span>&#x3001;<span class="hljs-number">3</span> &#x7684;&#x4EBA;&#x3002;<br>&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">5</span> &#x7684;&#x4EBA;&#x8EAB;&#x9AD8;&#x4E3A; <span class="hljs-number">7</span> &#xFF0C;&#x6709; <span class="hljs-number">1</span> &#x4E2A;&#x8EAB;&#x9AD8;&#x66F4;&#x9AD8;&#x6216;&#x8005;&#x76F8;&#x540C;&#x7684;&#x4EBA;&#x6392;&#x5728;&#x4ED6;&#x524D;&#x9762;&#xFF0C;&#x5373;&#x7F16;&#x53F7;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x4EBA;&#x3002;<br>&#x56E0;&#x6B64; [[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">1</span>]] &#x662F;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x540E;&#x7684;&#x961F;&#x5217;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：people &#x3D; [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]
-输出：[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;people = [[<span class="hljs-number">6</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">4</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">4</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">0</span>]]<br></code></pre></td></tr></table></figure>
 
 
 
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/queue-reconstruction-by-height/">https://leetcode.cn/problems/queue-reconstruction-by-height/</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int[][] reconstructQueue(int[][] people) &#123;
-        &#x2F;*
-        第一个元素进行降序排序，即元素越小，排的越靠后，
-        对于第一个元素相同的数组，针对第二个元素进行升序排序，即越小越靠前，之所以这样排序，是因为，最后是按照第二个元素
-        进行插入的，也就是说，被插入的时间比较早的元素比较容易被挤到后面，也是因为这个原因，第一个元素是降序，越小的插入的时间越迟，越大的越有可能后移，这样是不会出错的。
-        同理第二个元素，越大的越靠后，因为后面元素的插入不会影响前面的元素，而前面元素的插入是会影响后面的，所以先插小，后插大
-
-         *&#x2F;
-         &#x2F;&#x2F;对第一个元素进行降序排序，在第一个元素相同时对第二个元素进行降序
-        Arrays.sort(people,(m,n)-&gt;&#123;
-            &#x2F;&#x2F;第一个元素不相等时，使用降序
-            if(m[0]!&#x3D;n[0])&#123;
-                return n[0]-m[0];
-                &#x2F;&#x2F;第一个元素相等时，使用升序
-            &#125;else&#123;
-                return m[1]-n[1];
-            &#125;
-        &#125;);
-        &#x2F;&#x2F;创建返回值
-        List&lt;int[]&gt; list&#x3D;new ArrayList&lt;&gt;();
-        &#x2F;&#x2F;将排序后的数组插入到返回值中
-        for(int[] person:people)&#123;
-            &#x2F;&#x2F;若返回值列表大小大于要插入位置，则直接插入
-            if(list.size()&gt; person[1])&#123;
-                list.add(person[1],person);
-            &#125;else&#123;      &#x2F;&#x2F;若返回值列表大小小于要插入位置，则将person插入列表末尾位置
-                list.add(list.size(),person);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;将列表转化为二维数组进行返回
-        return list.toArray(new int[list.size()][]);
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/queue-reconstruction-by-height/">https://leetcode.cn/problems/queue-reconstruction-by-height/</a></p>
+<h2 id="&#x9898;&#x89E3;"><a href="#&#x9898;&#x89E3;" class="headerlink" title="&#x9898;&#x89E3;"></a>&#x9898;&#x89E3;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[][] reconstructQueue(<span class="hljs-type">int</span>[][] people) {<br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        &#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x5143;&#x7D20;&#x8D8A;&#x5C0F;&#xFF0C;&#x6392;&#x7684;&#x8D8A;&#x9760;&#x540E;&#xFF0C;</span><br><span class="hljs-comment">        &#x5BF9;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x9488;&#x5BF9;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5373;&#x8D8A;&#x5C0F;&#x8D8A;&#x9760;&#x524D;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#x6392;&#x5E8F;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x6309;&#x7167;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;</span><br><span class="hljs-comment">        &#x8FDB;&#x884C;&#x63D2;&#x5165;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x88AB;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x65E9;&#x7684;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x88AB;&#x6324;&#x5230;&#x540E;&#x9762;&#xFF0C;&#x4E5F;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x964D;&#x5E8F;&#xFF0C;&#x8D8A;&#x5C0F;&#x7684;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x8D8A;&#x8FDF;&#xFF0C;&#x8D8A;&#x5927;&#x7684;&#x8D8A;&#x6709;&#x53EF;&#x80FD;&#x540E;&#x79FB;&#xFF0C;&#x8FD9;&#x6837;&#x662F;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x7684;&#x3002;</span><br><span class="hljs-comment">        &#x540C;&#x7406;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8D8A;&#x5927;&#x7684;&#x8D8A;&#x9760;&#x540E;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x9762;&#x5143;&#x7D20;&#x7684;&#x63D2;&#x5165;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x524D;&#x9762;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x524D;&#x9762;&#x5143;&#x7D20;&#x7684;&#x63D2;&#x5165;&#x662F;&#x4F1A;&#x5F71;&#x54CD;&#x540E;&#x9762;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x63D2;&#x5C0F;&#xFF0C;&#x540E;&#x63D2;&#x5927;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">         */</span><br>         <span class="hljs-comment">//&#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x540C;&#x65F6;&#x5BF9;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x964D;&#x5E8F;</span><br>        Arrays.sort(people,(m,n)-&gt;{<br>            <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x964D;&#x5E8F;</span><br>            <span class="hljs-keyword">if</span>(m[<span class="hljs-number">0</span>]!=n[<span class="hljs-number">0</span>]){<br>                <span class="hljs-keyword">return</span> n[<span class="hljs-number">0</span>]-m[<span class="hljs-number">0</span>];<br>                <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x5347;&#x5E8F;</span><br>            }<span class="hljs-keyword">else</span>{<br>                <span class="hljs-keyword">return</span> m[<span class="hljs-number">1</span>]-n[<span class="hljs-number">1</span>];<br>            }<br>        });<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x8FD4;&#x56DE;&#x503C;</span><br>        List&lt;<span class="hljs-type">int</span>[]&gt; list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x5C06;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x6570;&#x7EC4;&#x63D2;&#x5165;&#x5230;&#x8FD4;&#x56DE;&#x503C;&#x4E2D;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span>[] person:people){<br>            <span class="hljs-comment">//&#x82E5;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x5927;&#x5C0F;&#x5927;&#x4E8E;&#x8981;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x63D2;&#x5165;</span><br>            <span class="hljs-keyword">if</span>(list.size()&gt; person[<span class="hljs-number">1</span>]){<br>                list.add(person[<span class="hljs-number">1</span>],person);<br>            }<span class="hljs-keyword">else</span>{      <span class="hljs-comment">//&#x82E5;&#x8FD4;&#x56DE;&#x503C;&#x5217;&#x8868;&#x5927;&#x5C0F;&#x5C0F;&#x4E8E;&#x8981;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#xFF0C;&#x5219;&#x5C06;person&#x63D2;&#x5165;&#x5217;&#x8868;&#x672B;&#x5C3E;&#x4F4D;&#x7F6E;</span><br>                list.add(list.size(),person);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5C06;&#x5217;&#x8868;&#x8F6C;&#x5316;&#x4E3A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">return</span> list.toArray(<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[list.size()][]);<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -645,71 +471,23 @@ public class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons" class="headerlink" title="452.Minimum Number of Arrows to Burst Balloons"></a>452.Minimum Number of Arrows to Burst Balloons</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] &#x3D; [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</p>
-<p>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;&#x3D; x &lt;&#x3D; xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</p>
+        <h1 id="452-Minimum-Number-of-Arrows-to-Burst-Balloons"><a href="#452-Minimum-Number-of-Arrows-to-Burst-Balloons" class="headerlink" title="452.Minimum Number of Arrows to Burst Balloons"></a>452.Minimum Number of Arrows to Burst Balloons</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.</p>
+<p>Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart &lt;= x &lt;= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.</p>
 <p>Given the array points, return the minimum number of arrows that must be shot to burst all balloons.</p>
-<p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组 points ，其中points[i] &#x3D; [xstart, xend] 表示水平直径在 xstart 和 xend之间的气球。你不知道气球的确切 y 坐标。</p>
-<p>一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个气球的直径的开始和结束坐标为 xstart，xend， 且满足  xstart ≤ x ≤ xend，则该气球会被 引爆 。可以射出的弓箭的数量 没有限制 。 弓箭一旦被射出之后，可以无限地前进。</p>
-<p>给你一个数组 points ，返回引爆所有气球所必须射出的 最小 弓箭数 。</p>
+<p>&#x6709;&#x4E00;&#x4E9B;&#x7403;&#x5F62;&#x6C14;&#x7403;&#x8D34;&#x5728;&#x4E00;&#x5835;&#x7528; XY &#x5E73;&#x9762;&#x8868;&#x793A;&#x7684;&#x5899;&#x9762;&#x4E0A;&#x3002;&#x5899;&#x9762;&#x4E0A;&#x7684;&#x6C14;&#x7403;&#x8BB0;&#x5F55;&#x5728;&#x6574;&#x6570;&#x6570;&#x7EC4; points &#xFF0C;&#x5176;&#x4E2D;points[i] = [xstart, xend] &#x8868;&#x793A;&#x6C34;&#x5E73;&#x76F4;&#x5F84;&#x5728; xstart &#x548C; xend&#x4E4B;&#x95F4;&#x7684;&#x6C14;&#x7403;&#x3002;&#x4F60;&#x4E0D;&#x77E5;&#x9053;&#x6C14;&#x7403;&#x7684;&#x786E;&#x5207; y &#x5750;&#x6807;&#x3002;</p>
+<p>&#x4E00;&#x652F;&#x5F13;&#x7BAD;&#x53EF;&#x4EE5;&#x6CBF;&#x7740; x &#x8F74;&#x4ECE;&#x4E0D;&#x540C;&#x70B9; &#x5B8C;&#x5168;&#x5782;&#x76F4; &#x5730;&#x5C04;&#x51FA;&#x3002;&#x5728;&#x5750;&#x6807; x &#x5904;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x82E5;&#x6709;&#x4E00;&#x4E2A;&#x6C14;&#x7403;&#x7684;&#x76F4;&#x5F84;&#x7684;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x5750;&#x6807;&#x4E3A; xstart&#xFF0C;xend&#xFF0C; &#x4E14;&#x6EE1;&#x8DB3;  xstart &#x2264; x &#x2264; xend&#xFF0C;&#x5219;&#x8BE5;&#x6C14;&#x7403;&#x4F1A;&#x88AB; &#x5F15;&#x7206; &#x3002;&#x53EF;&#x4EE5;&#x5C04;&#x51FA;&#x7684;&#x5F13;&#x7BAD;&#x7684;&#x6570;&#x91CF; &#x6CA1;&#x6709;&#x9650;&#x5236; &#x3002; &#x5F13;&#x7BAD;&#x4E00;&#x65E6;&#x88AB;&#x5C04;&#x51FA;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x5730;&#x524D;&#x8FDB;&#x3002;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; points &#xFF0C;&#x8FD4;&#x56DE;&#x5F15;&#x7206;&#x6240;&#x6709;&#x6C14;&#x7403;&#x6240;&#x5FC5;&#x987B;&#x5C04;&#x51FA;&#x7684; &#x6700;&#x5C0F; &#x5F13;&#x7BAD;&#x6570; &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[10,16],[2,8],[1,6],[7,12]]
-输出：2
-解释：气球可以用2支箭来爆破:
--在x &#x3D; 6处射出箭，击破气球[2,8]和[1,6]。
--在x &#x3D; 11处发射箭，击破气球[10,16]和[7,12]。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>-&#x5728;x = <span class="hljs-number">6</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]&#x548C;[<span class="hljs-number">1</span>,<span class="hljs-number">6</span>]&#x3002;<br>-&#x5728;x = <span class="hljs-number">11</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">10</span>,<span class="hljs-number">16</span>]&#x548C;[<span class="hljs-number">7</span>,<span class="hljs-number">12</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[3,4],[5,6],[7,8]]
-输出：4
-解释：每个气球需要射出一支箭，总共需要4支箭。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">4</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6BCF;&#x4E2A;&#x6C14;&#x7403;&#x9700;&#x8981;&#x5C04;&#x51FA;&#x4E00;&#x652F;&#x7BAD;&#xFF0C;&#x603B;&#x5171;&#x9700;&#x8981;<span class="hljs-number">4</span>&#x652F;&#x7BAD;&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：points &#x3D; [[1,2],[2,3],[3,4],[4,5]]
-输出：2
-解释：气球可以用2支箭来爆破:
-- 在x &#x3D; 2处发射箭，击破气球[1,2]和[2,3]。
-- 在x &#x3D; 4处射出箭，击破气球[3,4]和[4,5]。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;points = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6C14;&#x7403;&#x53EF;&#x4EE5;&#x7528;<span class="hljs-number">2</span>&#x652F;&#x7BAD;&#x6765;&#x7206;&#x7834;:<br>- &#x5728;x = <span class="hljs-number">2</span>&#x5904;&#x53D1;&#x5C04;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]&#x548C;[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]&#x3002;<br>- &#x5728;x = <span class="hljs-number">4</span>&#x5904;&#x5C04;&#x51FA;&#x7BAD;&#xFF0C;&#x51FB;&#x7834;&#x6C14;&#x7403;[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]&#x548C;[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*排序+贪心*&#x2F;
-class Solution &#123;
-    public int findMinArrowShots(int[][] points) &#123;
-        &#x2F;&#x2F;检查数组是否合法
-        if(points.length&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        &#x2F;&#x2F;依据右边界的大小进行升序排序
-        Arrays.sort(points,new Comparator&lt;&gt;()&#123;
-            public int compare(int[] m,int[] n)&#123;
-                &#x2F;&#x2F;m小n大则不用交换位置，因为我们要的就是升序排序
-                if(m[1]&lt;n[1])&#123;
-                    return -1;
-                    &#x2F;&#x2F;m大n小，则需要交换位置，保证升序
-                &#125;else if(m[1]&gt;n[1])&#123;
-                    return 1;
-                    &#x2F;&#x2F;若m&#x3D;n则不需要交换位置，【当返回值小于等于0时，不进行元素交换，仅当返回值大于0时才需要进行交换！】
-                &#125;else&#123;
-
-                    return 0;
-                &#125;
-            &#125;
-        &#125;);
-        &#x2F;&#x2F;获取第一个元素的右边界作为初始右边界
-        long right&#x3D;points[0][1];
-        &#x2F;&#x2F;用于箭矢计数，初始值为1
-        int num&#x3D;1;
-        &#x2F;&#x2F;对元素进行遍历，如果需要遇到了不重叠的气球（即左边界大于right），则需要增加箭矢的数量，并更新右边界的值
-        for(int[] b:points)&#123;
-            if(b[0]&gt;right)&#123;
-                num++;
-                right&#x3D;b[1];
-            &#125;
-        &#125;
-        &#x2F;&#x2F;返回箭矢的数量
-        return num;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x94FE;&#x63A5;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*&#x6392;&#x5E8F;+&#x8D2A;&#x5FC3;*/</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findMinArrowShots</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] points)</span> {<br>        <span class="hljs-comment">//&#x68C0;&#x67E5;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(points.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x4F9D;&#x636E;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x5927;&#x5C0F;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</span><br>        Arrays.sort(points,<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;&gt;(){<br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span>[] m,<span class="hljs-type">int</span>[] n)</span>{<br>                <span class="hljs-comment">//m&#x5C0F;n&#x5927;&#x5219;&#x4E0D;&#x7528;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8981;&#x7684;&#x5C31;&#x662F;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</span><br>                <span class="hljs-keyword">if</span>(m[<span class="hljs-number">1</span>]&lt;n[<span class="hljs-number">1</span>]){<br>                    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>                    <span class="hljs-comment">//m&#x5927;n&#x5C0F;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x4FDD;&#x8BC1;&#x5347;&#x5E8F;</span><br>                }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(m[<span class="hljs-number">1</span>]&gt;n[<span class="hljs-number">1</span>]){<br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>                    <span class="hljs-comment">//&#x82E5;m=n&#x5219;&#x4E0D;&#x9700;&#x8981;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x3010;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;0&#x65F6;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x5143;&#x7D20;&#x4EA4;&#x6362;&#xFF0C;&#x4EC5;&#x5F53;&#x8FD4;&#x56DE;&#x503C;&#x5927;&#x4E8E;0&#x65F6;&#x624D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#xFF01;&#x3011;</span><br>                }<span class="hljs-keyword">else</span>{<br><br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>                }<br>            }<br>        });<br>        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;</span><br>        <span class="hljs-type">long</span> right=points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x7528;&#x4E8E;&#x7BAD;&#x77E2;&#x8BA1;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;1</span><br>        <span class="hljs-type">int</span> num=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x9047;&#x5230;&#x4E86;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x6C14;&#x7403;&#xFF08;&#x5373;&#x5DE6;&#x8FB9;&#x754C;&#x5927;&#x4E8E;right&#xFF09;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x589E;&#x52A0;&#x7BAD;&#x77E2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x503C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span>[] b:points){<br>            <span class="hljs-keyword">if</span>(b[<span class="hljs-number">0</span>]&gt;right){<br>                num++;<br>                right=b[<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7BAD;&#x77E2;&#x7684;&#x6570;&#x91CF;</span><br>        <span class="hljs-keyword">return</span> num;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -750,69 +528,22 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="435-Non-overlapping-Intervals"><a href="#435-Non-overlapping-Intervals" class="headerlink" title="435. Non-overlapping Intervals"></a>435. Non-overlapping Intervals</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>Given an array of intervals intervals where intervals[i] &#x3D; [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.</p>
+        <h1 id="435-Non-overlapping-Intervals"><a href="#435-Non-overlapping-Intervals" class="headerlink" title="435. Non-overlapping Intervals"></a>435. Non-overlapping Intervals</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">Input: intervals &#x3D; [[1,2],[2,3],[3,4],[1,3]]
-Output: 1
-Explanation: [1,3] can be removed and the rest of the intervals are non-overlapping.
-</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">Input: intervals = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]]<br>Output: <span class="hljs-number">1</span><br>Explanation: [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>] can be removed and the rest of the intervals are non-overlapping.<br><br></code></pre></td></tr></table></figure>
 
 
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">Input: intervals &#x3D; [[1,2],[1,2],[1,2]]
-Output: 2
-Explanation: You need to remove two [1,2] to make the rest of the intervals non-overlapping.
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">Input: intervals = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]]<br>Output: <span class="hljs-number">2</span><br>Explanation: You need to remove two [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>] to make the rest of the intervals non-overlapping.<br>&#x8457;&#x4F5C;&#x6743;&#x5F52;&#x9886;&#x6263;&#x7F51;&#x7EDC;&#x6240;&#x6709;&#x3002;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x8054;&#x7CFB;&#x5B98;&#x65B9;&#x6388;&#x6743;&#xFF0C;&#x975E;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#x3002;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">Input: intervals &#x3D; [[1,2],[2,3]]
-Output: 0
-Explanation: You don&#39;t need to remove any of the intervals since they&#39;re already non-overlapping.</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Input: intervals = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]]<br>Output: <span class="hljs-number">0</span><br>Explanation: You don<span class="hljs-string">&apos;t need to remove any of the intervals since they&apos;</span>re already non-overlapping.<br></code></pre></td></tr></table></figure>
 
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-overlapping-intervals">https://leetcode.cn/problems/non-overlapping-intervals</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;*
-	贪心法：
-	1.首先对数组参数interval中的各个区间元素进行排序，下面是按照右边界升序排序的。
-	2.选出排序后的第一个区间的右边界作为初始右边界，并初始化未重叠区间的数量。
-	3.依次遍历数组中其他的区间元素，若遍历到的区间元素的左边界并未超过初始右边界，则表示两个区间不重叠，
-	  则：可以将该区间加入到非重叠区间集合中，更新未重叠区间数量，更新初始右边界。
-	4.最后遍历完成即可得到未重叠区间数量，最后获得需要删减的区间的数量作为返回值返回即可。
-*&#x2F;
-class Solution &#123;
-    public int eraseOverlapIntervals(int[][] intervals) &#123;
-        &#x2F;&#x2F;检查参数是否合法,长度为0，则无需移除任何元素
-        if(intervals.length&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        &#x2F;&#x2F;对间隔数组进行排序，对右边界进行排序，进行升序排序，排序完成后，最靠左的元素的右边界最小
-        Arrays.sort(intervals,new Comparator&lt;int[]&gt;()&#123;
-            public int compare(int[] m,int[] n)&#123;
-                return m[1]-n[1];
-            &#125;
-        &#125;);
-        &#x2F;&#x2F;获取间隔数组的长度
-        int length&#x3D;intervals.length;
-        &#x2F;&#x2F;获取初始右边界，即具有最小右边界的元素
-        int right_bound&#x3D;intervals[0][1];
-        &#x2F;&#x2F;non_overlapping_num记录的是不重叠的间隔的数量,因为至少存在一个元素，所以初始化ans为1.
-        int non_overlapping_num&#x3D;1;
-        &#x2F;&#x2F;若找到不重叠的下一个间隔【因为这里的数组已经按照右边界进行排序了，替换的右边界是逐渐增加的】
-        for(int i&#x3D;1;i&lt;length;i++)&#123;
-            &#x2F;&#x2F;若当前间隔元素不重叠
-            if(intervals[i][0]&gt;&#x3D;right_bound)&#123;
-                non_overlapping_num++;
-                right_bound&#x3D;intervals[i][1];
-            &#125;
-        &#125;
-        &#x2F;&#x2F;数组长度减去ans（当前不重叠元素个数），得到的就是需要移除的元素的个数
-        return length-non_overlapping_num;
-
-    &#125;
-&#125;
-</code></pre>
+<p>&#x6765;&#x6E90;&#xFF1A;&#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;<br>&#x94FE;&#x63A5;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-overlapping-intervals">https://leetcode.cn/problems/non-overlapping-intervals</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">	&#x8D2A;&#x5FC3;&#x6CD5;&#xFF1A;</span><br><span class="hljs-comment">	1.&#x9996;&#x5148;&#x5BF9;&#x6570;&#x7EC4;&#x53C2;&#x6570;interval&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x533A;&#x95F4;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6309;&#x7167;&#x53F3;&#x8FB9;&#x754C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#x7684;&#x3002;</span><br><span class="hljs-comment">	2.&#x9009;&#x51FA;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;&#xFF0C;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x672A;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#x7684;&#x6570;&#x91CF;&#x3002;</span><br><span class="hljs-comment">	3.&#x4F9D;&#x6B21;&#x904D;&#x5386;&#x6570;&#x7EC4;&#x4E2D;&#x5176;&#x4ED6;&#x7684;&#x533A;&#x95F4;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x904D;&#x5386;&#x5230;&#x7684;&#x533A;&#x95F4;&#x5143;&#x7D20;&#x7684;&#x5DE6;&#x8FB9;&#x754C;&#x5E76;&#x672A;&#x8D85;&#x8FC7;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x533A;&#x95F4;&#x4E0D;&#x91CD;&#x53E0;&#xFF0C;</span><br><span class="hljs-comment">	  &#x5219;&#xFF1A;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x533A;&#x95F4;&#x52A0;&#x5165;&#x5230;&#x975E;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x66F4;&#x65B0;&#x672A;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#x6570;&#x91CF;&#xFF0C;&#x66F4;&#x65B0;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;&#x3002;</span><br><span class="hljs-comment">	4.&#x6700;&#x540E;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x5373;&#x53EF;&#x5F97;&#x5230;&#x672A;&#x91CD;&#x53E0;&#x533A;&#x95F4;&#x6570;&#x91CF;&#xFF0C;&#x6700;&#x540E;&#x83B7;&#x5F97;&#x9700;&#x8981;&#x5220;&#x51CF;&#x7684;&#x533A;&#x95F4;&#x7684;&#x6570;&#x91CF;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#x8FD4;&#x56DE;&#x5373;&#x53EF;&#x3002;</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">eraseOverlapIntervals</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] intervals)</span> {<br>        <span class="hljs-comment">//&#x68C0;&#x67E5;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;,&#x957F;&#x5EA6;&#x4E3A;0&#xFF0C;&#x5219;&#x65E0;&#x9700;&#x79FB;&#x9664;&#x4EFB;&#x4F55;&#x5143;&#x7D20;</span><br>        <span class="hljs-keyword">if</span>(intervals.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x5BF9;&#x95F4;&#x9694;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5BF9;&#x53F3;&#x8FB9;&#x754C;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x8FDB;&#x884C;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x6392;&#x5E8F;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6700;&#x9760;&#x5DE6;&#x7684;&#x5143;&#x7D20;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x6700;&#x5C0F;</span><br>        Arrays.sort(intervals,<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;<span class="hljs-type">int</span>[]&gt;(){<br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span>[] m,<span class="hljs-type">int</span>[] n)</span>{<br>                <span class="hljs-keyword">return</span> m[<span class="hljs-number">1</span>]-n[<span class="hljs-number">1</span>];<br>            }<br>        });<br>        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x95F4;&#x9694;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</span><br>        <span class="hljs-type">int</span> length=intervals.length;<br>        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x521D;&#x59CB;&#x53F3;&#x8FB9;&#x754C;&#xFF0C;&#x5373;&#x5177;&#x6709;&#x6700;&#x5C0F;&#x53F3;&#x8FB9;&#x754C;&#x7684;&#x5143;&#x7D20;</span><br>        <span class="hljs-type">int</span> right_bound=intervals[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//non_overlapping_num&#x8BB0;&#x5F55;&#x7684;&#x662F;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x95F4;&#x9694;&#x7684;&#x6570;&#x91CF;,&#x56E0;&#x4E3A;&#x81F3;&#x5C11;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6240;&#x4EE5;&#x521D;&#x59CB;&#x5316;ans&#x4E3A;1.</span><br>        <span class="hljs-type">int</span> non_overlapping_num=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x627E;&#x5230;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x95F4;&#x9694;&#x3010;&#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x7684;&#x6570;&#x7EC4;&#x5DF2;&#x7ECF;&#x6309;&#x7167;&#x53F3;&#x8FB9;&#x754C;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x4E86;&#xFF0C;&#x66FF;&#x6362;&#x7684;&#x53F3;&#x8FB9;&#x754C;&#x662F;&#x9010;&#x6E10;&#x589E;&#x52A0;&#x7684;&#x3011;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;length;i++){<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x95F4;&#x9694;&#x5143;&#x7D20;&#x4E0D;&#x91CD;&#x53E0;</span><br>            <span class="hljs-keyword">if</span>(intervals[i][<span class="hljs-number">0</span>]&gt;=right_bound){<br>                non_overlapping_num++;<br>                right_bound=intervals[i][<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-comment">//&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x51CF;&#x53BB;ans&#xFF08;&#x5F53;&#x524D;&#x4E0D;&#x91CD;&#x53E0;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#xFF09;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x5C31;&#x662F;&#x9700;&#x8981;&#x79FB;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</span><br>        <span class="hljs-keyword">return</span> length-non_overlapping_num;<br><br>    }<br>}<br><br></code></pre></td></tr></table></figure>
 
 
     
@@ -853,74 +584,24 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="分发饼干"><a href="#分发饼干" class="headerlink" title="分发饼干"></a>分发饼干</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。</p>
-<p>对每个孩子 <code>i</code>，都有一个胃口值 <code>g[i]</code>，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 <code>j</code>，都有一个尺寸 <code>s[j]</code> 。如果 <code>s[j] &gt;= g[i]</code>，我们可以将这个饼干 <code>j</code> 分配给孩子 <code>i</code> ，这个孩子会得到满足。你的目标是尽可能满足越多数量的孩子，并输出这个最大数值。</p>
+        <h1 id="&#x5206;&#x53D1;&#x997C;&#x5E72;"><a href="#&#x5206;&#x53D1;&#x997C;&#x5E72;" class="headerlink" title="&#x5206;&#x53D1;&#x997C;&#x5E72;"></a>&#x5206;&#x53D1;&#x997C;&#x5E72;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x5047;&#x8BBE;&#x4F60;&#x662F;&#x4E00;&#x4F4D;&#x5F88;&#x68D2;&#x7684;&#x5BB6;&#x957F;&#xFF0C;&#x60F3;&#x8981;&#x7ED9;&#x4F60;&#x7684;&#x5B69;&#x5B50;&#x4EEC;&#x4E00;&#x4E9B;&#x5C0F;&#x997C;&#x5E72;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B69;&#x5B50;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x7ED9;&#x4E00;&#x5757;&#x997C;&#x5E72;&#x3002;</p>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5B69;&#x5B50; <code>i</code>&#xFF0C;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x80C3;&#x53E3;&#x503C; <code>g[i]</code>&#xFF0C;&#x8FD9;&#x662F;&#x80FD;&#x8BA9;&#x5B69;&#x5B50;&#x4EEC;&#x6EE1;&#x8DB3;&#x80C3;&#x53E3;&#x7684;&#x997C;&#x5E72;&#x7684;&#x6700;&#x5C0F;&#x5C3A;&#x5BF8;&#xFF1B;&#x5E76;&#x4E14;&#x6BCF;&#x5757;&#x997C;&#x5E72; <code>j</code>&#xFF0C;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8; <code>s[j]</code> &#x3002;&#x5982;&#x679C; <code>s[j] &gt;= g[i]</code>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x997C;&#x5E72; <code>j</code> &#x5206;&#x914D;&#x7ED9;&#x5B69;&#x5B50; <code>i</code> &#xFF0C;&#x8FD9;&#x4E2A;&#x5B69;&#x5B50;&#x4F1A;&#x5F97;&#x5230;&#x6EE1;&#x8DB3;&#x3002;&#x4F60;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5C3D;&#x53EF;&#x80FD;&#x6EE1;&#x8DB3;&#x8D8A;&#x591A;&#x6570;&#x91CF;&#x7684;&#x5B69;&#x5B50;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x8FD9;&#x4E2A;&#x6700;&#x5927;&#x6570;&#x503C;&#x3002;</p>
 <p>example1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: g &#x3D; [1,2,3], s &#x3D; [1,1]
-输出: 1
-解释: 
-你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。
-虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。
-所以你应该输出1。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: g = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], s = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-number">1</span><br>&#x89E3;&#x91CA;: <br>&#x4F60;&#x6709;&#x4E09;&#x4E2A;&#x5B69;&#x5B50;&#x548C;&#x4E24;&#x5757;&#x5C0F;&#x997C;&#x5E72;&#xFF0C;<span class="hljs-number">3</span>&#x4E2A;&#x5B69;&#x5B50;&#x7684;&#x80C3;&#x53E3;&#x503C;&#x5206;&#x522B;&#x662F;&#xFF1A;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#x3002;<br>&#x867D;&#x7136;&#x4F60;&#x6709;&#x4E24;&#x5757;&#x5C0F;&#x997C;&#x5E72;&#xFF0C;&#x7531;&#x4E8E;&#x4ED6;&#x4EEC;&#x7684;&#x5C3A;&#x5BF8;&#x90FD;&#x662F;<span class="hljs-number">1</span>&#xFF0C;&#x4F60;&#x53EA;&#x80FD;&#x8BA9;&#x80C3;&#x53E3;&#x503C;&#x662F;<span class="hljs-number">1</span>&#x7684;&#x5B69;&#x5B50;&#x6EE1;&#x8DB3;&#x3002;<br>&#x6240;&#x4EE5;&#x4F60;&#x5E94;&#x8BE5;&#x8F93;&#x51FA;<span class="hljs-number">1</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入: g &#x3D; [1,2], s &#x3D; [1,2,3]
-输出: 2
-解释: 
-你有两个孩子和三块小饼干，2个孩子的胃口值分别是1,2。
-你拥有的饼干数量和尺寸都足以让所有孩子满足。
-所以你应该输出2.</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;: g = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>], s = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;: <span class="hljs-number">2</span><br>&#x89E3;&#x91CA;: <br>&#x4F60;&#x6709;&#x4E24;&#x4E2A;&#x5B69;&#x5B50;&#x548C;&#x4E09;&#x5757;&#x5C0F;&#x997C;&#x5E72;&#xFF0C;<span class="hljs-number">2</span>&#x4E2A;&#x5B69;&#x5B50;&#x7684;&#x80C3;&#x53E3;&#x503C;&#x5206;&#x522B;&#x662F;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>&#x3002;<br>&#x4F60;&#x62E5;&#x6709;&#x7684;&#x997C;&#x5E72;&#x6570;&#x91CF;&#x548C;&#x5C3A;&#x5BF8;&#x90FD;&#x8DB3;&#x4EE5;&#x8BA9;&#x6240;&#x6709;&#x5B69;&#x5B50;&#x6EE1;&#x8DB3;&#x3002;<br>&#x6240;&#x4EE5;&#x4F60;&#x5E94;&#x8BE5;&#x8F93;&#x51FA;<span class="hljs-number">2.</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= g.length &lt;= 3 * 104</code></li>
 <li><code>0 &lt;= s.length &lt;= 3 * 104</code></li>
 <li><code>1 &lt;= g[i], s[j] &lt;= 231 - 1</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/assign-cookies">https://leetcode.cn/problems/assign-cookies</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;方法1：饼干和胃口都从大到小进行匹配，当饼干不足以满足胃口时，就寻找下一个更小的胃口，即移动胃口数组指针
-class Solution &#123;
-    public int findContentChildren(int[] g, int[] s) &#123;
-        Arrays.sort(s);
-        Arrays.sort(g);
-        int index_children&#x3D;g.length-1;
-        int index_supply&#x3D;s.length-1;
-        int count&#x3D;0;
-        while(index_children&gt;&#x3D;0&amp;&amp;index_supply&gt;&#x3D;0)&#123;
-            if(s[index_supply]&gt;&#x3D;g[index_children])&#123;
-                index_supply--;
-                count++;
-            &#125;
-            index_children--;
-        &#125;
-        return count;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/assign-cookies">https://leetcode.cn/problems/assign-cookies</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x65B9;&#x6CD5;1&#xFF1A;&#x997C;&#x5E72;&#x548C;&#x80C3;&#x53E3;&#x90FD;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x5F53;&#x997C;&#x5E72;&#x4E0D;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x80C3;&#x53E3;&#x65F6;&#xFF0C;&#x5C31;&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x66F4;&#x5C0F;&#x7684;&#x80C3;&#x53E3;&#xFF0C;&#x5373;&#x79FB;&#x52A8;&#x80C3;&#x53E3;&#x6570;&#x7EC4;&#x6307;&#x9488;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findContentChildren</span><span class="hljs-params">(<span class="hljs-type">int</span>[] g, <span class="hljs-type">int</span>[] s)</span> {<br>        Arrays.sort(s);<br>        Arrays.sort(g);<br>        <span class="hljs-type">int</span> index_children=g.length-<span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> index_supply=s.length-<span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> count=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(index_children&gt;=<span class="hljs-number">0</span>&amp;&amp;index_supply&gt;=<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">if</span>(s[index_supply]&gt;=g[index_children]){<br>                index_supply--;<br>                count++;<br>            }<br>            index_children--;<br>        }<br>        <span class="hljs-keyword">return</span> count;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;方法二、饼干和胃口都从小到大进行匹配，当饼干不足以满足胃口时，移动饼干，即找下一个更大的饼干。
-class Solution &#123;
-    public int findContentChildren(int[] g, int[] s) &#123;
-        Arrays.sort(s);
-        Arrays.sort(g);
-        int index_supply&#x3D;0;
-        int index_children&#x3D;0;
-        int count&#x3D;0;
-        while(index_children&lt;g.length&amp;&amp;index_supply&lt;s.length)&#123;
-            if(s[index_supply]&gt;&#x3D;g[index_children])&#123;
-                &#x2F;&#x2F;当前的child被满足，++
-                index_children++;
-                &#x2F;&#x2F;满足人数++
-                count++;
-
-            &#125;
-            &#x2F;&#x2F; 开始便利下一个饼干
-            index_supply++;
-        &#125;
-
-        return count;
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x65B9;&#x6CD5;&#x4E8C;&#x3001;&#x997C;&#x5E72;&#x548C;&#x80C3;&#x53E3;&#x90FD;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x5F53;&#x997C;&#x5E72;&#x4E0D;&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x80C3;&#x53E3;&#x65F6;&#xFF0C;&#x79FB;&#x52A8;&#x997C;&#x5E72;&#xFF0C;&#x5373;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x66F4;&#x5927;&#x7684;&#x997C;&#x5E72;&#x3002;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findContentChildren</span><span class="hljs-params">(<span class="hljs-type">int</span>[] g, <span class="hljs-type">int</span>[] s)</span> {<br>        Arrays.sort(s);<br>        Arrays.sort(g);<br>        <span class="hljs-type">int</span> index_supply=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> index_children=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> count=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(index_children&lt;g.length&amp;&amp;index_supply&lt;s.length){<br>            <span class="hljs-keyword">if</span>(s[index_supply]&gt;=g[index_children]){<br>                <span class="hljs-comment">//&#x5F53;&#x524D;&#x7684;child&#x88AB;&#x6EE1;&#x8DB3;&#xFF0C;++</span><br>                index_children++;<br>                <span class="hljs-comment">//&#x6EE1;&#x8DB3;&#x4EBA;&#x6570;++</span><br>                count++;<br><br>            }<br>            <span class="hljs-comment">// &#x5F00;&#x59CB;&#x4FBF;&#x5229;&#x4E0B;&#x4E00;&#x4E2A;&#x997C;&#x5E72;</span><br>            index_supply++;<br>        }<br><br>        <span class="hljs-keyword">return</span> count;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -961,42 +642,18 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="75-颜色排序–单指针"><a href="#75-颜色排序–单指针" class="headerlink" title="75. 颜色排序–单指针"></a>75. 颜色排序–单指针</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</p>
+        <h1 id="75-&#x989C;&#x8272;&#x6392;&#x5E8F;&#x2013;&#x5355;&#x6307;&#x9488;"><a href="#75-&#x989C;&#x8272;&#x6392;&#x5E8F;&#x2013;&#x5355;&#x6307;&#x9488;" class="headerlink" title="75. &#x989C;&#x8272;&#x6392;&#x5E8F;&#x2013;&#x5355;&#x6307;&#x9488;"></a>75. &#x989C;&#x8272;&#x6392;&#x5E8F;&#x2013;&#x5355;&#x6307;&#x9488;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.</p>
 <p>We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.</p>
-<p>You must solve this problem without using the library’s sort function.</p>
+<p>You must solve this problem without using the library&#x2019;s sort function.</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">Input: nums &#x3D; [2,0,2,1,1,0]
-Output: [0,0,1,1,2,2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Input: nums = [<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>]<br>Output: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">Input: nums &#x3D; [2,0,1]
-Output: [0,1,2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Input: nums = [<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>]<br>Output: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public void sortColors(int[] nums) &#123;
-        int index&#x3D;0;
-        &#x2F;&#x2F;确定0的位置
-        for(int i&#x3D;0;i&lt;nums.length;i++)&#123;
-            if(nums[i]&#x3D;&#x3D;0)&#123;
-                swap(nums,i,index++);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;确定1的位置
-        for(int j&#x3D;index;j&lt;nums.length;j++)&#123;
-            if(nums[j]&#x3D;&#x3D;1)&#123;
-                swap(nums,j,index++);
-            &#125;
-        &#125;
-    &#125;
-
-    public void swap(int[] nums,int left,int right)&#123;
-        int temp&#x3D;nums[left];
-        nums[left]&#x3D;nums[right];
-        nums[right]&#x3D;temp;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sortColors</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-type">int</span> index=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x786E;&#x5B9A;0&#x7684;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++){<br>            <span class="hljs-keyword">if</span>(nums[i]==<span class="hljs-number">0</span>){<br>                swap(nums,i,index++);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x786E;&#x5B9A;1&#x7684;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=index;j&lt;nums.length;j++){<br>            <span class="hljs-keyword">if</span>(nums[j]==<span class="hljs-number">1</span>){<br>                swap(nums,j,index++);<br>            }<br>        }<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-type">int</span> temp=nums[left];<br>        nums[left]=nums[right];<br>        nums[right]=temp;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1117,6 +774,19 @@ Output: [0,1,2]</code></pre>
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="1047.删除字符串中所有相邻重复项题目描述： 删除字符串中的所有相邻重复项  给出由小写字母组成的字符串 S，重复项删除操作会选择两个相邻且相同的字母，并删除它们。 在 S 上反复执行重复项删除操作，直到无法继续删除。 在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。 example 1: 输入：&quot;abbaca&quot; 输出：&quot;ca&quot; 解释： 例如，在">
+    <meta name="description" content="1047.&amp;#x5220;&amp;#x9664;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E2D;&amp;#x6240;&amp;#x6709;&amp;#x76F8;&amp;#x90BB;&amp;#x91CD;&amp;#x590D;&amp;#x9879;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5220;&amp;#x9664;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E2D;&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1047.删除字符串中所有相邻重复项">
 <meta property="og:url" content="http://example.com/post/1047-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1047.删除字符串中所有相邻重复项题目描述： 删除字符串中的所有相邻重复项  给出由小写字母组成的字符串 S，重复项删除操作会选择两个相邻且相同的字母，并删除它们。 在 S 上反复执行重复项删除操作，直到无法继续删除。 在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。 example 1: 输入：&quot;abbaca&quot; 输出：&quot;ca&quot; 解释： 例如，在">
+<meta property="og:description" content="1047.&amp;#x5220;&amp;#x9664;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E2D;&amp;#x6240;&amp;#x6709;&amp;#x76F8;&amp;#x90BB;&amp;#x91CD;&amp;#x590D;&amp;#x9879;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x5220;&amp;#x9664;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E2D;&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-16T15:21:54.000Z">
 <meta property="article:modified_time" content="2022-09-16T15:23:59.161Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,47 +152,22 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="1047-删除字符串中所有相邻重复项"><a href="#1047-删除字符串中所有相邻重复项" class="headerlink" title="1047.删除字符串中所有相邻重复项"></a>1047.删除字符串中所有相邻重复项</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="1047">
-<li>删除字符串中的所有相邻重复项</li>
+        <h1 id="1047-&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;"><a href="#1047-&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;" class="headerlink" title="1047.&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;"></a>1047.&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="1047">
+<li>&#x5220;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x76F8;&#x90BB;&#x91CD;&#x590D;&#x9879;</li>
 </ol>
-<p>给出由小写字母组成的字符串 <code>S</code>，<strong>重复项删除操作</strong>会选择两个相邻且相同的字母，并删除它们。</p>
-<p>在 S 上反复执行重复项删除操作，直到无法继续删除。</p>
-<p>在完成所有重复项删除操作后返回最终的字符串。答案保证唯一。</p>
+<p>&#x7ED9;&#x51FA;&#x7531;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32; <code>S</code>&#xFF0C;<strong>&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;</strong>&#x4F1A;&#x9009;&#x62E9;&#x4E24;&#x4E2A;&#x76F8;&#x90BB;&#x4E14;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x5728; S &#x4E0A;&#x53CD;&#x590D;&#x6267;&#x884C;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5728;&#x5B8C;&#x6210;&#x6240;&#x6709;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x540E;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x7B54;&#x6848;&#x4FDD;&#x8BC1;&#x552F;&#x4E00;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：&quot;abbaca&quot;
-输出：&quot;ca&quot;
-解释：
-例如，在 &quot;abbaca&quot; 中，我们可以删除 &quot;bb&quot; 由于两字母相邻且相同，这是此时唯一可以执行删除操作的重复项。之后我们得到字符串 &quot;aaca&quot;，其中又只有 &quot;aa&quot; 可以执行重复项删除操作，所以最后的字符串为 &quot;ca&quot;。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;<span class="hljs-string">&quot;abbaca&quot;</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-string">&quot;ca&quot;</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x4F8B;&#x5982;&#xFF0C;&#x5728; <span class="hljs-string">&quot;abbaca&quot;</span> &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5220;&#x9664; <span class="hljs-string">&quot;bb&quot;</span> &#x7531;&#x4E8E;&#x4E24;&#x5B57;&#x6BCD;&#x76F8;&#x90BB;&#x4E14;&#x76F8;&#x540C;&#xFF0C;&#x8FD9;&#x662F;&#x6B64;&#x65F6;&#x552F;&#x4E00;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x7684;&#x91CD;&#x590D;&#x9879;&#x3002;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x5B57;&#x7B26;&#x4E32; <span class="hljs-string">&quot;aaca&quot;</span>&#xFF0C;&#x5176;&#x4E2D;&#x53C8;&#x53EA;&#x6709; <span class="hljs-string">&quot;aa&quot;</span> &#x53EF;&#x4EE5;&#x6267;&#x884C;&#x91CD;&#x590D;&#x9879;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E3A; <span class="hljs-string">&quot;ca&quot;</span>&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ol>
 <li><code>1 &lt;= S.length &lt;= 20000</code></li>
-<li><code>S</code> 仅由小写英文字母组成。</li>
+<li><code>S</code> &#x4EC5;&#x7531;&#x5C0F;&#x5199;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x7EC4;&#x6210;&#x3002;</li>
 </ol>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string">https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public String removeDuplicates(String S) &#123;
-        &#x2F;&#x2F;创建deque
-        ArrayDeque&lt;Character&gt; deque &#x3D; new ArrayDeque&lt;&gt;();
-        char ch;
-        &#x2F;&#x2F;遍历字符串，检查栈顶元素是否与当前遍历元素相同，如果相同，则栈顶元素出栈，否则当前遍历元素入栈。，若栈为空，则直接入栈
-        for (int i &#x3D; 0; i &lt; S.length(); i++) &#123;
-            ch &#x3D; S.charAt(i);
-            if (deque.isEmpty() || deque.peek() !&#x3D; ch) &#123;
-                deque.push(ch);
-            &#125; else &#123;
-                deque.pop();
-            &#125;
-        &#125;
-        String str &#x3D; &quot;&quot;;
-        &#x2F;&#x2F;剩余的元素即为不重复的元素，注意这里是出栈元素拼接str，不要搞反，因为出栈的字符是逆序的
-        while (!deque.isEmpty()) &#123;
-            str &#x3D; deque.pop() + str;
-        &#125;
-        return str;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string">https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">removeDuplicates</span><span class="hljs-params">(String S)</span> {<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;deque</span><br>        ArrayDeque&lt;Character&gt; deque = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDeque</span>&lt;&gt;();<br>        <span class="hljs-type">char</span> ch;<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x68C0;&#x67E5;&#x6808;&#x9876;&#x5143;&#x7D20;&#x662F;&#x5426;&#x4E0E;&#x5F53;&#x524D;&#x904D;&#x5386;&#x5143;&#x7D20;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x6808;&#x9876;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x5426;&#x5219;&#x5F53;&#x524D;&#x904D;&#x5386;&#x5143;&#x7D20;&#x5165;&#x6808;&#x3002;&#xFF0C;&#x82E5;&#x6808;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5165;&#x6808;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; S.length(); i++) {<br>            ch = S.charAt(i);<br>            <span class="hljs-keyword">if</span> (deque.isEmpty() || deque.peek() != ch) {<br>                deque.push(ch);<br>            } <span class="hljs-keyword">else</span> {<br>                deque.pop();<br>            }<br>        }<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-comment">//&#x5269;&#x4F59;&#x7684;&#x5143;&#x7D20;&#x5373;&#x4E3A;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x662F;&#x51FA;&#x6808;&#x5143;&#x7D20;&#x62FC;&#x63A5;str&#xFF0C;&#x4E0D;&#x8981;&#x641E;&#x53CD;&#xFF0C;&#x56E0;&#x4E3A;&#x51FA;&#x6808;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x9006;&#x5E8F;&#x7684;</span><br>        <span class="hljs-keyword">while</span> (!deque.isEmpty()) {<br>            str = deque.pop() + str;<br>        }<br>        <span class="hljs-keyword">return</span> str;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -227,9 +202,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -238,14 +212,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -332,6 +317,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

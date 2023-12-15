@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="题目描述： 接雨水  给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水 example1: 输入：height &#x3D; [0,1,0,2,1,0,1,3,2,1,2,1] 输出：6 解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。   exampl">
+    <meta name="description" content="&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x63A5;&amp;#x96E8;&amp;#x6C34;  &amp;#x7ED9;&amp;#x5B9A; n &amp;#x4E2A;&amp;#x975E;&amp;#x8D1F;&amp;#x6574;&amp;#x6570;&amp;#x8868;&amp;#x793A;&amp;#x6BCF;&amp;#x4E2A;&amp;#x5BBD;&amp;#x5EA6;&amp;#x4E3A; 1 &amp;#x7684;&amp;#x67F1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="42.接雨水">
 <meta property="og:url" content="http://example.com/post/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题目描述： 接雨水  给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水 example1: 输入：height &#x3D; [0,1,0,2,1,0,1,3,2,1,2,1] 输出：6 解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。   exampl">
+<meta property="og:description" content="&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x63A5;&amp;#x96E8;&amp;#x6C34;  &amp;#x7ED9;&amp;#x5B9A; n &amp;#x4E2A;&amp;#x975E;&amp;#x8D1F;&amp;#x6574;&amp;#x6570;&amp;#x8868;&amp;#x793A;&amp;#x6BCF;&amp;#x4E2A;&amp;#x5BBD;&amp;#x5EA6;&amp;#x4E3A; 1 &amp;#x7684;&amp;#x67F1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-25T03:29:06.000Z">
 <meta property="article:modified_time" content="2023-01-25T03:33:01.335Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,55 +152,25 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="42">
-<li>接雨水</li>
+        <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="42">
+<li>&#x63A5;&#x96E8;&#x6C34;</li>
 </ol>
-<p>给定 <code>n</code> 个非负整数表示每个宽度为 <code>1</code> 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水</p>
+<p>&#x7ED9;&#x5B9A; <code>n</code> &#x4E2A;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x5BBD;&#x5EA6;&#x4E3A; <code>1</code> &#x7684;&#x67F1;&#x5B50;&#x7684;&#x9AD8;&#x5EA6;&#x56FE;&#xFF0C;&#x8BA1;&#x7B97;&#x6309;&#x6B64;&#x6392;&#x5217;&#x7684;&#x67F1;&#x5B50;&#xFF0C;&#x4E0B;&#x96E8;&#x4E4B;&#x540E;&#x80FD;&#x63A5;&#x591A;&#x5C11;&#x96E8;&#x6C34;</p>
 <p>example1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：height &#x3D; [0,1,0,2,1,0,1,3,2,1,2,1]
-输出：6
-解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 </code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;height = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x4E0A;&#x9762;&#x662F;&#x7531;&#x6570;&#x7EC4; [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>] &#x8868;&#x793A;&#x7684;&#x9AD8;&#x5EA6;&#x56FE;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5; <span class="hljs-number">6</span> &#x4E2A;&#x5355;&#x4F4D;&#x7684;&#x96E8;&#x6C34;&#xFF08;&#x84DD;&#x8272;&#x90E8;&#x5206;&#x8868;&#x793A;&#x96E8;&#x6C34;&#xFF09;&#x3002; <br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：height &#x3D; [4,2,0,3,2,5]
-输出：9</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;height = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>n == height.length</code></li>
 <li><code>1 &lt;= n &lt;= 2 * 104</code></li>
 <li><code>0 &lt;= height[i] &lt;= 105</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trapping-rain-water/description/">https://leetcode.cn/problems/trapping-rain-water/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;动态规划，若不使用动态规划，则在每一次求左右最大柱子高度的时候都需要在两边进行遍历，时间复杂度较高
-class Solution &#123;
-    public int trap(int[] height) &#123;
-        int length &#x3D; height.length;
-        if (length &lt;&#x3D; 2) return 0;
-        &#x2F;&#x2F;相当于两个dp数组，dp[i]表示i位置当前位置及其左边元素中的最大元素
-        int[] maxLeft &#x3D; new int[length];
-        int[] maxRight &#x3D; new int[length];
-        
-        &#x2F;&#x2F; 记录每个柱子左边柱子最大高度
-        maxLeft[0] &#x3D; height[0];
-        for (int i &#x3D; 1; i&lt; length; i++) maxLeft[i] &#x3D; Math.max(height[i], maxLeft[i-1]);
-        
-        &#x2F;&#x2F; 记录每个柱子右边柱子最大高度
-        maxRight[length - 1] &#x3D; height[length - 1];
-        for(int i &#x3D; length - 2; i &gt;&#x3D; 0; i--) maxRight[i] &#x3D; Math.max(height[i], maxRight[i+1]);
-        
-        &#x2F;&#x2F; 求和
-        &#x2F;&#x2F;根据列来求总的雨水量，每一列的雨水量&#x3D;（min(左边最大柱子高度，右边最高的柱子高度)-当前位置的柱子高度）*柱子宽度
-        &#x2F;&#x2F;从头遍历每一列，然后求出每一列的雨水量进行累加即可
-        int sum &#x3D; 0;
-        for (int i &#x3D; 0; i &lt; length; i++) &#123;
-            int count &#x3D; Math.min(maxLeft[i], maxRight[i]) - height[i];
-            if (count &gt; 0) sum +&#x3D; count;
-        &#125;
-        return sum;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x82E5;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x5219;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x6C42;&#x5DE6;&#x53F3;&#x6700;&#x5927;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x9700;&#x8981;&#x5728;&#x4E24;&#x8FB9;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8F83;&#x9AD8;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">trap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] height)</span> {<br>        <span class="hljs-type">int</span> <span class="hljs-variable">length</span> <span class="hljs-operator">=</span> height.length;<br>        <span class="hljs-keyword">if</span> (length &lt;= <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x76F8;&#x5F53;&#x4E8E;&#x4E24;&#x4E2A;dp&#x6570;&#x7EC4;&#xFF0C;dp[i]&#x8868;&#x793A;i&#x4F4D;&#x7F6E;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x53CA;&#x5176;&#x5DE6;&#x8FB9;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;</span><br>        <span class="hljs-type">int</span>[] maxLeft = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[length];<br>        <span class="hljs-type">int</span>[] maxRight = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[length];<br>        <br>        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x6BCF;&#x4E2A;&#x67F1;&#x5B50;&#x5DE6;&#x8FB9;&#x67F1;&#x5B50;&#x6700;&#x5927;&#x9AD8;&#x5EA6;</span><br>        maxLeft[<span class="hljs-number">0</span>] = height[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i&lt; length; i++) maxLeft[i] = Math.max(height[i], maxLeft[i-<span class="hljs-number">1</span>]);<br>        <br>        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x6BCF;&#x4E2A;&#x67F1;&#x5B50;&#x53F3;&#x8FB9;&#x67F1;&#x5B50;&#x6700;&#x5927;&#x9AD8;&#x5EA6;</span><br>        maxRight[length - <span class="hljs-number">1</span>] = height[length - <span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> length - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--) maxRight[i] = Math.max(height[i], maxRight[i+<span class="hljs-number">1</span>]);<br>        <br>        <span class="hljs-comment">// &#x6C42;&#x548C;</span><br>        <span class="hljs-comment">//&#x6839;&#x636E;&#x5217;&#x6765;&#x6C42;&#x603B;&#x7684;&#x96E8;&#x6C34;&#x91CF;&#xFF0C;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x96E8;&#x6C34;&#x91CF;=&#xFF08;min(&#x5DE6;&#x8FB9;&#x6700;&#x5927;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#xFF0C;&#x53F3;&#x8FB9;&#x6700;&#x9AD8;&#x7684;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;)-&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x7684;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#xFF09;*&#x67F1;&#x5B50;&#x5BBD;&#x5EA6;</span><br>        <span class="hljs-comment">//&#x4ECE;&#x5934;&#x904D;&#x5386;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x6C42;&#x51FA;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x96E8;&#x6C34;&#x91CF;&#x8FDB;&#x884C;&#x7D2F;&#x52A0;&#x5373;&#x53EF;</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; length; i++) {<br>            <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> Math.min(maxLeft[i], maxRight[i]) - height[i];<br>            <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) sum += count;<br>        }<br>        <span class="hljs-keyword">return</span> sum;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -237,9 +207,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -248,14 +217,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -342,6 +322,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

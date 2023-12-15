@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,64 +153,49 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="01背包理论基础02"><a href="#01背包理论基础02" class="headerlink" title="01背包理论基础02"></a>01背包理论基础02</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
-<h3 id="背包问题（一维数组d实现，滚动数组）"><a href="#背包问题（一维数组d实现，滚动数组）" class="headerlink" title="背包问题（一维数组d实现，滚动数组）"></a>背包问题（一维数组d实现，<strong>滚动数组</strong>）</h3><p>对于背包问题其实状态都是可以压缩的。</p>
-<p>在使用二维数组的时候，递推公式：dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
-<p><strong>其实可以发现如果把dp[i - 1]那一层拷贝到dp[i]上，表达式完全可以是：dp[i][j] &#x3D; max(dp[i][j], dp[i][j - weight[i]] + value[i]);</strong></p>
-<p><strong>与其把dp[i - 1]这一层拷贝到dp[i]上，不如只用一个一维数组了</strong>，只用dp[j]（一维数组，也可以理解是一个滚动数组）。</p>
-<p>这就是滚动数组的由来，需要满足的条件是上一层可以重复利用，直接拷贝到当前层。</p>
-<p>读到这里估计大家都忘了 dp[i][j]里的i和j表达的是什么了，i是物品，j是背包容量。</p>
-<p><strong>dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少</strong>。</p>
+        <h1 id="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;02"><a href="#01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;02" class="headerlink" title="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;02"></a>01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;02</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x6709;n&#x4EF6;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x591A;&#x80FD;&#x80CC;&#x91CD;&#x91CF;&#x4E3A;w &#x7684;&#x80CC;&#x5305;&#x3002;&#x7B2C;i&#x4EF6;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;&#x662F;weight[i]&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x4EF7;&#x503C;&#x662F;value[i] &#x3002;<strong>&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;</strong>&#xFF0C;&#x6C42;&#x89E3;&#x5C06;&#x54EA;&#x4E9B;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x91CC;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x3002;</p>
+<h3 id="&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF08;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;d&#x5B9E;&#x73B0;&#xFF0C;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF09;"><a href="#&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF08;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;d&#x5B9E;&#x73B0;&#xFF0C;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF09;" class="headerlink" title="&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF08;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;d&#x5B9E;&#x73B0;&#xFF0C;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF09;"></a>&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF08;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;d&#x5B9E;&#x73B0;&#xFF0C;<strong>&#x6EDA;&#x52A8;&#x6570;&#x7EC4;</strong>&#xFF09;</h3><p>&#x5BF9;&#x4E8E;&#x80CC;&#x5305;&#x95EE;&#x9898;&#x5176;&#x5B9E;&#x72B6;&#x6001;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x538B;&#x7F29;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF1A;dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
+<p><strong>&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x5982;&#x679C;&#x628A;dp[i - 1]&#x90A3;&#x4E00;&#x5C42;&#x62F7;&#x8D1D;&#x5230;dp[i]&#x4E0A;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x662F;&#xFF1A;dp[i][j] = max(dp[i][j], dp[i][j - weight[i]] + value[i]);</strong></p>
+<p><strong>&#x4E0E;&#x5176;&#x628A;dp[i - 1]&#x8FD9;&#x4E00;&#x5C42;&#x62F7;&#x8D1D;&#x5230;dp[i]&#x4E0A;&#xFF0C;&#x4E0D;&#x5982;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x4E86;</strong>&#xFF0C;&#x53EA;&#x7528;dp[j]&#xFF08;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x662F;&#x4E00;&#x4E2A;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#x7684;&#x7531;&#x6765;&#xFF0C;&#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x7684;&#x6761;&#x4EF6;&#x662F;&#x4E0A;&#x4E00;&#x5C42;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x5229;&#x7528;&#xFF0C;&#x76F4;&#x63A5;&#x62F7;&#x8D1D;&#x5230;&#x5F53;&#x524D;&#x5C42;&#x3002;</p>
+<p>&#x8BFB;&#x5230;&#x8FD9;&#x91CC;&#x4F30;&#x8BA1;&#x5927;&#x5BB6;&#x90FD;&#x5FD8;&#x4E86; dp[i][j]&#x91CC;&#x7684;i&#x548C;j&#x8868;&#x8FBE;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x4E86;&#xFF0C;i&#x662F;&#x7269;&#x54C1;&#xFF0C;j&#x662F;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x3002;</p>
+<p><strong>dp[i][j] &#x8868;&#x793A;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A;[0-i]&#x7684;&#x7269;&#x54C1;&#x91CC;&#x4EFB;&#x610F;&#x53D6;&#xFF0C;&#x653E;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x662F;&#x591A;&#x5C11;</strong>&#x3002;</p>
 <ol>
-<li>确定dp数组的定义</li>
+<li>&#x786E;&#x5B9A;dp&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</li>
 </ol>
-<p>在一维dp数组中，dp[j]表示：容量为j的背包，所背的物品价值可以最大为dp[j]。</p>
+<p>&#x5728;&#x4E00;&#x7EF4;dp&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;dp[j]&#x8868;&#x793A;&#xFF1A;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x6240;&#x80CC;&#x7684;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x53EF;&#x4EE5;&#x6700;&#x5927;&#x4E3A;dp[j]&#x3002;</p>
 <ol start="2">
-<li>一维dp数组的递推公式</li>
+<li>&#x4E00;&#x7EF4;dp&#x6570;&#x7EC4;&#x7684;&#x9012;&#x63A8;&#x516C;&#x5F0F;</li>
 </ol>
-<p>dp[j]为 容量为j的背包所背的最大价值，那么如何推导dp[j]呢？</p>
-<p>dp[j]可以通过dp[j - weight[i]]推导出来，dp[j - weight[i]]表示容量为j - weight[i]的背包所背的最大价值。</p>
-<p>dp[j - weight[i]] + value[i] 表示 容量为 j - 物品i重量 的背包 加上 物品i的价值。（也就是容量为j的背包，放入物品i了之后的价值即：dp[j]）</p>
-<p>此时dp[j]有两个选择，一个是取自己dp[j] 相当于 二维dp数组中的dp[i-1][j]，即不放物品i，一个是取dp[j - weight[i]] + value[i]，即放物品i，指定是取最大的，毕竟是求最大价值，</p>
-<p>所以递归公式为：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">dp[j] &#x3D; max(dp[j], dp[j - weight[i]] + value[i]);</code></pre>
+<p>dp[j]&#x4E3A; &#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x6240;&#x80CC;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x63A8;&#x5BFC;dp[j]&#x5462;&#xFF1F;</p>
+<p>dp[j]&#x53EF;&#x4EE5;&#x901A;&#x8FC7;dp[j - weight[i]]&#x63A8;&#x5BFC;&#x51FA;&#x6765;&#xFF0C;dp[j - weight[i]]&#x8868;&#x793A;&#x5BB9;&#x91CF;&#x4E3A;j - weight[i]&#x7684;&#x80CC;&#x5305;&#x6240;&#x80CC;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</p>
+<p>dp[j - weight[i]] + value[i] &#x8868;&#x793A; &#x5BB9;&#x91CF;&#x4E3A; j - &#x7269;&#x54C1;i&#x91CD;&#x91CF; &#x7684;&#x80CC;&#x5305; &#x52A0;&#x4E0A; &#x7269;&#x54C1;i&#x7684;&#x4EF7;&#x503C;&#x3002;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x4E86;&#x4E4B;&#x540E;&#x7684;&#x4EF7;&#x503C;&#x5373;&#xFF1A;dp[j]&#xFF09;</p>
+<p>&#x6B64;&#x65F6;dp[j]&#x6709;&#x4E24;&#x4E2A;&#x9009;&#x62E9;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x53D6;&#x81EA;&#x5DF1;dp[j] &#x76F8;&#x5F53;&#x4E8E; &#x4E8C;&#x7EF4;dp&#x6570;&#x7EC4;&#x4E2D;&#x7684;dp[i-1][j]&#xFF0C;&#x5373;&#x4E0D;&#x653E;&#x7269;&#x54C1;i&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x53D6;dp[j - weight[i]] + value[i]&#xFF0C;&#x5373;&#x653E;&#x7269;&#x54C1;i&#xFF0C;&#x6307;&#x5B9A;&#x662F;&#x53D6;&#x6700;&#x5927;&#x7684;&#xFF0C;&#x6BD5;&#x7ADF;&#x662F;&#x6C42;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;</p>
+<p>&#x6240;&#x4EE5;&#x9012;&#x5F52;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<figure class="highlight text hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);<br></code></pre></td></tr></table></figure>
 
-<p>可以看出相对于二维dp数组的写法，就是把dp[i] [j]中i的维度去掉了。</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x76F8;&#x5BF9;&#x4E8E;&#x4E8C;&#x7EF4;dp&#x6570;&#x7EC4;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x5C31;&#x662F;&#x628A;dp[i] [j]&#x4E2D;i&#x7684;&#x7EF4;&#x5EA6;&#x53BB;&#x6389;&#x4E86;&#x3002;</p>
 <ol start="3">
-<li>一维dp数组如何初始化</li>
+<li>&#x4E00;&#x7EF4;dp&#x6570;&#x7EC4;&#x5982;&#x4F55;&#x521D;&#x59CB;&#x5316;</li>
 </ol>
-<p><strong>关于初始化，一定要和dp数组的定义吻合，否则到递推公式的时候就会越来越乱</strong>。</p>
-<p>dp[j]表示：容量为j的背包，所背的物品价值可以最大为dp[j]，那么dp[0]就应该是0，因为背包容量为0所背的物品的最大价值就是0。</p>
-<p>那么dp数组除了下标0的位置，初始为0，其他下标应该初始化多少呢？</p>
-<p>看一下递归公式：dp[j] &#x3D; max(dp[j], dp[j - weight[i]] + value[i]);</p>
-<p>dp数组在推导的时候一定是取价值最大的数，如果题目给的价值都是正整数那么非0下标都初始化为0就可以了。</p>
+<p><strong>&#x5173;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x548C;dp&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#x543B;&#x5408;&#xFF0C;&#x5426;&#x5219;&#x5230;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x4E71;</strong>&#x3002;</p>
+<p>dp[j]&#x8868;&#x793A;&#xFF1A;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x6240;&#x80CC;&#x7684;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x53EF;&#x4EE5;&#x6700;&#x5927;&#x4E3A;dp[j]&#xFF0C;&#x90A3;&#x4E48;dp[0]&#x5C31;&#x5E94;&#x8BE5;&#x662F;0&#xFF0C;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;0&#x6240;&#x80CC;&#x7684;&#x7269;&#x54C1;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x5C31;&#x662F;0&#x3002;</p>
+<p>&#x90A3;&#x4E48;dp&#x6570;&#x7EC4;&#x9664;&#x4E86;&#x4E0B;&#x6807;0&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x4E3A;0&#xFF0C;&#x5176;&#x4ED6;&#x4E0B;&#x6807;&#x5E94;&#x8BE5;&#x521D;&#x59CB;&#x5316;&#x591A;&#x5C11;&#x5462;&#xFF1F;</p>
+<p>&#x770B;&#x4E00;&#x4E0B;&#x9012;&#x5F52;&#x516C;&#x5F0F;&#xFF1A;dp[j] = max(dp[j], dp[j - weight[i]] + value[i]);</p>
+<p>dp&#x6570;&#x7EC4;&#x5728;&#x63A8;&#x5BFC;&#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x662F;&#x53D6;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x7684;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x9898;&#x76EE;&#x7ED9;&#x7684;&#x4EF7;&#x503C;&#x90FD;&#x662F;&#x6B63;&#x6574;&#x6570;&#x90A3;&#x4E48;&#x975E;0&#x4E0B;&#x6807;&#x90FD;&#x521D;&#x59CB;&#x5316;&#x4E3A;0&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
 <ol start="4">
-<li>一维dp数组遍历顺序</li>
+<li>&#x4E00;&#x7EF4;dp&#x6570;&#x7EC4;&#x904D;&#x5386;&#x987A;&#x5E8F;</li>
 </ol>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">for(int i&#x3D;0;i&lt;weight.size();i++)&#123;
-    for(int j&#x3D;bagWeight;j&gt;&#x3D;weight[i];j--)&#123;
-        dp[j]&#x3D;Math.max(dp[j],dp[j-weight[i]]+value[i]);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.size();i++){<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=bagWeight;j&gt;=weight[i];j--){<br>        dp[j]=Math.max(dp[j],dp[j-weight[i]]+value[i]);<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
-<h3 id="注意两点："><a href="#注意两点：" class="headerlink" title="注意两点："></a>注意两点：</h3><ol>
-<li>背包容量从大到小遍历：因为如果是从小到大遍历，则一件物品会被放入多次，从大到小遍历可以避免这个问题。</li>
-<li>先遍历物品再遍历背包：如果先遍历背包再遍历物品，则会导致背包最多只能放入一个物品，先遍历物品再遍历背包可以避免这个问题</li>
+<h3 id="&#x6CE8;&#x610F;&#x4E24;&#x70B9;&#xFF1A;"><a href="#&#x6CE8;&#x610F;&#x4E24;&#x70B9;&#xFF1A;" class="headerlink" title="&#x6CE8;&#x610F;&#x4E24;&#x70B9;&#xFF1A;"></a>&#x6CE8;&#x610F;&#x4E24;&#x70B9;&#xFF1A;</h3><ol>
+<li>&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x904D;&#x5386;&#xFF1A;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x662F;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x904D;&#x5386;&#xFF0C;&#x5219;&#x4E00;&#x4EF6;&#x7269;&#x54C1;&#x4F1A;&#x88AB;&#x653E;&#x5165;&#x591A;&#x6B21;&#xFF0C;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x904D;&#x5386;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#xFF1A;&#x5982;&#x679C;&#x5148;&#x904D;&#x5386;&#x80CC;&#x5305;&#x518D;&#x904D;&#x5386;&#x7269;&#x54C1;&#xFF0C;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x80CC;&#x5305;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x653E;&#x5165;&#x4E00;&#x4E2A;&#x7269;&#x54C1;&#xFF0C;&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</li>
 </ol>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public int test(int[] weight,int[] value,int bagSize)&#123;
-    int length&#x3D;weight.length;
-    &#x2F;&#x2F;定义dp数组，采用滚动数组实现，其中dp[i]表示背包容量为i时放入物品的最大价值
-    int[] dp&#x3D;new int[bagSize+1];
-    for(int i&#x3D;0;i&lt;length;i++)&#123;
-        for(int j&#x3D;bagSize;j&gt;&#x3D;weight[i];j--)&#123;
-            dp[j]&#x3D;Math.max(dp[j],dp[j-weight[i]]+value[i]);
-        &#125;
-    &#125;
-    return dp[bagSize];
-    
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span>[] weight,<span class="hljs-type">int</span>[] value,<span class="hljs-type">int</span> bagSize)</span>{<br>    <span class="hljs-type">int</span> length=weight.length;<br>    <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;&#xFF0C;&#x91C7;&#x7528;&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#x5B9E;&#x73B0;&#xFF0C;&#x5176;&#x4E2D;dp[i]&#x8868;&#x793A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;i&#x65F6;&#x653E;&#x5165;&#x7269;&#x54C1;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</span><br>    <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[bagSize+<span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;length;i++){<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=bagSize;j&gt;=weight[i];j--){<br>            dp[j]=Math.max(dp[j],dp[j-weight[i]]+value[i]);<br>        }<br>    }<br>    <span class="hljs-keyword">return</span> dp[bagSize];<br>    <br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -251,57 +236,35 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="01背包理论基础01"><a href="#01背包理论基础01" class="headerlink" title="01背包理论基础01"></a>01背包理论基础01</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
+        <h1 id="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01"><a href="#01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01" class="headerlink" title="01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01"></a>01&#x80CC;&#x5305;&#x7406;&#x8BBA;&#x57FA;&#x7840;01</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x6709;n&#x4EF6;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x591A;&#x80FD;&#x80CC;&#x91CD;&#x91CF;&#x4E3A;w &#x7684;&#x80CC;&#x5305;&#x3002;&#x7B2C;i&#x4EF6;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;&#x662F;weight[i]&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x4EF7;&#x503C;&#x662F;value[i] &#x3002;<strong>&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;</strong>&#xFF0C;&#x6C42;&#x89E3;&#x5C06;&#x54EA;&#x4E9B;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x91CC;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x3002;</p>
 <ol>
-<li>确定dp数组以及下标的含义</li>
+<li>&#x786E;&#x5B9A;dp&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x4E0B;&#x6807;&#x7684;&#x542B;&#x4E49;</li>
 </ol>
-<p>对于背包问题，有一种写法， 是使用二维数组，即<strong>dp[i][j] 表示从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少</strong>。</p>
+<p>&#x5BF9;&#x4E8E;&#x80CC;&#x5305;&#x95EE;&#x9898;&#xFF0C;&#x6709;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C; &#x662F;&#x4F7F;&#x7528;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x5373;<strong>dp[i][j] &#x8868;&#x793A;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A;[0-i]&#x7684;&#x7269;&#x54C1;&#x91CC;&#x4EFB;&#x610F;&#x53D6;&#xFF0C;&#x653E;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x662F;&#x591A;&#x5C11;</strong>&#x3002;</p>
 <ol start="2">
-<li>确定递推公式</li>
+<li>&#x786E;&#x5B9A;&#x9012;&#x63A8;&#x516C;&#x5F0F;</li>
 </ol>
-<p>再回顾一下dp[i][j]的含义：从下标为[0-i]的物品里任意取，放进容量为j的背包，价值总和最大是多少。</p>
-<p>那么可以有两个方向推出来dp[i][j]，</p>
+<p>&#x518D;&#x56DE;&#x987E;&#x4E00;&#x4E0B;dp[i][j]&#x7684;&#x542B;&#x4E49;&#xFF1A;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A;[0-i]&#x7684;&#x7269;&#x54C1;&#x91CC;&#x4EFB;&#x610F;&#x53D6;&#xFF0C;&#x653E;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x662F;&#x591A;&#x5C11;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x5411;&#x63A8;&#x51FA;&#x6765;dp[i][j]&#xFF0C;</p>
 <ul>
-<li><strong>不放物品i</strong>：由dp[i - 1][j]推出，即背包容量为j，里面不放物品i的最大价值，此时dp[i][j]就是dp[i - 1][j]。(其实就是当物品i的重量大于背包j的重量时，物品i无法放进背包中，所以被背包内的价值依然和前面相同。)</li>
-<li><strong>放物品i</strong>：由dp[i - 1][j - weight[i]]推出，dp[i - 1][j - weight[i]] 为背包容量为j - weight[i]的时候不放物品i的最大价值，那么dp[i - 1][j - weight[i]] + value[i] （物品i的价值），就是背包放物品i得到的最大价值</li>
+<li><strong>&#x4E0D;&#x653E;&#x7269;&#x54C1;i</strong>&#xFF1A;&#x7531;dp[i - 1][j]&#x63A8;&#x51FA;&#xFF0C;&#x5373;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;j&#xFF0C;&#x91CC;&#x9762;&#x4E0D;&#x653E;&#x7269;&#x54C1;i&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x6B64;&#x65F6;dp[i][j]&#x5C31;&#x662F;dp[i - 1][j]&#x3002;(&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5F53;&#x7269;&#x54C1;i&#x7684;&#x91CD;&#x91CF;&#x5927;&#x4E8E;&#x80CC;&#x5305;j&#x7684;&#x91CD;&#x91CF;&#x65F6;&#xFF0C;&#x7269;&#x54C1;i&#x65E0;&#x6CD5;&#x653E;&#x8FDB;&#x80CC;&#x5305;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;&#x80CC;&#x5305;&#x5185;&#x7684;&#x4EF7;&#x503C;&#x4F9D;&#x7136;&#x548C;&#x524D;&#x9762;&#x76F8;&#x540C;&#x3002;)</li>
+<li><strong>&#x653E;&#x7269;&#x54C1;i</strong>&#xFF1A;&#x7531;dp[i - 1][j - weight[i]]&#x63A8;&#x51FA;&#xFF0C;dp[i - 1][j - weight[i]] &#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;j - weight[i]&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x653E;&#x7269;&#x54C1;i&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x90A3;&#x4E48;dp[i - 1][j - weight[i]] + value[i] &#xFF08;&#x7269;&#x54C1;i&#x7684;&#x4EF7;&#x503C;&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x80CC;&#x5305;&#x653E;&#x7269;&#x54C1;i&#x5F97;&#x5230;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</li>
 </ul>
-<p>所以递归公式： dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
+<p>&#x6240;&#x4EE5;&#x9012;&#x5F52;&#x516C;&#x5F0F;&#xFF1A; dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);</p>
 <ol start="3">
-<li>dp数组如何初始化</li>
+<li>dp&#x6570;&#x7EC4;&#x5982;&#x4F55;&#x521D;&#x59CB;&#x5316;</li>
 </ol>
-<p>状态转移方程 dp[i][j] &#x3D; max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]); 可以看出i 是由 i-1 推导出来，那么i为0的时候就一定要初始化。</p>
-<p>dp[0][j]，即：i为0，存放编号0的物品的时候，各个容量的背包所能存放的最大价值。</p>
-<p>那么很明显当 j &lt; weight[0]的时候，dp[0][j] 应该是 0，因为背包容量比编号0的物品重量还小。</p>
-<p>当j &gt;&#x3D; weight[0]时，dp[0][j] 应该是value[0]，因为背包容量放足够放编号0物品。</p>
+<p>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B; dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]); &#x53EF;&#x4EE5;&#x770B;&#x51FA;i &#x662F;&#x7531; i-1 &#x63A8;&#x5BFC;&#x51FA;&#x6765;&#xFF0C;&#x90A3;&#x4E48;i&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4E00;&#x5B9A;&#x8981;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p>dp[0][j]&#xFF0C;&#x5373;&#xFF1A;i&#x4E3A;0&#xFF0C;&#x5B58;&#x653E;&#x7F16;&#x53F7;0&#x7684;&#x7269;&#x54C1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5404;&#x4E2A;&#x5BB9;&#x91CF;&#x7684;&#x80CC;&#x5305;&#x6240;&#x80FD;&#x5B58;&#x653E;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x5F88;&#x660E;&#x663E;&#x5F53; j &lt; weight[0]&#x7684;&#x65F6;&#x5019;&#xFF0C;dp[0][j] &#x5E94;&#x8BE5;&#x662F; 0&#xFF0C;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x6BD4;&#x7F16;&#x53F7;0&#x7684;&#x7269;&#x54C1;&#x91CD;&#x91CF;&#x8FD8;&#x5C0F;&#x3002;</p>
+<p>&#x5F53;j &gt;= weight[0]&#x65F6;&#xFF0C;dp[0][j] &#x5E94;&#x8BE5;&#x662F;value[0]&#xFF0C;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x653E;&#x8DB3;&#x591F;&#x653E;&#x7F16;&#x53F7;0&#x7269;&#x54C1;&#x3002;</p>
 <ol start="4">
-<li>确定遍历顺序</li>
+<li>&#x786E;&#x5B9A;&#x904D;&#x5386;&#x987A;&#x5E8F;</li>
 </ol>
-<p>那么问题来了，<strong>先遍历 物品还是先遍历背包重量呢？</strong></p>
-<p><strong>其实都可以！！ 但是先遍历物品更好理解</strong>。</p>
-<p>那么我先给出先遍历物品，然后遍历背包重量的代码。</p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public int 01bag(int[] weight,int[] value,int bagsize)&#123;
-    &#x2F;&#x2F;创建dp数组
-    int goods&#x3D;weight.length;&#x2F;&#x2F;获取物品的数量
-    int[][] dp&#x3D;new int[goods][bagSize+1];
-    &#x2F;&#x2F;初始化dp数组
-    &#x2F;&#x2F;创建数组后，初始值均为0，dp[0][j]&#x3D;value[0],其中j&gt;&#x3D;weight[0]
-    for(int j&#x3D;weight[0];j&lt;&#x3D;bagSize;j++)&#123;
-        dp[0][j]&#x3D;value[0];
-    &#125;
-    &#x2F;&#x2F;填充dp数组,先遍历物品再遍历背包容量
-    for(int i&#x3D;0;i&lt;weight.length;i++)&#123;
-        for(int j&#x3D;1;j&lt;&#x3D;bagSize;j++)&#123;
-            &#x2F;&#x2F;如果当前遍历的背包容量小于当前物品重量，表示根本放不下物品i，则前i-1个物品能放下的最大价值就是当前情况下的最大价值
-            if(j&lt;weight[i])&#123;
-                dp[i][j]&#x3D;dp[i-1][j];
-            &#125;else&#123;
-                &#x2F;&#x2F;如果可以放下，则在两种情况下取最大值
-                dp[j][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i]]+value[i]);
-            &#125;
-        &#125;
-    &#125;
-    return dp[goods-1][bagSize];
-&#125;</code></pre>
+<p>&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;<strong>&#x5148;&#x904D;&#x5386; &#x7269;&#x54C1;&#x8FD8;&#x662F;&#x5148;&#x904D;&#x5386;&#x80CC;&#x5305;&#x91CD;&#x91CF;&#x5462;&#xFF1F;</strong></p>
+<p><strong>&#x5176;&#x5B9E;&#x90FD;&#x53EF;&#x4EE5;&#xFF01;&#xFF01; &#x4F46;&#x662F;&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x66F4;&#x597D;&#x7406;&#x89E3;</strong>&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x5148;&#x7ED9;&#x51FA;&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x80CC;&#x5305;&#x91CD;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> 01bag(<span class="hljs-type">int</span>[] weight,<span class="hljs-type">int</span>[] value,<span class="hljs-type">int</span> bagsize){<br>    <span class="hljs-comment">//&#x521B;&#x5EFA;dp&#x6570;&#x7EC4;</span><br>    <span class="hljs-type">int</span> goods=weight.length;<span class="hljs-comment">//&#x83B7;&#x53D6;&#x7269;&#x54C1;&#x7684;&#x6570;&#x91CF;</span><br>    <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[goods][bagSize+<span class="hljs-number">1</span>];<br>    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;dp&#x6570;&#x7EC4;</span><br>    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x6570;&#x7EC4;&#x540E;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x5747;&#x4E3A;0&#xFF0C;dp[0][j]=value[0],&#x5176;&#x4E2D;j&gt;=weight[0]</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=weight[<span class="hljs-number">0</span>];j&lt;=bagSize;j++){<br>        dp[<span class="hljs-number">0</span>][j]=value[<span class="hljs-number">0</span>];<br>    }<br>    <span class="hljs-comment">//&#x586B;&#x5145;dp&#x6570;&#x7EC4;,&#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#x5BB9;&#x91CF;</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.length;i++){<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=bagSize;j++){<br>            <span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x904D;&#x5386;&#x7684;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x91CD;&#x91CF;&#xFF0C;&#x8868;&#x793A;&#x6839;&#x672C;&#x653E;&#x4E0D;&#x4E0B;&#x7269;&#x54C1;i&#xFF0C;&#x5219;&#x524D;i-1&#x4E2A;&#x7269;&#x54C1;&#x80FD;&#x653E;&#x4E0B;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</span><br>            <span class="hljs-keyword">if</span>(j&lt;weight[i]){<br>                dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>            }<span class="hljs-keyword">else</span>{<br>                <span class="hljs-comment">//&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x653E;&#x4E0B;&#xFF0C;&#x5219;&#x5728;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x53D6;&#x6700;&#x5927;&#x503C;</span><br>                dp[j][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-weight[i]]+value[i]);<br>            }<br>        }<br>    }<br>    <span class="hljs-keyword">return</span> dp[goods-<span class="hljs-number">1</span>][bagSize];<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -342,67 +305,27 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="84-柱状图中最大的矩形"><a href="#84-柱状图中最大的矩形" class="headerlink" title="84.柱状图中最大的矩形"></a>84.柱状图中最大的矩形</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="84">
-<li>柱状图中最大的矩形</li>
+        <h1 id="84-&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;"><a href="#84-&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;" class="headerlink" title="84.&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;"></a>84.&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="84">
+<li>&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;</li>
 </ol>
-<p>给定 <em>n</em> 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
-<p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<p>&#x7ED9;&#x5B9A; <em>n</em> &#x4E2A;&#x975E;&#x8D1F;&#x6574;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#x5404;&#x4E2A;&#x67F1;&#x5B50;&#x7684;&#x9AD8;&#x5EA6;&#x3002;&#x6BCF;&#x4E2A;&#x67F1;&#x5B50;&#x5F7C;&#x6B64;&#x76F8;&#x90BB;&#xFF0C;&#x4E14;&#x5BBD;&#x5EA6;&#x4E3A; 1 &#x3002;</p>
+<p>&#x6C42;&#x5728;&#x8BE5;&#x67F1;&#x72B6;&#x56FE;&#x4E2D;&#xFF0C;&#x80FD;&#x591F;&#x52FE;&#x52D2;&#x51FA;&#x6765;&#x7684;&#x77E9;&#x5F62;&#x7684;&#x6700;&#x5927;&#x9762;&#x79EF;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：heights &#x3D; [2,1,5,6,2,3]
-输出：10
-解释：最大的矩形为图中红色区域，面积为 10</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;heights = [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">10</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;&#x4E3A;&#x56FE;&#x4E2D;&#x7EA2;&#x8272;&#x533A;&#x57DF;&#xFF0C;&#x9762;&#x79EF;&#x4E3A; <span class="hljs-number">10</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入： heights &#x3D; [2,4]
-输出： 4</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A; heights = [<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A; <span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= heights.length &lt;=105</code></li>
 <li><code>0 &lt;= heights[i] &lt;= 104</code></li>
 </ul>
-<p>题目描述：</p>
+<p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/largest-rectangle-in-histogram/description/">https://leetcode.cn/problems/largest-rectangle-in-histogram/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int largestRectangleArea(int[] heights) &#123;
-        &#x2F;&#x2F;由于最大面积&#x3D;MAX(height[i]*(minRight[i]-minLeft[i]-1))求得，其中，minLeft[i]表示柱子i左边第一个高度小于i的柱子的下标，minRight表示柱子i右边第一个高度小于i的柱子的下标
-        int[] minLeft&#x3D;new int[heights.length];
-        int[] minRight&#x3D;new int[heights.length];
-
-        &#x2F;&#x2F;构造两个数组
-        int length&#x3D;heights.length;
-        minLeft[0]&#x3D;-1;
-        &#x2F;&#x2F;左数组，从0开始，在确定每一个柱子左边的第一根短柱子时都需要进行一次while循环。找到第一个小于柱子i的柱子下标，并赋值
-        for(int i&#x3D;0;i&lt;length;i++)&#123;
-            int t&#x3D;i-1;
-            while(t&gt;&#x3D;0&amp;&amp;heights[t]&gt;&#x3D;heights[i])&#123;
-                t&#x3D;minLeft[t];
-            &#125;
-            minLeft[i]&#x3D;t;
-        &#125;
-
-        &#x2F;&#x2F;右数组，从length-1开始，同左数组不断确定数组元素
-        minRight[length-1]&#x3D;length;
-        for(int i&#x3D;length-2;i&gt;&#x3D;0;i--)&#123;
-            int t&#x3D;i+1;
-            while(t&lt;length&amp;&amp;heights[t]&gt;&#x3D;heights[i])&#123;
-                t&#x3D;minRight[t];
-            &#125;
-            minRight[i]&#x3D;t;
-        &#125;
-
-        &#x2F;&#x2F;根据开头的公式，求得heights中的最大的矩形面积
-        int result&#x3D;0;
-        for(int i&#x3D;0;i&lt;length;i++)&#123;
-            int sum&#x3D;heights[i]*(minRight[i]-minLeft[i]-1);
-            result&#x3D;Math.max(sum,result);
-        &#125;
-        return result;
-
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">largestRectangleArea</span><span class="hljs-params">(<span class="hljs-type">int</span>[] heights)</span> {<br>        <span class="hljs-comment">//&#x7531;&#x4E8E;&#x6700;&#x5927;&#x9762;&#x79EF;=MAX(height[i]*(minRight[i]-minLeft[i]-1))&#x6C42;&#x5F97;&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;minLeft[i]&#x8868;&#x793A;&#x67F1;&#x5B50;i&#x5DE6;&#x8FB9;&#x7B2C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E;i&#x7684;&#x67F1;&#x5B50;&#x7684;&#x4E0B;&#x6807;&#xFF0C;minRight&#x8868;&#x793A;&#x67F1;&#x5B50;i&#x53F3;&#x8FB9;&#x7B2C;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E;i&#x7684;&#x67F1;&#x5B50;&#x7684;&#x4E0B;&#x6807;</span><br>        <span class="hljs-type">int</span>[] minLeft=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[heights.length];<br>        <span class="hljs-type">int</span>[] minRight=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[heights.length];<br><br>        <span class="hljs-comment">//&#x6784;&#x9020;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span> length=heights.length;<br>        minLeft[<span class="hljs-number">0</span>]=-<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x5DE6;&#x6570;&#x7EC4;&#xFF0C;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x5728;&#x786E;&#x5B9A;&#x6BCF;&#x4E00;&#x4E2A;&#x67F1;&#x5B50;&#x5DE6;&#x8FB9;&#x7684;&#x7B2C;&#x4E00;&#x6839;&#x77ED;&#x67F1;&#x5B50;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4E00;&#x6B21;while&#x5FAA;&#x73AF;&#x3002;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5C0F;&#x4E8E;&#x67F1;&#x5B50;i&#x7684;&#x67F1;&#x5B50;&#x4E0B;&#x6807;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;length;i++){<br>            <span class="hljs-type">int</span> t=i-<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">while</span>(t&gt;=<span class="hljs-number">0</span>&amp;&amp;heights[t]&gt;=heights[i]){<br>                t=minLeft[t];<br>            }<br>            minLeft[i]=t;<br>        }<br><br>        <span class="hljs-comment">//&#x53F3;&#x6570;&#x7EC4;&#xFF0C;&#x4ECE;length-1&#x5F00;&#x59CB;&#xFF0C;&#x540C;&#x5DE6;&#x6570;&#x7EC4;&#x4E0D;&#x65AD;&#x786E;&#x5B9A;&#x6570;&#x7EC4;&#x5143;&#x7D20;</span><br>        minRight[length-<span class="hljs-number">1</span>]=length;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=length-<span class="hljs-number">2</span>;i&gt;=<span class="hljs-number">0</span>;i--){<br>            <span class="hljs-type">int</span> t=i+<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">while</span>(t&lt;length&amp;&amp;heights[t]&gt;=heights[i]){<br>                t=minRight[t];<br>            }<br>            minRight[i]=t;<br>        }<br><br>        <span class="hljs-comment">//&#x6839;&#x636E;&#x5F00;&#x5934;&#x7684;&#x516C;&#x5F0F;&#xFF0C;&#x6C42;&#x5F97;heights&#x4E2D;&#x7684;&#x6700;&#x5927;&#x7684;&#x77E9;&#x5F62;&#x9762;&#x79EF;</span><br>        <span class="hljs-type">int</span> result=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;length;i++){<br>            <span class="hljs-type">int</span> sum=heights[i]*(minRight[i]-minLeft[i]-<span class="hljs-number">1</span>);<br>            result=Math.max(sum,result);<br>        }<br>        <span class="hljs-keyword">return</span> result;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -443,55 +366,25 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="42">
-<li>接雨水</li>
+        <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="42">
+<li>&#x63A5;&#x96E8;&#x6C34;</li>
 </ol>
-<p>给定 <code>n</code> 个非负整数表示每个宽度为 <code>1</code> 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水</p>
+<p>&#x7ED9;&#x5B9A; <code>n</code> &#x4E2A;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x5BBD;&#x5EA6;&#x4E3A; <code>1</code> &#x7684;&#x67F1;&#x5B50;&#x7684;&#x9AD8;&#x5EA6;&#x56FE;&#xFF0C;&#x8BA1;&#x7B97;&#x6309;&#x6B64;&#x6392;&#x5217;&#x7684;&#x67F1;&#x5B50;&#xFF0C;&#x4E0B;&#x96E8;&#x4E4B;&#x540E;&#x80FD;&#x63A5;&#x591A;&#x5C11;&#x96E8;&#x6C34;</p>
 <p>example1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：height &#x3D; [0,1,0,2,1,0,1,3,2,1,2,1]
-输出：6
-解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 </code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;height = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x4E0A;&#x9762;&#x662F;&#x7531;&#x6570;&#x7EC4; [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>] &#x8868;&#x793A;&#x7684;&#x9AD8;&#x5EA6;&#x56FE;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5; <span class="hljs-number">6</span> &#x4E2A;&#x5355;&#x4F4D;&#x7684;&#x96E8;&#x6C34;&#xFF08;&#x84DD;&#x8272;&#x90E8;&#x5206;&#x8868;&#x793A;&#x96E8;&#x6C34;&#xFF09;&#x3002; <br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：height &#x3D; [4,2,0,3,2,5]
-输出：9</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;height = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>n == height.length</code></li>
 <li><code>1 &lt;= n &lt;= 2 * 104</code></li>
 <li><code>0 &lt;= height[i] &lt;= 105</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trapping-rain-water/description/">https://leetcode.cn/problems/trapping-rain-water/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;动态规划，若不使用动态规划，则在每一次求左右最大柱子高度的时候都需要在两边进行遍历，时间复杂度较高
-class Solution &#123;
-    public int trap(int[] height) &#123;
-        int length &#x3D; height.length;
-        if (length &lt;&#x3D; 2) return 0;
-        &#x2F;&#x2F;相当于两个dp数组，dp[i]表示i位置当前位置及其左边元素中的最大元素
-        int[] maxLeft &#x3D; new int[length];
-        int[] maxRight &#x3D; new int[length];
-        
-        &#x2F;&#x2F; 记录每个柱子左边柱子最大高度
-        maxLeft[0] &#x3D; height[0];
-        for (int i &#x3D; 1; i&lt; length; i++) maxLeft[i] &#x3D; Math.max(height[i], maxLeft[i-1]);
-        
-        &#x2F;&#x2F; 记录每个柱子右边柱子最大高度
-        maxRight[length - 1] &#x3D; height[length - 1];
-        for(int i &#x3D; length - 2; i &gt;&#x3D; 0; i--) maxRight[i] &#x3D; Math.max(height[i], maxRight[i+1]);
-        
-        &#x2F;&#x2F; 求和
-        &#x2F;&#x2F;根据列来求总的雨水量，每一列的雨水量&#x3D;（min(左边最大柱子高度，右边最高的柱子高度)-当前位置的柱子高度）*柱子宽度
-        &#x2F;&#x2F;从头遍历每一列，然后求出每一列的雨水量进行累加即可
-        int sum &#x3D; 0;
-        for (int i &#x3D; 0; i &lt; length; i++) &#123;
-            int count &#x3D; Math.min(maxLeft[i], maxRight[i]) - height[i];
-            if (count &gt; 0) sum +&#x3D; count;
-        &#125;
-        return sum;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x82E5;&#x4E0D;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x5219;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x6C42;&#x5DE6;&#x53F3;&#x6700;&#x5927;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x9700;&#x8981;&#x5728;&#x4E24;&#x8FB9;&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8F83;&#x9AD8;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">trap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] height)</span> {<br>        <span class="hljs-type">int</span> <span class="hljs-variable">length</span> <span class="hljs-operator">=</span> height.length;<br>        <span class="hljs-keyword">if</span> (length &lt;= <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//&#x76F8;&#x5F53;&#x4E8E;&#x4E24;&#x4E2A;dp&#x6570;&#x7EC4;&#xFF0C;dp[i]&#x8868;&#x793A;i&#x4F4D;&#x7F6E;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x53CA;&#x5176;&#x5DE6;&#x8FB9;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;</span><br>        <span class="hljs-type">int</span>[] maxLeft = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[length];<br>        <span class="hljs-type">int</span>[] maxRight = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[length];<br>        <br>        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x6BCF;&#x4E2A;&#x67F1;&#x5B50;&#x5DE6;&#x8FB9;&#x67F1;&#x5B50;&#x6700;&#x5927;&#x9AD8;&#x5EA6;</span><br>        maxLeft[<span class="hljs-number">0</span>] = height[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i&lt; length; i++) maxLeft[i] = Math.max(height[i], maxLeft[i-<span class="hljs-number">1</span>]);<br>        <br>        <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x6BCF;&#x4E2A;&#x67F1;&#x5B50;&#x53F3;&#x8FB9;&#x67F1;&#x5B50;&#x6700;&#x5927;&#x9AD8;&#x5EA6;</span><br>        maxRight[length - <span class="hljs-number">1</span>] = height[length - <span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> length - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--) maxRight[i] = Math.max(height[i], maxRight[i+<span class="hljs-number">1</span>]);<br>        <br>        <span class="hljs-comment">// &#x6C42;&#x548C;</span><br>        <span class="hljs-comment">//&#x6839;&#x636E;&#x5217;&#x6765;&#x6C42;&#x603B;&#x7684;&#x96E8;&#x6C34;&#x91CF;&#xFF0C;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x96E8;&#x6C34;&#x91CF;=&#xFF08;min(&#x5DE6;&#x8FB9;&#x6700;&#x5927;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#xFF0C;&#x53F3;&#x8FB9;&#x6700;&#x9AD8;&#x7684;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;)-&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x7684;&#x67F1;&#x5B50;&#x9AD8;&#x5EA6;&#xFF09;*&#x67F1;&#x5B50;&#x5BBD;&#x5EA6;</span><br>        <span class="hljs-comment">//&#x4ECE;&#x5934;&#x904D;&#x5386;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x6C42;&#x51FA;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x96E8;&#x6C34;&#x91CF;&#x8FDB;&#x884C;&#x7D2F;&#x52A0;&#x5373;&#x53EF;</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; length; i++) {<br>            <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> Math.min(maxLeft[i], maxRight[i]) - height[i];<br>            <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) sum += count;<br>        }<br>        <span class="hljs-keyword">return</span> sum;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -534,62 +427,32 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="62">
-<li>不同路径</li>
+        <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="62">
+<li>&#x4E0D;&#x540C;&#x8DEF;&#x5F84;</li>
 </ol>
-<p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
-<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p>
-<p>问总共有多少条不同的路径？</p>
+<p>&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x4F4D;&#x4E8E;&#x4E00;&#x4E2A; <code>m x n</code> &#x7F51;&#x683C;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; &#xFF08;&#x8D77;&#x59CB;&#x70B9;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#x6807;&#x8BB0;&#x4E3A; &#x201C;Start&#x201D; &#xFF09;&#x3002;</p>
+<p>&#x673A;&#x5668;&#x4EBA;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x5411;&#x4E0B;&#x6216;&#x8005;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#x4E00;&#x6B65;&#x3002;&#x673A;&#x5668;&#x4EBA;&#x8BD5;&#x56FE;&#x8FBE;&#x5230;&#x7F51;&#x683C;&#x7684;&#x53F3;&#x4E0B;&#x89D2;&#xFF08;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#x6807;&#x8BB0;&#x4E3A; &#x201C;Finish&#x201D; &#xFF09;&#x3002;</p>
+<p>&#x95EE;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x6761;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#xFF1F;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：m &#x3D; 3, n &#x3D; 7
-输出：28</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;m = <span class="hljs-number">3</span>, n = <span class="hljs-number">7</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">28</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：m &#x3D; 3, n &#x3D; 2
-输出：3
-解释：
-从左上角开始，总共有 3 条路径可以到达右下角。
-1. 向右 -&gt; 向下 -&gt; 向下
-2. 向下 -&gt; 向下 -&gt; 向右
-3. 向下 -&gt; 向右 -&gt; 向下</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;m = <span class="hljs-number">3</span>, n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">3</span><br>&#x89E3;&#x91CA;&#xFF1A;<br>&#x4ECE;&#x5DE6;&#x4E0A;&#x89D2;&#x5F00;&#x59CB;&#xFF0C;&#x603B;&#x5171;&#x6709; <span class="hljs-number">3</span> &#x6761;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x5230;&#x8FBE;&#x53F3;&#x4E0B;&#x89D2;&#x3002;<br><span class="hljs-number">1.</span> &#x5411;&#x53F3; -&gt; &#x5411;&#x4E0B; -&gt; &#x5411;&#x4E0B;<br><span class="hljs-number">2.</span> &#x5411;&#x4E0B; -&gt; &#x5411;&#x4E0B; -&gt; &#x5411;&#x53F3;<br><span class="hljs-number">3.</span> &#x5411;&#x4E0B; -&gt; &#x5411;&#x53F3; -&gt; &#x5411;&#x4E0B;<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：m &#x3D; 7, n &#x3D; 3
-输出：28</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;m = <span class="hljs-number">7</span>, n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">28</span><br></code></pre></td></tr></table></figure>
 
 <p>example 4:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：m &#x3D; 3, n &#x3D; 3
-输出：6</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;m = <span class="hljs-number">3</span>, n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= m, n &lt;= 100</code></li>
-<li>题目数据保证答案小于等于 <code>2 * 109</code></li>
+<li>&#x9898;&#x76EE;&#x6570;&#x636E;&#x4FDD;&#x8BC1;&#x7B54;&#x6848;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; <code>2 * 109</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths/description/">https://leetcode.cn/problems/unique-paths/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int uniquePaths(int m, int n) &#123;
-        &#x2F;&#x2F;初始化，表示到达每一个位置的走法
-        int[][] dp&#x3D;new int[m][n];
-        &#x2F;&#x2F;因为出发位置是（0，0），所以[0][j]和[i][0]只能存在一种走法
-        for(int i&#x3D;0;i&lt;m;i++)&#123;
-            dp[i][0]&#x3D;1;
-        &#125;
-        for(int j&#x3D;0;j&lt;n;j++)&#123;
-            dp[0][j]&#x3D;1;
-        &#125;
-
-        &#x2F;&#x2F;递推公式：dp[k][s]&#x3D;dp[k-1][s]+dp[k][s-1]
-        for(int k&#x3D;1;k&lt;m;k++)&#123;
-            for(int s&#x3D;1;s&lt;n;s++)&#123;
-                dp[k][s]&#x3D;dp[k-1][s]+dp[k][s-1];
-            &#125;
-        &#125;
-
-        return dp[m-1][n-1];
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">uniquePaths</span><span class="hljs-params">(<span class="hljs-type">int</span> m, <span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8868;&#x793A;&#x5230;&#x8FBE;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x8D70;&#x6CD5;</span><br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[m][n];<br>        <span class="hljs-comment">//&#x56E0;&#x4E3A;&#x51FA;&#x53D1;&#x4F4D;&#x7F6E;&#x662F;&#xFF08;0&#xFF0C;0&#xFF09;&#xFF0C;&#x6240;&#x4EE5;[0][j]&#x548C;[i][0]&#x53EA;&#x80FD;&#x5B58;&#x5728;&#x4E00;&#x79CD;&#x8D70;&#x6CD5;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;m;i++){<br>            dp[i][<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;n;j++){<br>            dp[<span class="hljs-number">0</span>][j]=<span class="hljs-number">1</span>;<br>        }<br><br>        <span class="hljs-comment">//&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF1A;dp[k][s]=dp[k-1][s]+dp[k][s-1]</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k=<span class="hljs-number">1</span>;k&lt;m;k++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> s=<span class="hljs-number">1</span>;s&lt;n;s++){<br>                dp[k][s]=dp[k-<span class="hljs-number">1</span>][s]+dp[k][s-<span class="hljs-number">1</span>];<br>            }<br>        }<br><br>        <span class="hljs-keyword">return</span> dp[m-<span class="hljs-number">1</span>][n-<span class="hljs-number">1</span>];<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -630,64 +493,31 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="509-斐波那契数列"><a href="#509-斐波那契数列" class="headerlink" title="509.斐波那契数列"></a>509.斐波那契数列</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="509">
-<li>斐波那契数</li>
+        <h1 id="509-&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;"><a href="#509-&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;" class="headerlink" title="509.&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;"></a>509.&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="509">
+<li>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;</li>
 </ol>
-<p><strong>斐波那契数</strong> （通常用 <code>F(n)</code> 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
-<pre class="line-numbers language-none"><code class="language-none">F(0) &#x3D; 0，F(1) &#x3D; 1
-F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1</code></pre>
+<p><strong>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;</strong> &#xFF08;&#x901A;&#x5E38;&#x7528; <code>F(n)</code> &#x8868;&#x793A;&#xFF09;&#x5F62;&#x6210;&#x7684;&#x5E8F;&#x5217;&#x79F0;&#x4E3A; <strong>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</strong> &#x3002;&#x8BE5;&#x6570;&#x5217;&#x7531; <code>0</code> &#x548C; <code>1</code> &#x5F00;&#x59CB;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x6570;&#x5B57;&#x90FD;&#x662F;&#x524D;&#x9762;&#x4E24;&#x9879;&#x6570;&#x5B57;&#x7684;&#x548C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#xFF1A;</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">F</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span> = <span class="hljs-number">0</span>&#xFF0C;<span class="hljs-built_in">F</span>(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span><br><span class="hljs-function"><span class="hljs-title">F</span><span class="hljs-params">(n)</span></span> = <span class="hljs-built_in">F</span>(n - <span class="hljs-number">1</span>) + <span class="hljs-built_in">F</span>(n - <span class="hljs-number">2</span>)&#xFF0C;&#x5176;&#x4E2D; n &gt; <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>给定 <code>n</code> ，请计算 <code>F(n)</code> 。</p>
+<p>&#x7ED9;&#x5B9A; <code>n</code> &#xFF0C;&#x8BF7;&#x8BA1;&#x7B97; <code>F(n)</code> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 2
-输出：1
-解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">2</span>) = F(<span class="hljs-number">1</span>) + F(<span class="hljs-number">0</span>) = <span class="hljs-number">1</span> + <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 3
-输出：2
-解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">3</span>) = F(<span class="hljs-number">2</span>) + F(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span> + <span class="hljs-number">1</span> = <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 4
-输出：3
-解释：F(4) &#x3D; F(3) + F(2) &#x3D; 2 + 1 &#x3D; 3</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">4</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">3</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">4</span>) = F(<span class="hljs-number">3</span>) + F(<span class="hljs-number">2</span>) = <span class="hljs-number">2</span> + <span class="hljs-number">1</span> = <span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>0 &lt;= n &lt;= 30</code></li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/description/">https://leetcode.cn/problems/fibonacci-number/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;动态规划
-class Solution &#123;
-    public int fib(int n) &#123;
-        if(n&lt;&#x3D;1)
-            return n;
-        &#x2F;&#x2F;创建dp数组，用于存储每一次的推导结果
-        int[] dp&#x3D;new int[n+1];
-        dp[0]&#x3D;0;
-        dp[1]&#x3D;1;
-        for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
-            dp[i]&#x3D;dp[i-1]+dp[i-2];
-        &#125;
-        return dp[n];
-        
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x52A8;&#x6001;&#x89C4;&#x5212;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fib</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">1</span>)<br>            <span class="hljs-keyword">return</span> n;<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;dp&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x63A8;&#x5BFC;&#x7ED3;&#x679C;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++){<br>            dp[i]=dp[i-<span class="hljs-number">1</span>]+dp[i-<span class="hljs-number">2</span>];<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br>        <br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
-    &#125;
-&#125;</code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;递归
-class Solution &#123;
-    public int fib(int n) &#123;
-        if(n&lt;&#x3D;1)&#123;
-            return n;
-        &#125;
-        return fib(n-1)+fib(n-2);
-        
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x9012;&#x5F52;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fib</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> n;<br>        }<br>        <span class="hljs-keyword">return</span> fib(n-<span class="hljs-number">1</span>)+fib(n-<span class="hljs-number">2</span>);<br>        <br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -730,89 +560,25 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="416-分割等和子集"><a href="#416-分割等和子集" class="headerlink" title="416.分割等和子集"></a>416.分割等和子集</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="416">
-<li>分割等和子集</li>
+        <h1 id="416-&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;"><a href="#416-&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;" class="headerlink" title="416.&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;"></a>416.&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="416">
+<li>&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;</li>
 </ol>
-<p>给你一个 <strong>只包含正整数</strong> 的 <strong>非空</strong> 数组 <code>nums</code> 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A; <strong>&#x53EA;&#x5305;&#x542B;&#x6B63;&#x6574;&#x6570;</strong> &#x7684; <strong>&#x975E;&#x7A7A;</strong> &#x6570;&#x7EC4; <code>nums</code> &#x3002;&#x8BF7;&#x4F60;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x5B50;&#x96C6;&#xFF0C;&#x4F7F;&#x5F97;&#x4E24;&#x4E2A;&#x5B50;&#x96C6;&#x7684;&#x5143;&#x7D20;&#x548C;&#x76F8;&#x7B49;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [1,5,11,5]
-输出：true
-解释：数组可以分割成 [1, 5, 5] 和 [11] 。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">11</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x5206;&#x5272;&#x6210; [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>] &#x548C; [<span class="hljs-number">11</span>] &#x3002;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums &#x3D; [1,2,3,5]
-输出：false
-解释：数组不能分割成两个元素和相等的子集。</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6570;&#x7EC4;&#x4E0D;&#x80FD;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x548C;&#x76F8;&#x7B49;&#x7684;&#x5B50;&#x96C6;&#x3002;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= nums.length &lt;= 200</code></li>
 <li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-equal-subset-sum/">https://leetcode.cn/problems/partition-equal-subset-sum/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;滚动数组，一维的dp数组
-class Solution &#123;
-    public boolean canPartition(int[] nums) &#123;
-        if(nums&#x3D;&#x3D;null||nums.length&#x3D;&#x3D;0)&#123;
-            return false;
-        &#125;
-        int sum&#x3D;0;
-        for(int num:nums)&#123;
-            sum+&#x3D;num;
-        &#125;
-        &#x2F;&#x2F;是奇数，必无法分割成两个等和的子数组
-        if(sum%2&#x3D;&#x3D;1)&#123;
-            return false;
-        &#125;
-        &#x2F;&#x2F;背包大小即为和
-        &#x2F;&#x2F;物品重量为nums[i],物品价值为nums[i]
-        int target&#x3D;sum&#x2F;2;
-        int[] dp&#x3D;new int[target+1];
-        for(int i&#x3D;nums[0];i&lt;&#x3D;target;i++)&#123;
-            dp[i]&#x3D;nums[0];
-        &#125;
-        for(int i&#x3D;1;i&lt;nums.length;i++)&#123;
-            for(int j&#x3D;target;j&gt;&#x3D;nums[i];j--)&#123;
-                &#x2F;&#x2F;为了防止覆盖问题，背包容量从后往前遍历
-                dp[j]&#x3D;Math.max(dp[j],dp[j-nums[i]]+nums[i]);
-            &#125;
-        &#125;
-        return dp[target]&#x3D;&#x3D;target;
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-equal-subset-sum/">https://leetcode.cn/problems/partition-equal-subset-sum/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x7EF4;&#x7684;dp&#x6570;&#x7EC4;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPartition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num:nums){<br>            sum+=num;<br>        }<br>        <span class="hljs-comment">//&#x662F;&#x5947;&#x6570;&#xFF0C;&#x5FC5;&#x65E0;&#x6CD5;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x7B49;&#x548C;&#x7684;&#x5B50;&#x6570;&#x7EC4;</span><br>        <span class="hljs-keyword">if</span>(sum%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-comment">//&#x80CC;&#x5305;&#x5927;&#x5C0F;&#x5373;&#x4E3A;&#x548C;</span><br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x91CD;&#x91CF;&#x4E3A;nums[i],&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x4E3A;nums[i]</span><br>        <span class="hljs-type">int</span> target=sum/<span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[target+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=nums[<span class="hljs-number">0</span>];i&lt;=target;i++){<br>            dp[i]=nums[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=target;j&gt;=nums[i];j--){<br>                <span class="hljs-comment">//&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x8986;&#x76D6;&#x95EE;&#x9898;&#xFF0C;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x904D;&#x5386;</span><br>                dp[j]=Math.max(dp[j],dp[j-nums[i]]+nums[i]);<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[target]==target;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;01背包，二维dp数组
-class Solution &#123;
-    public boolean canPartition(int[] nums) &#123;
-        if(nums&#x3D;&#x3D;null||nums.length&#x3D;&#x3D;0)&#123;
-            return false;
-        &#125;
-        int sum&#x3D;0;
-        for(int num:nums)&#123;
-            sum+&#x3D;num;
-        &#125;
-        if(sum%2&#x3D;&#x3D;1)&#123;
-            return false;
-        &#125;
-        int target&#x3D;sum&#x2F;2;
-        int[][] dp&#x3D;new int[nums.length][target+1];
-        &#x2F;&#x2F;dp数组初始化
-        for(int i&#x3D;nums[0];i&lt;&#x3D;target;i++)&#123;
-            dp[0][i]&#x3D;nums[0];
-        &#125;
-        &#x2F;&#x2F;遍历物品从第一个开始，因为初始化的时候第0个已经遍历过了
-        for(int i&#x3D;1;i&lt;nums.length;i++)&#123;
-            for(int j&#x3D;1;j&lt;&#x3D;target;j++)&#123;
-                if(j&lt;nums[i])&#123;
-                    dp[i][j]&#x3D;dp[i-1][j];
-                &#125;else&#123;
-                    dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-nums[i]]+nums[i]);
-                &#125;
-            &#125;
-        &#125;
-        return dp[nums.length-1][target]&#x3D;&#x3D;target;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//01&#x80CC;&#x5305;&#xFF0C;&#x4E8C;&#x7EF4;dp&#x6570;&#x7EC4;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPartition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num:nums){<br>            sum+=num;<br>        }<br>        <span class="hljs-keyword">if</span>(sum%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> target=sum/<span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[nums.length][target+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=nums[<span class="hljs-number">0</span>];i&lt;=target;i++){<br>            dp[<span class="hljs-number">0</span>][i]=nums[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x7269;&#x54C1;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x56E0;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x7B2C;0&#x4E2A;&#x5DF2;&#x7ECF;&#x904D;&#x5386;&#x8FC7;&#x4E86;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=target;j++){<br>                <span class="hljs-keyword">if</span>(j&lt;nums[i]){<br>                    dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>                }<span class="hljs-keyword">else</span>{<br>                    dp[i][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-nums[i]]+nums[i]);<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[nums.length-<span class="hljs-number">1</span>][target]==target;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -853,74 +619,11 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>有n件物品和一个最多能背重量为w 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品价值总和最大。</p>
-<p>这样其实是没有从底向上去思考，而是习惯性想到了背包，那么暴力的解法应该是怎么样的呢？</p>
-<p>每一件物品其实只有两个状态，取或者不取，所以可以使用回溯法搜索出所有的情况，那么时间复杂度就是$o(2^n)$，这里的n表示物品数量。</p>
-<p><strong>所以暴力的解法是指数级别的时间复杂度。进而才需要动态规划的解法来进行优化！</strong></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">public class bag01 &#123;
-
-    public static void main(String[] args) &#123;
-        &#x2F;&#x2F;物品重量
-        int[] weight &#x3D; &#123;1, 3, 4&#125;;
-        &#x2F;&#x2F;物品价值
-        int[] value &#x3D; &#123;15, 20, 30&#125;;
-        &#x2F;&#x2F;背包大小
-        int bagsize &#x3D; 4;
-        testweightbagproblem(weight, value, bagsize);
-    &#125;
-
-    public static void testweightbagproblem(int[] weight, int[] value, int bagsize)&#123;
-        &#x2F;&#x2F;创建dp数组
-        int[][] dp&#x3D;new int[weight.length][bagsize+1];
-        &#x2F;&#x2F;对dp数组进行初始化
-        &#x2F;*
-        * 对dp数组的第一行进行初始化，dp[i][j]表示的是容量为j的背包，前i个物品能获得的最大价值
-        * 第一行是指将第0个物品放入不同的容量0~bagsize的背包的最大价值，其实也就是看第0个物品可不可以放入背包中，如果可以则将dp[0][j]设置为value[0]即可
-        * ，若j&lt;weight[0]则表示第0个物品放不进容量为j的背包，则容量为j的背包的价值只能是0，所以下方的j从weight[0]开始遍历，因为j&lt;weight[0]时，dp[0][j]&#x3D;0
-        * *&#x2F;
-        for(int j&#x3D;weight[0];j&lt;&#x3D;bagsize;j++)&#123;
-            dp[0][j]&#x3D;value[0];
-        &#125;
-
-        &#x2F;&#x2F;状态转换公式
-        &#x2F;*
-        * 先遍历物品i&#x3D;1;i&lt;&#x3D;weight.length，再遍历背包容量j&#x3D;1;j&lt;&#x3D;bagsize
-        * 1.当背包容量小于当前的物品的重量j&lt;weight[i]时,表示物品i无法放进此时容量为j的背包，所以dp[i][j]：容量为j的背包在i个物品中所能获得的最大价值等于容量为j的背包
-        * 在i-1个物品中所能获得的最大价值；也就是不放入第i个物品的最大价值（因为背包容量不够嘛）
-        * 2.当背包容量大于等于当前物品的重量j&gt;&#x3D;weight[i]时，表示物品可以放进此时容量为j的背包，因此出现两种选择：
-        *   （1）将物品i放进背包
-        *   （2）不将物品i放进背包，
-        * 至于选择放还是不放，就需要分别计算放入物品i和不放入物品i的背包的价值并选择能使背包价值最大化的方式（通俗的说，放入i和不放入i，谁能使背包的价值大，就选谁）
-        * 所以dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i]+value[i]])
-        * 注：这里的dp[i-1][j-weight[i]表示的是容量为j-weight[j]的背包在0~i-1所能获得最大价值，之所以j-weight[j]就是要预留出物品i的空间，所以p[i-1][j-weight[i]也可以说是为物品i
-        * 预留出背包空间后的最大可以获得的价值，再然后加上value[i]就可以得到放入物品i后，容量为j的背包所能获得的最大价值。
-        *
-        * 重新梳理：
-        * （1）如果物品i可以放入背包（背包容量允许），则分别比较物品放入前后的背包价值，选取最大值
-        * （2）若物品i不可以放入背包（背包容量不允许），则选择不放入i时的最大价值。
-        * *&#x2F;
-        for(int i&#x3D;1;i&lt;weight.length;i++)&#123;
-            for(int j&#x3D;1;j&lt;&#x3D;bagsize;j++)&#123;
-                if(j&lt;weight[i-1])&#123;
-                    dp[i][j]&#x3D;dp[i-1][j];
-                &#125;else&#123;
-                    dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i-1][j-weight[i-1]]+value[i-1]);
-                &#125;
-            &#125;
-        &#125;
-
-        &#x2F;&#x2F;输出dp数组查看运行结果
-        for (int i&#x3D;0;i&lt;weight.length;i++)&#123;
-            for(int j&#x3D;0;j&lt;&#x3D;bagsize;j++)&#123;
-                System.out.printf(dp[i][j]+&quot; &quot;);
-            &#125;
-            System.out.printf(&quot;\n&quot;);
-        &#125;
-
-
-    &#125;
-&#125;
-</code></pre>
+        <h1 id="01&#x80CC;&#x5305;&#x95EE;&#x9898;"><a href="#01&#x80CC;&#x5305;&#x95EE;&#x9898;" class="headerlink" title="01&#x80CC;&#x5305;&#x95EE;&#x9898;"></a>01&#x80CC;&#x5305;&#x95EE;&#x9898;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x6709;n&#x4EF6;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x6700;&#x591A;&#x80FD;&#x80CC;&#x91CD;&#x91CF;&#x4E3A;w &#x7684;&#x80CC;&#x5305;&#x3002;&#x7B2C;i&#x4EF6;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;&#x662F;weight[i]&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x4EF7;&#x503C;&#x662F;value[i] &#x3002;<strong>&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;</strong>&#xFF0C;&#x6C42;&#x89E3;&#x5C06;&#x54EA;&#x4E9B;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#x91CC;&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x603B;&#x548C;&#x6700;&#x5927;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x5176;&#x5B9E;&#x662F;&#x6CA1;&#x6709;&#x4ECE;&#x5E95;&#x5411;&#x4E0A;&#x53BB;&#x601D;&#x8003;&#xFF0C;&#x800C;&#x662F;&#x4E60;&#x60EF;&#x6027;&#x60F3;&#x5230;&#x4E86;&#x80CC;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x66B4;&#x529B;&#x7684;&#x89E3;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#x600E;&#x4E48;&#x6837;&#x7684;&#x5462;&#xFF1F;</p>
+<p>&#x6BCF;&#x4E00;&#x4EF6;&#x7269;&#x54C1;&#x5176;&#x5B9E;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x72B6;&#x6001;&#xFF0C;&#x53D6;&#x6216;&#x8005;&#x4E0D;&#x53D6;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x56DE;&#x6EAF;&#x6CD5;&#x641C;&#x7D22;&#x51FA;&#x6240;&#x6709;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x90A3;&#x4E48;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;$o(2^n)$&#xFF0C;&#x8FD9;&#x91CC;&#x7684;n&#x8868;&#x793A;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
+<p><strong>&#x6240;&#x4EE5;&#x66B4;&#x529B;&#x7684;&#x89E3;&#x6CD5;&#x662F;&#x6307;&#x6570;&#x7EA7;&#x522B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;&#x8FDB;&#x800C;&#x624D;&#x9700;&#x8981;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x89E3;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF01;</strong></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">bag01</span> {<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> {<br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x91CD;&#x91CF;</span><br>        <span class="hljs-type">int</span>[] weight = {<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>};<br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x4EF7;&#x503C;</span><br>        <span class="hljs-type">int</span>[] value = {<span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>};<br>        <span class="hljs-comment">//&#x80CC;&#x5305;&#x5927;&#x5C0F;</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">bagsize</span> <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br>        testweightbagproblem(weight, value, bagsize);<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testweightbagproblem</span><span class="hljs-params">(<span class="hljs-type">int</span>[] weight, <span class="hljs-type">int</span>[] value, <span class="hljs-type">int</span> bagsize)</span>{<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;dp&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[weight.length][bagsize+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x5BF9;dp&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * &#x5BF9;dp&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;dp[i][j]&#x8868;&#x793A;&#x7684;&#x662F;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x524D;i&#x4E2A;&#x7269;&#x54C1;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;</span><br><span class="hljs-comment">        * &#x7B2C;&#x4E00;&#x884C;&#x662F;&#x6307;&#x5C06;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x653E;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x5BB9;&#x91CF;0~bagsize&#x7684;&#x80CC;&#x5305;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x5C31;&#x662F;&#x770B;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x53EF;&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x5219;&#x5C06;dp[0][j]&#x8BBE;&#x7F6E;&#x4E3A;value[0]&#x5373;&#x53EF;</span><br><span class="hljs-comment">        * &#xFF0C;&#x82E5;j&lt;weight[0]&#x5219;&#x8868;&#x793A;&#x7B2C;0&#x4E2A;&#x7269;&#x54C1;&#x653E;&#x4E0D;&#x8FDB;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x5219;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x53EA;&#x80FD;&#x662F;0&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x65B9;&#x7684;j&#x4ECE;weight[0]&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x56E0;&#x4E3A;j&lt;weight[0]&#x65F6;&#xFF0C;dp[0][j]=0</span><br><span class="hljs-comment">        * */</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=weight[<span class="hljs-number">0</span>];j&lt;=bagsize;j++){<br>            dp[<span class="hljs-number">0</span>][j]=value[<span class="hljs-number">0</span>];<br>        }<br><br>        <span class="hljs-comment">//&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x516C;&#x5F0F;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * &#x5148;&#x904D;&#x5386;&#x7269;&#x54C1;i=1;i&lt;=weight.length&#xFF0C;&#x518D;&#x904D;&#x5386;&#x80CC;&#x5305;&#x5BB9;&#x91CF;j=1;j&lt;=bagsize</span><br><span class="hljs-comment">        * 1.&#x5F53;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x7684;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;j&lt;weight[i]&#x65F6;,&#x8868;&#x793A;&#x7269;&#x54C1;i&#x65E0;&#x6CD5;&#x653E;&#x8FDB;&#x6B64;&#x65F6;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x6240;&#x4EE5;dp[i][j]&#xFF1A;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x5728;i&#x4E2A;&#x7269;&#x54C1;&#x4E2D;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x7B49;&#x4E8E;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;</span><br><span class="hljs-comment">        * &#x5728;i-1&#x4E2A;&#x7269;&#x54C1;&#x4E2D;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF1B;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x653E;&#x5165;&#x7B2C;i&#x4E2A;&#x7269;&#x54C1;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF08;&#x56E0;&#x4E3A;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E0D;&#x591F;&#x561B;&#xFF09;</span><br><span class="hljs-comment">        * 2.&#x5F53;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x7684;&#x91CD;&#x91CF;j&gt;=weight[i]&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x7269;&#x54C1;&#x53EF;&#x4EE5;&#x653E;&#x8FDB;&#x6B64;&#x65F6;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#xFF0C;&#x56E0;&#x6B64;&#x51FA;&#x73B0;&#x4E24;&#x79CD;&#x9009;&#x62E9;&#xFF1A;</span><br><span class="hljs-comment">        *   &#xFF08;1&#xFF09;&#x5C06;&#x7269;&#x54C1;i&#x653E;&#x8FDB;&#x80CC;&#x5305;</span><br><span class="hljs-comment">        *   &#xFF08;2&#xFF09;&#x4E0D;&#x5C06;&#x7269;&#x54C1;i&#x653E;&#x8FDB;&#x80CC;&#x5305;&#xFF0C;</span><br><span class="hljs-comment">        * &#x81F3;&#x4E8E;&#x9009;&#x62E9;&#x653E;&#x8FD8;&#x662F;&#x4E0D;&#x653E;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x548C;&#x4E0D;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x7684;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x5E76;&#x9009;&#x62E9;&#x80FD;&#x4F7F;&#x80CC;&#x5305;&#x4EF7;&#x503C;&#x6700;&#x5927;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#xFF08;&#x901A;&#x4FD7;&#x7684;&#x8BF4;&#xFF0C;&#x653E;&#x5165;i&#x548C;&#x4E0D;&#x653E;&#x5165;i&#xFF0C;&#x8C01;&#x80FD;&#x4F7F;&#x80CC;&#x5305;&#x7684;&#x4EF7;&#x503C;&#x5927;&#xFF0C;&#x5C31;&#x9009;&#x8C01;&#xFF09;</span><br><span class="hljs-comment">        * &#x6240;&#x4EE5;dp[i][j]=Math.max(dp[i-1][j],dp[i-1][j-weight[i]+value[i]])</span><br><span class="hljs-comment">        * &#x6CE8;&#xFF1A;&#x8FD9;&#x91CC;&#x7684;dp[i-1][j-weight[i]&#x8868;&#x793A;&#x7684;&#x662F;&#x5BB9;&#x91CF;&#x4E3A;j-weight[j]&#x7684;&#x80CC;&#x5305;&#x5728;0~i-1&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x4E4B;&#x6240;&#x4EE5;j-weight[j]&#x5C31;&#x662F;&#x8981;&#x9884;&#x7559;&#x51FA;&#x7269;&#x54C1;i&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;p[i-1][j-weight[i]&#x4E5F;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E3A;&#x7269;&#x54C1;i</span><br><span class="hljs-comment">        * &#x9884;&#x7559;&#x51FA;&#x80CC;&#x5305;&#x7A7A;&#x95F4;&#x540E;&#x7684;&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x7684;&#x4EF7;&#x503C;&#xFF0C;&#x518D;&#x7136;&#x540E;&#x52A0;&#x4E0A;value[i]&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x653E;&#x5165;&#x7269;&#x54C1;i&#x540E;&#xFF0C;&#x5BB9;&#x91CF;&#x4E3A;j&#x7684;&#x80CC;&#x5305;&#x6240;&#x80FD;&#x83B7;&#x5F97;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</span><br><span class="hljs-comment">        *</span><br><span class="hljs-comment">        * &#x91CD;&#x65B0;&#x68B3;&#x7406;&#xFF1A;</span><br><span class="hljs-comment">        * &#xFF08;1&#xFF09;&#x5982;&#x679C;&#x7269;&#x54C1;i&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#xFF08;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x5141;&#x8BB8;&#xFF09;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x6BD4;&#x8F83;&#x7269;&#x54C1;&#x653E;&#x5165;&#x524D;&#x540E;&#x7684;&#x80CC;&#x5305;&#x4EF7;&#x503C;&#xFF0C;&#x9009;&#x53D6;&#x6700;&#x5927;&#x503C;</span><br><span class="hljs-comment">        * &#xFF08;2&#xFF09;&#x82E5;&#x7269;&#x54C1;i&#x4E0D;&#x53EF;&#x4EE5;&#x653E;&#x5165;&#x80CC;&#x5305;&#xFF08;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E0D;&#x5141;&#x8BB8;&#xFF09;&#xFF0C;&#x5219;&#x9009;&#x62E9;&#x4E0D;&#x653E;&#x5165;i&#x65F6;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x3002;</span><br><span class="hljs-comment">        * */</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;weight.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=bagsize;j++){<br>                <span class="hljs-keyword">if</span>(j&lt;weight[i-<span class="hljs-number">1</span>]){<br>                    dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>                }<span class="hljs-keyword">else</span>{<br>                    dp[i][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-weight[i-<span class="hljs-number">1</span>]]+value[i-<span class="hljs-number">1</span>]);<br>                }<br>            }<br>        }<br><br>        <span class="hljs-comment">//&#x8F93;&#x51FA;dp&#x6570;&#x7EC4;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=bagsize;j++){<br>                System.out.printf(dp[i][j]+<span class="hljs-string">&quot; &quot;</span>);<br>            }<br>            System.out.printf(<span class="hljs-string">&quot;\n&quot;</span>);<br>        }<br><br><br>    }<br>}<br><br></code></pre></td></tr></table></figure>
 
 
     
@@ -961,69 +664,29 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="96-不同的二叉搜索树"><a href="#96-不同的二叉搜索树" class="headerlink" title="96.不同的二叉搜索树"></a>96.不同的二叉搜索树</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="96">
-<li>不同的二叉搜索树</li>
+        <h1 id="96-&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#96-&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="96.&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>96.&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="96">
+<li>&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
 </ol>
-<p>给你一个整数 <code>n</code> ，求恰由 <code>n</code> 个节点组成且节点值从 <code>1</code> 到 <code>n</code> 互不相同的 <strong>二叉搜索树</strong> 有多少种？返回满足题意的二叉搜索树的种数。</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570; <code>n</code> &#xFF0C;&#x6C42;&#x6070;&#x7531; <code>n</code> &#x4E2A;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x4E14;&#x8282;&#x70B9;&#x503C;&#x4ECE; <code>1</code> &#x5230; <code>n</code> &#x4E92;&#x4E0D;&#x76F8;&#x540C;&#x7684; <strong>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</strong> &#x6709;&#x591A;&#x5C11;&#x79CD;&#xFF1F;&#x8FD4;&#x56DE;&#x6EE1;&#x8DB3;&#x9898;&#x610F;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x79CD;&#x6570;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 3
-输出：5</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：n &#x3D; 1
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= n &lt;= 19</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-binary-search-trees/">https://leetcode.cn/problems/unique-binary-search-trees/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><ul>
-<li>2023&#x2F;1&#x2F;25</li>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-binary-search-trees/">https://leetcode.cn/problems/unique-binary-search-trees/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><ul>
+<li>2023/1/25</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int numTrees(int n) &#123;
-        if(n&lt;&#x3D;1)&#123;
-            return n;
-        &#125;
-        &#x2F;&#x2F;dp数组，dp[i]表示由i个节点可能组成的二叉树个数
-        int[] dp&#x3D;new int[n+1];
-        dp[0]&#x3D;1;
-        dp[1]&#x3D;1;
-        dp[2]&#x3D;2;
-        &#x2F;&#x2F;当前二叉树结构个数&#x3D;左子树结构数量*右子树结构数量
-        for(int i&#x3D;3;i&lt;&#x3D;n;i++)&#123;
-            for(int j&#x3D;0;j&lt;&#x3D;i-1;j++)&#123;
-                dp[i]+&#x3D;dp[j]*dp[i-j-1];
-            &#125;
-        &#125;
-        return dp[n];
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">numTrees</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> n;<br>        }<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#xFF0C;dp[i]&#x8868;&#x793A;&#x7531;i&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x80FD;&#x7EC4;&#x6210;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x4E2A;&#x6570;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">2</span>]=<span class="hljs-number">2</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x6811;&#x7ED3;&#x6784;&#x4E2A;&#x6570;=&#x5DE6;&#x5B50;&#x6811;&#x7ED3;&#x6784;&#x6570;&#x91CF;*&#x53F3;&#x5B50;&#x6811;&#x7ED3;&#x6784;&#x6570;&#x91CF;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">3</span>;i&lt;=n;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=i-<span class="hljs-number">1</span>;j++){<br>                dp[i]+=dp[j]*dp[i-j-<span class="hljs-number">1</span>];<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
-    &#125;
-&#125;</code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int numTrees(int n) &#123;
-        &#x2F;&#x2F;定义dp数组
-        int[] dp&#x3D;new int[n+1];
-        &#x2F;&#x2F;dp的初始值：当有0个节点时，看作一个空的二叉树，dp[0]&#x3D;1；当有一个节点时，dp[1]&#x3D;1;
-        dp[0]&#x3D;1;
-        dp[1]&#x3D;1;
-        &#x2F;&#x2F;状态公式：dp[i]+&#x3D;dp[j-1]*dp[i-j];
-        &#x2F;&#x2F;j表示当前二叉搜索树的头节点，dp[j-1]和dp[i-j]分别表示其左右子树的二叉搜索树个数
-        &#x2F;&#x2F;详情见https:&#x2F;&#x2F;gitee.com&#x2F;programmercarl&#x2F;leetcode-master&#x2F;blob&#x2F;master&#x2F;problems&#x2F;0096.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md
-        for(int i&#x3D;2;i&lt;&#x3D;n;i++)&#123;
-            for(int j&#x3D;1;j&lt;&#x3D;i;j++)&#123;
-                dp[i]+&#x3D;dp[j-1]*dp[i-j];
-            &#125;
-        &#125;
-        return dp[n];
-
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">numTrees</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//dp&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF1A;&#x5F53;&#x6709;0&#x4E2A;&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;dp[0]=1&#xFF1B;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x65F6;&#xFF0C;dp[1]=1;</span><br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-comment">//&#x72B6;&#x6001;&#x516C;&#x5F0F;&#xFF1A;dp[i]+=dp[j-1]*dp[i-j];</span><br>        <span class="hljs-comment">//j&#x8868;&#x793A;&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x5934;&#x8282;&#x70B9;&#xFF0C;dp[j-1]&#x548C;dp[i-j]&#x5206;&#x522B;&#x8868;&#x793A;&#x5176;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2A;&#x6570;</span><br>        <span class="hljs-comment">//&#x8BE6;&#x60C5;&#x89C1;https://gitee.com/programmercarl/leetcode-master/blob/master/problems/0096.%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=i;j++){<br>                dp[i]+=dp[j-<span class="hljs-number">1</span>]*dp[i-j];<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1064,108 +727,33 @@ class Solution &#123;
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="63-不同路径Ⅱ"><a href="#63-不同路径Ⅱ" class="headerlink" title="63.不同路径Ⅱ"></a>63.不同路径Ⅱ</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="63">
-<li>不同路径 II</li>
+        <h1 id="63-&#x4E0D;&#x540C;&#x8DEF;&#x5F84;&#x2161;"><a href="#63-&#x4E0D;&#x540C;&#x8DEF;&#x5F84;&#x2161;" class="headerlink" title="63.&#x4E0D;&#x540C;&#x8DEF;&#x5F84;&#x2161;"></a>63.&#x4E0D;&#x540C;&#x8DEF;&#x5F84;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="63">
+<li>&#x4E0D;&#x540C;&#x8DEF;&#x5F84; II</li>
 </ol>
-<p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
-<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p>
-<p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
-<p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p>
+<p>&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x4EBA;&#x4F4D;&#x4E8E;&#x4E00;&#x4E2A; <code>m x n</code> &#x7F51;&#x683C;&#x7684;&#x5DE6;&#x4E0A;&#x89D2; &#xFF08;&#x8D77;&#x59CB;&#x70B9;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#x6807;&#x8BB0;&#x4E3A; &#x201C;Start&#x201D; &#xFF09;&#x3002;</p>
+<p>&#x673A;&#x5668;&#x4EBA;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x5411;&#x4E0B;&#x6216;&#x8005;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#x4E00;&#x6B65;&#x3002;&#x673A;&#x5668;&#x4EBA;&#x8BD5;&#x56FE;&#x8FBE;&#x5230;&#x7F51;&#x683C;&#x7684;&#x53F3;&#x4E0B;&#x89D2;&#xFF08;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#x6807;&#x8BB0;&#x4E3A; &#x201C;Finish&#x201D;&#xFF09;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x8003;&#x8651;&#x7F51;&#x683C;&#x4E2D;&#x6709;&#x969C;&#x788D;&#x7269;&#x3002;&#x90A3;&#x4E48;&#x4ECE;&#x5DE6;&#x4E0A;&#x89D2;&#x5230;&#x53F3;&#x4E0B;&#x89D2;&#x5C06;&#x4F1A;&#x6709;&#x591A;&#x5C11;&#x6761;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#xFF1F;</p>
+<p>&#x7F51;&#x683C;&#x4E2D;&#x7684;&#x969C;&#x788D;&#x7269;&#x548C;&#x7A7A;&#x4F4D;&#x7F6E;&#x5206;&#x522B;&#x7528; <code>1</code> &#x548C; <code>0</code> &#x6765;&#x8868;&#x793A;&#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：obstacleGrid &#x3D; [[0,0,0],[0,1,0],[0,0,0]]
-输出：2
-解释：3x3 网格的正中间有一个障碍物。
-从左上角到右下角一共有 2 条不同的路径：
-1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下
-2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;obstacleGrid = [[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;3x3 &#x7F51;&#x683C;&#x7684;&#x6B63;&#x4E2D;&#x95F4;&#x6709;&#x4E00;&#x4E2A;&#x969C;&#x788D;&#x7269;&#x3002;<br>&#x4ECE;&#x5DE6;&#x4E0A;&#x89D2;&#x5230;&#x53F3;&#x4E0B;&#x89D2;&#x4E00;&#x5171;&#x6709; <span class="hljs-number">2</span> &#x6761;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;<br><span class="hljs-number">1.</span> &#x5411;&#x53F3; -&gt; &#x5411;&#x53F3; -&gt; &#x5411;&#x4E0B; -&gt; &#x5411;&#x4E0B;<br><span class="hljs-number">2.</span> &#x5411;&#x4E0B; -&gt; &#x5411;&#x4E0B; -&gt; &#x5411;&#x53F3; -&gt; &#x5411;&#x53F3;<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：obstacleGrid &#x3D; [[0,1],[0,0]]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;obstacleGrid = [[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
-<p>m &#x3D;&#x3D; obstacleGrid.length<br>n &#x3D;&#x3D; obstacleGrid[i].length<br>1 &lt;&#x3D; m, n &lt;&#x3D; 100<br>obstacleGrid[i][j] 为 0 或 1</p>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths-ii">https://leetcode.cn/problems/unique-paths-ii</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><ul>
-<li>初始版本</li>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<p>m == obstacleGrid.length<br>n == obstacleGrid[i].length<br>1 &lt;= m, n &lt;= 100<br>obstacleGrid[i][j] &#x4E3A; 0 &#x6216; 1</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths-ii">https://leetcode.cn/problems/unique-paths-ii</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><ul>
+<li>&#x521D;&#x59CB;&#x7248;&#x672C;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) &#123;
-        &#x2F;&#x2F;若传入的数组为空，或者起始位置就是障碍物，那么就直接返回0，没有路径可以到达
-        if(obstacleGrid&#x3D;&#x3D;null||obstacleGrid.length&#x3D;&#x3D;0||obstacleGrid[0][0]&#x3D;&#x3D;1)&#123;
-            return 0;
-        &#125;
-        &#x2F;&#x2F;构造dp数组，数组元素是每一个格子的不同路径
-        int[][] dp&#x3D;new int[obstacleGrid.length][obstacleGrid[0].length];
-        &#x2F;&#x2F;初始化第一行和第一列的路径数
-        &#x2F;&#x2F;如果在第一行或者第一列中遇到了障碍物，则直接停止初始化，因为障碍物后面的格子没办法到达，默认初始化为0
-        for(int i&#x3D;0;i&lt;obstacleGrid.length;i++)&#123;
-            if(obstacleGrid[i][0]&#x3D;&#x3D;1)&#123;
-                break;
-            &#125;else&#123;
-                dp[i][0]&#x3D;1;
-            &#125;
-            
-        &#125;
-        for(int j&#x3D;0;j&lt;obstacleGrid[0].length;j++)&#123;
-            if(obstacleGrid[0][j]&#x3D;&#x3D;1)&#123;
-                break;
-            &#125;else&#123;
-                dp[0][j]&#x3D;1;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;从[1][1]位置开始初始化，动态规划公式dp[m][n]&#x3D;dp[m-1][n]+dp[m][n-1]
-        for(int m&#x3D;1;m&lt;obstacleGrid.length;m++)&#123;
-            for(int n&#x3D;1;n&lt;obstacleGrid[0].length;n++)&#123;
-                if(obstacleGrid[m][n]&#x3D;&#x3D;1)&#123;
-                    dp[m][n]&#x3D;0;
-                &#125;
-                else&#123;
-                    dp[m][n]&#x3D;dp[m-1][n]+dp[m][n-1];
-                &#125;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;返回右下角位置的路径数量
-        return dp[obstacleGrid.length-1][obstacleGrid[0].length-1];
-        
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">uniquePathsWithObstacles</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] obstacleGrid)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x4F20;&#x5165;&#x7684;&#x6570;&#x7EC4;&#x4E3A;&#x7A7A;&#xFF0C;&#x6216;&#x8005;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5C31;&#x662F;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;0&#xFF0C;&#x6CA1;&#x6709;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x5230;&#x8FBE;</span><br>        <span class="hljs-keyword">if</span>(obstacleGrid==<span class="hljs-literal">null</span>||obstacleGrid.length==<span class="hljs-number">0</span>||obstacleGrid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]==<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x6784;&#x9020;dp&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x683C;&#x5B50;&#x7684;&#x4E0D;&#x540C;&#x8DEF;&#x5F84;</span><br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[obstacleGrid.length][obstacleGrid[<span class="hljs-number">0</span>].length];<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x7B2C;&#x4E00;&#x884C;&#x548C;&#x7B2C;&#x4E00;&#x5217;&#x7684;&#x8DEF;&#x5F84;&#x6570;</span><br>        <span class="hljs-comment">//&#x5982;&#x679C;&#x5728;&#x7B2C;&#x4E00;&#x884C;&#x6216;&#x8005;&#x7B2C;&#x4E00;&#x5217;&#x4E2D;&#x9047;&#x5230;&#x4E86;&#x969C;&#x788D;&#x7269;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x505C;&#x6B62;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x969C;&#x788D;&#x7269;&#x540E;&#x9762;&#x7684;&#x683C;&#x5B50;&#x6CA1;&#x529E;&#x6CD5;&#x5230;&#x8FBE;&#xFF0C;&#x9ED8;&#x8BA4;&#x521D;&#x59CB;&#x5316;&#x4E3A;0</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;obstacleGrid.length;i++){<br>            <span class="hljs-keyword">if</span>(obstacleGrid[i][<span class="hljs-number">0</span>]==<span class="hljs-number">1</span>){<br>                <span class="hljs-keyword">break</span>;<br>            }<span class="hljs-keyword">else</span>{<br>                dp[i][<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>            }<br>            <br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;obstacleGrid[<span class="hljs-number">0</span>].length;j++){<br>            <span class="hljs-keyword">if</span>(obstacleGrid[<span class="hljs-number">0</span>][j]==<span class="hljs-number">1</span>){<br>                <span class="hljs-keyword">break</span>;<br>            }<span class="hljs-keyword">else</span>{<br>                dp[<span class="hljs-number">0</span>][j]=<span class="hljs-number">1</span>;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x4ECE;[1][1]&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x516C;&#x5F0F;dp[m][n]=dp[m-1][n]+dp[m][n-1]</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> m=<span class="hljs-number">1</span>;m&lt;obstacleGrid.length;m++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> n=<span class="hljs-number">1</span>;n&lt;obstacleGrid[<span class="hljs-number">0</span>].length;n++){<br>                <span class="hljs-keyword">if</span>(obstacleGrid[m][n]==<span class="hljs-number">1</span>){<br>                    dp[m][n]=<span class="hljs-number">0</span>;<br>                }<br>                <span class="hljs-keyword">else</span>{<br>                    dp[m][n]=dp[m-<span class="hljs-number">1</span>][n]+dp[m][n-<span class="hljs-number">1</span>];<br>                }<br>            }<br>        }<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x53F3;&#x4E0B;&#x89D2;&#x4F4D;&#x7F6E;&#x7684;&#x8DEF;&#x5F84;&#x6570;&#x91CF;</span><br>        <span class="hljs-keyword">return</span> dp[obstacleGrid.length-<span class="hljs-number">1</span>][obstacleGrid[<span class="hljs-number">0</span>].length-<span class="hljs-number">1</span>];<br>        <br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
 
 <ul>
-<li>简化版本</li>
+<li>&#x7B80;&#x5316;&#x7248;&#x672C;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) &#123;
-        if(obstacleGrid&#x3D;&#x3D;null||obstacleGrid.length&#x3D;&#x3D;0||obstacleGrid[0].length&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        int m&#x3D;obstacleGrid.length;
-        int n&#x3D;obstacleGrid[0].length;
-        &#x2F;&#x2F;定义dp数组，dp[i][j]表示从(0,0)出发到达（i，j）所包含的路线数
-        int[][] dp&#x3D;new int[m][n];
-        &#x2F;&#x2F;对dp数组进行初始化，注意，dp[i][0]和dp[0][j]为1，若遇到障碍，则为0。
-        for(int i&#x3D;0;i&lt;m&amp;&amp;obstacleGrid[i][0]&#x3D;&#x3D;0;i++)&#123;
-            dp[i][0]&#x3D;1;
-        &#125;
-        for(int j&#x3D;0;j&lt;n&amp;&amp;obstacleGrid[0][j]&#x3D;&#x3D;0;j++)&#123;
-            dp[0][j]&#x3D;1;
-        &#125;
-        &#x2F;&#x2F;dp[i][j]&#x3D;dp[i-1][j]+dp[i][j-1]
-        for(int i&#x3D;1;i&lt;m;i++)&#123;
-            for(int j&#x3D;1;j&lt;n;j++)&#123;
-                &#x2F;&#x2F;若当前遍历的位置（i,j）不是障碍时，才进行赋值
-                if(obstacleGrid[i][j]!&#x3D;1)&#123;
-                    dp[i][j]&#x3D;dp[i-1][j]+dp[i][j-1];
-                &#125;
-            &#125;
-        &#125;
-        return dp[m-1][n-1];
-
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">uniquePathsWithObstacles</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] obstacleGrid)</span> {<br>        <span class="hljs-keyword">if</span>(obstacleGrid==<span class="hljs-literal">null</span>||obstacleGrid.length==<span class="hljs-number">0</span>||obstacleGrid[<span class="hljs-number">0</span>].length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-type">int</span> m=obstacleGrid.length;<br>        <span class="hljs-type">int</span> n=obstacleGrid[<span class="hljs-number">0</span>].length;<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;&#xFF0C;dp[i][j]&#x8868;&#x793A;&#x4ECE;(0,0)&#x51FA;&#x53D1;&#x5230;&#x8FBE;&#xFF08;i&#xFF0C;j&#xFF09;&#x6240;&#x5305;&#x542B;&#x7684;&#x8DEF;&#x7EBF;&#x6570;</span><br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[m][n];<br>        <span class="hljs-comment">//&#x5BF9;dp&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;dp[i][0]&#x548C;dp[0][j]&#x4E3A;1&#xFF0C;&#x82E5;&#x9047;&#x5230;&#x969C;&#x788D;&#xFF0C;&#x5219;&#x4E3A;0&#x3002;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;m&amp;&amp;obstacleGrid[i][<span class="hljs-number">0</span>]==<span class="hljs-number">0</span>;i++){<br>            dp[i][<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;n&amp;&amp;obstacleGrid[<span class="hljs-number">0</span>][j]==<span class="hljs-number">0</span>;j++){<br>            dp[<span class="hljs-number">0</span>][j]=<span class="hljs-number">1</span>;<br>        }<br>        <span class="hljs-comment">//dp[i][j]=dp[i-1][j]+dp[i][j-1]</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;m;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;n;j++){<br>                <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x904D;&#x5386;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;i,j&#xFF09;&#x4E0D;&#x662F;&#x969C;&#x788D;&#x65F6;&#xFF0C;&#x624D;&#x8FDB;&#x884C;&#x8D4B;&#x503C;</span><br>                <span class="hljs-keyword">if</span>(obstacleGrid[i][j]!=<span class="hljs-number">1</span>){<br>                    dp[i][j]=dp[i-<span class="hljs-number">1</span>][j]+dp[i][j-<span class="hljs-number">1</span>];<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[m-<span class="hljs-number">1</span>][n-<span class="hljs-number">1</span>];<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -1280,6 +868,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

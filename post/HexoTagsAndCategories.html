@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="如何在Hexo中添加分类和标签？分类： 创建分类选项： 生成【分类页】，并添加type属性    hexo new page categories   执行成功：  INFO  Created: H:\blog\source\categories\index.md   根据上述路径，找到index.md,添加type和layout：  title: categories date: 2022-07">
+    <meta name="description" content="&amp;#x5982;&amp;#x4F55;&amp;#x5728;Hexo&amp;#x4E2D;&amp;#x6DFB;&amp;#x52A0;&amp;#x5206;&amp;#x7C7B;&amp;#x548C;&amp;#x6807;&amp;#x7B7E;&amp;#xFF1F;&amp;#x5206;&amp;#x7C7B;&amp;#xFF1A; &amp;#x521B;&amp;#x5EFA;&amp;#x5206;&amp;#x7C7B;&amp;#x9009;&amp;#x9879;&amp;#xFF1A; &amp;#x751F;&amp;#x6210;&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo添加标签和分类">
 <meta property="og:url" content="http://example.com/post/HexoTagsAndCategories.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="如何在Hexo中添加分类和标签？分类： 创建分类选项： 生成【分类页】，并添加type属性    hexo new page categories   执行成功：  INFO  Created: H:\blog\source\categories\index.md   根据上述路径，找到index.md,添加type和layout：  title: categories date: 2022-07">
+<meta property="og:description" content="&amp;#x5982;&amp;#x4F55;&amp;#x5728;Hexo&amp;#x4E2D;&amp;#x6DFB;&amp;#x52A0;&amp;#x5206;&amp;#x7C7B;&amp;#x548C;&amp;#x6807;&amp;#x7B7E;&amp;#xFF1F;&amp;#x5206;&amp;#x7C7B;&amp;#xFF1A; &amp;#x521B;&amp;#x5EFA;&amp;#x5206;&amp;#x7C7B;&amp;#x9009;&amp;#x9879;&amp;#xFF1A; &amp;#x751F;&amp;#x6210;&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-19T08:18:19.000Z">
 <meta property="article:modified_time" content="2022-07-19T08:27:21.522Z">
@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -92,10 +92,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -110,7 +110,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -151,73 +151,55 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="如何在Hexo中添加分类和标签？"><a href="#如何在Hexo中添加分类和标签？" class="headerlink" title="如何在Hexo中添加分类和标签？"></a>如何在Hexo中添加分类和标签？</h1><h2 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h2><ul>
-<li>创建分类选项：<ul>
-<li>生成【分类页】，并添加type属性</li>
+        <h1 id="&#x5982;&#x4F55;&#x5728;Hexo&#x4E2D;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x548C;&#x6807;&#x7B7E;&#xFF1F;"><a href="#&#x5982;&#x4F55;&#x5728;Hexo&#x4E2D;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x548C;&#x6807;&#x7B7E;&#xFF1F;" class="headerlink" title="&#x5982;&#x4F55;&#x5728;Hexo&#x4E2D;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x548C;&#x6807;&#x7B7E;&#xFF1F;"></a>&#x5982;&#x4F55;&#x5728;Hexo&#x4E2D;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x548C;&#x6807;&#x7B7E;&#xFF1F;</h1><h2 id="&#x5206;&#x7C7B;&#xFF1A;"><a href="#&#x5206;&#x7C7B;&#xFF1A;" class="headerlink" title="&#x5206;&#x7C7B;&#xFF1A;"></a>&#x5206;&#x7C7B;&#xFF1A;</h2><ul>
+<li>&#x521B;&#x5EFA;&#x5206;&#x7C7B;&#x9009;&#x9879;&#xFF1A;<ul>
+<li>&#x751F;&#x6210;&#x3010;&#x5206;&#x7C7B;&#x9875;&#x3011;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;type&#x5C5E;&#x6027;</li>
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page categories</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new page categories<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>执行成功：</li>
+<li>&#x6267;&#x884C;&#x6210;&#x529F;&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">INFO  Created: H:\blog\source\categories\index.md</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">INFO  Created: H:\blog\source\categories\index.md<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>根据上述路径，找到index.md,添加type和layout：</li>
+<li>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x8DEF;&#x5F84;&#xFF0C;&#x627E;&#x5230;index.md,&#x6DFB;&#x52A0;type&#x548C;layout&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: categories
-date: 2022-07-19 16:16:46
-type: &quot;categories&quot;
-layout: &quot;categories&quot;</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">title: categories<br>date: 2022-07-19 16:16:46<br>type: &quot;categories&quot;<br>layout: &quot;categories&quot;<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>保存并关闭index.md</li>
-<li>使用categories：</li>
+<li>&#x4FDD;&#x5B58;&#x5E76;&#x5173;&#x95ED;index.md</li>
+<li>&#x4F7F;&#x7528;categories&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">title: Console失效
-date: 2022-07-19 16:02:42
-categories: 
-- web前端
-tags:
-- Vue
-- 报错</code></pre>
+<figure class="highlight txt hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt">title: Console&#x5931;&#x6548;<br>date: 2022-07-19 16:02:42<br>categories: <br>- web&#x524D;&#x7AEF;<br>tags:<br>- Vue<br>- &#x62A5;&#x9519;<br></code></pre></td></tr></table></figure>
 
 
 
-<h2 id="标签："><a href="#标签：" class="headerlink" title="标签："></a>标签：</h2><ul>
-<li>创建标签选项：<ul>
-<li>生成【标签页】，并添加type属性</li>
+<h2 id="&#x6807;&#x7B7E;&#xFF1A;"><a href="#&#x6807;&#x7B7E;&#xFF1A;" class="headerlink" title="&#x6807;&#x7B7E;&#xFF1A;"></a>&#x6807;&#x7B7E;&#xFF1A;</h2><ul>
+<li>&#x521B;&#x5EFA;&#x6807;&#x7B7E;&#x9009;&#x9879;&#xFF1A;<ul>
+<li>&#x751F;&#x6210;&#x3010;&#x6807;&#x7B7E;&#x9875;&#x3011;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;type&#x5C5E;&#x6027;</li>
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page tags</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new page tags<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>执行成功：</li>
+<li>&#x6267;&#x884C;&#x6210;&#x529F;&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">INFO  Created: H:\blog\source\tags\index.md</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">INFO  Created: H:\blog\source\tags\index.md<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>根据上述路径，找到index.md,添加type和layout：</li>
+<li>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x8DEF;&#x5F84;&#xFF0C;&#x627E;&#x5230;index.md,&#x6DFB;&#x52A0;type&#x548C;layout&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: 文章分类
-date: 2022-01-07 22:53:43
-type: &quot;tags&quot;
-layout: &quot;tags&quot;</code></pre>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">title: &#x6587;&#x7AE0;&#x5206;&#x7C7B;<br>date: 2022-01-07 22:53:43<br>type: &quot;tags&quot;<br>layout: &quot;tags&quot;<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>保存并关闭index.md</li>
-<li>使用tags：</li>
+<li>&#x4FDD;&#x5B58;&#x5E76;&#x5173;&#x95ED;index.md</li>
+<li>&#x4F7F;&#x7528;tags&#xFF1A;</li>
 </ul>
-<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">title: Console失效
-date: 2022-07-19 16:02:42
-categories: 
-- web前端
-tags:
-- Vue
-- 报错</code></pre>
+<figure class="highlight txt hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs txt">title: Console&#x5931;&#x6548;<br>date: 2022-07-19 16:02:42<br>categories: <br>- web&#x524D;&#x7AEF;<br>tags:<br>- Vue<br>- &#x62A5;&#x9519;<br></code></pre></td></tr></table></figure>
 
 
 
@@ -256,9 +238,8 @@ tags:
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -267,14 +248,25 @@ tags:
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -361,6 +353,19 @@ tags:
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

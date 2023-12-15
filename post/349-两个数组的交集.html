@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="349.两个数组的交集题目描述： 两个数组的交集  给定两个数组 nums1 和 nums2 ，返回 它们的交集 。输出结果中的每个元素一定是 唯一 的。我们可以 不考虑输出结果的顺序 。 example 1: 输入：nums1 &#x3D; [1,2,2,1], nums2 &#x3D; [2,2] 输出：[2]  example 2: 输入：nums1 &#x3D; [4,9,5], nums">
+    <meta name="description" content="349.&amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x4EA4;&amp;#x96C6;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x4EA4;&amp;#x96C6;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="349.两个数组的交集">
 <meta property="og:url" content="http://example.com/post/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="349.两个数组的交集题目描述： 两个数组的交集  给定两个数组 nums1 和 nums2 ，返回 它们的交集 。输出结果中的每个元素一定是 唯一 的。我们可以 不考虑输出结果的顺序 。 example 1: 输入：nums1 &#x3D; [1,2,2,1], nums2 &#x3D; [2,2] 输出：[2]  example 2: 输入：nums1 &#x3D; [4,9,5], nums">
+<meta property="og:description" content="349.&amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x4EA4;&amp;#x96C6;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;#x7EC4;&amp;#x7684;&amp;#x4EA4;&amp;#x96C6;  &amp;#x7ED9;&amp;#x5B9A;&amp;#x4E24;&amp;#x4E2A;&amp;#x6570;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-29T12:47:57.000Z">
 <meta property="article:modified_time" content="2022-08-29T12:50:21.782Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,48 +152,23 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349.两个数组的交集"></a>349.两个数组的交集</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="349">
-<li>两个数组的交集</li>
+        <h1 id="349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;"><a href="#349-&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;" class="headerlink" title="349.&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;"></a>349.&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="349">
+<li>&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</li>
 </ol>
-<p>给定两个数组 <code>nums1</code> 和 <code>nums2</code> ，返回 <em>它们的交集</em> 。输出结果中的每个元素一定是 <strong>唯一</strong> 的。我们可以 <strong>不考虑输出结果的顺序</strong> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6570;&#x7EC4; <code>nums1</code> &#x548C; <code>nums2</code> &#xFF0C;&#x8FD4;&#x56DE; <em>&#x5B83;&#x4EEC;&#x7684;&#x4EA4;&#x96C6;</em> &#x3002;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x662F; <strong>&#x552F;&#x4E00;</strong> &#x7684;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5; <strong>&#x4E0D;&#x8003;&#x8651;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x987A;&#x5E8F;</strong> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [1,2,2,1], nums2 &#x3D; [2,2]
-输出：[2]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>], nums2 = [<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：nums1 &#x3D; [4,9,5], nums2 &#x3D; [9,4,9,8,4]
-输出：[9,4]
-解释：[4,9] 也是可通过的</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums1 = [<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>], nums2 = [<span class="hljs-number">9</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">9</span>,<span class="hljs-number">4</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">9</span>] &#x4E5F;&#x662F;&#x53EF;&#x901A;&#x8FC7;&#x7684;<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
 <li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-arrays/">https://leetcode.cn/problems/intersection-of-two-arrays/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int[] intersection(int[] nums1, int[] nums2) &#123;
-        if (nums1 &#x3D;&#x3D; null || nums1.length &#x3D;&#x3D; 0 || nums2 &#x3D;&#x3D; null || nums2.length &#x3D;&#x3D; 0) &#123;
-            return new int[0];
-        &#125;
-        &#x2F;&#x2F;存储数组元素
-        Set&lt;Integer&gt; set1 &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;存储结果
-        Set&lt;Integer&gt; resSet &#x3D; new HashSet&lt;&gt;();
-        &#x2F;&#x2F;遍历数组1
-        for (int i : nums1) &#123;
-            set1.add(i);
-        &#125;
-        &#x2F;&#x2F;遍历数组2的过程中判断哈希表中是否存在该元素，若存在，则存入resSet中，因为输出结果是唯一的，因此并集的结果使用set集合来存储
-        for (int i : nums2) &#123;
-            if (set1.contains(i)) &#123;
-                resSet.add(i);
-            &#125;
-        &#125;
-        &#x2F;&#x2F;将结果集合转为数组
-        return resSet.stream().mapToInt(x -&gt; x).toArray();
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-arrays/">https://leetcode.cn/problems/intersection-of-two-arrays/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[] intersection(<span class="hljs-type">int</span>[] nums1, <span class="hljs-type">int</span>[] nums2) {<br>        <span class="hljs-keyword">if</span> (nums1 == <span class="hljs-literal">null</span> || nums1.length == <span class="hljs-number">0</span> || nums2 == <span class="hljs-literal">null</span> || nums2.length == <span class="hljs-number">0</span>) {<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-comment">//&#x5B58;&#x50A8;&#x6570;&#x7EC4;&#x5143;&#x7D20;</span><br>        Set&lt;Integer&gt; set1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x5B58;&#x50A8;&#x7ED3;&#x679C;</span><br>        Set&lt;Integer&gt; resSet = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashSet</span>&lt;&gt;();<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;1</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i : nums1) {<br>            set1.add(i);<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x6570;&#x7EC4;2&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5224;&#x65AD;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8BE5;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5B58;&#x5165;resSet&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5E76;&#x96C6;&#x7684;&#x7ED3;&#x679C;&#x4F7F;&#x7528;set&#x96C6;&#x5408;&#x6765;&#x5B58;&#x50A8;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i : nums2) {<br>            <span class="hljs-keyword">if</span> (set1.contains(i)) {<br>                resSet.add(i);<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5C06;&#x7ED3;&#x679C;&#x96C6;&#x5408;&#x8F6C;&#x4E3A;&#x6570;&#x7EC4;</span><br>        <span class="hljs-keyword">return</span> resSet.stream().mapToInt(x -&gt; x).toArray();<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -228,9 +203,8 @@
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -239,14 +213,25 @@
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -333,6 +318,19 @@
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

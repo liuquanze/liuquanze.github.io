@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -86,10 +86,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -104,7 +104,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -153,57 +153,10 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Kth-Largest-Element-in-an-Array——堆排序"><a href="#Kth-Largest-Element-in-an-Array——堆排序" class="headerlink" title="Kth Largest Element in an Array——堆排序"></a>Kth Largest Element in an Array——堆排序</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>Given an integer array nums and an integer k, return the kth largest element in the array.</p>
+        <h1 id="Kth-Largest-Element-in-an-Array&#x2014;&#x2014;&#x5806;&#x6392;&#x5E8F;"><a href="#Kth-Largest-Element-in-an-Array&#x2014;&#x2014;&#x5806;&#x6392;&#x5E8F;" class="headerlink" title="Kth Largest Element in an Array&#x2014;&#x2014;&#x5806;&#x6392;&#x5E8F;"></a>Kth Largest Element in an Array&#x2014;&#x2014;&#x5806;&#x6392;&#x5E8F;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>Given an integer array nums and an integer k, return the kth largest element in the array.</p>
 <p>Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>
 <p>You must solve it in O(n) time complexity.</p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int findKthLargest(int[] nums, int k) &#123;
-        &#x2F;&#x2F;堆的大小
-        int heapSize&#x3D;nums.length;
-        &#x2F;&#x2F;初始建立大根堆
-        buildMaxHeap(nums,heapSize);
-        &#x2F;&#x2F;取出堆顶元素，置换到堆底，再对置换完成的堆进行调整
-        for(int i&#x3D;nums.length-1;i&gt;&#x3D;nums.length-k+1;i--)&#123;
-            swap(nums,0,i);
-            adjustHeap(nums,0,--heapSize);
-        &#125;
-        &#x2F;&#x2F;返回第k次调整的堆顶元素
-        return nums[0];
-    &#125;
-    &#x2F;&#x2F;初始建堆
-    public void buildMaxHeap(int[] nums,int heapSize)&#123;
-        &#x2F;&#x2F;找到第一个非叶节点，不断下坠
-        for(int i&#x3D;heapSize&#x2F;2;i&gt;&#x3D;0;i--)&#123;
-            adjustHeap(nums,i,heapSize);
-        &#125;
-    &#125;
-	&#x2F;&#x2F;堆调整
-    public void adjustHeap(int[] nums,int i,int heapSize)&#123;
-        &#x2F;&#x2F;创建指针分别指向i节点的左右孩子节点
-        int left&#x3D;i*2+1;
-        int right&#x3D;i*2+2;
-        int largest&#x3D;i;
-        &#x2F;&#x2F;通过两次判断，将largest指针指向最大节点
-        if(left&lt;heapSize&amp;&amp;nums[left]&gt;nums[largest])&#123;
-            largest&#x3D;left;
-        &#125;
-        if(right&lt;heapSize&amp;&amp;nums[right]&gt;nums[largest])&#123;
-            largest&#x3D;right;
-        &#125;
-        &#x2F;&#x2F;若不符合大根堆要求，则进行调整
-        if(largest!&#x3D;i)&#123;
-            swap(nums,largest,i);
-            adjustHeap(nums,largest,heapSize);
-        &#125;
-    &#125;
-
-    public void swap(int[] nums,int left,int right)&#123;
-        int temp&#x3D;nums[left];
-        nums[left]&#x3D;nums[right];
-        nums[right]&#x3D;temp;
-    &#125;
-
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findKthLargest</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> k)</span> {<br>        <span class="hljs-comment">//&#x5806;&#x7684;&#x5927;&#x5C0F;</span><br>        <span class="hljs-type">int</span> heapSize=nums.length;<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5EFA;&#x7ACB;&#x5927;&#x6839;&#x5806;</span><br>        buildMaxHeap(nums,heapSize);<br>        <span class="hljs-comment">//&#x53D6;&#x51FA;&#x5806;&#x9876;&#x5143;&#x7D20;&#xFF0C;&#x7F6E;&#x6362;&#x5230;&#x5806;&#x5E95;&#xFF0C;&#x518D;&#x5BF9;&#x7F6E;&#x6362;&#x5B8C;&#x6210;&#x7684;&#x5806;&#x8FDB;&#x884C;&#x8C03;&#x6574;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=nums.length-<span class="hljs-number">1</span>;i&gt;=nums.length-k+<span class="hljs-number">1</span>;i--){<br>            swap(nums,<span class="hljs-number">0</span>,i);<br>            adjustHeap(nums,<span class="hljs-number">0</span>,--heapSize);<br>        }<br>        <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7B2C;k&#x6B21;&#x8C03;&#x6574;&#x7684;&#x5806;&#x9876;&#x5143;&#x7D20;</span><br>        <span class="hljs-keyword">return</span> nums[<span class="hljs-number">0</span>];<br>    }<br>    <span class="hljs-comment">//&#x521D;&#x59CB;&#x5EFA;&#x5806;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">buildMaxHeap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> heapSize)</span>{<br>        <span class="hljs-comment">//&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x53F6;&#x8282;&#x70B9;&#xFF0C;&#x4E0D;&#x65AD;&#x4E0B;&#x5760;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=heapSize/<span class="hljs-number">2</span>;i&gt;=<span class="hljs-number">0</span>;i--){<br>            adjustHeap(nums,i,heapSize);<br>        }<br>    }<br>	<span class="hljs-comment">//&#x5806;&#x8C03;&#x6574;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">adjustHeap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> i,<span class="hljs-type">int</span> heapSize)</span>{<br>        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x6307;&#x9488;&#x5206;&#x522B;&#x6307;&#x5411;i&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x53F3;&#x5B69;&#x5B50;&#x8282;&#x70B9;</span><br>        <span class="hljs-type">int</span> left=i*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> right=i*<span class="hljs-number">2</span>+<span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> largest=i;<br>        <span class="hljs-comment">//&#x901A;&#x8FC7;&#x4E24;&#x6B21;&#x5224;&#x65AD;&#xFF0C;&#x5C06;largest&#x6307;&#x9488;&#x6307;&#x5411;&#x6700;&#x5927;&#x8282;&#x70B9;</span><br>        <span class="hljs-keyword">if</span>(left&lt;heapSize&amp;&amp;nums[left]&gt;nums[largest]){<br>            largest=left;<br>        }<br>        <span class="hljs-keyword">if</span>(right&lt;heapSize&amp;&amp;nums[right]&gt;nums[largest]){<br>            largest=right;<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x4E0D;&#x7B26;&#x5408;&#x5927;&#x6839;&#x5806;&#x8981;&#x6C42;&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x8C03;&#x6574;</span><br>        <span class="hljs-keyword">if</span>(largest!=i){<br>            swap(nums,largest,i);<br>            adjustHeap(nums,largest,heapSize);<br>        }<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-type">int</span> temp=nums[left];<br>        nums[left]=nums[right];<br>        nums[right]=temp;<br>    }<br><br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -246,50 +199,10 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h4 id="Kth-Largest-Element-in-an-Array——快速排序"><a href="#Kth-Largest-Element-in-an-Array——快速排序" class="headerlink" title="Kth Largest Element in an Array——快速排序"></a>Kth Largest Element in an Array——快速排序</h4><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>Given an integer array nums and an integer k, return the kth largest element in the array.</p>
+        <h4 id="Kth-Largest-Element-in-an-Array&#x2014;&#x2014;&#x5FEB;&#x901F;&#x6392;&#x5E8F;"><a href="#Kth-Largest-Element-in-an-Array&#x2014;&#x2014;&#x5FEB;&#x901F;&#x6392;&#x5E8F;" class="headerlink" title="Kth Largest Element in an Array&#x2014;&#x2014;&#x5FEB;&#x901F;&#x6392;&#x5E8F;"></a>Kth Largest Element in an Array&#x2014;&#x2014;&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h4><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>Given an integer array nums and an integer k, return the kth largest element in the array.</p>
 <p>Note that it is the kth largest element in the sorted order, not the kth distinct element.</p>
 <p>You must solve it in O(n) time complexity.</p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class Solution &#123;
-    public int findKthLargest(int[] nums, int k) &#123;
-        return fastSelection(nums,0,nums.length-1,k-1);	&#x2F;&#x2F;注意，传入的参数是nums.length-1和k-1
-    &#125;
-	&#x2F;&#x2F;快速排序，递归
-    public int fastSelection(int[] nums,int start,int end,int kth)&#123;
-        &#x2F;&#x2F;划分并确定一个元素的位置
-        int cur&#x3D;partition(nums,start,end);
-        &#x2F;&#x2F;若为第k个元素，则直接返回
-        if(cur&#x3D;&#x3D;kth)&#123;
-            return nums[cur];
-        &#125;else if(cur&lt;kth)&#123;		&#x2F;&#x2F;否则对右边区域进行划分
-            return fastSelection(nums,cur+1,end,kth);
-        &#125;else&#123;				&#x2F;&#x2F;对左边区域进行划分
-            return fastSelection(nums,start,cur-1,kth);
-        &#125;
-    &#125;
-	&#x2F;&#x2F;划分区间
-    public int partition(int[] nums,int start,int end)&#123;
-       	 &#x2F;&#x2F;随机选择枢轴元素
-        int pivot&#x3D;start+(int)(Math.random()*(end-start+1));
-        &#x2F;&#x2F;将枢轴元素调换至右边界
-        swap(nums,pivot,end);
-        &#x2F;&#x2F;双指针index和i用于进行划分，确定枢轴元素的最终位置
-        int index&#x3D;start-1;
-        for(int i&#x3D;start;i&lt;end;i++)&#123;
-            if(nums[i]&gt;nums[end])&#123;
-                swap(nums,i,++index);
-            &#125;
-        &#125;
-        swap(nums,++index,end);
-        return index;
-    &#125;
-
-    public void swap(int[] nums,int left,int right)&#123;
-        int temp&#x3D;nums[left];
-        nums[left]&#x3D;nums[right];
-        nums[right]&#x3D;temp;
-    &#125;
-
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">findKthLargest</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> k)</span> {<br>        <span class="hljs-keyword">return</span> fastSelection(nums,<span class="hljs-number">0</span>,nums.length-<span class="hljs-number">1</span>,k-<span class="hljs-number">1</span>);	<span class="hljs-comment">//&#x6CE8;&#x610F;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;nums.length-1&#x548C;k-1</span><br>    }<br>	<span class="hljs-comment">//&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF0C;&#x9012;&#x5F52;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fastSelection</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> start,<span class="hljs-type">int</span> end,<span class="hljs-type">int</span> kth)</span>{<br>        <span class="hljs-comment">//&#x5212;&#x5206;&#x5E76;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-type">int</span> cur=partition(nums,start,end);<br>        <span class="hljs-comment">//&#x82E5;&#x4E3A;&#x7B2C;k&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(cur==kth){<br>            <span class="hljs-keyword">return</span> nums[cur];<br>        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(cur&lt;kth){		<span class="hljs-comment">//&#x5426;&#x5219;&#x5BF9;&#x53F3;&#x8FB9;&#x533A;&#x57DF;&#x8FDB;&#x884C;&#x5212;&#x5206;</span><br>            <span class="hljs-keyword">return</span> fastSelection(nums,cur+<span class="hljs-number">1</span>,end,kth);<br>        }<span class="hljs-keyword">else</span>{				<span class="hljs-comment">//&#x5BF9;&#x5DE6;&#x8FB9;&#x533A;&#x57DF;&#x8FDB;&#x884C;&#x5212;&#x5206;</span><br>            <span class="hljs-keyword">return</span> fastSelection(nums,start,cur-<span class="hljs-number">1</span>,kth);<br>        }<br>    }<br>	<span class="hljs-comment">//&#x5212;&#x5206;&#x533A;&#x95F4;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">partition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> start,<span class="hljs-type">int</span> end)</span>{<br>       	 <span class="hljs-comment">//&#x968F;&#x673A;&#x9009;&#x62E9;&#x67A2;&#x8F74;&#x5143;&#x7D20;</span><br>        <span class="hljs-type">int</span> pivot=start+(<span class="hljs-type">int</span>)(Math.random()*(end-start+<span class="hljs-number">1</span>));<br>        <span class="hljs-comment">//&#x5C06;&#x67A2;&#x8F74;&#x5143;&#x7D20;&#x8C03;&#x6362;&#x81F3;&#x53F3;&#x8FB9;&#x754C;</span><br>        swap(nums,pivot,end);<br>        <span class="hljs-comment">//&#x53CC;&#x6307;&#x9488;index&#x548C;i&#x7528;&#x4E8E;&#x8FDB;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x786E;&#x5B9A;&#x67A2;&#x8F74;&#x5143;&#x7D20;&#x7684;&#x6700;&#x7EC8;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-type">int</span> index=start-<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=start;i&lt;end;i++){<br>            <span class="hljs-keyword">if</span>(nums[i]&gt;nums[end]){<br>                swap(nums,i,++index);<br>            }<br>        }<br>        swap(nums,++index,end);<br>        <span class="hljs-keyword">return</span> index;<br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">swap</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-type">int</span> temp=nums[left];<br>        nums[left]=nums[right];<br>        nums[right]=temp;<br>    }<br><br>}<br></code></pre></td></tr></table></figure>
 
 
 
@@ -327,39 +240,32 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="Java中的优先队列"><a href="#Java中的优先队列" class="headerlink" title="Java中的优先队列"></a>Java中的优先队列</h1><p>Java中的PriorityQueue默认是小顶堆，逻辑上是堆，物理上是数组，每次取出的元素是最小的。【可以通过比较器的方式传入不同的比较规则】</p>
-<h2 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h2><ul>
-<li>实现了Queue接口</li>
-<li>不允许放入null元素</li>
-<li>插入方法：<ul>
-<li>add()和offer(),前者插入失败抛出异常，后者插入失败返回false。</li>
+        <h1 id="Java&#x4E2D;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;"><a href="#Java&#x4E2D;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;" class="headerlink" title="Java&#x4E2D;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;"></a>Java&#x4E2D;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;</h1><p>Java&#x4E2D;&#x7684;PriorityQueue&#x9ED8;&#x8BA4;&#x662F;&#x5C0F;&#x9876;&#x5806;&#xFF0C;&#x903B;&#x8F91;&#x4E0A;&#x662F;&#x5806;&#xFF0C;&#x7269;&#x7406;&#x4E0A;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x6B21;&#x53D6;&#x51FA;&#x7684;&#x5143;&#x7D20;&#x662F;&#x6700;&#x5C0F;&#x7684;&#x3002;&#x3010;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6BD4;&#x8F83;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x6BD4;&#x8F83;&#x89C4;&#x5219;&#x3011;</p>
+<h2 id="&#x7279;&#x70B9;&#xFF1A;"><a href="#&#x7279;&#x70B9;&#xFF1A;" class="headerlink" title="&#x7279;&#x70B9;&#xFF1A;"></a>&#x7279;&#x70B9;&#xFF1A;</h2><ul>
+<li>&#x5B9E;&#x73B0;&#x4E86;Queue&#x63A5;&#x53E3;</li>
+<li>&#x4E0D;&#x5141;&#x8BB8;&#x653E;&#x5165;null&#x5143;&#x7D20;</li>
+<li>&#x63D2;&#x5165;&#x65B9;&#x6CD5;&#xFF1A;<ul>
+<li>add()&#x548C;offer(),&#x524D;&#x8005;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x540E;&#x8005;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x8FD4;&#x56DE;false&#x3002;</li>
 </ul>
 </li>
-<li>获取堆顶元素：<ul>
-<li>element()和peek():都是获取堆顶元素，前者获取失败抛出异常，后者返回null</li>
+<li>&#x83B7;&#x53D6;&#x5806;&#x9876;&#x5143;&#x7D20;&#xFF1A;<ul>
+<li>element()&#x548C;peek():&#x90FD;&#x662F;&#x83B7;&#x53D6;&#x5806;&#x9876;&#x5143;&#x7D20;&#xFF0C;&#x524D;&#x8005;&#x83B7;&#x53D6;&#x5931;&#x8D25;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x540E;&#x8005;&#x8FD4;&#x56DE;null</li>
 </ul>
 </li>
-<li>获取并删除队首元素：<ul>
-<li>remove()和poll()都是获取并删除队首元素，前者失败抛出异常，后者失败返回null。</li>
+<li>&#x83B7;&#x53D6;&#x5E76;&#x5220;&#x9664;&#x961F;&#x9996;&#x5143;&#x7D20;&#xFF1A;<ul>
+<li>remove()&#x548C;poll()&#x90FD;&#x662F;&#x83B7;&#x53D6;&#x5E76;&#x5220;&#x9664;&#x961F;&#x9996;&#x5143;&#x7D20;&#xFF0C;&#x524D;&#x8005;&#x5931;&#x8D25;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x540E;&#x8005;&#x5931;&#x8D25;&#x8FD4;&#x56DE;null&#x3002;</li>
 </ul>
 </li>
 </ul>
-<h2 id="构造："><a href="#构造：" class="headerlink" title="构造："></a>构造：</h2><ul>
-<li>构造小顶堆</li>
+<h2 id="&#x6784;&#x9020;&#xFF1A;"><a href="#&#x6784;&#x9020;&#xFF1A;" class="headerlink" title="&#x6784;&#x9020;&#xFF1A;"></a>&#x6784;&#x9020;&#xFF1A;</h2><ul>
+<li>&#x6784;&#x9020;&#x5C0F;&#x9876;&#x5806;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">PriorityQueue small&#x3D;new PriorityQueue&lt;&gt;();</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">PriorityQueue small=<span class="hljs-keyword">new</span> <span class="hljs-title class_">PriorityQueue</span>&lt;&gt;();<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>构造大顶堆</li>
+<li>&#x6784;&#x9020;&#x5927;&#x9876;&#x5806;</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">PriorityQueue big&#x3D;new PriorityQueue&lt;&gt;(Collections.reverseOrder());
-&#x2F;&#x2F;使用比较器构造大顶堆
-PriorityQueue&lt;int[]&gt; queue&#x3D;new PriorityQueue&lt;&gt;(new Comparator&lt;int[]&gt;() &#123;
-	public int compare(int[] m, int[] n) &#123;
-		return m[1] - n[1];
-	&#125;
-&#125;);
-   </code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">PriorityQueue big=<span class="hljs-keyword">new</span> <span class="hljs-title class_">PriorityQueue</span>&lt;&gt;(Collections.reverseOrder());<br><span class="hljs-comment">//&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x5668;&#x6784;&#x9020;&#x5927;&#x9876;&#x5806;</span><br>PriorityQueue&lt;<span class="hljs-type">int</span>[]&gt; queue=<span class="hljs-keyword">new</span> <span class="hljs-title class_">PriorityQueue</span>&lt;&gt;(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;<span class="hljs-type">int</span>[]&gt;() {<br>	<span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span>[] m, <span class="hljs-type">int</span>[] n)</span> {<br>		<span class="hljs-keyword">return</span> m[<span class="hljs-number">1</span>] - n[<span class="hljs-number">1</span>];<br>	}<br>});<br>   <br></code></pre></td></tr></table></figure>
 
     
     </div>
@@ -477,6 +383,19 @@ PriorityQueue&lt;int[]&gt; queue&#x3D;new PriorityQueue&lt;&gt;(new Comparator&l
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

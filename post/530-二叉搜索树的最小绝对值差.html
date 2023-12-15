@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="530.二叉搜索树的最小绝对值差题目描述： 二叉搜索树的最小绝对差  给你一个二叉搜索树的根节点 root ，返回 树中任意两不同节点值之间的最小差值 。 差值是一个正数，其数值等于两值之差的绝对值。 example 1： 输入：root &#x3D; [4,2,6,1,3] 输出：1  example 2: 输入：root &#x3D; [1,0,48,null,null,12,49] 输出：1">
+    <meta name="description" content="530.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x5C0F;&amp;#x7EDD;&amp;#x5BF9;&amp;#x503C;&amp;#x5DEE;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="530.二叉搜索树的最小绝对值差">
 <meta property="og:url" content="http://example.com/post/530-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%B7%AE.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="530.二叉搜索树的最小绝对值差题目描述： 二叉搜索树的最小绝对差  给你一个二叉搜索树的根节点 root ，返回 树中任意两不同节点值之间的最小差值 。 差值是一个正数，其数值等于两值之差的绝对值。 example 1： 输入：root &#x3D; [4,2,6,1,3] 输出：1  example 2: 输入：root &#x3D; [1,0,48,null,null,12,49] 输出：1">
+<meta property="og:description" content="530.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x5C0F;&amp;#x7EDD;&amp;#x5BF9;&amp;#x503C;&amp;#x5DEE;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x7684;&amp;#x6700;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-08T01:03:59.000Z">
 <meta property="article:modified_time" content="2022-10-08T01:06:27.840Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,63 +152,24 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="530-二叉搜索树的最小绝对值差"><a href="#530-二叉搜索树的最小绝对值差" class="headerlink" title="530.二叉搜索树的最小绝对值差"></a>530.二叉搜索树的最小绝对值差</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="530">
-<li>二叉搜索树的最小绝对差</li>
+        <h1 id="530-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;"><a href="#530-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;" class="headerlink" title="530.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;"></a>530.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x5DEE;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="530">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x5DEE;</li>
 </ol>
-<p>给你一个二叉搜索树的根节点 <code>root</code> ，返回 <strong>树中任意两不同节点值之间的最小差值</strong> 。</p>
-<p>差值是一个正数，其数值等于两值之差的绝对值。</p>
-<p>example 1：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,6,1,3]
-输出：1</code></pre>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x8FD4;&#x56DE; <strong>&#x6811;&#x4E2D;&#x4EFB;&#x610F;&#x4E24;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x5C0F;&#x5DEE;&#x503C;</strong> &#x3002;</p>
+<p>&#x5DEE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x6570;&#xFF0C;&#x5176;&#x6570;&#x503C;&#x7B49;&#x4E8E;&#x4E24;&#x503C;&#x4E4B;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [1,0,48,null,null,12,49]
-输出：1</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">48</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">12</span>,<span class="hljs-number">49</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中节点的数目范围是 <code>[2, 104]</code></li>
+<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x8303;&#x56F4;&#x662F; <code>[2, 104]</code></li>
 <li><code>0 &lt;= Node.val &lt;= 105</code></li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">https://leetcode.cn/problems/minimum-absolute-difference-in-bst/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    &#x2F;&#x2F;记录当前的最小绝对值之差
-    public int result&#x3D;Integer.MAX_VALUE;
-    &#x2F;&#x2F;记录前一个节点的值
-    public TreeNode pre&#x3D;null;
-    public void findMin(TreeNode node)&#123;
-        if(node&#x3D;&#x3D;null)
-            return;
-        findMin(node.left);
-        if(pre!&#x3D;null)&#123;
-            result&#x3D;Math.min(result,node.val-pre.val);
-        &#125;
-        pre&#x3D;node;
-        findMin(node.right);
-        
-    &#125;
-
-    public int getMinimumDifference(TreeNode root) &#123;
-        findMin(root);
-        return result;
-
-    &#125;
-&#125;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">https://leetcode.cn/problems/minimum-absolute-difference-in-bst/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x7EDD;&#x5BF9;&#x503C;&#x4E4B;&#x5DEE;</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> result=Integer.MAX_VALUE;<br>    <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x524D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;</span><br>    <span class="hljs-keyword">public</span> TreeNode pre=<span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">findMin</span><span class="hljs-params">(TreeNode node)</span>{<br>        <span class="hljs-keyword">if</span>(node==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span>;<br>        findMin(node.left);<br>        <span class="hljs-keyword">if</span>(pre!=<span class="hljs-literal">null</span>){<br>            result=Math.min(result,node.val-pre.val);<br>        }<br>        pre=node;<br>        findMin(node.right);<br>        <br>    }<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getMinimumDifference</span><span class="hljs-params">(TreeNode root)</span> {<br>        findMin(root);<br>        <span class="hljs-keyword">return</span> result;<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -243,9 +204,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -254,14 +214,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -348,6 +319,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

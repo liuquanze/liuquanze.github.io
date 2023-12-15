@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="701.二叉搜索树中的插入操作题目描述： 二叉搜索树中的插入操作  给定二叉搜索树（BST）的根节点 root 和要插入树中的值 value ，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据 保证 ，新值和原始二叉搜索树中的任意节点值都不同。 注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 任意有效的结果 。 example 1: 输入：roo">
+    <meta name="description" content="701.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x5165;&amp;#x64CD;&amp;#x4F5C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="701.二叉搜索树中的插入操作">
 <meta property="og:url" content="http://example.com/post/701-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="701.二叉搜索树中的插入操作题目描述： 二叉搜索树中的插入操作  给定二叉搜索树（BST）的根节点 root 和要插入树中的值 value ，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据 保证 ，新值和原始二叉搜索树中的任意节点值都不同。 注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 任意有效的结果 。 example 1: 输入：roo">
+<meta property="og:description" content="701.&amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x5165;&amp;#x64CD;&amp;#x4F5C;&amp;#x9898;&amp;#x76EE;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x4E8C;&amp;#x53C9;&amp;#x641C;&amp;#x7D22;&amp;#x6811;&amp;#x4E2D;&amp;#x7684;&amp;#x63D2;&amp;#x">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-12T02:51:28.000Z">
 <meta property="article:modified_time" content="2022-10-12T02:55:13.376Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,76 +152,31 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="701-二叉搜索树中的插入操作"><a href="#701-二叉搜索树中的插入操作" class="headerlink" title="701.二叉搜索树中的插入操作"></a>701.二叉搜索树中的插入操作</h1><h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><ol start="701">
-<li>二叉搜索树中的插入操作</li>
+        <h1 id="701-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"><a href="#701-&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;" class="headerlink" title="701.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"></a>701.&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="701">
+<li>&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</li>
 </ol>
-<p>给定二叉搜索树（BST）的根节点 <code>root</code> 和要插入树中的值 <code>value</code> ，将值插入二叉搜索树。 返回插入后二叉搜索树的根节点。 输入数据 <strong>保证</strong> ，新值和原始二叉搜索树中的任意节点值都不同。</p>
-<p><strong>注意</strong>，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 <strong>任意有效的结果</strong> 。</p>
+<p>&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF08;BST&#xFF09;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#x548C;&#x8981;&#x63D2;&#x5165;&#x6811;&#x4E2D;&#x7684;&#x503C; <code>value</code> &#xFF0C;&#x5C06;&#x503C;&#x63D2;&#x5165;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002; &#x8FD4;&#x56DE;&#x63D2;&#x5165;&#x540E;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#x3002; &#x8F93;&#x5165;&#x6570;&#x636E; <strong>&#x4FDD;&#x8BC1;</strong> &#xFF0C;&#x65B0;&#x503C;&#x548C;&#x539F;&#x59CB;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x503C;&#x90FD;&#x4E0D;&#x540C;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x591A;&#x79CD;&#x6709;&#x6548;&#x7684;&#x63D2;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x8981;&#x6811;&#x5728;&#x63D2;&#x5165;&#x540E;&#x4ECD;&#x4FDD;&#x6301;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x5373;&#x53EF;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE; <strong>&#x4EFB;&#x610F;&#x6709;&#x6548;&#x7684;&#x7ED3;&#x679C;</strong> &#x3002;</p>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3], val &#x3D; 5
-输出：[4,2,7,1,3,5]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>], val = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 2:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [40,20,60,10,30,50,70], val &#x3D; 25
-输出：[40,20,60,10,30,50,70,null,null,25]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">40</span>,<span class="hljs-number">20</span>,<span class="hljs-number">60</span>,<span class="hljs-number">10</span>,<span class="hljs-number">30</span>,<span class="hljs-number">50</span>,<span class="hljs-number">70</span>], val = <span class="hljs-number">25</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">40</span>,<span class="hljs-number">20</span>,<span class="hljs-number">60</span>,<span class="hljs-number">10</span>,<span class="hljs-number">30</span>,<span class="hljs-number">50</span>,<span class="hljs-number">70</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">25</span>]<br></code></pre></td></tr></table></figure>
 
 <p>example 3:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：root &#x3D; [4,2,7,1,3,null,null,null,null,null,null], val &#x3D; 5
-输出：[4,2,7,1,3,5]</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>], val = <span class="hljs-number">5</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
-<li>树中的节点数将在 <code>[0, 104]</code>的范围内。</li>
+<li>&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;&#x5C06;&#x5728; <code>[0, 104]</code>&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;</li>
 <li><code>-108 &lt;= Node.val &lt;= 108</code></li>
-<li>所有值 <code>Node.val</code> 是 <strong>独一无二</strong> 的。</li>
+<li>&#x6240;&#x6709;&#x503C; <code>Node.val</code> &#x662F; <strong>&#x72EC;&#x4E00;&#x65E0;&#x4E8C;</strong> &#x7684;&#x3002;</li>
 <li><code>-108 &lt;= val &lt;= 108</code></li>
-<li><strong>保证</strong> <code>val</code> 在原始BST中不存在</li>
+<li><strong>&#x4FDD;&#x8BC1;</strong> <code>val</code> &#x5728;&#x539F;&#x59CB;BST&#x4E2D;&#x4E0D;&#x5B58;&#x5728;</li>
 </ul>
-<p>题目来源：</p>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/">https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val &#x3D; val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val &#x3D; val;
- *         this.left &#x3D; left;
- *         this.right &#x3D; right;
- *     &#125;
- * &#125;
- *&#x2F;
-class Solution &#123;
-    public TreeNode insertIntoBST(TreeNode root, int val) &#123;
-        &#x2F;&#x2F;若当前二叉搜索树为空，则创建新节点，并返回
-        if(root&#x3D;&#x3D;null)
-            return new TreeNode(val);
-        &#x2F;&#x2F;记录树的根节点，创建前驱节点
-        TreeNode newRoot&#x3D;root;
-        TreeNode pre&#x3D;null;
-        &#x2F;&#x2F;当活动节点不为null时进行循环遍历
-        while(root!&#x3D;null)&#123;
-            &#x2F;&#x2F;记录当前位置
-            pre&#x3D;root;
-            &#x2F;&#x2F;若当前节点val大于val则表示插入元素应该在当前节点的左子树
-            if(root.val&gt;val)&#123;
-                root&#x3D;root.left;
-            &#125;else&#123;
-                root&#x3D;root.right;
-            &#125;
-        &#125;
-        &#x2F;&#x2F;当root&#x3D;null时跳出循环，此时pre指向的是叶子节点，若叶子节点的val大于插入元素，则作为左孩子，否则作为右孩子
-        if(pre.val&gt;val)&#123;
-            pre.left&#x3D;new TreeNode(val);
-        &#125;else&#123;
-            pre.right&#x3D;new TreeNode(val);
-        &#125;
-        return newRoot;
-    &#125;
-&#125;</code></pre>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">insertIntoBST</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> val)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x65B0;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x521B;&#x5EFA;&#x524D;&#x9A71;&#x8282;&#x70B9;</span><br>        TreeNode newRoot=root;<br>        TreeNode pre=<span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x5F53;&#x6D3B;&#x52A8;&#x8282;&#x70B9;&#x4E0D;&#x4E3A;null&#x65F6;&#x8FDB;&#x884C;&#x5FAA;&#x73AF;&#x904D;&#x5386;</span><br>        <span class="hljs-keyword">while</span>(root!=<span class="hljs-literal">null</span>){<br>            <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</span><br>            pre=root;<br>            <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;val&#x5927;&#x4E8E;val&#x5219;&#x8868;&#x793A;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x5728;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;</span><br>            <span class="hljs-keyword">if</span>(root.val&gt;val){<br>                root=root.left;<br>            }<span class="hljs-keyword">else</span>{<br>                root=root.right;<br>            }<br>        }<br>        <span class="hljs-comment">//&#x5F53;root=null&#x65F6;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#xFF0C;&#x6B64;&#x65F6;pre&#x6307;&#x5411;&#x7684;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x82E5;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;val&#x5927;&#x4E8E;&#x63D2;&#x5165;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x4F5C;&#x4E3A;&#x5DE6;&#x5B69;&#x5B50;&#xFF0C;&#x5426;&#x5219;&#x4F5C;&#x4E3A;&#x53F3;&#x5B69;&#x5B50;</span><br>        <span class="hljs-keyword">if</span>(pre.val&gt;val){<br>            pre.left=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        }<span class="hljs-keyword">else</span>{<br>            pre.right=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(val);<br>        }<br>        <span class="hljs-keyword">return</span> newRoot;<br>    }<br>}<br></code></pre></td></tr></table></figure>
 
 
     
@@ -256,9 +211,8 @@ class Solution &#123;
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -267,14 +221,25 @@ class Solution &#123;
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -361,6 +326,19 @@ class Solution &#123;
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>

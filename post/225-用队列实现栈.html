@@ -16,12 +16,12 @@
 
 
 
-    <meta name="description" content="225.用队列实现栈问题描述： 用队列实现栈  请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。 实现 MyStack 类：  void push(int x) 将元素 x 压入栈顶。 int pop() 移除并返回栈顶元素。 int top() 返回栈顶元素。 boolean empty() 如果栈是空的，返回 true">
+    <meta name="description" content="225.&amp;#x7528;&amp;#x961F;&amp;#x5217;&amp;#x5B9E;&amp;#x73B0;&amp;#x6808;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7528;&amp;#x961F;&amp;#x5217;&amp;#x5B9E;&amp;#x73B0;&amp;#x6808;  &amp;#x8BF7;&amp;#x4F60;&amp;#x4EC5;&amp;#x4F7F;&amp;#x7528;&amp;#x4E24;&amp;#x4E2A;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="225.用队列实现栈">
 <meta property="og:url" content="http://example.com/post/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="225.用队列实现栈问题描述： 用队列实现栈  请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。 实现 MyStack 类：  void push(int x) 将元素 x 压入栈顶。 int pop() 移除并返回栈顶元素。 int top() 返回栈顶元素。 boolean empty() 如果栈是空的，返回 true">
+<meta property="og:description" content="225.&amp;#x7528;&amp;#x961F;&amp;#x5217;&amp;#x5B9E;&amp;#x73B0;&amp;#x6808;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&amp;#xFF1A; &amp;#x7528;&amp;#x961F;&amp;#x5217;&amp;#x5B9E;&amp;#x73B0;&amp;#x6808;  &amp;#x8BF7;&amp;#x4F60;&amp;#x4EC5;&amp;#x4F7F;&amp;#x7528;&amp;#x4E24;&amp;#x4E2A;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-14T14:46:17.000Z">
 <meta property="article:modified_time" content="2022-09-14T14:48:54.649Z">
@@ -46,7 +46,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -93,10 +93,10 @@
                href="/archives">Archives</a>
             
             <a class="navbar-item "
-               href="/categories/Music">Music</a>
+               href="/categories">Categories</a>
             
             <a class="navbar-item "
-               href="/categories/Technology">Technology</a>
+               href="/tage">Tags</a>
             
             <a class="navbar-item "
                href="/about">About</a>
@@ -111,7 +111,7 @@
             
             
             
-            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/liuquanze">
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
                 
                 <i class="fab fa-github"></i>
                 
@@ -152,102 +152,33 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <h1 id="225-用队列实现栈"><a href="#225-用队列实现栈" class="headerlink" title="225.用队列实现栈"></a>225.用队列实现栈</h1><h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ol start="225">
-<li>用队列实现栈</li>
+        <h1 id="225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;"><a href="#225-&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;" class="headerlink" title="225.&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;"></a>225.&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="225">
+<li>&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;</li>
 </ol>
-<p>请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（<code>push</code>、<code>top</code>、<code>pop</code> 和 <code>empty</code>）。</p>
-<p>实现 <code>MyStack</code> 类：</p>
+<p>&#x8BF7;&#x4F60;&#x4EC5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x540E;&#x5165;&#x5148;&#x51FA;&#xFF08;LIFO&#xFF09;&#x7684;&#x6808;&#xFF0C;&#x5E76;&#x652F;&#x6301;&#x666E;&#x901A;&#x6808;&#x7684;&#x5168;&#x90E8;&#x56DB;&#x79CD;&#x64CD;&#x4F5C;&#xFF08;<code>push</code>&#x3001;<code>top</code>&#x3001;<code>pop</code> &#x548C; <code>empty</code>&#xFF09;&#x3002;</p>
+<p>&#x5B9E;&#x73B0; <code>MyStack</code> &#x7C7B;&#xFF1A;</p>
 <ul>
-<li><code>void push(int x)</code> 将元素 x 压入栈顶。</li>
-<li><code>int pop()</code> 移除并返回栈顶元素。</li>
-<li><code>int top()</code> 返回栈顶元素。</li>
-<li><code>boolean empty()</code> 如果栈是空的，返回 <code>true</code> ；否则，返回 <code>false</code> 。</li>
+<li><code>void push(int x)</code> &#x5C06;&#x5143;&#x7D20; x &#x538B;&#x5165;&#x6808;&#x9876;&#x3002;</li>
+<li><code>int pop()</code> &#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x6808;&#x9876;&#x5143;&#x7D20;&#x3002;</li>
+<li><code>int top()</code> &#x8FD4;&#x56DE;&#x6808;&#x9876;&#x5143;&#x7D20;&#x3002;</li>
+<li><code>boolean empty()</code> &#x5982;&#x679C;&#x6808;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x8FD4;&#x56DE; <code>true</code> &#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE; <code>false</code> &#x3002;</li>
 </ul>
-<p><strong>注意：</strong></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
 <ul>
-<li>你只能使用队列的基本操作 —— 也就是 <code>push to back</code>、<code>peek/pop from front</code>、<code>size</code> 和 <code>is empty</code> 这些操作。</li>
-<li>你所使用的语言也许不支持队列。 你可以使用 list （列表）或者 deque（双端队列）来模拟一个队列 , 只要是标准的队列操作即可。</li>
+<li>&#x4F60;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C; &#x2014;&#x2014; &#x4E5F;&#x5C31;&#x662F; <code>push to back</code>&#x3001;<code>peek/pop from front</code>&#x3001;<code>size</code> &#x548C; <code>is empty</code> &#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x4F60;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;&#x4E5F;&#x8BB8;&#x4E0D;&#x652F;&#x6301;&#x961F;&#x5217;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; list &#xFF08;&#x5217;&#x8868;&#xFF09;&#x6216;&#x8005; deque&#xFF08;&#x53CC;&#x7AEF;&#x961F;&#x5217;&#xFF09;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x961F;&#x5217; , &#x53EA;&#x8981;&#x662F;&#x6807;&#x51C6;&#x7684;&#x961F;&#x5217;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</li>
 </ul>
 <p>example 1:</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">输入：
-[&quot;MyStack&quot;, &quot;push&quot;, &quot;push&quot;, &quot;top&quot;, &quot;pop&quot;, &quot;empty&quot;]
-[[], [1], [2], [], [], []]
-输出：
-[null, null, null, 2, 2, false]
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;<br>[<span class="hljs-string">&quot;MyStack&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;push&quot;</span>, <span class="hljs-string">&quot;top&quot;</span>, <span class="hljs-string">&quot;pop&quot;</span>, <span class="hljs-string">&quot;empty&quot;</span>]<br>[[], [<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>], [], [], []]<br>&#x8F93;&#x51FA;&#xFF1A;<br>[<span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">false</span>]<br><br>&#x89E3;&#x91CA;&#xFF1A;<br><span class="hljs-type">MyStack</span> <span class="hljs-variable">myStack</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyStack</span>();<br>myStack.push(<span class="hljs-number">1</span>);<br>myStack.push(<span class="hljs-number">2</span>);<br>myStack.top(); <span class="hljs-comment">// &#x8FD4;&#x56DE; 2</span><br>myStack.pop(); <span class="hljs-comment">// &#x8FD4;&#x56DE; 2</span><br>myStack.empty(); <span class="hljs-comment">// &#x8FD4;&#x56DE; False</span><br></code></pre></td></tr></table></figure>
 
-解释：
-MyStack myStack &#x3D; new MyStack();
-myStack.push(1);
-myStack.push(2);
-myStack.top(); &#x2F;&#x2F; 返回 2
-myStack.pop(); &#x2F;&#x2F; 返回 2
-myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
-
-<p>提示：</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
 <ul>
 <li><code>1 &lt;= x &lt;= 9</code></li>
-<li>最多调用<code>100</code> 次 <code>push</code>、<code>pop</code>、<code>top</code> 和 <code>empty</code></li>
-<li>每次调用 <code>pop</code> 和 <code>top</code> 都保证栈不为空</li>
+<li>&#x6700;&#x591A;&#x8C03;&#x7528;<code>100</code> &#x6B21; <code>push</code>&#x3001;<code>pop</code>&#x3001;<code>top</code> &#x548C; <code>empty</code></li>
+<li>&#x6BCF;&#x6B21;&#x8C03;&#x7528; <code>pop</code> &#x548C; <code>top</code> &#x90FD;&#x4FDD;&#x8BC1;&#x6808;&#x4E0D;&#x4E3A;&#x7A7A;</li>
 </ul>
-<p>题目来源：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-stack-using-queues">https://leetcode.cn/problems/implement-stack-using-queues</a></p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">class MyStack &#123;
-    &#x2F;** 
-        队列模拟栈，其实一个队列就够了，那么我们先说一说两个队列来实现栈的思路。
-
-    队列是先进先出的规则，把一个队列中的数据导入另一个队列中，数据的顺序并没有变，并没有变成先进后出的顺序。
-
-    所以用栈实现队列， 和用队列实现栈的思路还是不一样的，这取决于这两个数据结构的性质。
-
-    但是依然还是要用两个队列来模拟栈，只不过没有输入和输出的关系，而是另一个队列完全用又来备份的！
-
-    如下面动画所示，用两个队列que1和que2实现队列的功能，que2其实完全就是一个备份的作用，把que1最后面的元素以外的元素都备份到que2，然后弹出最后面的元素，再把其他元素从que2导回que1。
-    *&#x2F;
-    &#x2F;&#x2F; Deque 接口继承了 Queue 接口
-    &#x2F;&#x2F; 所以 Queue 中的 add、poll、peek等效于 Deque 中的 addLast、pollFirst、peekFirst
-    Deque&lt;Integer&gt; que1;
-    &#x2F;** Initialize your data structure here. *&#x2F;
-    public MyStack() &#123;
-        que1 &#x3D; new ArrayDeque&lt;&gt;();
-    &#125;
-    
-    &#x2F;** Push element x onto stack. *&#x2F;
-    public void push(int x) &#123;
-        que1.addLast(x);
-    &#125;
-    
-    &#x2F;** Removes the element on top of the stack and returns that element. *&#x2F;
-    public int pop() &#123;
-        int size &#x3D; que1.size();
-        size--;
-        &#x2F;&#x2F; 将 que1 除了最后一个元素之外的所有元素从队头移到队尾，相当于暴露最后一个元素，用以满足栈的先进后出的特性，同时将元素从队头移到队尾的操作可以替换原先的使用另一个辅助队列的方式，降低了时间复杂度
-        while (size-- &gt; 0) &#123;
-            que1.addLast(que1.peekFirst());
-            que1.pollFirst();
-        &#125;
-
-        int res &#x3D; que1.pollFirst();
-        return res;
-    &#125;
-    
-    &#x2F;** Get the top element. *&#x2F;
-    public int top() &#123;
-        return que1.peekLast();
-    &#125;
-    
-    &#x2F;** Returns whether the stack is empty. *&#x2F;
-    public boolean empty() &#123;
-        return que1.isEmpty();
-    &#125;
-&#125;
-
-&#x2F;**
- * Your MyStack object will be instantiated and called as such:
- * MyStack obj &#x3D; new MyStack();
- * obj.push(x);
- * int param_2 &#x3D; obj.pop();
- * int param_3 &#x3D; obj.top();
- * boolean param_4 &#x3D; obj.empty();
- *&#x2F;</code></pre>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-stack-using-queues">https://leetcode.cn/problems/implement-stack-using-queues</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyStack</span> {<br>    <span class="hljs-comment">/** </span><br><span class="hljs-comment">        &#x961F;&#x5217;&#x6A21;&#x62DF;&#x6808;&#xFF0C;&#x5176;&#x5B9E;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5148;&#x8BF4;&#x4E00;&#x8BF4;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x6765;&#x5B9E;&#x73B0;&#x6808;&#x7684;&#x601D;&#x8DEF;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x961F;&#x5217;&#x662F;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x628A;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x53E6;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#x6210;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x6240;&#x4EE5;&#x7528;&#x6808;&#x5B9E;&#x73B0;&#x961F;&#x5217;&#xFF0C; &#x548C;&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#x6808;&#x7684;&#x601D;&#x8DEF;&#x8FD8;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x6027;&#x8D28;&#x3002;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x4F46;&#x662F;&#x4F9D;&#x7136;&#x8FD8;&#x662F;&#x8981;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#x6765;&#x6A21;&#x62DF;&#x6808;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x6CA1;&#x6709;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5B8C;&#x5168;&#x7528;&#x53C8;&#x6765;&#x5907;&#x4EFD;&#x7684;&#xFF01;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">    &#x5982;&#x4E0B;&#x9762;&#x52A8;&#x753B;&#x6240;&#x793A;&#xFF0C;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;que1&#x548C;que2&#x5B9E;&#x73B0;&#x961F;&#x5217;&#x7684;&#x529F;&#x80FD;&#xFF0C;que2&#x5176;&#x5B9E;&#x5B8C;&#x5168;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x628A;que1&#x6700;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x4EE5;&#x5916;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5907;&#x4EFD;&#x5230;que2&#xFF0C;&#x7136;&#x540E;&#x5F39;&#x51FA;&#x6700;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x518D;&#x628A;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x4ECE;que2&#x5BFC;&#x56DE;que1&#x3002;</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-comment">// Deque &#x63A5;&#x53E3;&#x7EE7;&#x627F;&#x4E86; Queue &#x63A5;&#x53E3;</span><br>    <span class="hljs-comment">// &#x6240;&#x4EE5; Queue &#x4E2D;&#x7684; add&#x3001;poll&#x3001;peek&#x7B49;&#x6548;&#x4E8E; Deque &#x4E2D;&#x7684; addLast&#x3001;pollFirst&#x3001;peekFirst</span><br>    Deque&lt;Integer&gt; que1;<br>    <span class="hljs-comment">/** Initialize your data structure here. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyStack</span><span class="hljs-params">()</span> {<br>        que1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDeque</span>&lt;&gt;();<br>    }<br>    <br>    <span class="hljs-comment">/** Push element x onto stack. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">push</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> {<br>        que1.addLast(x);<br>    }<br>    <br>    <span class="hljs-comment">/** Removes the element on top of the stack and returns that element. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">pop</span><span class="hljs-params">()</span> {<br>        <span class="hljs-type">int</span> <span class="hljs-variable">size</span> <span class="hljs-operator">=</span> que1.size();<br>        size--;<br>        <span class="hljs-comment">// &#x5C06; que1 &#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x5916;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x4ECE;&#x961F;&#x5934;&#x79FB;&#x5230;&#x961F;&#x5C3E;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x66B4;&#x9732;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7528;&#x4EE5;&#x6EE1;&#x8DB3;&#x6808;&#x7684;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x5143;&#x7D20;&#x4ECE;&#x961F;&#x5934;&#x79FB;&#x5230;&#x961F;&#x5C3E;&#x7684;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x539F;&#x5148;&#x7684;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x964D;&#x4F4E;&#x4E86;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</span><br>        <span class="hljs-keyword">while</span> (size-- &gt; <span class="hljs-number">0</span>) {<br>            que1.addLast(que1.peekFirst());<br>            que1.pollFirst();<br>        }<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> que1.pollFirst();<br>        <span class="hljs-keyword">return</span> res;<br>    }<br>    <br>    <span class="hljs-comment">/** Get the top element. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">top</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">return</span> que1.peekLast();<br>    }<br>    <br>    <span class="hljs-comment">/** Returns whether the stack is empty. */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">empty</span><span class="hljs-params">()</span> {<br>        <span class="hljs-keyword">return</span> que1.isEmpty();<br>    }<br>}<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your MyStack object will be instantiated and called as such:</span><br><span class="hljs-comment"> * MyStack obj = new MyStack();</span><br><span class="hljs-comment"> * obj.push(x);</span><br><span class="hljs-comment"> * int param_2 = obj.pop();</span><br><span class="hljs-comment"> * int param_3 = obj.top();</span><br><span class="hljs-comment"> * boolean param_4 = obj.empty();</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
 
 
     
@@ -282,9 +213,8 @@ myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
 
 <div class="sharebox">
     
-<div class="notification is-danger">
-    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
-</div>
+<div class="sharethis-inline-share-buttons"></div>
+<script type='text/javascript' src='xxxx' async='async'></script>
 
 </div>
 
@@ -293,14 +223,25 @@ myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
 <div class="comments">
     <h3 class="title is-4">Comments</h3>
     
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'mlUtxJKQFsdo7L83Pyws1ymA-MdYXbMMI',
+        appKey: 'MTXGi6xNiixNviENLrc3ugXG',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'Say something...',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
 </div>
 
     </div>
@@ -387,6 +328,19 @@ myStack.empty(); &#x2F;&#x2F; 返回 False</code></pre>
 
     
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        // ...options...
+    });
+});
+</script>
+
     
     
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
