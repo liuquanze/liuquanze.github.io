@@ -121,6 +121,187 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/post/416-%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86.html" itemprop="url">416.分割等和子集</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-08-20T01:04:47.000Z" itemprop="datePublished">Aug 20 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 414 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="416-&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;"><a href="#416-&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;" class="headerlink" title="416.&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;"></a>416.&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="416">
+<li>&#x5206;&#x5272;&#x7B49;&#x548C;&#x5B50;&#x96C6;</li>
+</ol>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A; <strong>&#x53EA;&#x5305;&#x542B;&#x6B63;&#x6574;&#x6570;</strong> &#x7684; <strong>&#x975E;&#x7A7A;</strong> &#x6570;&#x7EC4; <code>nums</code> &#x3002;&#x8BF7;&#x4F60;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x5B50;&#x96C6;&#xFF0C;&#x4F7F;&#x5F97;&#x4E24;&#x4E2A;&#x5B50;&#x96C6;&#x7684;&#x5143;&#x7D20;&#x548C;&#x76F8;&#x7B49;&#x3002;</p>
+<p>example 1:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">11</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">true</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x5206;&#x5272;&#x6210; [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>] &#x548C; [<span class="hljs-number">11</span>] &#x3002;<br></code></pre></td></tr></table></figure>
+
+<p>example 2:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-literal">false</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6570;&#x7EC4;&#x4E0D;&#x80FD;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x548C;&#x76F8;&#x7B49;&#x7684;&#x5B50;&#x96C6;&#x3002;<br></code></pre></td></tr></table></figure>
+
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 200</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-equal-subset-sum/">https://leetcode.cn/problems/partition-equal-subset-sum/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//&#x6EDA;&#x52A8;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x7EF4;&#x7684;dp&#x6570;&#x7EC4;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPartition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num:nums){<br>            sum+=num;<br>        }<br>        <span class="hljs-comment">//&#x662F;&#x5947;&#x6570;&#xFF0C;&#x5FC5;&#x65E0;&#x6CD5;&#x5206;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x7B49;&#x548C;&#x7684;&#x5B50;&#x6570;&#x7EC4;</span><br>        <span class="hljs-keyword">if</span>(sum%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-comment">//&#x80CC;&#x5305;&#x5927;&#x5C0F;&#x5373;&#x4E3A;&#x548C;</span><br>        <span class="hljs-comment">//&#x7269;&#x54C1;&#x91CD;&#x91CF;&#x4E3A;nums[i],&#x7269;&#x54C1;&#x4EF7;&#x503C;&#x4E3A;nums[i]</span><br>        <span class="hljs-type">int</span> target=sum/<span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[target+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=nums[<span class="hljs-number">0</span>];i&lt;=target;i++){<br>            dp[i]=nums[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=target;j&gt;=nums[i];j--){<br>                <span class="hljs-comment">//&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x8986;&#x76D6;&#x95EE;&#x9898;&#xFF0C;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x904D;&#x5386;</span><br>                dp[j]=Math.max(dp[j],dp[j-nums[i]]+nums[i]);<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[target]==target;<br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//01&#x80CC;&#x5305;&#xFF0C;&#x4E8C;&#x7EF4;dp&#x6570;&#x7EC4;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">canPartition</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> num:nums){<br>            sum+=num;<br>        }<br>        <span class="hljs-keyword">if</span>(sum%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        }<br>        <span class="hljs-type">int</span> target=sum/<span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span>[][] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[nums.length][target+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=nums[<span class="hljs-number">0</span>];i&lt;=target;i++){<br>            dp[<span class="hljs-number">0</span>][i]=nums[<span class="hljs-number">0</span>];<br>        }<br>        <span class="hljs-comment">//&#x904D;&#x5386;&#x7269;&#x54C1;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x56E0;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x7B2C;0&#x4E2A;&#x5DF2;&#x7ECF;&#x904D;&#x5386;&#x8FC7;&#x4E86;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.length;i++){<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>;j&lt;=target;j++){<br>                <span class="hljs-keyword">if</span>(j&lt;nums[i]){<br>                    dp[i][j]=dp[i-<span class="hljs-number">1</span>][j];<br>                }<span class="hljs-keyword">else</span>{<br>                    dp[i][j]=Math.max(dp[i-<span class="hljs-number">1</span>][j],dp[i-<span class="hljs-number">1</span>][j-nums[i]]+nums[i]);<br>                }<br>            }<br>        }<br>        <span class="hljs-keyword">return</span> dp[nums.length-<span class="hljs-number">1</span>][target]==target;<br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5%E2%85%A1.html" itemprop="url">59.螺旋矩阵Ⅱ</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-08-19T12:59:09.000Z" itemprop="datePublished">Aug 19 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 416 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="59-&#x87BA;&#x65CB;&#x77E9;&#x9635;&#x2161;"><a href="#59-&#x87BA;&#x65CB;&#x77E9;&#x9635;&#x2161;" class="headerlink" title="59.&#x87BA;&#x65CB;&#x77E9;&#x9635;&#x2161;"></a>59.&#x87BA;&#x65CB;&#x77E9;&#x9635;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="59">
+<li>&#x87BA;&#x65CB;&#x77E9;&#x9635; II</li>
+</ol>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570; <code>n</code> &#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>1</code> &#x5230; <code>n2</code> &#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x4E14;&#x5143;&#x7D20;&#x6309;&#x987A;&#x65F6;&#x9488;&#x987A;&#x5E8F;&#x87BA;&#x65CB;&#x6392;&#x5217;&#x7684; <code>n x n</code> &#x6B63;&#x65B9;&#x5F62;&#x77E9;&#x9635; <code>matrix</code> &#x3002;</p>
+<p>example 1:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">8</span>,<span class="hljs-number">9</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>example 2:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">1</span><br>&#x8F93;&#x51FA;&#xFF1A;[[<span class="hljs-number">1</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li><code>1 &lt;= n &lt;= 20</code></li>
+</ul>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix-ii/">https://leetcode.cn/problems/spiral-matrix-ii/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[][] generateMatrix(<span class="hljs-type">int</span> n) {<br>        <span class="hljs-type">int</span>[][] ret=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n][n];<br>        <span class="hljs-type">int</span> offset=<span class="hljs-number">1</span>;   <span class="hljs-comment">//&#x6BCF;&#x8F6E;&#x5FAA;&#x73AF;&#x9700;&#x8981;&#x504F;&#x79FB;&#x7684;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;&#x7B2C;&#x4E00;&#x8F6E;&#x662F;&#x8981;&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;offset=1</span><br>        <span class="hljs-type">int</span> loop=n/<span class="hljs-number">2</span>;   <span class="hljs-comment">//&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7684;&#x5708;&#x6570;&#xFF0C;&#x6BD4;&#x5982;n=3&#x53EA;&#x9700;&#x8981;&#x5FAA;&#x73AF;&#x4E00;&#x6B21;&#xFF0C;n=6&#x9700;&#x8981;&#x5FAA;&#x73AF;3&#x6B21;</span><br>        <span class="hljs-type">int</span> mid=n/<span class="hljs-number">2</span>;    <span class="hljs-comment">//&#x77E9;&#x9635;&#x7684;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;n=3&#xFF0C;&#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;&#x662F;(1,1)</span><br>        <span class="hljs-type">int</span> count=<span class="hljs-number">1</span>;    <span class="hljs-comment">//&#x7528;&#x4E8E;&#x7ED9;&#x5404;&#x4E2A;&#x4F4D;&#x7F6E;&#x8D4B;&#x503C;</span><br>        <span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> startx=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> starty=<span class="hljs-number">0</span>;       <span class="hljs-comment">//&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x6BCF;&#x4E00;&#x5708;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;</span><br>        <span class="hljs-keyword">for</span>(;loop&gt;<span class="hljs-number">0</span>;loop--){<br>            i=startx;<br>            j=starty;<br>            <span class="hljs-comment">//&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#xFF0C;j&#x5C0F;&#x4E8E;n-offset&#xFF0C;&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x7ED9;&#x540E;&#x9762;            </span><br>            <span class="hljs-keyword">for</span>(;j&lt;n-offset;j++){<br>                ret[i][j]=count++;<br>            }<br>            <span class="hljs-comment">//&#x4ECE;&#x4E0A;&#x5411;&#x4E0B;&#x79FB;&#x52A8;&#xFF0C;&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x7ED9;&#x540E;&#x9762;</span><br>            <span class="hljs-keyword">for</span>(;i&lt;n-offset;i++){<br>                ret[i][j]=count++;<br>            }<br>            <span class="hljs-comment">//&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x79FB;&#x52A8;&#xFF0C;&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x7ED9;&#x540E;&#x9762;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;j&#x4E0D;&#x662F;&#x5927;&#x4E8E;0&#xFF0C;&#x800C;&#x662F;&#x5927;&#x4E8E;starty&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x5708;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x662F;&#x5728;&#x6539;&#x53D8;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x5708;&#x624D;&#x662F;0</span><br>            <span class="hljs-keyword">for</span>(;j&gt;starty;j--){<br>                ret[i][j]=count++;<br>            }<br>            <span class="hljs-comment">//&#x4ECE;&#x4E0B;&#x5411;&#x4E0A;&#x79FB;&#x52A8;&#xFF0C;&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x7ED9;&#x540E;&#x9762;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;i&#x4E0D;&#x662F;&#x5927;&#x4E8E;0&#xFF0C;&#x800C;&#x662F;&#x5927;&#x4E8E;startx&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x5708;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x662F;&#x5728;&#x79FB;&#x52A8;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x5708;&#x624D;&#x662F;0</span><br>            <span class="hljs-keyword">for</span>(;i&gt;startx;i--){<br>                ret[i][j]=count++;<br>            }<br>            <span class="hljs-comment">//&#x66F4;&#x65B0;&#x4FBF;&#x5B9C;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x5708;&#x662F;&#x5728;&#x4E0D;&#x65AD;&#x7F29;&#x5C0F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8FB9;&#x754C;&#x662F;&#x5728;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x504F;&#x79FB;&#x91CF;&#x4E5F;&#x5728;&#x53D8;&#x5316;</span><br>            offset++;<br>            <span class="hljs-comment">//&#x66F4;&#x65B0;&#x4E0B;&#x4E00;&#x5708;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;</span><br>            startx++;<br>            starty++;<br><br><br>        }<br>        <span class="hljs-comment">//&#x82E5;n&#x4E3A;&#x5947;&#x6570;&#xFF0C;&#x5219;&#x4E2D;&#x5FC3;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x591A;&#x51FA;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;n^2</span><br>        <span class="hljs-keyword">if</span>(n%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>){<br>            ret[mid][mid]=n*n;<br>        }<br>        <span class="hljs-keyword">return</span> ret;<br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html" itemprop="url">209.长度最小的子数组</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-08-19T12:21:28.000Z" itemprop="datePublished">Aug 19 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 494 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="209-&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;"><a href="#209-&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;" class="headerlink" title="209.&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;"></a>209.&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="209">
+<li>&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;</li>
+</ol>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x542B;&#x6709; <code>n</code> &#x4E2A;&#x6B63;&#x6574;&#x6570;&#x7684;&#x6570;&#x7EC4;&#x548C;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570; <code>target</code> <strong>&#x3002;</strong></p>
+<p>&#x627E;&#x51FA;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x6EE1;&#x8DB3;&#x5176;&#x548C; <code>&#x2265; target</code> &#x7684;&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684; <strong>&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;</strong> <code>[numsl, numsl+1, ..., numsr-1, numsr]</code> &#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x957F;&#x5EA6;<strong>&#x3002;</strong>&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE; <code>0</code> &#x3002;</p>
+<p>example 1:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">7</span>, nums = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x5B50;&#x6570;&#x7EC4; [<span class="hljs-number">4</span>,<span class="hljs-number">3</span>] &#x662F;&#x8BE5;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x957F;&#x5EA6;&#x6700;&#x5C0F;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x3002;<br></code></pre></td></tr></table></figure>
+
+<p>example 2:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">4</span>, nums = [<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-number">4</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<p>example 3:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;target = <span class="hljs-number">11</span>, nums = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li><code>1 &lt;= target &lt;= 109</code></li>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 105</code></li>
+</ul>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum/">https://leetcode.cn/problems/minimum-size-subarray-sum/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, <span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-comment">//&#x6ED1;&#x52A8;&#x7A97;&#x53E3;</span><br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        &#x57FA;&#x672C;&#x601D;&#x60F3;&#xFF1A;</span><br><span class="hljs-comment">            1.&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x5747;&#x4E3A;&#x6570;&#x7EC4;&#x5DE6;&#x8FB9;&#x754C;</span><br><span class="hljs-comment">            2.&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x533A;&#x57DF;&#x4E4B;&#x95F4;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x548C;&#xFF0C;&#x518D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x6700;&#x5C0F;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;&#x65E0;&#x7A77;&#x5927;</span><br><span class="hljs-comment">            3.&#x4E0D;&#x65AD;&#x53F3;&#x79FB;&#x53F3;&#x6307;&#x9488;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x5B50;&#x533A;&#x57DF;&#x5143;&#x7D20;&#x4E4B;&#x548C;&#xFF0C;&#x5F53;&#x5B50;&#x533A;&#x57DF;&#x548C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#x5E76;&#x66F4;&#x65B0;&#x6700;&#x5C0F;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x5DE6;&#x6307;&#x9488;&#x53F3;&#x79FB;&#xFF0C;&#x82E5;&#x4F9D;&#x65E7;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x5219;&#x7EE7;&#x7EED;&#x66F4;&#x65B0;&#x6700;&#x5C0F;&#x5B50;&#x533A;&#x57DF;&#x957F;&#x5EA6;&#xFF0C;&#x76F4;&#x5230;&#x5B50;&#x533A;&#x57DF;&#x4E4B;&#x548C;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x4E4B;&#x540E;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x53F3;&#x79FB;&#x53F3;&#x6307;&#x9488;</span><br><span class="hljs-comment">        */</span><br>        <span class="hljs-comment">//&#x5224;&#x65AD;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x6CD5;</span><br>        <span class="hljs-keyword">if</span>(nums==<span class="hljs-literal">null</span>||nums.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x6307;&#x9488;&#xFF0C;j&#x4E3A;&#x53F3;&#x6307;&#x9488;&#xFF0C;i&#x4E3A;&#x5DE6;&#x6307;&#x9488;</span><br>        <span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//sum&#x8868;&#x793A;i~j&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;</span><br>        <span class="hljs-type">int</span> sum=<span class="hljs-number">0</span>;<br>        <span class="hljs-comment">//ret&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x5B50;&#x5E8F;&#x5217;</span><br>        <span class="hljs-type">int</span> ret=Integer.MAX_VALUE;<br>        <span class="hljs-comment">//&#x5F53;&#x904D;&#x5386;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#x6CA1;&#x6709;&#x8D85;&#x8FC7;target&#xFF0C;&#x5219;&#x5C06;j&#x53F3;&#x79FB;</span><br>        <span class="hljs-keyword">while</span>(j&lt;nums.length){<br>            sum+=nums[j];<br>            <span class="hljs-comment">//&#x82E5;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x8BA1;&#x7B97;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#xFF0C;&#x5E76;&#x5224;&#x65AD;&#x662F;&#x5426;&#x66F4;&#x65B0;ret&#xFF0C;&#x5E76;&#x5C06;&#x5DE6;&#x8FB9;&#x754C;&#x53F3;&#x79FB;&#xFF0C;&#x66F4;&#x65B0;&#x5B50;&#x5E8F;&#x5217;&#x4E4B;&#x548C;&#xFF0C;&#x5FAA;&#x73AF;&#x53F3;&#x79FB;&#x5E76;&#x66F4;&#x65B0;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x3002;</span><br>            <span class="hljs-keyword">while</span>(sum&gt;=target){<br>                <span class="hljs-type">int</span> sub_length=j-i+<span class="hljs-number">1</span>;<br>                ret=ret&gt;sub_length? sub_length:ret;<br>                sum-=nums[i++]; <br>            }<br>            j++;<br>        }<br>        <span class="hljs-comment">//&#x82E5;ret&#x7684;&#x503C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0&#xFF0C;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x89E3;</span><br>        <span class="hljs-keyword">return</span> ret==Integer.MAX_VALUE? <span class="hljs-number">0</span>:ret;<br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/post/%E8%BF%9E%E6%8E%A5mysql%E5%A4%B1%E8%B4%A5.html" itemprop="url">ERROR 2003 (HY000) Can&#39;t connect to MySQL server on &#39;localhost:3306&#39; (10061)</a>
         
     </h1>
@@ -529,184 +710,6 @@
 
 
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E7%9A%84%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.html" itemprop="url">746.使用最小的花费爬楼梯</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-08-13T04:38:58.000Z" itemprop="datePublished">Aug 13 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            3 minutes read (About 494 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h1 id="746-&#x82B1;&#x8D39;&#x6700;&#x5C0F;&#x7684;&#x82B1;&#x8D39;&#x722C;&#x697C;&#x68AF;"><a href="#746-&#x82B1;&#x8D39;&#x6700;&#x5C0F;&#x7684;&#x82B1;&#x8D39;&#x722C;&#x697C;&#x68AF;" class="headerlink" title="746.&#x82B1;&#x8D39;&#x6700;&#x5C0F;&#x7684;&#x82B1;&#x8D39;&#x722C;&#x697C;&#x68AF;"></a>746.&#x82B1;&#x8D39;&#x6700;&#x5C0F;&#x7684;&#x82B1;&#x8D39;&#x722C;&#x697C;&#x68AF;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="746">
-<li>&#x4F7F;&#x7528;&#x6700;&#x5C0F;&#x82B1;&#x8D39;&#x722C;&#x697C;&#x68AF;</li>
-</ol>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>cost</code> &#xFF0C;&#x5176;&#x4E2D; <code>cost[i]</code> &#x662F;&#x4ECE;&#x697C;&#x68AF;&#x7B2C; <code>i</code> &#x4E2A;&#x53F0;&#x9636;&#x5411;&#x4E0A;&#x722C;&#x9700;&#x8981;&#x652F;&#x4ED8;&#x7684;&#x8D39;&#x7528;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x652F;&#x4ED8;&#x6B64;&#x8D39;&#x7528;&#xFF0C;&#x5373;&#x53EF;&#x9009;&#x62E9;&#x5411;&#x4E0A;&#x722C;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#x3002;</p>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A; <code>0</code> &#x6216;&#x4E0B;&#x6807;&#x4E3A; <code>1</code> &#x7684;&#x53F0;&#x9636;&#x5F00;&#x59CB;&#x722C;&#x697C;&#x68AF;&#x3002;</p>
-<p>&#x8BF7;&#x4F60;&#x8BA1;&#x7B97;&#x5E76;&#x8FD4;&#x56DE;&#x8FBE;&#x5230;&#x697C;&#x68AF;&#x9876;&#x90E8;&#x7684;&#x6700;&#x4F4E;&#x82B1;&#x8D39;&#x3002;</p>
-<p>example 1&#xFF1A;</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;cost = [<span class="hljs-number">10</span>,<span class="hljs-number">15</span>,<span class="hljs-number">20</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">15</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x4F60;&#x5C06;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">1</span> &#x7684;&#x53F0;&#x9636;&#x5F00;&#x59CB;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">15</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x697C;&#x68AF;&#x9876;&#x90E8;&#x3002;<br>&#x603B;&#x82B1;&#x8D39;&#x4E3A; <span class="hljs-number">15</span> &#x3002;<br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;cost = [<span class="hljs-number">1</span>,<span class="hljs-number">100</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">100</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">100</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">6</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x4F60;&#x5C06;&#x4ECE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">0</span> &#x7684;&#x53F0;&#x9636;&#x5F00;&#x59CB;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">2</span> &#x7684;&#x53F0;&#x9636;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">4</span> &#x7684;&#x53F0;&#x9636;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">6</span> &#x7684;&#x53F0;&#x9636;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E00;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">7</span> &#x7684;&#x53F0;&#x9636;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E24;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x4E0B;&#x6807;&#x4E3A; <span class="hljs-number">9</span> &#x7684;&#x53F0;&#x9636;&#x3002;<br>- &#x652F;&#x4ED8; <span class="hljs-number">1</span> &#xFF0C;&#x5411;&#x4E0A;&#x722C;&#x4E00;&#x4E2A;&#x53F0;&#x9636;&#xFF0C;&#x5230;&#x8FBE;&#x697C;&#x68AF;&#x9876;&#x90E8;&#x3002;<br>&#x603B;&#x82B1;&#x8D39;&#x4E3A; <span class="hljs-number">6</span> &#x3002;<br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li><code>2 &lt;= cost.length &lt;= 1000</code></li>
-<li><code>0 &lt;= cost[i] &lt;= 999</code></li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-cost-climbing-stairs">https://leetcode.cn/problems/min-cost-climbing-stairs</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">minCostClimbingStairs</span><span class="hljs-params">(<span class="hljs-type">int</span>[] cost)</span> {<br>        <span class="hljs-comment">//&#x68C0;&#x67E5;&#x53C2;&#x6570;&#x7684;&#x5408;&#x6CD5;&#x6027;</span><br>        <span class="hljs-keyword">if</span>(cost==<span class="hljs-literal">null</span>||cost.length==<span class="hljs-number">0</span>){<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        }<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x548C;&#x82B1;&#x8D39;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x4E00;&#x81F4;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[cost.length];<br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x7B2C;0&#x8282;&#x53F0;&#x9636;&#x82B1;&#x8D39;cost[0]&#xFF08;&#x6BCF;&#x6B21;&#x767B;&#x4E0A;&#x4E00;&#x8282;&#xFF09;,&#x767B;&#x4E0A;&#x7B2C;1&#x8282;&#x53F0;&#x9636;&#x82B1;&#x8D39;cost[1](&#x6BCF;&#x6B21;&#x767B;&#x4E0A;&#x4E24;&#x8282;)</span><br>        dp[<span class="hljs-number">0</span>]=cost[<span class="hljs-number">0</span>];<br>        dp[<span class="hljs-number">1</span>]=cost[<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x9012;&#x63A8;&#x76F4;&#x5230;cost.length-1&#x8282;&#x53F0;&#x9636;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;cost.length;i++){<br>            dp[i]=Math.min(dp[i-<span class="hljs-number">1</span>],dp[i-<span class="hljs-number">2</span>])+cost[i];<br>        }<br>        <span class="hljs-comment">//&#x56E0;&#x4E3A;&#x767B;&#x4E0A;&#x6700;&#x540E;&#x4E00;&#x8282;&#x53F0;&#x9636;&#x662F;&#x4E0D;&#x8D39;&#x529B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x62E9;dp&#x672B;&#x5C3E;&#x4E24;&#x4E2A;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x5373;&#x53EF;&#x3002;</span><br>        <span class="hljs-keyword">return</span> Math.min(dp[cost.length-<span class="hljs-number">1</span>],dp[cost.length-<span class="hljs-number">2</span>]);<br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/70-%E7%88%AC%E6%A5%BC%E6%A2%AF.html" itemprop="url">70.爬楼梯</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-08-13T04:05:38.000Z" itemprop="datePublished">Aug 13 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            a minute read (About 188 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h1 id="70-&#x722C;&#x697C;&#x68AF;"><a href="#70-&#x722C;&#x697C;&#x68AF;" class="headerlink" title="70.&#x722C;&#x697C;&#x68AF;"></a>70.&#x722C;&#x697C;&#x68AF;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="70">
-<li>&#x722C;&#x697C;&#x68AF;</li>
-</ol>
-<p>&#x5047;&#x8BBE;&#x4F60;&#x6B63;&#x5728;&#x722C;&#x697C;&#x68AF;&#x3002;&#x9700;&#x8981; <code>n</code> &#x9636;&#x4F60;&#x624D;&#x80FD;&#x5230;&#x8FBE;&#x697C;&#x9876;&#x3002;</p>
-<p>&#x6BCF;&#x6B21;&#x4F60;&#x53EF;&#x4EE5;&#x722C; <code>1</code> &#x6216; <code>2</code> &#x4E2A;&#x53F0;&#x9636;&#x3002;&#x4F60;&#x6709;&#x591A;&#x5C11;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x722C;&#x5230;&#x697C;&#x9876;&#x5462;&#xFF1F;</p>
-<p>example 1:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x722C;&#x5230;&#x697C;&#x9876;&#x3002;<br><span class="hljs-number">1.</span> <span class="hljs-number">1</span> &#x9636; + <span class="hljs-number">1</span> &#x9636;<br><span class="hljs-number">2.</span> <span class="hljs-number">2</span> &#x9636;<br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">3</span><br>&#x89E3;&#x91CA;&#xFF1A;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x722C;&#x5230;&#x697C;&#x9876;&#x3002;<br><span class="hljs-number">1.</span> <span class="hljs-number">1</span> &#x9636; + <span class="hljs-number">1</span> &#x9636; + <span class="hljs-number">1</span> &#x9636;<br><span class="hljs-number">2.</span> <span class="hljs-number">1</span> &#x9636; + <span class="hljs-number">2</span> &#x9636;<br><span class="hljs-number">3.</span> <span class="hljs-number">2</span> &#x9636; + <span class="hljs-number">1</span> &#x9636;<br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li><code>1 &lt;= n &lt;= 45</code></li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/climbing-stairs/">https://leetcode.cn/problems/climbing-stairs/</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">climbStairs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">2</span>){<br>            <span class="hljs-keyword">return</span> n; <br>        }<br>        <span class="hljs-comment">//&#x5B9A;&#x4E49;dp&#x6570;&#x7EC4;</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        dp[<span class="hljs-number">2</span>]=<span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">3</span>;i&lt;=n;i++){<br>            <span class="hljs-comment">//&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF1A;dp[i]=dp[i-1]+dp[i-2]</span><br>            dp[i]=dp[i-<span class="hljs-number">1</span>]+dp[i-<span class="hljs-number">2</span>];<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97.html" itemprop="url">509.斐波那契数列</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-08-13T03:54:49.000Z" itemprop="datePublished">Aug 13 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            2 minutes read (About 227 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h1 id="509-&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;"><a href="#509-&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;" class="headerlink" title="509.&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;"></a>509.&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</h1><ol start="509">
-<li>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;</li>
-</ol>
-<p><strong>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;</strong> &#xFF08;&#x901A;&#x5E38;&#x7528; <code>F(n)</code> &#x8868;&#x793A;&#xFF09;&#x5F62;&#x6210;&#x7684;&#x5E8F;&#x5217;&#x79F0;&#x4E3A; <strong>&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</strong> &#x3002;&#x8BE5;&#x6570;&#x5217;&#x7531; <code>0</code> &#x548C; <code>1</code> &#x5F00;&#x59CB;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x6570;&#x5B57;&#x90FD;&#x662F;&#x524D;&#x9762;&#x4E24;&#x9879;&#x6570;&#x5B57;&#x7684;&#x548C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#xFF1A;</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">F(<span class="hljs-number">0</span>) = <span class="hljs-number">0</span>&#xFF0C;F(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span><br>F(n) = F(n - <span class="hljs-number">1</span>) + F(n - <span class="hljs-number">2</span>)&#xFF0C;&#x5176;&#x4E2D; n &gt; <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<p>&#x7ED9;&#x5B9A; <code>n</code> &#xFF0C;&#x8BF7;&#x8BA1;&#x7B97; <code>F(n)</code> &#x3002;</p>
-<h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>example 1:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">1</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">2</span>) = F(<span class="hljs-number">1</span>) + F(<span class="hljs-number">0</span>) = <span class="hljs-number">1</span> + <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">2</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">3</span>) = F(<span class="hljs-number">2</span>) + F(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span> + <span class="hljs-number">1</span> = <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
-<p>example 3:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;n = <span class="hljs-number">4</span><br>&#x8F93;&#x51FA;&#xFF1A;<span class="hljs-number">3</span><br>&#x89E3;&#x91CA;&#xFF1A;F(<span class="hljs-number">4</span>) = F(<span class="hljs-number">3</span>) + F(<span class="hljs-number">2</span>) = <span class="hljs-number">2</span> + <span class="hljs-number">1</span> = <span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li><code>0 &lt;= n &lt;= 30</code></li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/">https://leetcode.cn/problems/fibonacci-number/</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">fib</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> {<br>        <span class="hljs-keyword">if</span>(n&lt;<span class="hljs-number">2</span>)<br>            <span class="hljs-keyword">return</span> n;<br>        <span class="hljs-comment">//&#x786E;&#x5B9A;dp&#x6570;&#x7EC4;&#xFF0C;dp[i]</span><br>        <span class="hljs-type">int</span>[] dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">//&#x786E;&#x5B9A;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF0C;f(n)=f(n-1)+f(n-2)</span><br>        <span class="hljs-comment">//dp&#x6570;&#x7EC4;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF0C;dp[0]=0,dp[1]=1</span><br>        dp[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<br>        dp[<span class="hljs-number">1</span>]=<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;=n;i++){<br>            dp[i]=dp[i-<span class="hljs-number">1</span>]+dp[i-<span class="hljs-number">2</span>];<br>        }<br>        <span class="hljs-keyword">return</span> dp[n];<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
     
         
 <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
@@ -730,7 +733,7 @@
         
         <li><span class="pagination-ellipsis">&hellip;</span></li>
         
-        <li><a class="pagination-link" href="/page/14/">14</a></li>
+        <li><a class="pagination-link" href="/page/15/">15</a></li>
         
     </ul>
 </nav>

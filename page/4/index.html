@@ -121,6 +121,222 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/post/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98-%E7%AC%AC%E4%B8%80%E7%AB%A0.html" itemprop="url">Java并发编程实战_第一章</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-11-09T15:25:33.000Z" itemprop="datePublished">Nov 9 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            9 minutes read (About 1310 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;"><a href="#Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;" class="headerlink" title="Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;"></a>Java&#x5E76;&#x53D1;&#x7F16;&#x7A0B;&#x5B9E;&#x6218;&#x2014;&#x2014;&#x7B2C;&#x4E00;&#x7AE0;&#x3010;&#x7B80;&#x4ECB;&#x3011;</h1><h2 id="1-&#x5E76;&#x53D1;&#x7B80;&#x53F2;"><a href="#1-&#x5E76;&#x53D1;&#x7B80;&#x53F2;" class="headerlink" title="1.&#x5E76;&#x53D1;&#x7B80;&#x53F2;"></a>1.&#x5E76;&#x53D1;&#x7B80;&#x53F2;</h2><ul>
+<li>&#x65E9;&#x671F;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x4EC5;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x4EC5;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x8BBF;&#x95EE;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6240;&#x6709;&#x8D44;&#x6E90;</li>
+<li>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x51FA;&#x73B0;&#x4F7F;&#x5F97;&#x8BA1;&#x7B97;&#x673A;&#x6BCF;&#x6B21;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x7A0B;&#x5E8F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;</li>
+<li>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E3A;&#x6BCF;&#x4E2A;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x5206;&#x914D;&#x5404;&#x79CD;&#x8D44;&#x6E90;&#xFF1A;&#x5185;&#x5B58;&#x3001;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#x3001;&#x5B89;&#x5168;&#x8BC1;&#x4E66;&#x7B49;</li>
+<li>&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x95F4;&#x53EF;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x901A;&#x4FE1;&#x673A;&#x5236;&#x5305;&#x62EC;&#xFF1A;&#x5957;&#x63A5;&#x5B57;&#x3001;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x5668;&#x3001;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7B49;</li>
+</ul>
+</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x52A0;&#x5165;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x540C;&#x65F6;&#x6267;&#x884C;&#xFF1F;<ul>
+<li>&#x8D44;&#x6E90;&#x5229;&#x7528;&#x7387;&#xFF1A;&#x5355;&#x4E2A;&#x7A0B;&#x5E8F;&#x7B49;&#x5F85;&#x5916;&#x90E8;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#xFF0C;&#x9020;&#x6210;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x7684;&#x6D6A;&#x8D39;</li>
+<li>&#x516C;&#x5E73;&#x6027;&#xFF1A;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x548C;&#x7A0B;&#x5E8F;&#x5BF9;&#x8BA1;&#x7B97;&#x673A;&#x8D44;&#x6E90;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x4F7F;&#x7528;&#x6743;</li>
+<li>&#x4FBF;&#x5229;&#x6027;&#xFF1A;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5FC5;&#x8981;&#x65F6;&#x8FDB;&#x884C;&#x7A0B;&#x5E8F;&#x95F4;&#x901A;&#x4FE1;&#x76F8;&#x6BD4;&#x4E8E;&#x7F16;&#x5199;&#x5355;&#x4E2A;&#x7A0B;&#x5E8F;&#x800C;&#x8A00;&#x66F4;&#x6613;&#x4E8E;&#x5B9E;&#x73B0;</li>
+</ul>
+</li>
+<li>&#x8FD9;&#x4E9B;&#x4FC3;&#x4F7F;&#x8FDB;&#x7A0B;&#x51FA;&#x73B0;&#x7684;&#x56E0;&#x7D20;&#xFF0C;&#x540C;&#x6837;&#x4FC3;&#x4F7F;&#x7EBF;&#x7A0B;&#x7684;&#x51FA;&#x73B0;&#xFF1A;<ul>
+<li>&#x7EBF;&#x7A0B;&#x5141;&#x8BB8;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#x63A7;&#x5236;&#x6D41;&#x3002;</li>
+<li>&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x8FDB;&#x7A0B;&#x8303;&#x56F4;&#x5185;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#x5185;&#x5B58;&#x53E5;&#x67C4;&#x548C;&#x6587;&#x4EF6;&#x53E5;&#x67C4;</li>
+<li>&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#x3001;&#x6808;&#x3001;&#x53D8;&#x91CF;&#x7B49;</li>
+<li>&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x88AB;&#x8C03;&#x5EA6;&#x5230;&#x591A;&#x4E2A;CPU&#x4E0A;&#x8FD0;&#x884C;</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;"><a href="#2-&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;" class="headerlink" title="2.&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;"></a>2.&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;</h2><ul>
+<li>&#x53D1;&#x6325;&#x591A;&#x5904;&#x7406;&#x5668;&#x7684;&#x5F3A;&#x5927;&#x80FD;&#x529B;<ul>
+<li>&#x5728;&#x53CC;&#x5904;&#x7406;&#x5668;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x5355;&#x7EBF;&#x7A0B;&#x7684;&#x7A0B;&#x5E8F;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x534A;&#x7684;CPU&#x8D44;&#x6E90;&#xFF0C;&#x5728;100&#x4E2A;&#x5904;&#x7406;&#x5668;&#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x5C06;&#x6709;99%&#x7684;&#x8D44;&#x6E90;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x591A;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5728;&#x591A;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x82E5;&#x8BBE;&#x8BA1;&#x6B63;&#x786E;&#xFF0C;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63D0;&#x9AD8;&#x5904;&#x7406;&#x5668;&#x8D44;&#x6E90;&#x7684;&#x5229;&#x7528;&#x7387;&#x6765;&#x63D0;&#x5347;&#x7CFB;&#x7EDF;&#x541E;&#x5410;&#x7387;</li>
+<li>&#x4F7F;&#x7528;&#x591A;&#x7EBF;&#x7A0B;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x5355;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x7684;&#x541E;&#x5410;&#x7387;</li>
+</ul>
+</li>
+<li>&#x5EFA;&#x6A21;&#x7684;&#x7B80;&#x5355;&#x6027;<ul>
+<li>&#x82E5;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x6BD4;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x7A0B;&#x5E8F;&#x8981;&#x66F4;&#x52A0;&#x6613;&#x4E8E;&#x7F16;&#x5199;&#xFF0C;&#x9519;&#x8BEF;&#x66F4;&#x5C11;&#xFF0C;&#x4E5F;&#x66F4;&#x52A0;&#x6613;&#x4E8E;&#x6D4B;&#x8BD5;</li>
+<li>&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x590D;&#x6742;&#x4E14;&#x5F02;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x8FDB;&#x4E00;&#x6B65;&#x5206;&#x89E3;&#x4E3A;&#x4E00;&#x7EC4;&#x7B80;&#x5355;&#x4E14;&#x540C;&#x6B65;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x6D41;&#x5728;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7279;&#x5B9A;&#x540C;&#x6B65;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x7684;&#x7B80;&#x5316;&#x5904;&#x7406;<ul>
+<li>&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x591A;&#x4E2A;&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5957;&#x63A5;&#x5B57;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x8FDE;&#x63A5;&#x90FD;&#x5206;&#x914D;&#x5176;&#x5404;&#x81EA;&#x7684;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x540C;&#x6B65;IO&#x5C06;&#x4F1A;&#x964D;&#x4F4E;&#x8BE5;&#x7C7B;&#x7A0B;&#x5E8F;&#x7684;&#x5F00;&#x53D1;&#x96BE;&#x5EA6;</li>
+<li>&#x82E5;&#x4F7F;&#x7528;&#x5355;&#x7EBF;&#x7A0B;&#xFF0C;&#x5219;&#x6BCF;&#x4E00;&#x6B21;&#x53EA;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x8BF7;&#x6C42;&#x5FC5;&#x987B;&#x963B;&#x585E;&#xFF0C;&#x8FD9;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x4E86;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#x901F;&#x5EA6;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<strong>&#x975E;&#x963B;&#x585E;IO</strong>&#x6765;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x963B;&#x585E;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;<strong>&#x975E;&#x963B;&#x585E;IO</strong>&#x7684;&#x590D;&#x6742;&#x5EA6;&#x8FDC;&#x8FDC;&#x9AD8;&#x4E8E;<strong>&#x540C;&#x6B65;IO</strong><ul>
+<li>&#x975E;&#x963B;&#x585E;IO&#x4E0D;&#x592A;&#x4E86;&#x89E3;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;"><a href="#3-&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;" class="headerlink" title="3.&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;"></a>3.&#x7EBF;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x98CE;&#x9669;</h2><ul>
+<li>&#x5B89;&#x5168;&#x6027;&#x95EE;&#x9898;&#xFF1A;&#x3010;&#x6C38;&#x8FDC;&#x4E0D;&#x53D1;&#x751F;&#x7CDF;&#x7CD5;&#x7684;&#x4E8B;&#x60C5;&#x3011;<ul>
+<li>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#x53EF;&#x80FD;&#x662F;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x5145;&#x5206;&#x540C;&#x6B65;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;&#x64CD;&#x4F5C;&#x987A;&#x5E8F;&#x662F;&#x4E0D;&#x53EF;&#x9884;&#x6D4B;&#x7684;&#xFF0C;&#x751A;&#x81F3;&#x4F1A;&#x4EA7;&#x751F;&#x5947;&#x602A;&#x7684;&#x7ED3;&#x679C;</li>
+<li>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8981;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x5E76;&#x53D1;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x6216;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6781;&#x5927;&#x7684;&#x4FBF;&#x5229;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x5E26;&#x6765;&#x4E86;&#x5DE8;&#x5927;&#x98CE;&#x9669;&#xFF1A;&#x7EBF;&#x7A0B;&#x4F1A;&#x56E0;&#x4E3A;&#x65E0;&#x6CD5;&#x9884;&#x6599;&#x7684;&#x6570;&#x636E;&#x53D8;&#x5316;&#x800C;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#x76F8;&#x540C;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x5728;&#x4E32;&#x884C;&#x7F16;&#x7A0B;&#x6A21;&#x578B;&#x4E2D;&#x5F15;&#x5165;&#x975E;&#x4E32;&#x884C;&#x56E0;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x79CD;&#x975E;&#x4E32;&#x884C;&#x6027;&#x662F;&#x5F88;&#x96BE;&#x5206;&#x6790;&#x7684;&#x3002;</li>
+<li>&#x8981;&#x4F7F;&#x5F97;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x7684;&#x884C;&#x4E3A;&#x662F;&#x53EF;&#x4EE5;&#x9884;&#x6D4B;&#x7684;&#xFF0C;&#x5FC5;&#x987B;&#x5BF9;&#x5171;&#x4EAB;&#x4FBF;&#x5229;&#x7684;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x534F;&#x540C;&#xFF0C;&#x9632;&#x6B62;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x5E72;&#x6270;&#x3002;</li>
+<li>Java&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5404;&#x79CD;&#x540C;&#x6B65;&#x673A;&#x5236;&#x6765;&#x534F;&#x540C;&#x8FD9;&#x79CD;&#x8BBF;&#x95EE;</li>
+</ul>
+</li>
+<li>&#x6D3B;&#x8DC3;&#x6027;&#x95EE;&#x9898;&#xFF1A;&#x3010;&#x6D3B;&#x8DC3;&#x6027;&#xFF1A;&#x67D0;&#x4EF6;&#x4E8B;&#x60C5;&#x7EC8;&#x5C06;&#x4F1A;&#x53D1;&#x751F;&#x3011;<ul>
+<li>&#x5F62;&#x5F0F;&#x4E4B;&#x4E00;&#xFF1A;&#x65E0;&#x610F;&#x4E2D;&#x9020;&#x6210;&#x7684;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F97;&#x5FAA;&#x73AF;&#x4F53;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5F97;&#x4E0D;&#x5230;&#x6267;&#x884C;</li>
+</ul>
+</li>
+<li>&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF1A;<ul>
+<li>&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x7A0B;&#x5E8F;&#x79CD;&#xFF0C;&#x9891;&#x7E41;&#x7684;&#x8FDB;&#x884C;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#x4E0D;&#x4EC5;&#x4F1A;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x5F00;&#x9500;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x538B;&#x7F29;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x5206;&#x6790;&#x548C;&#x51CF;&#x5C11;&#x6B64;&#x7C7B;&#x5F00;&#x9500;</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;"><a href="#4-&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;" class="headerlink" title="4.&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;"></a>4.&#x7EBF;&#x7A0B;&#x65E0;&#x5904;&#x4E0D;&#x5728;</h2><ul>
+<li>&#x5373;&#x4F7F;&#x7A0B;&#x5E8F;&#x4E2D;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x7684;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x5728;&#x6846;&#x67B6;&#x79CD;&#x4ECD;&#x7136;&#x53EF;&#x80FD;&#x4F1A;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x5FC5;&#x987B;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;</li>
+</ul>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/90-%E5%AD%90%E9%9B%86%E2%85%A1.html" itemprop="url">90.子集Ⅱ</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-11-09T03:50:16.000Z" itemprop="datePublished">Nov 9 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 436 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="90-&#x5B50;&#x96C6;&#x2161;"><a href="#90-&#x5B50;&#x96C6;&#x2161;" class="headerlink" title="90.&#x5B50;&#x96C6;&#x2161;"></a>90.&#x5B50;&#x96C6;&#x2161;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>90.&#x5B50;&#x96C6; II</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x5176;&#x4E2D;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x91CD;&#x590D;&#x5143;&#x7D20;&#xFF0C;&#x8BF7;&#x4F60;&#x8FD4;&#x56DE;&#x8BE5;&#x6570;&#x7EC4;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x5B50;&#x96C6;&#xFF08;&#x5E42;&#x96C6;&#xFF09;&#x3002;</p>
+<p>&#x89E3;&#x96C6; <strong>&#x4E0D;&#x80FD;</strong> &#x5305;&#x542B;&#x91CD;&#x590D;&#x7684;&#x5B50;&#x96C6;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x89E3;&#x96C6;&#x4E2D;&#xFF0C;&#x5B50;&#x96C6;&#x53EF;&#x4EE5;&#x6309; <strong>&#x4EFB;&#x610F;&#x987A;&#x5E8F;</strong> &#x6392;&#x5217;&#x3002;</p>
+<p>example 1&#xFF1A;</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[],[<span class="hljs-number">1</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>example 2:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[],[<span class="hljs-number">0</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10</code></li>
+<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>
+</ul>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subsets-ii/description/">https://leetcode.cn/problems/subsets-ii/description/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-comment">//&#x672C;&#x9898;&#x548C;&#x5B50;&#x96C6;&#x2160;&#x7684;&#x90A3;&#x4E00;&#x9898;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x672C;&#x6B21;&#x7684;nums&#x6570;&#x7EC4;&#x4E2D;&#x5305;&#x542B;&#x91CD;&#x590D;&#x5143;&#x7D20;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x53BB;&#x91CD;&#x64CD;&#x4F5C;&#xFF0C;&#x5B8C;&#x6210;&#x8BE5;&#x64CD;&#x4F5C;&#x7684;&#x624B;&#x6BB5;&#x662F;&#x901A;&#x8FC7;&#x5BF9;nums&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5219;&#x52A0;&#x5165;&#x5143;&#x7D20;&#x4E4B;&#x524D;&#x5224;&#x65AD;&#x524D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x548C;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x8FC7;&#xFF0C;&#x5219;&#x8DF3;&#x8FC7;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x9009;&#x53D6;</span><br>   List&lt;List&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<span class="hljs-comment">// &#x5B58;&#x653E;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7ED3;&#x679C;&#x7684;&#x96C6;&#x5408;</span><br>   LinkedList&lt;Integer&gt; path = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();<span class="hljs-comment">// &#x7528;&#x6765;&#x5B58;&#x653E;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7ED3;&#x679C;</span><br>   <span class="hljs-type">boolean</span>[] used;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="hljs-title function_">subsetsWithDup</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>){<br>            result.add(path);<br>            <span class="hljs-keyword">return</span> result;<br>        }<br>        Arrays.sort(nums);<br>        used = <span class="hljs-keyword">new</span> <span class="hljs-title class_">boolean</span>[nums.length];<br>        subsetsWithDupHelper(nums, <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    }<br>    <br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">subsetsWithDupHelper</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> startIndex)</span>{<br>        result.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;(path));<br>        <span class="hljs-keyword">if</span> (startIndex &gt;= nums.length){<br>            <span class="hljs-keyword">return</span>;<br>        }<br>        <span class="hljs-comment">//used&#x4E3A;true&#x5219;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x8FC7;&#x4E86;&#xFF0C;&#x8868;&#x793A;&#x4E0A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x548C;&#x8BE5;&#x5143;&#x7D20;&#x4F4D;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x5C42;&#x6B21;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x6570;&#x5B57;&#xFF0C;&#x82E5;used&#x4E3A;false&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E0A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5DF2;&#x7ECF;&#x88AB;&#x9009;&#x53D6;&#x8FC7;&#x4E86;&#xFF0C;&#x8BE5;&#x5143;&#x7D20;&#x548C;&#x4E0A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x5C42;&#xFF0C;&#x5C31;&#x4E0D;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x6570;&#x5B57;&#x3002;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;if&#x5224;&#x65AD;&#x5B8C;&#x6210;&#x53BB;&#x91CD;&#x7684;&#x64CD;&#x4F5C;</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> startIndex; i &lt; nums.length; i++){<br>            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] == nums[i - <span class="hljs-number">1</span>] &amp;&amp; !used[i - <span class="hljs-number">1</span>]){<br>                <span class="hljs-keyword">continue</span>;<br>            }<br>            path.add(nums[i]);<br>            used[i] = <span class="hljs-literal">true</span>;<br>            subsetsWithDupHelper(nums, i + <span class="hljs-number">1</span>);<br>            path.removeLast();<br>            used[i] = <span class="hljs-literal">false</span>;<br>        }<br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/post/78-%E5%AD%90%E9%9B%86.html" itemprop="url">78.子集</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2022-11-07T13:36:20.000Z" itemprop="datePublished">Nov 7 2022</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            a minute read (About 179 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h1 id="78-&#x5B50;&#x96C6;"><a href="#78-&#x5B50;&#x96C6;" class="headerlink" title="78.&#x5B50;&#x96C6;"></a>78.&#x5B50;&#x96C6;</h1><h2 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;</h2><p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20; <strong>&#x4E92;&#x4E0D;&#x76F8;&#x540C;</strong> &#x3002;&#x8FD4;&#x56DE;&#x8BE5;&#x6570;&#x7EC4;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x5B50;&#x96C6;&#xFF08;&#x5E42;&#x96C6;&#xFF09;&#x3002;</p>
+<p>&#x89E3;&#x96C6; <strong>&#x4E0D;&#x80FD;</strong> &#x5305;&#x542B;&#x91CD;&#x590D;&#x7684;&#x5B50;&#x96C6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6309; <strong>&#x4EFB;&#x610F;&#x987A;&#x5E8F;</strong> &#x8FD4;&#x56DE;&#x89E3;&#x96C6;&#x3002;</p>
+<p>example 1:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[],[<span class="hljs-number">1</span>],[<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>example 2:</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">0</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[[],[<span class="hljs-number">0</span>]]<br></code></pre></td></tr></table></figure>
+
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10</code></li>
+<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>
+<li><code>nums</code> &#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20; <strong>&#x4E92;&#x4E0D;&#x76F8;&#x540C;</strong></li>
+</ul>
+<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subsets/">https://leetcode.cn/problems/subsets/</a></p>
+<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    List&lt;List&lt;Integer&gt;&gt; result=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>    LinkedList&lt;Integer&gt; path=<span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="hljs-title function_">subsets</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        getSubSet(nums,<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    }<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">getSubSet</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> startIndex)</span>{<br>        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x6240;&#x6709;&#x5B50;&#x96C6;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x96C6;</span><br>        result.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;(path));<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=startIndex;i&lt;nums.length;i++){<br>            path.add(nums[i]);<br>            getSubSet(nums,i+<span class="hljs-number">1</span>);<br>            path.removeLast();<br>        }<br><br>    }<br>}<br></code></pre></td></tr></table></figure>
+
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/post/93-%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80.html" itemprop="url">93.复原IP地址</a>
         
     </h1>
@@ -558,200 +774,6 @@
 
 
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/538-%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B4%AF%E5%8A%A0%E6%A0%91.html" itemprop="url">538. 把二叉搜索树转换为累加树</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-10-19T14:48:37.000Z" itemprop="datePublished">Oct 19 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            2 minutes read (About 363 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="538">
-<li>&#x628A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x8F6C;&#x6362;&#x4E3A;&#x7D2F;&#x52A0;&#x6811;</li>
-</ol>
-<p>&#x7ED9;&#x51FA;&#x4E8C;&#x53C9; <strong>&#x641C;&#x7D22;</strong> &#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x8BE5;&#x6811;&#x7684;&#x8282;&#x70B9;&#x503C;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x8BF7;&#x4F60;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x7D2F;&#x52A0;&#x6811;&#xFF08;Greater Sum Tree&#xFF09;&#xFF0C;&#x4F7F;&#x6BCF;&#x4E2A;&#x8282;&#x70B9; <code>node</code> &#x7684;&#x65B0;&#x503C;&#x7B49;&#x4E8E;&#x539F;&#x6811;&#x4E2D;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; <code>node.val</code> &#x7684;&#x503C;&#x4E4B;&#x548C;&#x3002;</p>
-<p>&#x63D0;&#x9192;&#x4E00;&#x4E0B;&#xFF0C;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x6EE1;&#x8DB3;&#x4E0B;&#x5217;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
-<ul>
-<li>&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x4EC5;&#x5305;&#x542B;&#x952E; <strong>&#x5C0F;&#x4E8E;</strong> &#x8282;&#x70B9;&#x952E;&#x7684;&#x8282;&#x70B9;&#x3002;</li>
-<li>&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x4EC5;&#x5305;&#x542B;&#x952E; <strong>&#x5927;&#x4E8E;</strong> &#x8282;&#x70B9;&#x952E;&#x7684;&#x8282;&#x70B9;&#x3002;</li>
-<li>&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x4E5F;&#x5FC5;&#x987B;&#x662F;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</li>
-</ul>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>&#x672C;&#x9898;&#x548C; 1038: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/">https://leetcode-cn.com/problems/binary-search-tree-to-greater-sum-tree/</a> &#x76F8;&#x540C;</p>
-<p>example 1:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;[<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">6</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">5</span>,<span class="hljs-number">7</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">8</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">30</span>,<span class="hljs-number">36</span>,<span class="hljs-number">21</span>,<span class="hljs-number">36</span>,<span class="hljs-number">35</span>,<span class="hljs-number">26</span>,<span class="hljs-number">15</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">33</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">8</span>]<br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">3</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
-
-<p>example 3:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">0</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
-
-<p>example 4:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>,<span class="hljs-number">1</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">7</span>,<span class="hljs-number">9</span>,<span class="hljs-number">4</span>,<span class="hljs-number">10</span>]<br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li>&#x6811;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6570;&#x4ECB;&#x4E8E; <code>0</code> &#x548C; <code>104</code> &#x4E4B;&#x95F4;&#x3002;</li>
-<li>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4ECB;&#x4E8E; <code>-104</code> &#x548C; <code>104</code> &#x4E4B;&#x95F4;&#x3002;</li>
-<li>&#x6811;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x503C; <strong>&#x4E92;&#x4E0D;&#x76F8;&#x540C;</strong> &#x3002;</li>
-<li>&#x7ED9;&#x5B9A;&#x7684;&#x6811;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/convert-bst-to-greater-tree/description/">https://leetcode.cn/problems/convert-bst-to-greater-tree/description/</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> pre=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">build</span><span class="hljs-params">(TreeNode root)</span>{<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> ;<br>        build(root.right);<br>        root.val+=pre;<br>        pre=root.val;<br>        build(root.left);<br><br>    }<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">convertBST</span><span class="hljs-params">(TreeNode root)</span> {<br>        build(root);<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/108-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html" itemprop="url">108. 将有序数组转换为二叉搜索树</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-10-19T14:46:45.000Z" itemprop="datePublished">Oct 19 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            2 minutes read (About 291 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h1 id="108-&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#108-&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="108.&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>108.&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="108">
-<li>&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
-</ol>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; <code>nums</code> &#xFF0C;&#x5176;&#x4E2D;&#x5143;&#x7D20;&#x5DF2;&#x7ECF;&#x6309; <strong>&#x5347;&#x5E8F;</strong> &#x6392;&#x5217;&#xFF0C;&#x8BF7;&#x4F60;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x68F5; <strong>&#x9AD8;&#x5EA6;&#x5E73;&#x8861;</strong> &#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;</p>
-<p><strong>&#x9AD8;&#x5EA6;&#x5E73;&#x8861;</strong> &#x4E8C;&#x53C9;&#x6811;&#x662F;&#x4E00;&#x68F5;&#x6EE1;&#x8DB3;&#x300C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x8D85;&#x8FC7; 1 &#x300D;&#x7684;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
-<p>example 1:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [-<span class="hljs-number">10</span>,-<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">0</span>,-<span class="hljs-number">3</span>,<span class="hljs-number">9</span>,-<span class="hljs-number">10</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">5</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">0</span>,-<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-literal">null</span>,-<span class="hljs-number">3</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">9</span>] &#x4E5F;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x6B63;&#x786E;&#x7B54;&#x6848;&#xFF1A;<br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;nums = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]<br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]<br>&#x89E3;&#x91CA;&#xFF1A;[<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">3</span>] &#x548C; [<span class="hljs-number">3</span>,<span class="hljs-number">1</span>] &#x90FD;&#x662F;&#x9AD8;&#x5EA6;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x3002;<br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 104</code></li>
-<li><code>-104 &lt;= nums[i] &lt;= 104</code></li>
-<li><code>nums</code> &#x6309; <strong>&#x4E25;&#x683C;&#x9012;&#x589E;</strong> &#x987A;&#x5E8F;&#x6392;&#x5217;</li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/">https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">build</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>{<br>        <span class="hljs-keyword">if</span>(left&gt;right)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">int</span> mid=left+((right-left)/<span class="hljs-number">2</span>);<br>        TreeNode node=<span class="hljs-keyword">new</span> <span class="hljs-title class_">TreeNode</span>(nums[mid]);<br>        node.left=build(nums,left,mid-<span class="hljs-number">1</span>);<br>        node.right=build(nums,mid+<span class="hljs-number">1</span>,right);<br>        <span class="hljs-keyword">return</span> node;<br>    }<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">sortedArrayToBST</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> {<br>        <span class="hljs-keyword">return</span> build(nums,<span class="hljs-number">0</span>,nums.length-<span class="hljs-number">1</span>);<br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/post/669-%E4%BF%AE%E5%89%AA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html" itemprop="url">669.修剪二叉搜索树</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-                <time datetime="2022-10-16T03:19:25.000Z" itemprop="datePublished">Oct 16 2022</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            3 minutes read (About 433 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h1 id="669-&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"><a href="#669-&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;" class="headerlink" title="669.&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;"></a>669.&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</h1><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;" class="headerlink" title="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;"></a>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</h2><ol start="669">
-<li>&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
-</ol>
-<p>&#x7ED9;&#x4F60;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; <code>root</code> &#xFF0C;&#x540C;&#x65F6;&#x7ED9;&#x5B9A;&#x6700;&#x5C0F;&#x8FB9;&#x754C;<code>low</code> &#x548C;&#x6700;&#x5927;&#x8FB9;&#x754C; <code>high</code>&#x3002;&#x901A;&#x8FC7;&#x4FEE;&#x526A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C;&#x4F7F;&#x5F97;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5728;<code>[low, high]</code>&#x4E2D;&#x3002;&#x4FEE;&#x526A;&#x6811; <strong>&#x4E0D;&#x5E94;&#x8BE5;</strong> &#x6539;&#x53D8;&#x4FDD;&#x7559;&#x5728;&#x6811;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7684;&#x76F8;&#x5BF9;&#x7ED3;&#x6784; (&#x5373;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x79FB;&#x9664;&#xFF0C;&#x539F;&#x6709;&#x7684;&#x7236;&#x4EE3;&#x5B50;&#x4EE3;&#x5173;&#x7CFB;&#x90FD;&#x5E94;&#x5F53;&#x4FDD;&#x7559;)&#x3002; &#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF0C;&#x5B58;&#x5728; <strong>&#x552F;&#x4E00;&#x7684;&#x7B54;&#x6848;</strong> &#x3002;</p>
-<p>&#x6240;&#x4EE5;&#x7ED3;&#x679C;&#x5E94;&#x5F53;&#x8FD4;&#x56DE;&#x4FEE;&#x526A;&#x597D;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x7684;&#x65B0;&#x7684;&#x6839;&#x8282;&#x70B9;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x53EF;&#x80FD;&#x4F1A;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x8FB9;&#x754C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x3002;</p>
-<p>example 1:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>], low = <span class="hljs-number">1</span>, high = <span class="hljs-number">2</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">1</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
-
-<p>example 2:</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&#x8F93;&#x5165;&#xFF1A;root = [<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">4</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>], low = <span class="hljs-number">1</span>, high = <span class="hljs-number">3</span><br>&#x8F93;&#x51FA;&#xFF1A;[<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-literal">null</span>,<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
-
-<p>&#x63D0;&#x793A;&#xFF1A;</p>
-<ul>
-<li>&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x6570;&#x5728;&#x8303;&#x56F4; <code>[1, 104]</code> &#x5185;</li>
-<li><code>0 &lt;= Node.val &lt;= 104</code></li>
-<li>&#x6811;&#x4E2D;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x662F; <strong>&#x552F;&#x4E00;</strong> &#x7684;</li>
-<li>&#x9898;&#x76EE;&#x6570;&#x636E;&#x4FDD;&#x8BC1;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x68F5;&#x6709;&#x6548;&#x7684;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</li>
-<li><code>0 &lt;= low &lt;= high &lt;= 104</code></li>
-</ul>
-<p>&#x9898;&#x76EE;&#x6765;&#x6E90;&#xFF1A;</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trim-a-binary-search-tree/description/">https://leetcode.cn/problems/trim-a-binary-search-tree/description/</a></p>
-<h2 id="&#x9898;&#x89E3;&#xFF1A;"><a href="#&#x9898;&#x89E3;&#xFF1A;" class="headerlink" title="&#x9898;&#x89E3;&#xFF1A;"></a>&#x9898;&#x89E3;&#xFF1A;</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode {</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() {}</span><br><span class="hljs-comment"> *     TreeNode(int val) { this.val = val; }</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) {</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     }</span><br><span class="hljs-comment"> * }</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {<br>    <span class="hljs-keyword">public</span> TreeNode <span class="hljs-title function_">trimBST</span><span class="hljs-params">(TreeNode root, <span class="hljs-type">int</span> low, <span class="hljs-type">int</span> high)</span> {<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;null</span><br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-literal">null</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x503C;&#x5C0F;&#x4E8E;&#x4E0B;&#x754C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x5747;&#x5C0F;&#x4E8E;&#x4E0B;&#x754C;&#xFF08;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        <span class="hljs-keyword">if</span>(root.val&lt;low){<br>            TreeNode right=trimBST(root.right,low,high);<br>            <span class="hljs-keyword">return</span> right;<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x503C;&#x5927;&#x4E8E;&#x4E0B;&#x754C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x5747;&#x5927;&#x4E8E;&#x4E0B;&#x754C;&#xFF08;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        <span class="hljs-keyword">if</span>(root.val&gt;high){<br>            TreeNode left=trimBST(root.left,low,high);<br>            <span class="hljs-keyword">return</span> left;<br>        }<br>        <span class="hljs-comment">//&#x82E5;&#x8BE5;&#x8282;&#x70B9;&#x7684;val&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF0C;&#x5219;&#x5BF9;&#x5176;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x518D;&#x6B21;&#x526A;&#x679D;</span><br>        root.left=trimBST(root.left,low,high);<br>        root.right=trimBST(root.right,low,high);<br>        <span class="hljs-keyword">return</span> root;<br>    }<br>}<br></code></pre></td></tr></table></figure>
-
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
     
         
 <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
@@ -775,7 +797,7 @@
         
         <li><span class="pagination-ellipsis">&hellip;</span></li>
         
-        <li><a class="pagination-link" href="/page/14/">14</a></li>
+        <li><a class="pagination-link" href="/page/15/">15</a></li>
         
     </ul>
 </nav>
